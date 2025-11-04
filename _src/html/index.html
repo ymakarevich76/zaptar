@@ -2,16 +2,226 @@
 @@include('block/header/header.html')
 
 <main class="main">
-  <section class="intro container">
-      <h1>
+  <div class="container">
+    <section class="intro">
+      <h1 class="intro__title">
         Интернет магазин автозапчастей для иномарок
       </h1>
-  </section>
-  <section class="intro container">
-    <h1>
-      Интернет магазин автозапчастей для иномарок
-    </h1>
-  </section>
+
+      <div class="intro__search">
+        <div class="intro__search-wrapper">
+          <input type="text" name="search" class="intro__search-input" placeholder="Поиск по VIN или FRAME">
+          <button type="button" class="btn btn-reset intro__search-btn">
+            <svg aria-hidden="true" class="btn-ico intro__search-ico">
+              <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+            <span class="intro__search-text">Найти</span>
+          </button>
+        </div>
+        <span class="intro__search-content">
+          Пример: <span>WAUBH54B11N111054</span> или <span>FNN15-502358</span>
+        </span>
+      </div>
+    </section>
+  </div>
+  <div class="container">
+    <section class="brands">
+      <h2>Поиск по марке автомобиля</h2>
+        <ul class="brands__list">
+          <li class="brands__item">
+              <div class="brands__letter">A</div>
+              <a href="#" class="brands__link">Abarth</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Alfa Romeo</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Audi</a>
+          </li>
+          <li class="brands__item">
+              <div class="brands__letter">B</div>
+              <a href="#" class="brands__link">BMW</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">BMW Motorrad</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Buick</a>
+          </li>
+          <li class="brands__item">
+              <div class="brands__letter">C</div>
+              <a href="#" class="brands__link">Cadillac</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Chevrolet</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Chrysler</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Citroen</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">D</div>
+            <a href="#" class="brands__link">Dacia</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Daewoo</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Dodge</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">F</div>
+            <a href="#" class="brands__link">Fiat</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Fiat Professional</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Ford</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">G</div>
+            <a href="#" class="brands__link">GMC</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">H</div>
+            <a href="#" class="brands__link">Honda</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Holden</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Hummer</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Hyundai</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">I</div>
+            <a href="#" class="brands__link">Infinity</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Isuzu</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">J</div>
+            <a href="#" class="brands__link">Jaguar</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Jeep</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">K</div>
+            <a href="#" class="brands__link">Kia</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">L</div>
+            <a href="#" class="brands__link">Lanccia</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Land Rover</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Lexus</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">M</div>
+            <a href="#" class="brands__link">Mazda</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Mersedes-Benz</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Mini</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Mitsubishu</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">N</div>
+            <a href="#" class="brands__link">Nissan</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">O</div>
+            <a href="#" class="brands__link">Opel</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Oldsmobile</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">P</div>
+            <a href="#" class="brands__link">Peugeot</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Pontiac</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Porsche</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">R</div>
+            <a href="#" class="brands__link">Renault</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Ram</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Ravon</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Rolls-Roys</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Rover</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">S</div>
+            <a href="#" class="brands__link">Saab</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Saturn</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Seat</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Skoda</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Smart</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Ssangyong</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Subaru</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Suzuki</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">T</div>
+            <a href="#" class="brands__link">Toyota</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">V</div>
+            <a href="#" class="brands__link">Vokswagen</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Volvo</a>
+          </li>
+          <li class="brands__item">
+            <a href="#" class="brands__link">Vauxhall</a>
+          </li>
+          <li class="brands__item">
+            <div class="brands__letter">Z</div>
+            <a href="#" class="brands__link">Zaz</a>
+          </li>
+        </ul>
+    </section>
+  </div>
 </main>
 
 @@include('block/footer/footer.html')

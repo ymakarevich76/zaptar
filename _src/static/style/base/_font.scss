@@ -30,6 +30,16 @@
 }
 
 @font-face {
+  font-weight: 600;
+  font-family: Inter;
+  font-style: normal;
+
+  font-display: swap;
+  src: url(../font/Inter/Inter_18pt-SemiBold.woff2),
+  url(../font/Inter/Inter_18pt-SemiBold.woff);
+}
+
+@font-face {
   font-weight: 700;
   font-family: Inter;
   font-style: normal;
