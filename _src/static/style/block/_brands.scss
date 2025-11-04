@@ -1,27 +1,32 @@
 .brands {
   &__list {
-    height: 329px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0 -$gutter * 0.5 !important;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(11, auto);
+    grid-auto-flow: column;
+    gap: 8px $gutter * 2 ;
 
     @media (max-width: $xl) {
-      height: 450px;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(12, auto);
+    }
+
+    @media (max-width: $lg) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(15, auto);
+    }
+
+    @media (max-width: $md) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(30, auto);
     }
   }
 
   &__item {
     position: relative;
-    width: $c-2;
-    margin: 0 $gutter * 0.5 8px;
     padding-left: $gutter * 4;
     display: flex;
     align-items: center;
-
-    @media (max-width: $xl) {
-      width: $c-3;
-    }
   }
 
   &__letter {
