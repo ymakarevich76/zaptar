@@ -1,0 +1,61 @@
+.registration {
+  height: auto;
+
+  background: url("../img/bc/bc-empty.jpg") no-repeat;
+  background-size: cover;
+}
+
+.registration__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 505px;
+  padding: 50px 0;
+
+  @media (max-width: $xl) {
+    max-width: 100%;
+    padding: 50px 0;
+  }
+
+  @media (max-width: $md) {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+.registration__title {
+  text-align: center;
+}
+
+.registration__form {
+  display: flex;
+  flex-direction: column;
+  width: 445px;
+  padding: 50px 30px;
+
+  background-color: rgba(222, 215, 222, .9);
+  border-radius: 20px;
+
+  @media (max-width: $md) {
+    padding: 40px 10px;
+
+    border-radius: 0;
+  }
+
+  @media (max-width: $md) {
+    width: 100%;
+  }
+}
+
+.registration__checkbox {
+  margin-top: 30px;
+}
+
+.registration__form-btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.registration__btn {
+  min-width: 205px;
+}

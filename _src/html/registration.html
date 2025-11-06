@@ -1,0 +1,35 @@
+@@include('block/head.html')
+@@include('block/header/header.html')
+<main class="main">
+  <!-- //////////////////////////////////////////////////////////  -->
+  <section class="registration">
+    <div class="registration__container container">
+      <form action="" class="registration__form form">
+        <h2 class="form__title title-2">Регистрация</h2>
+        <div class="form__wrap-name">
+          <input type="text" class="form__input form__input--name" placeholder="Имя*" required>
+          <input type="text" class="form__input form__input--surname" placeholder="Фамилия">
+        </div>
+        <input type="email" class="form__input" placeholder="Email*" required>
+        <input type="tel" class="form__input" id="phone-2" placeholder="Телефон*" required>
+        <input type="text" class="form__input form__input--company" placeholder="Название компании">
+        <input type="text" class="form__input" placeholder="Город">
+        <input type="text" class="form__input" placeholder="Адрес">
+
+        <div class="registration__checkbox checkbox">
+          <input id="agree" type="checkbox" class="checkbox__check" checked required>
+          <label for="agree"></label>
+          <p class="checkbox__text">Согласен на обработку
+            персональных данных.</span>
+          </p>
+        </div>
+        <div class="registration__form-btn-wrap form__btn-wrap">
+          <button type="submit" class="registration__btn form__btn btn btn-reset">зарегистрироваться</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+@@include('block/footer/footer.html')
+@@include('block/scripts.html')
