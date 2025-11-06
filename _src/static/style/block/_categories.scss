@@ -1,11 +1,14 @@
 .categories {
+  $self: &;
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: $gutter * 2;
 
     @media (max-width: $lg) {
       grid-template-columns: repeat(2, 1fr);
+      gap: $gutter;
     }
 
     @media (max-width: $sm) {
@@ -15,10 +18,17 @@
 
   &__item {
     background-color: $bg-main;
+    border-radius: 8px;
     display: flex;
     align-items: center;
+  }
+
+  &__link {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 16px 16px 16px 32px;
-    border-radius: 8px;
 
     @media (max-width: $md) {
       padding: 8px;
@@ -27,13 +37,16 @@
     @media (max-width: $sm) {
       padding-left: 16px;
     }
+
+    &:hover {
+      #{$self}__img {
+        scale: 1.1;
+      }
+    }
   }
 
-  &__link {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  &__img {
+    transition: .2s;
   }
 
   &__text {

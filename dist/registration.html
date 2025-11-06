@@ -130,7 +130,7 @@
   <div class="container">
     <ul class="breadcrumb">
         <li class="breadcrumb__item">
-            <a class="breadcrumb__link link" href="#">Главная</a>
+            <a class="breadcrumb__link link" href="/">Главная</a>
         </li>
         <li class="breadcrumb__item breadcrumb__item--current">Регистрация</li>
     </ul>
@@ -139,9 +139,220 @@
     <div class="container">
         <section class="registration">
             <h2>Регистрация</h2>
-            <form action="" class="registration__form form">
+            <div class="registration__wrap">
+                <div class="registration__tabs tabs">
+                    <div class="tabs__box-btn">
+                        <button class="tabs__btn tabs__btn--active" tab="1">Физическое лицо (только самовывоз)</button>
+                        <button class="tabs__btn" tab="2">Юридическое лицо</button>
+                    </div>
 
-            </form>
+                    <div class="tabs__box-content">
+                        <div class="tabs__content tabs__content--active" tab-content="1">
+                            <form action="" class="tabs__form form">
+                                <div class="form__top">
+                                    <div class="form__column">
+                                        <h3>Данные пользователя</h3>
+                                        <div class="form__wrapper-input">
+                                            <label for="phone" class="form__label form__required-field">Телефон</label>
+                                            <input type="tel" class="form__input" id="phone" placeholder="+7 (000) 000-00-00" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="password" class="form__label form__required-field">Пароль</label>
+                                            <input type="password" class="form__input" id="password" placeholder="Введите пароль" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="repeat-password" class="form__label form__required-field">Подтверждение пароля</label>
+                                            <input type="password" class="form__input" id="repeat-password" placeholder="Введите пароль повторно" required disabled>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="email" class="form__label form__required-field">E-mail</label>
+                                            <input type="email" class="form__input" id="email"  placeholder="Введите e-mail" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="name" class="form__label form__required-field">ФИО</label>
+                                            <input type="text" class="form__input" id="name" placeholder="Введите ФИО" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="city" class="form__label form__required-field">Город</label>
+                                            <div class="form__input select" data-select>
+    <button type="button" class="select__button" data-select-btn>
+        <span data-select-text>Брянск</span>
+        <span class="select__ico">
+            <svg>
+                <use xlink:href="static/img/symbol/sprite.svg#down-chevron"></use>
+            </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item"
+                data-select-value="Bryansk">Брянск</button>
+        <button type="button" class="select__item"
+                data-select-value="Moscow">Москва</button>
+        <button type="button" class="select__item"
+                data-select-value="Yaroslavl">Ярославль</button>
+    </div>
+    <input type="text" name="select-category" value="Брянск" data-select-input id="city" class="select__input-hidden">
+</div>
+
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="address" class="form__label">Адрес</label>
+                                            <input type="text" class="form__input" id="address" placeholder="Введите адрес">
+                                        </div>
+
+                                        <div class="form__footer">
+                                            <div class="checkbox form__footer-checkbox">
+    <div class="checkbox__wrapper-input">
+        <input id="agree-1" type="checkbox" class="checkbox__input" checked required>
+        <label for="agree-1"></label>
+    </div>
+    <p class="checkbox__text">Я ознакомлен(а) с условиями <a href="#" target="_blank" class="checkbox__link">договора-оферты</a> и <a href="#" target="_blank" class="checkbox__link">политикой конфенденциальности</a>
+    </p>
+</div>
+
+                                            <div class="form__btn-wrap">
+                                                <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div >
+                        <div class="tabs__content" tab-content="2">
+                            <form action="" class="tabs__form form">
+                                <div class="form__top">
+                                    <div class="form__column">
+                                        <h3>Данные пользователя</h3>
+                                        <div class="form__wrapper-input">
+                                            <label for="phone-1" class="form__label form__required-field">Телефон</label>
+                                            <input type="tel" class="form__input" id="phone-1" placeholder="+7 (000) 000-00-00" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="password-1" class="form__label form__required-field">Пароль</label>
+                                            <input type="password" class="form__input" id="password-1" placeholder="Введите пароль" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="repeat-password-1" class="form__label form__required-field">Подтверждение пароля</label>
+                                            <input type="password" class="form__input" id="repeat-password-1" placeholder="Введите пароль повторно" required disabled>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="email-1" class="form__label form__required-field">E-mail</label>
+                                            <input type="email" class="form__input" id="email-1"  placeholder="Введите e-mail" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="name-1" class="form__label form__required-field">ФИО</label>
+                                            <input type="text" class="form__input" id="name-1" placeholder="Введите ФИО" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="city-1" class="form__label form__required-field">Город</label>
+                                            <div class="form__input select" data-select>
+    <button type="button" class="select__button" data-select-btn>
+        <span data-select-text>Брянск</span>
+        <span class="select__ico">
+            <svg>
+                <use xlink:href="static/img/symbol/sprite.svg#down-chevron"></use>
+            </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item"
+                data-select-value="Bryansk">Брянск</button>
+        <button type="button" class="select__item"
+                data-select-value="Moscow">Москва</button>
+        <button type="button" class="select__item"
+                data-select-value="Yaroslavl">Ярославль</button>
+    </div>
+    <input type="text" name="select-category" value="Брянск" data-select-input id="city-1" class="select__input-hidden">
+</div>
+
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="address" class="form__label">Адрес</label>
+                                            <input type="text" class="form__input" id="address-1" placeholder="Введите адрес">
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <h3>Данные юридического лица</h3>
+                                        <div class="form__wrapper-input">
+                                            <label for="type-organization" class="form__label form__required-field">Тип организации</label>
+                                            <div class="form__input select" data-select>
+    <button type="button" class="select__button" data-select-btn>
+        <span data-select-text>ИП</span>
+        <span class="select__ico">
+            <svg>
+                <use xlink:href="static/img/symbol/sprite.svg#down-chevron"></use>
+            </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item"
+                data-select-value="IP">ИП</button>
+        <button type="button" class="select__item"
+                data-select-value="ООО">ООО</button>
+        <button type="button" class="select__item"
+                data-select-value="ООО">ООО</button>
+    </div>
+    <input type="text" name="select-category" value="ИП" data-select-input id="type-organization" class="select__input-hidden">
+</div>
+
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="name-organization" class="form__label form__required-field">Наименование организации</label>
+                                            <input type="text" class="form__input" id="name-organization" placeholder="Введите наименование" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="inn" class="form__label form__required-field">ИНН</label>
+                                            <input type="text" class="form__input" id="inn" placeholder="Введите ИНН" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="kpp" class="form__label">КПП</label>
+                                            <input type="text" class="form__input" id="kpp" placeholder="Введите КПП">
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="ogrn" class="form__label form__required-field">ОГРН</label>
+                                            <input type="text" class="form__input" id="ogrn" placeholder="Введите ОГРН" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="address-2" class="form__label form__required-field">Юридический адрес</label>
+                                            <input type="text" class="form__input" id="address-2" placeholder="Введите адрес" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="bank" class="form__label form__required-field">Название банка</label>
+                                            <input type="text" class="form__input" id="bank" placeholder="Введите название" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="bic" class="form__label form__required-field">БИК банка</label>
+                                            <input type="text" class="form__input" id="bic" placeholder="Введите БИК" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="r-count" class="form__label form__required-field">Р/Счет</label>
+                                            <input type="text" class="form__input" id="r-count" placeholder="Введите номер" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="k-count" class="form__label form__required-field">К/Счет</label>
+                                            <input type="text" class="form__input" id="k-count" placeholder="Введите номер" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__bottom">
+                                    <div class="checkbox @@class">
+    <div class="checkbox__wrapper-input">
+        <input id="agree-1" type="checkbox" class="checkbox__input" checked required>
+        <label for="agree-1"></label>
+    </div>
+    <p class="checkbox__text">Я ознакомлен(а) с условиями <a href="#" target="_blank" class="checkbox__link">договора-оферты</a> и <a href="#" target="_blank" class="checkbox__link">политикой конфенденциальности</a>
+    </p>
+</div>
+
+                                    <div class="form__btn-wrap">
+                                        <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </main>

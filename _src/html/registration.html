@@ -2,33 +2,170 @@
 @@include('block/header/header.html')
 <main class="main">
   <!-- //////////////////////////////////////////////////////////  -->
-  <section class="registration">
-    <div class="registration__container container">
-      <form action="" class="registration__form form">
-        <h2 class="form__title title-2">Регистрация</h2>
-        <div class="form__wrap-name">
-          <input type="text" class="form__input form__input--name" placeholder="Имя*" required>
-          <input type="text" class="form__input form__input--surname" placeholder="Фамилия">
-        </div>
-        <input type="email" class="form__input" placeholder="Email*" required>
-        <input type="tel" class="form__input" id="phone-2" placeholder="Телефон*" required>
-        <input type="text" class="form__input form__input--company" placeholder="Название компании">
-        <input type="text" class="form__input" placeholder="Город">
-        <input type="text" class="form__input" placeholder="Адрес">
+  @@include('block/breadcrumb.html')
+    <div class="container">
+        <section class="registration">
+            <h2>Регистрация</h2>
+            <div class="registration__wrap">
+                <div class="registration__tabs tabs">
+                    <div class="tabs__box-btn">
+                        <button class="tabs__btn tabs__btn--active" tab="1">Физическое лицо (только самовывоз)</button>
+                        <button class="tabs__btn" tab="2">Юридическое лицо</button>
+                    </div>
 
-        <div class="registration__checkbox checkbox">
-          <input id="agree" type="checkbox" class="checkbox__check" checked required>
-          <label for="agree"></label>
-          <p class="checkbox__text">Согласен на обработку
-            персональных данных.</span>
-          </p>
-        </div>
-        <div class="registration__form-btn-wrap form__btn-wrap">
-          <button type="submit" class="registration__btn form__btn btn btn-reset">зарегистрироваться</button>
-        </div>
-      </form>
+                    <div class="tabs__box-content">
+                        <div class="tabs__content tabs__content--active" tab-content="1">
+                            <form action="" class="tabs__form form">
+                                <div class="form__top">
+                                    <div class="form__column">
+                                        <h3>Данные пользователя</h3>
+                                        <div class="form__wrapper-input">
+                                            <label for="phone" class="form__label form__required-field">Телефон</label>
+                                            <input type="tel" class="form__input" id="phone" placeholder="+7 (000) 000-00-00" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="password" class="form__label form__required-field">Пароль</label>
+                                            <input type="password" class="form__input" id="password" placeholder="Введите пароль" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="repeat-password" class="form__label form__required-field">Подтверждение пароля</label>
+                                            <input type="password" class="form__input" id="repeat-password" placeholder="Введите пароль повторно" required disabled>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="email" class="form__label form__required-field">E-mail</label>
+                                            <input type="email" class="form__input" id="email"  placeholder="Введите e-mail" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="name" class="form__label form__required-field">ФИО</label>
+                                            <input type="text" class="form__input" id="name" placeholder="Введите ФИО" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="city" class="form__label form__required-field">Город</label>
+                                            @@include('block/select.html', {
+                                            "id": "city",
+                                            "option1": { "title": "Брянск", "value": "Bryansk" },
+                                            "option2": { "title": "Москва", "value": "Moscow" },
+                                            "option3": { "title": "Ярославль", "value": "Yaroslavl" }
+                                            })
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="address" class="form__label">Адрес</label>
+                                            <input type="text" class="form__input" id="address" placeholder="Введите адрес">
+                                        </div>
+
+                                        <div class="form__footer">
+                                            @@include('block/checkbox.html', {
+                                            class: 'form__footer-checkbox'
+                                            })
+                                            <div class="form__btn-wrap">
+                                                <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div >
+                        <div class="tabs__content" tab-content="2">
+                            <form action="" class="tabs__form form">
+                                <div class="form__top">
+                                    <div class="form__column">
+                                        <h3>Данные пользователя</h3>
+                                        <div class="form__wrapper-input">
+                                            <label for="phone-1" class="form__label form__required-field">Телефон</label>
+                                            <input type="tel" class="form__input" id="phone-1" placeholder="+7 (000) 000-00-00" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="password-1" class="form__label form__required-field">Пароль</label>
+                                            <input type="password" class="form__input" id="password-1" placeholder="Введите пароль" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="repeat-password-1" class="form__label form__required-field">Подтверждение пароля</label>
+                                            <input type="password" class="form__input" id="repeat-password-1" placeholder="Введите пароль повторно" required disabled>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="email-1" class="form__label form__required-field">E-mail</label>
+                                            <input type="email" class="form__input" id="email-1"  placeholder="Введите e-mail" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="name-1" class="form__label form__required-field">ФИО</label>
+                                            <input type="text" class="form__input" id="name-1" placeholder="Введите ФИО" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="city-1" class="form__label form__required-field">Город</label>
+                                            @@include('block/select.html', {
+                                            "id": "city-1",
+                                            "option1": { "title": "Брянск", "value": "Bryansk" },
+                                            "option2": { "title": "Москва", "value": "Moscow" },
+                                            "option3": { "title": "Ярославль", "value": "Yaroslavl" }
+                                            })
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="address" class="form__label">Адрес</label>
+                                            <input type="text" class="form__input" id="address-1" placeholder="Введите адрес">
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <h3>Данные юридического лица</h3>
+                                        <div class="form__wrapper-input">
+                                            <label for="type-organization" class="form__label form__required-field">Тип организации</label>
+                                            @@include('block/select.html', {
+                                            "id": "type-organization",
+                                            "option1": { "title": "ИП", "value": "IP" },
+                                            "option2": { "title": "ООО", "value": "ООО" },
+                                            "option3": { "title": "ООО", "value": "ООО" },
+                                            })
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="name-organization" class="form__label form__required-field">Наименование организации</label>
+                                            <input type="text" class="form__input" id="name-organization" placeholder="Введите наименование" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="inn" class="form__label form__required-field">ИНН</label>
+                                            <input type="text" class="form__input" id="inn" placeholder="Введите ИНН" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="kpp" class="form__label">КПП</label>
+                                            <input type="text" class="form__input" id="kpp" placeholder="Введите КПП">
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="ogrn" class="form__label form__required-field">ОГРН</label>
+                                            <input type="text" class="form__input" id="ogrn" placeholder="Введите ОГРН" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="address-2" class="form__label form__required-field">Юридический адрес</label>
+                                            <input type="text" class="form__input" id="address-2" placeholder="Введите адрес" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="bank" class="form__label form__required-field">Название банка</label>
+                                            <input type="text" class="form__input" id="bank" placeholder="Введите название" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="bic" class="form__label form__required-field">БИК банка</label>
+                                            <input type="text" class="form__input" id="bic" placeholder="Введите БИК" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="r-count" class="form__label form__required-field">Р/Счет</label>
+                                            <input type="text" class="form__input" id="r-count" placeholder="Введите номер" required>
+                                        </div>
+                                        <div class="form__wrapper-input">
+                                            <label for="k-count" class="form__label form__required-field">К/Счет</label>
+                                            <input type="text" class="form__input" id="k-count" placeholder="Введите номер" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__bottom">
+                                    @@include('block/checkbox.html')
+                                    <div class="form__btn-wrap">
+                                        <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </section>
 </main>
 
 @@include('block/footer/footer.html')

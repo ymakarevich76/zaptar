@@ -1,3 +1,23 @@
 .btn {
   @extend .btn-reset;
+
+  background-color: $c-accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  transition: .2s;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+
+  &:hover,
+  &:active {
+    background-color: $c-accent-dark;
+  }
+
+  @media (max-width: $md) {
+    padding: 4px;
+  }
 }

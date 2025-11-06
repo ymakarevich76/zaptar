@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 
-  font-weight: 300;
+  font-weight: 400;
   font-size: $fz-main;
   line-height: 22px;
   font-family: $ff-main;
@@ -23,6 +23,12 @@ body {
   display: grid;
   align-content: start;
   gap: $gutter * 4;
+
+  @media (max-width: $md) {
+    padding-top: $gutter * 2;
+    padding-bottom: $gutter * 2;
+    gap: $gutter * 2;
+  }
 }
 
 img {

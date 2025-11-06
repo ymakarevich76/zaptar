@@ -62,7 +62,7 @@
     font-size: 16px;
     line-height: 24px;
 
-    background-color: white;
+    background-color: #fff;
     padding: 16px 20px;
     width: 100%;
     height: 56px;
@@ -87,20 +87,12 @@
     top: 50%;
     transform: translateY(-50%);
 
-    background-color: $c-accent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 104px;
     height: 40px;
-    padding: 8px 16px;
-    border-radius: 4px;
-    color: white;
 
     @media (max-width: $md) {
       width: auto;
       height: auto;
-      padding: 4px;
     }
   }
 
@@ -120,15 +112,17 @@
   }
 
   &__search-content {
-    color: white;
+    color: #fff;
     opacity: 0.8;
     font-size: 12px;
     line-height: 20px;
+  }
 
-      span {
-        text-decoration: underline dotted;
-        text-decoration-thickness: 8%;
-        text-underline-offset: 16%;
-      }
+  &__search-link {
+    @extend .btn-reset;
+
+    text-decoration: underline dotted;
+    text-decoration-thickness: 8%;
+    text-underline-offset: 16%;
   }
 }

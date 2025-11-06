@@ -1,2 +1,104 @@
 .form {
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gutter * 4;
+  }
+
+  &__bottom,
+  &__footer {
+    display: flex;
+    align-items: center;
+    padding-top: $gutter * 2;
+    margin-top: $gutter * 2;
+    border-top: 1px solid #D9D9D9;
+  }
+
+  &__bottom {
+    justify-content: space-between;
+  }
+
+  &__footer {
+    flex-direction: column;
+  }
+
+  &__column {
+    &:last-child {
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -$gutter * 2;
+        background-color: #D9D9D9;
+        width: 1px;
+        height: 100%;
+      }
+    }
+  }
+
+  &__wrapper-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__required-field {
+    position: relative;
+
+    &::after {
+      content: "*";
+      display: block;
+      position: absolute;
+      right: -10px;
+      top: 0;
+      color: $c-accent;
+    }
+  }
+
+  &__label {
+    color: $c-main-88;
+  }
+
+  &__input {
+    padding: 5px $gutter;
+    color: $c-main-88;
+
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    min-width: 337px;
+
+    &:disabled {
+      background-color: #0000000A;
+    }
+
+    &::placeholder {
+      color: $c-main-45;
+    }
+  }
+
+  &__footer-checkbox {
+    margin-bottom: $gutter * 2;
+  }
+
+  &__btn {
+    width: 100%;
+    min-width: 552px;
+    border-radius: 8px;
+
+    &:disabled {
+      border: 1px solid #D9D9D9;
+      background-color: #0000000A;
+      color: $c-main-25;
+    }
+  }
 }
