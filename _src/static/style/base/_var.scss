@@ -4,20 +4,24 @@ $ff-main: "Inter", sans-serif;
 // //////////////////////////////////////// font-size
 $fz-main: 14px;
 
-// //////////////////////////////////////// bg-colors
-$bg-main: #F5F5F5;
-$bg-secondary: hsla(0, 0%, 0%, 0.45);
-$bg-accent: hsla(215, 100%, 54%, 1);
-$bg-dark: #141414;
-
 // //////////////////////////////////////// colors
+$с-dark: #141414;
 $c-main: #030B15;
 $c-main-88: #000000E0;
 $c-main-45: #00000073;
 $c-main-25: #00000040;
+$c-main-6: #0000000F;
+
 $c-accent: #1677FF;
 $c-accent-dark: #0958D9;
-$c-light: #F0F0F0;
+
+$c-light: #F5F5F5;
+$c-light-80: #FFFFFFCC;
+$c-light-65: #FFFFFFA6;
+$c-light-30: #FFFFFF4D;
+$c-light-20: #FFFFFF33;
+$c-light-10: #FFFFFF19;
+//$c-light: #F0F0F0; использовался только в одном месте
 
 // //////////////////////////////////////// breakpoints
 $xl: 1199.98px;

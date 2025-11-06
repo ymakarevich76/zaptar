@@ -27,12 +27,22 @@
   }
 
   &__bottom {
-    background-color: $bg-dark;
+    background-color: $с-dark;
   }
 
   &__search {
     max-width: 696px;
     width: 100%;
+    margin-right: $gutter * 2;
+  }
+
+  &__actions {
+    margin-left: auto;
+    flex-shrink: 0;
+
+    @media (max-width: $lg) {
+      display: none;
+    }
   }
 }
 
@@ -88,7 +98,7 @@
 
   &--has-divider {
     padding-left: 16px;
-    border-left: 1px solid $c-light;
+    border-left: 1px solid $c-main-6;
   }
 }
 
@@ -153,7 +163,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $bg-accent;
+    background-color: $c-accent;
     min-width: 110px;
     padding-left: $gutter;
     padding-right: $gutter;
@@ -175,9 +185,9 @@
     color: #fff;
   }
 
-  &__nav {
+  &__menu {
     position: absolute;
-    top: calc(100% + 12px);
+    top: calc(100% + 4px);
     background-color: #fff;
     border-radius: 8px;
     padding: 4px;
@@ -196,7 +206,7 @@
       bottom: 100%;
       left: 0;
       right: 0;
-      height: 12px;
+      height: 4px;
     }
 
     #{$self}:hover & {
@@ -214,10 +224,183 @@
     align-items: center;
     color: $c-main-88;
     transition: background-color 0.2s;
+    border-radius: 4px;
 
     &:hover {
-      background-color: $bg-main;
-      border-radius: 4px;
+      background-color: $c-light;
     }
+  }
+}
+
+.header-actions {
+  &__groups {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 32px;
+  }
+
+  &__group {
+    color: #fff;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 16px;
+    align-content: center;
+
+    &:not(:first-child) {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -16px;
+        width: 1px;
+        background-color: $c-light-20;
+      }
+    }
+  }
+}
+
+.header-btn {
+  $self: &;
+  min-width: 32px;
+  min-height: 32px;
+  display: flex;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: $c-light-20;
+  }
+
+  & > *:not(:first-child) {
+    margin-left: 8px;
+  }
+
+  &--accent {
+    background-color: $c-accent;
+
+    &:hover {
+      background-color: $c-accent-dark;
+    }
+  }
+
+  &--gray {
+    background-color: $c-light-20;
+
+    &:hover {
+      background-color: $c-light-30;
+    }
+  }
+
+  &--ico {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  &:not(#{$self}--ico) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__ico {
+    width: 16px;
+    height: 16px;
+
+    &--sm {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__caption {
+    color: $c-light-80;
+  }
+
+  b {
+    font-weight: 700;
+  }
+}
+
+.header-user-dropdown {
+  $self: &;
+  position: relative;
+
+  &__toggle {
+    #{$self}:hover & {
+      background-color: $c-light-30;
+    }
+  }
+
+  &__menu {
+    border-radius: 8px;
+    background-color: #fff;
+    right: 0;
+    position: absolute;
+    top: calc(100% + 4px);
+    padding: 4px;
+    color: $c-main;
+    z-index: 100;
+    min-width: 183px;
+    opacity: 0;
+    transition: 0.2s;
+    visibility: hidden;
+    transform: translateY(4px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      height: 4px;
+    }
+
+    #{$self}:hover & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__link {
+    min-height: 32px;
+    padding-left: $gutter;
+    padding-right: $gutter;
+    display: flex;
+    align-items: center;
+    color: $c-main-88;
+    transition: background-color 0.2s;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $c-light;
+    }
+
+    &--logout {
+      margin-top: 10px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        height: 1px;
+        left: 0;
+        right: 0;
+        background-color: $c-main-6;
+      }
+    }
+  }
+
+  &__ico {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
   }
 }

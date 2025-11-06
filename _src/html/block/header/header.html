@@ -56,7 +56,7 @@
                         <span class="header-search-dropdown__caption">Каталог</span>
                     </button>
 
-                    <nav class="header-search-dropdown__nav">
+                    <nav class="header-search-dropdown__menu">
                         <a class="header-search-dropdown__link" href="#">
                             Каталог запчастей
                         </a>
@@ -95,6 +95,107 @@
                     </svg>
                 </button>
 
+            </div>
+
+            <div class="header__actions header-actions">
+                <!-- Пользователь не авторизован -->
+<!--                <div class="header-actions__group">-->
+<!--                    <a class="header-btn" href="#">-->
+<!--                        Регистрация-->
+<!--                    </a>-->
+
+<!--                    <button type="button" class="header-btn header-btn&#45;&#45;accent">-->
+<!--                        <svg aria-hidden="true" class="header-btn__ico">-->
+<!--                            <use xlink:href="static/img/symbol/sprite.svg#user"></use>-->
+<!--                        </svg>-->
+
+<!--                        <span>Войти</span>-->
+<!--                    </button>-->
+<!--                </div>-->
+
+               <!-- Пользователь авторизован -->
+               <div class="header-actions__groups">
+                   <div class="header-actions__group">
+                       <a class="header-btn header-btn--gray header-btn--ico" href="#">
+                           <svg aria-hidden="true" class="header-btn__ico">
+                               <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
+                           </svg>
+                       </a>
+
+                       <a class="header-btn header-btn--gray header-btn--ico" href="#">
+                           <svg aria-hidden="true" class="header-btn__ico">
+                               <use xlink:href="static/img/symbol/sprite.svg#car"></use>
+                           </svg>
+                       </a>
+                   </div>
+                   <div class="header-actions__group">
+                       <a class="header-btn header-btn--gray header-btn--ico" href="#">
+                           <svg aria-hidden="true" class="header-btn__ico">
+                               <use xlink:href="static/img/symbol/sprite.svg#inbox"></use>
+                           </svg>
+                       </a>
+
+                       <a class="header-btn header-btn--gray header-btn--ico" href="#">
+                           <svg aria-hidden="true" class="header-btn__ico">
+                               <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                           </svg>
+                       </a>
+
+                       <a class="header-btn header-btn--gray header-btn--ico" href="#">
+                           <svg aria-hidden="true" class="header-btn__ico">
+                               <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
+                           </svg>
+                       </a>
+                   </div>
+
+                   <div class="header-actions__group">
+                       <a class="header-btn header-btn--gray" href="#">
+                           <span class="header-btn__caption">Баланс</span> <b>+999 999 руб</b>
+                       </a>
+
+                       <div class="header-user-dropdown">
+                           <button type="button" class="header-user-dropdown__toggle header-btn header-btn--gray header-btn--is-active">
+                               <span>Иван</span>
+                               <svg aria-hidden="true" class="header-btn__ico header-btn__ico--sm">
+                                   <use xlink:href="static/img/symbol/sprite.svg#down-chevron"></use>
+                               </svg>
+                           </button>
+
+                            <nav class="header-user-dropdown__menu">
+                                <a class="header-user-dropdown__link" href="#">
+                                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                                        <use xlink:href="static/img/symbol/sprite.svg#user"></use>
+                                    </svg>
+                                    Профиль
+                                </a>
+                                <a class="header-user-dropdown__link" href="#">
+                                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                                        <use xlink:href="static/img/symbol/sprite.svg#dollar"></use>
+                                    </svg>
+                                    Мои финансы
+                                </a>
+                                <a class="header-user-dropdown__link" href="#">
+                                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                                        <use xlink:href="static/img/symbol/sprite.svg#line-chart"></use>
+                                    </svg>
+                                    Ценообразование
+                                </a>
+                                <a class="header-user-dropdown__link" href="#">
+                                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                                        <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
+                                    </svg>
+                                    Пополнить баланс
+                                </a>
+                                <a class="header-user-dropdown__link header-user-dropdown__link--logout" href="#">
+                                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                                        <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
+                                    </svg>
+                                    Выйти
+                                </a>
+                            </nav>
+                       </div>
+                   </div>
+               </div>
             </div>
         </div>
     </div>
