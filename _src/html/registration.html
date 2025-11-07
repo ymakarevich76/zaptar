@@ -11,7 +11,7 @@
             <div class="registration__wrap">
                 <div class="registration__tabs tabs">
                     <div class="tabs__box-btn">
-                        <button class="tabs__btn tabs__btn--active" tab="1">Физическое лицо (только самовывоз)</button>
+                        <button class="tabs__btn tabs__btn--active" tab="1">Физическое лицо <br><span class="d-md-none">(только самовывоз)</span></button>
                         <button class="tabs__btn" tab="2">Юридическое лицо</button>
                     </div>
 
@@ -56,16 +56,14 @@
                                             <label for="address" class="form__label">Адрес</label>
                                             <input type="text" class="form__input" id="address" placeholder="Введите адрес">
                                         </div>
-
-                                        <div class="form__footer">
-                                            @@include('block/checkbox.html', {
-                                            class: 'form__footer-checkbox'
-                                            })
-                                            <div class="form__btn-wrap">
-                                                <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
-                                            </div>
-                                        </div>
                                     </div>
+                                </div>
+                                <div class="form__bottom form__bottom--column">
+                                    @@include('block/checkbox.html', {
+                                    class: 'form__checkbox',
+                                    id: 'agree',
+                                    })
+                                    <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
                                 </div>
                             </form>
                         </div >
@@ -160,10 +158,11 @@
                                     </div>
                                 </div>
                                 <div class="form__bottom">
-                                    @@include('block/checkbox.html')
-                                    <div class="form__btn-wrap">
-                                        <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
-                                    </div>
+                                    @@include('block/checkbox.html', {
+                                        class: 'form__checkbox',
+                                        id: 'agree-1',
+                                    })
+                                    <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
                                 </div>
                             </form>
                         </div>

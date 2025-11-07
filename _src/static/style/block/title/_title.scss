@@ -43,4 +43,8 @@ h3 {
   font-weight: 600;
   color: $c-main-88;
   margin-bottom: $gutter * 2;
+
+  @media (max-width: $md) {
+    margin-bottom: $gutter;
+  }
 }
