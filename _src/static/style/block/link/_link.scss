@@ -1,0 +1,35 @@
+.link {
+  $self: &;
+  color: $c-main-88;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    transition: width .2s;
+    width: 0;
+    height: 1px;
+    box-shadow: inset 0 -1px 0 0 $c-main-88;
+    opacity: 0;
+  }
+
+  &:hover#{$self}::after {
+    width: 100%;
+    opacity: 1;
+  }
+
+  &--size-sm {
+
+  }
+
+  &--light {
+    color: $c-main-45;
+
+    &#{$self}::after {
+      box-shadow: inset 0 -1px 0 0 $c-main-45;
+    }
+  }
+}
