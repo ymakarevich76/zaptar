@@ -20,7 +20,7 @@
                             <form action="" class="tabs__form form">
                                 <div class="form__top">
                                     <div class="form__column">
-                                        <h3>Данные пользователя</h3>
+                                        <h3 class="form__title">Данные пользователя</h3>
                                         <div class="form__wrapper-input">
                                             <label for="phone" class="form__label">
                                                 Телефон<span>*</span>
@@ -60,8 +60,8 @@
                                 </div>
                                 <div class="form__bottom form__bottom--column">
                                     @@include('block/checkbox.html', {
-                                    class: 'form__checkbox',
-                                    id: 'agree',
+                                        id: 'agree',
+                                        text: 'Я ознакомлен(а) с условиями <a href="#" target="_blank" class="checkbox__link">договора-оферты</a> и <a href="#" target="_blank" class="checkbox__link">политикой конфенденциальности</a>',
                                     })
                                     <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
                                 </div>
@@ -71,7 +71,7 @@
                             <form action="" class="tabs__form form">
                                 <div class="form__top">
                                     <div class="form__column">
-                                        <h3>Данные пользователя</h3>
+                                        <h3 class="form__title">Данные пользователя</h3>
                                         <div class="form__wrapper-input">
                                             <label for="phone-1" class="form__label">
                                                 Телефон<span>*</span>
@@ -109,7 +109,7 @@
                                         </div>
                                     </div>
                                     <div class="form__column">
-                                        <h3>Данные юридического лица</h3>
+                                        <h3 class="form__title">Данные юридического лица</h3>
                                         <div class="form__wrapper-input">
                                             <label for="type-organization" class="form__label">Тип организации<span>*</span></label>
                                             @@include('block/select.html', {
@@ -159,8 +159,8 @@
                                 </div>
                                 <div class="form__bottom">
                                     @@include('block/checkbox.html', {
-                                        class: 'form__checkbox',
                                         id: 'agree-1',
+                                        text: 'Я ознакомлен(а) с условиями <a href="#" target="_blank" class="checkbox__link">договора-оферты</a> и <a href="#" target="_blank" class="checkbox__link">политикой конфенденциальности</a>',
                                     })
                                     <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
                                 </div>

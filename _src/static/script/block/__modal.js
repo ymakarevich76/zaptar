@@ -41,7 +41,7 @@ document.addEventListener('keydown', (e) => {
 if (modalLinks.length > 0) {
   modalLinks.forEach((modalLink, index) => {
     modalLink.addEventListener('click', (e) => {
-      const currentModal = document.getElementById('modal-order');
+      const currentModal = document.getElementById('modal-auth');
       modalOpen(currentModal);
       e.preventDefault();
     })

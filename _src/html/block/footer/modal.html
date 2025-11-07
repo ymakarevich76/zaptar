@@ -1,40 +1,46 @@
-<div class="modal__wrap">
-
-  <div id="modal-order" class="modal">
-    <div class="modal__body">
-      <div class="modal__content">
-
-        <button type="button" class="modal__close btn-reset"></button>
-
-        <form action="" class="modal__form form">
-
-          <textarea name="tour" rows="1" class="form__field" placeholder="Куда хотите отправиться?"></textarea>
-
-          <input type="text" name="name" class="form__field" placeholder="Как к Вам обращаться" required>
-
-          <input type="tel" name="phone" class="form__field" id="phone_1" placeholder="+7 (___) ___-____" required>
-
-          <input type="text" name="email" class="form__field" placeholder="Ваш E-mail">
-
-          <textarea name="comment" rows="1" class="form__field" placeholder="Комментарии"></textarea>
-
-          <div class="form__checkbox">
-            <input class="form__checkbox-input" type="checkbox" name="agreement" required>
-            <label class="form__checkbox-label">Я согласен на использование моих <a href="#"
-                target="_blank">персональных данных</a></label>
-          </div>
-
-          <div class="modal__wrap-btn">
-            <button type="submit" class="modal__btn btn-reset" disabled>
-              <span>Заказать путешествие</span>
+<div id="modal-auth" class="modal">
+    <div class="modal__inner">
+        <div class="modal__content">
+            <button type="button" class="modal__close">
+                <svg>
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
             </button>
-          </div>
+            <div class="modal__header">
+                <h3>Авторизация</h3>
+            </div>
+            <form action="" class="modal__form form">
+                <div class="modal__wrapper-input-login">
+                    <input type="text" class="form__input modal__input" id="login-auth" placeholder="Введите логин" required>
+                </div>
+                <div class="modal__wrapper-input-password">
+                    <input type="password" class="form__input" id="password-auth" placeholder="Введите пароль" required>
+                    <button type="button" class="modal__input-password">
+                        <svg>
+                            <use xlink:href="static/img/symbol/sprite.svg#eye-invisible"></use>
+                        </svg>
+                    </button>
+                </div>
 
-        </form>
-      </div>
-      <!--/modal__content-->
+                <div class="modal__fields-row">
+                    @@include('../checkbox.html', {
+                        id: 'checkbox-auth',
+                        text: 'Запомнить данные',
+                    })
+                    <a href="#" class="modal__fields-item">Забыли пароль?</a>
+                </div>
+
+
+                <div class="modal__footer">
+                    <button type="submit" class="modal__btn form__btn btn btn--size-s">
+                        Войти
+                    </button>
+                    <a href="/registration.html" class="modal__link">
+                        Зарегистрироваться
+                    </a>
+                </div>
+
+            </form>
+        </div>
     </div>
-    <!--/modal__body-->
-  </div>
-  <!--/modal-->
 </div>

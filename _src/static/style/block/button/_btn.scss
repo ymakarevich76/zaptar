@@ -17,6 +17,12 @@
     background-color: $c-accent-dark;
   }
 
+  &--size-s {
+    font-size: 14px;
+    line-height: 22px;
+    padding: $gutter $gutter * 4;
+  }
+
   @media (max-width: $md) {
     padding: $gutter;
   }

@@ -88,6 +88,10 @@
       }
   }
 
+  &__title {
+    margin-bottom: $gutter * 6;
+  }
+
   &__wrapper-input {
     display: flex;
     align-items: center;
@@ -138,10 +142,6 @@
     @media (max-width: $md) {
       min-width: 100%;
     }
-  }
-
-  &__footer-checkbox {
-    margin-bottom: $gutter * 6;
   }
 
   &__btn {
