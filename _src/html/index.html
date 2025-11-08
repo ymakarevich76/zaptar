@@ -13,10 +13,10 @@
             <a href="registration.html">Регистрация</a>
         </li>
         <li>
-            Авторизация
+            <a href="#" data-modal="modal-auth">Авторизация</a>
         </li>
         <li>
-            Профиль
+            <a href="#" data-modal="drawer-profile">Профиль</a>
         </li>
         <li>
             Мои финансы
@@ -50,10 +50,16 @@
     <h3>Модалки</h3>
     <ol>
         <li>
-            <button disabled>Авторизация</button>
+            <button data-modal="modal-auth">Авторизация</button>
+        </li>
+        <li>
+            <button data-modal="drawer-profile">Drawer</button>
         </li>
     </ol>
 
 </main>
 
+@@include('block/footer/modal.html')
+@@include('block/footer/drawer.html')
+@@include('block/footer/drawer-profile-edit.html')
 @@include('block/scripts.html')

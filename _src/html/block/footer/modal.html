@@ -1,7 +1,7 @@
 <div id="modal-auth" class="modal">
-    <div class="modal__inner">
-        <div class="modal__content">
-            <button type="button" class="modal__close">
+    <div class="modal__inner modal__inner--open-top">
+        <div class="modal__content modal__content--radius">
+            <button type="button" class="modal__close modal__close--right" data-btn="close">
                 <svg>
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
@@ -9,38 +9,49 @@
             <div class="modal__header">
                 <h3>Авторизация</h3>
             </div>
-            <form action="" class="modal__form form">
-                <div class="modal__wrapper-input-login">
-                    <input type="text" class="form__input modal__input" id="login-auth" placeholder="Введите логин" required>
-                </div>
-                <div class="modal__wrapper-input-password">
-                    <input type="password" class="form__input" id="password-auth" placeholder="Введите пароль" required>
-                    <button type="button" class="modal__input-password">
-                        <svg>
-                            <use xlink:href="static/img/symbol/sprite.svg#eye-invisible"></use>
-                        </svg>
-                    </button>
-                </div>
+            <div class="modal__wrapper">
+<!--                <div class="modal__alert">-->
+<!--                    <span class="modal__alert-ico">-->
+<!--                        <svg>-->
+<!--                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>-->
+<!--                        </svg>-->
+<!--                    </span>-->
+<!--                    <span class="modal__alert-text">Чтобы просмотреть содержимое страницы, войдите в личный кабинет или зарегистрируйтесь</span>-->
+<!--                </div>-->
+                <form action="" class="modal__form form">
+                    <div class="modal__wrapper-input-login">
+                        <input type="text" class="form__input modal__input" id="login-auth" placeholder="Введите логин" required>
+                    </div>
+                    <div class="modal__wrapper-input-password">
+                        <input type="password" class="form__input" id="password-auth" placeholder="Введите пароль" required>
+                        <button type="button" class="modal__input-password">
+                            <svg>
+                                <use xlink:href="static/img/symbol/sprite.svg#eye-invisible"></use>
+                            </svg>
+                        </button>
+                    </div>
 
-                <div class="modal__fields-row">
-                    @@include('../checkbox.html', {
+                    <div class="modal__fields-row">
+                        @@include('../checkbox.html', {
                         id: 'checkbox-auth',
                         text: 'Запомнить данные',
-                    })
-                    <a href="#" class="modal__fields-item">Забыли пароль?</a>
-                </div>
+                        })
+                        <a href="#" class="modal__fields-item">Забыли пароль?</a>
+                    </div>
 
 
-                <div class="modal__footer">
-                    <button type="submit" class="modal__btn form__btn btn btn--size-s">
-                        Войти
-                    </button>
-                    <a href="/registration.html" class="modal__link">
-                        Зарегистрироваться
-                    </a>
-                </div>
+                    <div class="modal__footer">
+                        <button type="submit" class="modal__btn form__btn btn btn--size-s">
+                            Войти
+                        </button>
+                        <a href="/registration.html" class="modal__link">
+                            Зарегистрироваться
+                        </a>
+                    </div>
 
-            </form>
+                </form>
+            </div>
+
         </div>
     </div>
 </div>

@@ -1,0 +1,105 @@
+.drawer {
+  &__content {
+    width: 400px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+
+    @media (max-width: $md) {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+
+  &__header {
+    padding: $gutter * 5 $gutter * 6 0 $gutter * 14;
+
+    border-bottom: 1px solid $c-main-6;
+
+    @media (max-width: $md) {
+      padding: $gutter * 4 $gutter * 4 0 $gutter * 10;
+    }
+  }
+
+  &__info {
+    padding: $gutter * 6;
+
+    @media (max-width: $md) {
+      padding: $gutter * 3;
+    }
+  }
+
+  &__info-blocks {
+    display: grid;
+    gap: $gutter * 2;
+    margin-bottom: $gutter * 6;
+
+    @media (max-width: $md) {
+      gap: $gutter;
+      margin-bottom: $gutter * 3;
+    }
+  }
+
+  &__info-block {
+    background-color: $c-light;
+    padding: $gutter * 4;
+    border-radius: 8px;
+
+    display: grid;
+    gap: $gutter * 2;
+
+    @media (max-width: $md) {
+      padding: $gutter * 3;
+    }
+  }
+
+  &__info-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: $c-main;
+
+    &--light {
+      color: $c-main-45;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+
+  &__form {
+    padding: $gutter * 6;
+
+    display: grid;
+    gap: $gutter * 3;
+
+    @media (max-width: $md) {
+      padding: $gutter * 3;
+    }
+  }
+
+  &__wrapper-input {
+    display: grid;
+    gap: $gutter * 2;
+
+    @media (max-width: $md) {
+      gap: 0;
+    }
+  }
+
+  &__input {
+    box-shadow: 0 2px 4px 0 #00000005;
+
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gutter * 4;
+    margin-top: $gutter * 3;
+  }
+
+  &__footer-btn {
+    border-radius: 6px;
+  }
+}

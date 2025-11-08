@@ -1,0 +1,55 @@
+<div id="drawer-profile-edit" class="drawer modal">
+    <div class="modal__inner modal__inner--open-right">
+        <div class="modal__content drawer__content">
+            <button type="button" class="modal__close modal__close--left" data-btn="close">
+                <svg>
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="drawer__header">
+                <h3>Редактирование профиля</h3>
+            </div>
+            <form action="" class="drawer__form form">
+                <div class="drawer__wrapper-input">
+                    <label for="name-profile" class="form__label">
+                        ФИО
+                    </label>
+                    <input type="text" class="form__input drawer__input" id="name-profile" placeholder="Введите ФИО" required>
+                </div>
+                <div class="drawer__wrapper-input">
+                    <label for="phone-profile" class="form__label">
+                        Телефон
+                    </label>
+                    <input type="tel" class="form__input drawer__input" id="phone-profile" placeholder="+7 (000) 000-00-00" required>
+                </div>
+                <div class="drawer__wrapper-input">
+                    <label for="email-profile" class="form__label">
+                        E-mail
+                    </label>
+                    <input type="email" class="form__input drawer__input" id="email-profile"  placeholder="Введите e-mail" required>
+                </div>
+                <div class="drawer__wrapper-input">
+                    <label for="password-profile" class="form__label">
+                        Пароль
+                    </label>
+                    <input type="password" class="form__input drawer__input" id="password-profile" placeholder="Введите пароль" required>
+                </div>
+                <div class="drawer__wrapper-input">
+                    <label for="city-profile" class="form__label">
+                        Город
+                    </label>
+                    <input type="text" class="form__input drawer__input" id="city-profile" placeholder="Введите город" required>
+                </div>
+
+                <div class="drawer__footer">
+                    <button type="button" class="drawer__footer-btn btn-primary" data-modal="drawer-profile">
+                        Назад
+                    </button>
+                    <button type="button" class="drawer__footer-btn btn btn--size-s" data-btn="close">
+                        Сохранить
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

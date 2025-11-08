@@ -20,28 +20,39 @@
     opacity: 1;
   }
 
-  &--open .modal__content {
-    transform: translate(0, 0);
+  &--open .modal__inner {
     opacity: 1;
+    transform: translate(0, 0);
   }
 
   &__inner {
+    height: 100%;
+    opacity: 0;
+
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100%;
-    position: relative;
+    transition: all .5s ease;
+
+    &--open-top {
+      transform: translate(0, -100%);
+      align-items: center;
+      padding: $gutter * 3;
+    }
+
+    &--open-right {
+      justify-content: flex-end;
+      transform: translate(100%, 0);
+    }
   }
 
   &__content {
     position: relative;
-
     background-color: #fff;
-    transform: translate(0, -100%);
-    border-radius: 16px;
-    opacity: 0;
 
-    transition: all .8s ease;
+    &--radius {
+      border-radius: 16px;
+      width: 434px;
+    }
   }
 
   &__close {
@@ -49,7 +60,6 @@
 
     position: absolute;
     top: 20px;
-    right: 20px;
 
     width: 22px;
     height: 22px;
@@ -57,6 +67,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &--right {
+      right: 20px;
+    }
+
+    &--left {
+      left: 20px;
+
+      @media (max-width: $md) {
+        left: 12px;
+      }
+    }
 
     svg {
       width: 16px;
@@ -68,6 +90,10 @@
         scale: 1.2;
       }
     }
+
+    @media (max-width: $md) {
+      top: 16px;
+    }
   }
 
   &__header {
@@ -76,10 +102,15 @@
     border-bottom: 1px solid $c-main-6;
   }
 
-  &__form {
+  &__wrapper {
     display: grid;
     gap: $gutter * 6;
     padding: $gutter * 3 $gutter * 6 $gutter * 6;
+  }
+
+  &__form {
+    display: grid;
+    gap: $gutter * 6;
 
     @media (max-width: $md) {
       gap: $gutter * 3;
@@ -132,6 +163,11 @@
     font-size: 14px;
     line-height: 22px;
     color: $c-accent;
+    transition: color .2s;
+
+    &:hover {
+      color: $c-accent-dark;
+    }
 
     @media (max-width: $md) {
       margin-top: $gutter * 2;
@@ -149,6 +185,36 @@
   }
 
   &__link {
+    font-size: 12px;
+    line-height: 20px;
+    color: $c-accent;
+    transition: color .2s;
+
+    &:hover {
+      color: $c-accent-dark;
+    }
+  }
+
+  &__alert {
+    display: flex;
+    align-items: center;
+    background-color: #E6F4FF;
+    border-radius: 8px;
+    border: 1px solid #91CAFF;
+    padding: $gutter * 2 $gutter * 3;
+  }
+
+  &__alert-ico {
+    margin-right: $gutter * 2;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: $c-accent;
+    }
+  }
+
+  &__alert-text {
     font-size: 12px;
     line-height: 20px;
     color: $c-accent;
