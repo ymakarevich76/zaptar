@@ -1,0 +1,77 @@
+.chat {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $gutter * 6;
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__header-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__header-btn {
+    border-radius: 6px;
+
+    &:not(:last-child) {
+      margin-right: $gutter * 4;
+
+      svg {
+        fill: $c-main-88;
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: #fff;
+      margin-right: $gutter * 2;
+    }
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: minmax(69px, auto) 1fr minmax(165px, auto) minmax(176px, auto);
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &__table-col {
+    display: grid;
+  }
+
+  &__table-header {
+    background-color: #00000005;
+    color: $c-main-45;
+    padding: $gutter * 4;
+  }
+
+  &__table-content {
+    border-bottom: 1px solid #F0F0F0;
+    padding: $gutter * 4;
+
+    &--action {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__table-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
