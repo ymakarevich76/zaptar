@@ -4,12 +4,17 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
+  padding-top: 128px;
 
   font-weight: 400;
   font-size: $fz-main;
   line-height: 22px;
   font-family: $ff-main;
   color: $c-main;
+
+  @media (max-width: $md) {
+    padding-top: 92px;
+  }
 
   &.fixed {
     overflow: hidden;

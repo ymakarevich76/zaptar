@@ -1,10 +1,14 @@
 .footer {
   background-color: $c-light;
-
+  color: $c-main-45;
 
   &__top {
-    padding-top: $gutter * 4;
+    padding-top: $gutter * 12;
     padding-bottom: 16px;
+
+    @media (max-width: $md) {
+      padding-top: $gutter * 6;
+    }
   }
 
   &__bottom {
@@ -12,16 +16,169 @@
     padding-bottom: 16px;
     border-top: 1px solid $c-main-6;
     transition: border-color .2s;
+    font-size: 12px;
+    line-height: 20px;
+  }
 
-    p {
-      color: $c-main-45;
+  &__copyright {
+    grid-area: copy;
+
+    @media (max-width: 1230px) {
+      max-width: 340px;
+      padding-right: $gutter * 4;
+    }
+
+    @media (max-width: $sm) {
+      max-width: 100%;
+      padding-right: 0;
     }
   }
 
-  &__container {
+  &__top-container {
     display: grid;
     grid-template-columns: 1fr repeat(3, 216px);
-    gap: $gutter * 2;
-    justify-items: start;
+    gap: $gutter * 6;
+    grid-template-areas: "main sub1 sub2 sub3";
+
+    @media (max-width: $xl) {
+      gap: $gutter * 2;
+    }
+
+    @media (max-width: $lg) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: $gutter * 5;
+
+      grid-template-areas:
+        "main sub1"
+        "sub2 sub3";
+    }
+
+    @media (max-width: $sm) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      grid-template-areas:
+        "main"
+        "sub1"
+        "sub2"
+        "sub3";
+    }
+  }
+
+  &__company {
+    grid-area: main;
+  }
+
+  &__category {
+    grid-area: sub1;
+  }
+
+  &__contacts {
+    grid-area: sub2;
+  }
+
+  &__schedule {
+    grid-area: sub3;
+  }
+
+  &__company,
+  &__category,
+  &__contacts,
+  &__schedule,
+  &__copyright {
+    @media (max-width: $sm) {
+      text-align: center;
+    }
+  }
+
+  &__bottom-container {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 216px);
+    gap: $gutter * 6;
+    grid-template-areas: "copy conf offer pay";
+
+    @media (max-width: $xl) {
+      gap: $gutter * 2;
+    }
+
+    @media (max-width: $lg) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "copy conf"
+        "copy offer"
+        "copy pay";
+    }
+
+    @media (max-width: $sm) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      grid-template-areas:
+        "conf"
+        "offer"
+        "pay"
+        "copy";
+    }
+  }
+
+  &__conf {
+    grid-area: conf;
+  }
+  &__offer {
+    grid-area: offer;
+  }
+
+  &__pay {
+    grid-area: pay;
+  }
+}
+
+.footer-company {
+  @media (max-width: $sm) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__list {
+    margin-top: $gutter * 8;
+  }
+
+  &__item {
+    font-size: 12px;
+    color: $c-main-45;
+
+    @media (max-width: $xl) {
+      display: grid;
+    }
+
+    b {
+      font-weight: 600;
+      color: $c-main-88;
+    }
+  }
+}
+
+.footer-info {
+  &__title {
+    margin-bottom: $gutter * 8;
+
+    @media (max-width: $lg) {
+      margin-bottom: $gutter * 2;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: $gutter * 2;
+    font-size: 12px;
+    color: $c-main-88;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: $gutter * 2;
+    color: $c-main-45;
+
+    &:not(:last-child) {
+      margin-bottom: $gutter * 4;
+    }
   }
 }
