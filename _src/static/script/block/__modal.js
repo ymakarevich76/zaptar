@@ -1,6 +1,16 @@
 const modalLinks = document.querySelectorAll('[data-modal]');
 const body = document.querySelector('body');
 
+const modalClose = (currentModal) => {
+  if (!currentModal) return;
+  currentModal.classList.remove('modal--open');
+
+  // если нет открытых модалок — возвращаем прокрутку
+  if (!document.querySelector('.modal--open')) {
+    body.classList.remove('fixed');
+  }
+};
+
 const modalOpen = (currentModal) => {
   const activeModal = document.querySelector('.modal--open');
   if (activeModal && activeModal !== currentModal) {
@@ -18,16 +28,6 @@ const modalOpen = (currentModal) => {
       modalClose(currentModal);
     }
   });
-};
-
-const modalClose = (currentModal) => {
-  if (!currentModal) return;
-  currentModal.classList.remove('modal--open');
-
-  // если нет открытых модалок — возвращаем прокрутку
-  if (!document.querySelector('.modal--open')) {
-    body.classList.remove('fixed');
-  }
 };
 
 document.querySelectorAll('[data-btn]').forEach((closeBtn) => {

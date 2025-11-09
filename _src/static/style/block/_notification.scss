@@ -1,0 +1,45 @@
+.notification {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+
+  width: 384px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: $gutter * 5 $gutter * 6;
+  box-shadow: 0 9px 28px 8px #0000000D;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: $gutter * 6;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: all .8s ease 0s;
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__ico {
+    width: 24px;
+    height: 24px;
+    fill: #52C41A;
+  }
+
+  &__close {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
