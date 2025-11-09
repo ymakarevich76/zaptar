@@ -1,5 +1,9 @@
 .logo {
-  &__image {
+  &__img {
     width: 198px;
+
+    @media (max-width: $md) {
+      width: 120px;
+    }
   }
 }

@@ -1,12 +1,27 @@
 .header {
-  &__top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 
+  &--is-fixed {
+    position: fixed;
+    z-index: 200;
+    //box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+  }
+
+  &__top {
+    background-color: #fff;
   }
 
   &__container {
     min-height: 64px;
     display: flex;
     align-items: center;
+
+    @media (max-width: $md) {
+      min-height: 46px;
+    }
   }
 
   &__top-left {
@@ -26,21 +41,37 @@
     }
   }
 
+  &__top-actions {
+    display: none;
+
+    @media (max-width: $md) {
+      margin-left: auto;
+      display: grid;
+      grid-auto-flow: column;
+      column-gap: $gutter * 1.5;
+    }
+  }
+
   &__bottom {
-    background-color: $с-dark;
+    background-color: $c-dark;
   }
 
   &__search {
     max-width: 696px;
     width: 100%;
     margin-right: $gutter * 6;
+
+    @media (max-width: $md) {
+      margin-right: 0;
+      max-width: 100%;
+    }
   }
 
   &__actions {
     margin-left: auto;
     flex-shrink: 0;
 
-    @media (max-width: $lg) {
+    @media (max-width: $md) {
       display: none;
     }
   }
@@ -53,15 +84,22 @@
   column-gap: 8px;
   align-items: center;
 
-  &__icon {
+  &__ico {
     width: 12px;
     height: 12px;
     color: $c-main;
     opacity: 0.45;
     transition: opacity 0.2s;
 
-    #{$self}:hover & {
-      opacity: 1;
+    @media (hover: hover) {
+      #{$self}:hover & {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: $md) {
+      width: 16px;
+      height: 16px;
     }
   }
 
@@ -69,6 +107,10 @@
     font-size: 12px;
     line-height: 20px;
     font-weight: 500;
+
+    @media (max-width: $md) {
+      display: none;
+    }
   }
 }
 
@@ -110,9 +152,13 @@
   display: flex;
 
   &__dropdown {
-    min-width: 110px;
     border-top-left-radius: inherit;
     border-bottom-left-radius: inherit;
+    min-width: 110px;
+
+    @media (max-width: $lg) {
+      min-width: 32px;
+    }
   }
 
   &__input {
@@ -122,6 +168,10 @@
     border-bottom-right-radius: inherit;
     padding-left: $gutter * 2;
     padding-right: $gutter * 10;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     &::placeholder {
       color: $c-main-45;
@@ -164,10 +214,15 @@
     align-items: center;
     justify-content: center;
     background-color: $c-accent;
-    min-width: 110px;
-    padding-left: $gutter * 3;
-    padding-right: $gutter * 3;
+    width: 100%;
+    padding: $gutter $gutter * 3;
     transition: background-color 0.2s;
+
+    @media (max-width: $lg) {
+      min-width: 32px;
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
 
     #{$self}:hover & {
       background-color: $c-accent-dark;
@@ -178,11 +233,15 @@
     width: 16px;
     height: 16px;
     color: #fff;
-    margin-right: $gutter * 2;
   }
 
   &__caption {
     color: #fff;
+    margin-left: $gutter * 2;
+
+    @media (max-width: $lg) {
+      display: none;
+    }
   }
 
   &__menu {
@@ -191,7 +250,7 @@
     background-color: #fff;
     border-radius: 8px;
     padding: $gutter;
-    box-shadow: 0 6px 4px 0 #0000000D;
+    box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.12);
     display: flex;
     flex-direction: column;
     z-index: 100;
@@ -267,8 +326,7 @@
   min-width: 32px;
   min-height: 32px;
   display: flex;
-  padding-top: $gutter;
-  padding-bottom: $gutter;
+  padding: $gutter $gutter * 2;
   border-radius: 6px;
   align-items: center;
   justify-content: center;
@@ -276,10 +334,6 @@
 
   &:hover {
     background-color: $c-light-20;
-  }
-
-  & > *:not(:first-child) {
-    margin-left: $gutter * 2;
   }
 
   &--accent {
@@ -298,14 +352,15 @@
     }
   }
 
-  &--ico {
+  &__container {
+    display: flex;
+    align-items: center;
     padding-left: $gutter * 2;
     padding-right: $gutter * 2;
-  }
 
-  &:not(#{$self}--ico) {
-    padding-left: $gutter * 4;
-    padding-right: $gutter * 4;
+    & > *:not(:first-child) {
+      margin-left: $gutter * 2;
+    }
   }
 
   &__ico {
@@ -324,6 +379,22 @@
 
   b {
     font-weight: 700;
+  }
+}
+
+.header-btn-wallet {
+  &__ico {
+    display: none;
+
+    @media (max-width: $lg) {
+      display: block;
+    }
+  }
+
+  &__container {
+    @media (max-width: $lg) {
+      display: none;
+    }
   }
 }
 
@@ -351,6 +422,7 @@
     transition: 0.2s;
     visibility: hidden;
     transform: translateY(4px);
+    box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.12);
 
     &::before {
       content: "";
@@ -383,13 +455,13 @@
     }
 
     &--logout {
-      margin-top: 10px;
+      margin-top: $gutter * 3;
       position: relative;
 
       &::before {
         content: "";
         position: absolute;
-        top: -5px;
+        top: -$gutter * 1.5;
         height: 1px;
         left: 0;
         right: 0;
