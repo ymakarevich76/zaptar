@@ -7,6 +7,7 @@ if (selects.length) {
     const selectList = select.querySelector('[data-select-list]');
     const selectItems = select.querySelectorAll('[data-select-value]');
     const selectInput = select.querySelector('[data-select-input]');
+    const isMultiple = select.hasAttribute('data-select-multiple');
 
     // функция для сворачивания списка
     const closeSelect = () => {
@@ -15,7 +16,8 @@ if (selects.length) {
     };
 
     // открытие/закрытие списка
-    selectButton.addEventListener('click', () => {
+    selectButton.addEventListener('click', (e) => {
+      e.preventDefault();
       const isActive = select.classList.contains('select--active');
 
       // закрываем все открытые селекты перед открытием нового
@@ -32,11 +34,33 @@ if (selects.length) {
 
     // выбор элемента списка
     selectItems.forEach(item => {
-      item.addEventListener('click', () => {
-        selectButtonText.textContent = item.textContent;
-        selectInput.value = item.dataset.selectValue;
-        selectInput.setAttribute('value', item.dataset.selectValue);
-        closeSelect();
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (!isMultiple) {
+          // одиночный выбор: снимаем active со всех опций текущего селекта
+          selectItems.forEach(i => i.classList.remove('select__item--active'));
+
+          // ставим active на выбранный
+          item.classList.add('select__item--active');
+
+          selectButtonText.textContent = item.textContent.trim();
+          selectInput.setAttribute('value', selectInput.value);
+          closeSelect();
+        } else {
+          item.classList.toggle('select__item--active');
+
+          const activeItems = Array.from(selectItems).filter(i =>
+            i.classList.contains('select__item--active')
+          );
+
+          const activeTexts = activeItems.map(i => i.textContent.trim());
+          const activeValues = activeItems.map(i => i.dataset.selectValue);
+
+          selectButtonText.textContent = activeTexts.join(', ') || 'Не выбрано';
+          selectInput.value = activeValues.join(',');
+          selectInput.setAttribute('value', selectInput.value);
+        }
       });
     });
 

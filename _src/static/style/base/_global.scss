@@ -29,7 +29,7 @@ body {
   align-content: start;
   gap: $gutter * 12;
 
-  @media (max-width: $md) {
+  @media (max-width: $lg) {
     padding-top: $gutter * 6;
     padding-bottom: $gutter * 6;
     gap: $gutter * 6;

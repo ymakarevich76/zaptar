@@ -1,4 +1,6 @@
 .chat {
+  $self: &;
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -33,31 +35,76 @@
     }
   }
 
-  &__table {
+  &__table-row {
     display: grid;
     grid-template-columns: minmax(69px, auto) 1fr minmax(165px, auto) minmax(176px, auto);
     font-size: 12px;
     line-height: 20px;
-  }
-
-  &__table-col {
-    display: grid;
-  }
-
-  &__table-header {
-    background-color: #00000005;
-    color: $c-main-45;
-    padding: $gutter * 4;
-  }
-
-  &__table-content {
     border-bottom: 1px solid #F0F0F0;
+    grid-template-areas: "id name data action";
+
+    @media (max-width: $sm) {
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "name action"
+        "id data";
+    }
+
+    &:first-child {
+      #{$self}__table-cell {
+        background-color: #00000005;
+        color: $c-main-45;
+        padding: $gutter * 4;
+
+        @media (max-width: $sm) {
+          display: none;
+        }
+      }
+    }
+
+    span {
+      display: none;
+
+      @media (max-width: $sm) {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__table-cell {
     padding: $gutter * 4;
+
+    @media (max-width: $sm) {
+      padding: $gutter * 2;
+    }
+
+    &--id {
+      grid-area: id;
+
+      @media (max-width: $sm) {
+        padding-top: 0;
+      }
+    }
+
+    &--name {
+      grid-area: name;
+    }
+
+    &--data {
+      grid-area: data;
+
+      @media (max-width: $sm) {
+        padding-top: 0;
+        justify-self: right;
+      }
+    }
 
     &--action {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      grid-area: action;
+
+      display: grid;
+      grid-auto-flow: column;
+      gap: $gutter * 4;
     }
   }
 
@@ -71,6 +118,45 @@
     svg {
       width: 14px;
       height: 14px;
+    }
+  }
+
+  &__filter {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: $gutter * 2;
+    margin-bottom: $gutter * 6;
+  }
+
+  &__filter-text {
+    color: #000000A6;
+  }
+
+  &__filter-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 4px;
+    background-color: #00000005;
+    padding-left: $gutter * 2;
+    padding-right: $gutter * 2;
+
+    font-size: 12px;
+    line-height: 20px;
+    color: $c-main-88;
+
+    span {
+      color: $c-main-45;
+      padding-right: 2px;
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: $c-main-88;
+      margin-left: $gutter;
     }
   }
 }

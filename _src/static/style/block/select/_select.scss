@@ -28,11 +28,12 @@
 
   &__list {
     display: none;
+    padding: $gutter;
 
-    width: 100%;
+    width: calc(100% + 2px);
     position: absolute;
-    top: 33px;
-    left: 0;
+    top: 30px;
+    left: -1px;
 
     overflow: hidden;
     z-index: 1;
@@ -55,9 +56,45 @@
     text-align: left;
     cursor: pointer;
     transition: background-color .2s;
+    border-radius: 4px;
 
     &:hover {
       background-color: $c-light;
+    }
+
+    &--active {
+      background-color: #E6F4FF;
+      font-weight: 600;
+      position: relative;
+
+      #{$self}--multiple &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background: url("../img/icon/check-solid.svg") no-repeat 50%;
+      }
+
+      &:hover {
+        background-color: #E6F4FF;
+      }
+    }
+
+    &--active + &--active {
+      &::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: 0;
+        height: 8px;
+        width: 100%;
+        background-color: #E6F4FF;
+        pointer-events: none;
+      }
     }
   }
 

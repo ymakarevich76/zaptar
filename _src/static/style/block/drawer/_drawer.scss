@@ -5,8 +5,7 @@
     border-bottom-left-radius: 16px;
 
     @media (max-width: $md) {
-      width: 100%;
-      border-radius: 0;
+      width: 90%;
     }
   }
 
@@ -96,5 +95,15 @@
 
   &__footer-btn {
     border-radius: 6px;
+  }
+
+  &__radio-actions {
+    padding-bottom: $gutter * 3;
+    border-bottom: 1px solid $c-main-6;
+  }
+
+  &__select-label {
+    display: inline-block;
+    margin-bottom: $gutter * 2;
   }
 }

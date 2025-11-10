@@ -10,7 +10,7 @@
             <div class="chat__header">
                 <h2 class="chat__title">Чат</h2>
                 <div class="chat__header-wrapper">
-                    <button type="button" class="btn-primary chat__header-btn">
+                    <button type="button" class="btn-primary chat__header-btn" data-modal="drawer-filter-messages">
                         <svg>
                             <use xlink:href="static/img/symbol/sprite.svg#filter"></use>
                         </svg>
@@ -24,36 +24,138 @@
                     </button>
                 </div>
             </div>
+            <div class="chat__filter">
+                <span class="chat__filter-text">Фильтр:</span>
+                <div type="button" class="chat__filter-item">
+                    Прочитанные
+                    <button type="button" class="chat__filter-btn">
+                        <svg aria-hidden="true">
+                            <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div type="button" class="chat__filter-item">
+                    В работе
+                    <button type="button" class="chat__filter-btn">
+                        <svg aria-hidden="true">
+                            <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div type="button" class="chat__filter-item">
+                    <span>Тип сообщения: </span>
+                    Возврат произведен
+                    <button type="button" class="chat__filter-btn">
+                        <svg aria-hidden="true">
+                            <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div type="button" class="chat__filter-item">
+                    <span>Причина возврата: </span>
+                    Брак
+                    <button type="button" class="chat__filter-btn">
+                        <svg aria-hidden="true">
+                            <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
             <div class="chat__table">
-                <div class="chat__table-col">
-                    <div class="chat__table-header">
+                <div class="chat__table-row">
+                    <div class="chat__table-cell">
                         ID
                     </div>
-                    <div class="chat__table-content">
-                        77854
-                    </div>
-                </div>
-                <div class="chat__table-col">
-                    <div class="chat__table-header">
+                    <div class="chat__table-cell">
                         Тема
                     </div>
-                    <div class="chat__table-content">
-                        Лампа ксенон d2r 5000к
-                    </div>
-                </div>
-                <div class="chat__table-col">
-                    <div class="chat__table-header">
+                    <div class="chat__table-cell">
                         Последнее изменение
                     </div>
-                    <div class="chat__table-content">
-                        04.11.24 в 17:40
-                    </div>
-                </div>
-                <div class="chat__table-col">
-                    <div class="chat__table-header">
+                    <div class="chat__table-cell">
                         Действия
                     </div>
-                    <div class="chat__table-content chat__table-content--action">
+                </div>
+                <div class="chat__table-row">
+                    <div class="chat__table-cell chat__table-cell--id">
+                        <span class="">ID:</span>
+                            77854
+                    </div>
+                    <div class="chat__table-cell chat__table-cell--name">
+                        Лампа ксенон d2r 5000к
+                    </div>
+                    <div class="chat__table-cell chat__table-cell--data">
+                        04.11.24 в 17:40
+                    </div>
+                    <div class="chat__table-cell chat__table-cell--action">
+                        <button type="button" class="chat__table-btn">
+                            <svg>
+                                <use xlink:href="static/img/symbol/sprite.svg#unlock"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="chat__table-btn">
+                            <svg>
+                                <use xlink:href="static/img/symbol/sprite.svg#message"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="chat__table-btn">
+                            <svg>
+                                <use xlink:href="static/img/symbol/sprite.svg#eye"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="chat__table-btn">
+                            <svg>
+                                <use xlink:href="static/img/symbol/sprite.svg#download"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="chat__table-row">
+                    <div class="chat__table-cell chat__table-cell--id">
+                        <span class="">ID:</span>
+                        77854
+                    </div>
+                    <div class="chat__table-cell chat__table-cell--name">
+                        Лампа ксенон d2r 5000к
+                    </div>
+                    <div class="chat__table-cell chat__table-cell--data">
+                        04.11.24 в 17:40
+                    </div>
+                    <div class="chat__table-cell chat__table-cell--action">
+                        <button type="button" class="chat__table-btn">
+                            <svg>
+                                <use xlink:href="static/img/symbol/sprite.svg#unlock"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="chat__table-btn">
+                            <svg>
+                                <use xlink:href="static/img/symbol/sprite.svg#message"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="chat__table-btn">
+                            <svg>
+                                <use xlink:href="static/img/symbol/sprite.svg#eye"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="chat__table-btn">
+                            <svg>
+                                <use xlink:href="static/img/symbol/sprite.svg#download"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="chat__table-row">
+                    <div class="chat__table-cell chat__table-cell--id">
+                        <span class="">ID:</span>
+                        77854
+                    </div>
+                    <div class="chat__table-cell chat__table-cell--name">
+                        Лампа ксенон d2r 5000к
+                    </div>
+                    <div class="chat__table-cell chat__table-cell--data">
+                        04.11.24 в 17:40
+                    </div>
+                    <div class="chat__table-cell chat__table-cell--action">
                         <button type="button" class="chat__table-btn">
                             <svg>
                                 <use xlink:href="static/img/symbol/sprite.svg#unlock"></use>

@@ -47,13 +47,22 @@
             <button data-modal="modal-auth">Авторизация</button>
         </li>
         <li>
-            <button data-modal="drawer-profile">Профиль</button>
+            <button data-modal="drawer-profile">Дравер Профиль</button>
+        </li>
+        <li>
+            <button data-modal="drawer-profile-edit">Дравер Редактирование профиля</button>
+        </li>
+        <li>
+            <button data-modal="drawer-add-theme">Дравер Добавление темы</button>
+        </li>
+        <li>
+            <button data-notification="notification">Нотификация</button>
         </li>
     </ol>
 
 </main>
 
-@@include('block/footer/modal.html')
-@@include('block/footer/drawer.html')
-@@include('block/footer/drawer-profile-edit.html')
+@@include('block/modal/modal.html')
+@@include('block/drawer/drawer-template.html')
+@@include('block/notification/notification.html')
 @@include('block/scripts.html')
