@@ -120,6 +120,13 @@
   }
 }
 
+  &__clip-choose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .chat-message {
   $self: &;
 
