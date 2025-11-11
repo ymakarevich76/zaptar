@@ -157,7 +157,6 @@
     position: relative;
 
     border: 1px dashed #D9D9D9;
-    background-color: #00000005;
     padding: $gutter * 4;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -165,23 +164,24 @@
     &:hover {
       background-color: #0000000A;
     }
+
+    &--bg {
+      background-color: #00000005;
+    }
   }
 
   &__file-input {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    z-index: 2;
-    cursor: pointer;
+    @extend .visually-hidden;
   }
 
   &__file-content {
     font-size: 14px;
     line-height: 22px;
     color: $c-main-25;
-    pointer-events: none;
     text-align: center;
     display: inline-block;
+    cursor: pointer;
+    width: 100%;
   }
 
   &__btn {

@@ -1,5 +1,6 @@
-if (document.querySelector('[tab]')) {
-  const tabs = document.querySelectorAll('[tab]');
+const tabs = document.querySelectorAll('[tab]');
+
+if (tabs.length) {
   const contents = document.querySelectorAll('[tab-content]');
 
   tabs.forEach((tab) => {
