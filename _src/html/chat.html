@@ -42,6 +42,8 @@
                         </span>
                     </div>
                     <p class="chat-message__text">Запрос на возврат</p>
+                    <!--Todo: разобраться с размерами изображения-->
+                    <div class="chat-message__img"></div>
                 </div>
                 <div class="chat-message chat-message--admin">
                     <div class="chat-message__header">
@@ -58,6 +60,7 @@
                         </span>
                     </div>
                     <p class="chat-message__text">Запрос на возврат</p>
+                    <div class="chat-message__img"></div>
                 </div>
                 <div class="chat-message chat-message--admin">
                     <div class="chat-message__header">
@@ -74,24 +77,40 @@
                         </span>
                     </div>
                     <p class="chat-message__text">Запрос на возврат</p>
+                    <div class="chat-message__img"></div>
                 </div>
                 <form action="" class="chat__form">
-                    <textarea class="form__input" id="chat-text"  placeholder="Сообщение"></textarea>
+                    <textarea class="form__input" id="chat-text" placeholder="Сообщение"></textarea>
                     <div class="chat__footer">
-                        <div class="chat__clip">
-                            <input name="file" type="file" id="input__file" class="chat__clip-input" multiple data-input="file">
-                            <label for="input__file" class="chat__clip-ico">
-                                <svg>
-                                    <use xlink:href="static/img/symbol/sprite.svg#paper"></use>
-                                </svg>
+                        <div class="chat__clip" data-dropzone>
+                            <input name="file" type="file" id="input-file" class="chat__clip-input" multiple accept="image/*" data-input="file">
+                            <label for="input-file" class="chat__clip-content">
+                                <span
+                                    class="chat__clip-choose"
+                                    data-input="label"
+                                    data-input-error="Один из файлов не является изображением. Доступные типы: jpg, png, bmp"
+                                    data-input-placeholder="Нажмите в эту область, чтобы загрузить файлы"
+                                ></span>
+                                <span class="chat__clip-ico">
+                                    <svg>
+                                        <use xlink:href="static/img/symbol/sprite.svg#paper"></use>
+                                     </svg>
+                                </span>
                             </label>
                         </div>
-                        <div class="chat__clip-choose" data-input="label"></div>
                         <button type="button" class="btn btn--size-s">
                             Отправить
                         </button>
                     </div>
                 </form>
+                <div class="chat__closed">
+                    <span class="chat__closed-text">
+                        Тема закрыта:
+                        <span class="chat__closed-text chat__closed-text--bold">
+                            04.11.2024, 17:44
+                        </span>
+                    </span>
+                </div>
             </div>
         </section>
     </div>

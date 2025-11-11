@@ -75,16 +75,16 @@
     grid-column-gap: $gutter * 4;
     align-items: center;
     justify-self: end;
+    gap: $gutter * 4;
   }
 
   &__clip {
-    width: 32px;
-    height: 32px;
     position: relative;
 
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     align-items: center;
-    justify-content: center;
+    gap: $gutter * 2;
     margin-right: $gutter * 2;
 
     &::after {
@@ -100,11 +100,15 @@
   }
 
   &__clip-input {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    @extend .visually-hidden;
+  }
+
+  &__clip-content {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: $gutter * 2;
+    cursor: pointer;
   }
 
   &__clip-ico {
@@ -112,18 +116,38 @@
     align-items: center;
     justify-content: center;
 
+    width: 32px;
+    height: 32px;
+
+    cursor: pointer;
+
     svg {
       width: 16px;
       height: 16px;
       fill: $c-main-88;
     }
   }
-}
 
-  &__clip-choose {
-    display: flex;
+  &__closed {
+    display: none;
+    //display: flex;
     align-items: center;
     justify-content: center;
+    height: 110px;
+
+    background-color: #00000026;
+    border-radius: 8px;
+    padding: $gutter * 2;
+  }
+
+  &__closed-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: $c-main-45;
+
+    &--bold {
+      font-weight: 600;
+    }
   }
 }
 
@@ -294,18 +318,27 @@
       color: $c-accent;
       order: 1;
     }
-
-    @media (max-width: $sm) {
-      #{$self}--user & {
-        //order: -1;
-      }
-    }
   }
 
   &__text {
     font-size: 14px;
     line-height: 22px;
     color: $c-main-45;
+
+    #{$self}--admin & {
+      justify-self: start;
+    }
+
+    #{$self}--user & {
+      justify-self: end;
+    }
+  }
+
+  &__img {
+    display: grid;
+    gap: $gutter * 2;
+    max-width: 360px;
+    max-height: 360px;
 
     #{$self}--admin & {
       justify-self: start;
