@@ -17,6 +17,11 @@
     }
 
     @media (max-width: $md) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(20, auto);
+    }
+
+    @media (max-width: $sm) {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(30, auto);
     }

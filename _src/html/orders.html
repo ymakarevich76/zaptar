@@ -1,0 +1,38 @@
+@@include('block/head.html')
+@@include('block/header/header.html')
+
+<main class="main">
+    @@include('block/breadcrumb.html')
+
+    <div class="container">
+        <section class="orders">
+            <div class="orders__header orders-header">
+                <h2 class="title title--mb">Заказы</h2>
+
+                <div class="orders-header__actions">
+                    <a href="#">Архив заказов</a>
+
+                    <button type="button">Фильтр</button>
+                </div>
+            </div>
+
+            <div class="table">
+                <div class="table__row">
+                    <div class="table__cell">
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__cell"></div>
+                </div>
+                <div class="table__row">
+                    <div class="table__cell"></div>
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+</main>
+
+@@include('block/footer/footer.html')
+@@include('block/scripts.html')

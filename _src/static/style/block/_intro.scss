@@ -31,11 +31,22 @@
     width: 672px;
     padding-bottom: $gutter * 8;
     margin-bottom: $gutter * 12;
+    font-size: 72px;
+    line-height: 68px;
+    font-weight: 600;
+    color: #fff;
+
+    @media (max-width: $lg) {
+      font-size: 56px;
+      line-height: 1.2;
+    }
 
     @media (max-width: $md) {
       width: 100%;
       padding-bottom: $gutter * 5;
       margin-bottom: $gutter * 6;
+      font-size: 32px;
+      line-height: 1.2;
     }
 
     &::after {

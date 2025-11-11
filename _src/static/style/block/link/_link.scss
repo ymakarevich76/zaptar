@@ -16,6 +16,7 @@
     opacity: 0;
   }
 
+  // todo: переделать hover
   &:hover#{$self}::after {
     width: 100%;
     opacity: 1;

@@ -1,29 +1,8 @@
 .title {
-}
-
-.title-1 {
-  font-size: 72px;
-  line-height: 68px;
-  font-weight: 600;
-  color: #fff;
-
-  @media (max-width: $lg) {
-    font-size: 56px;
-    line-height: 1.2;
-  }
-
-  @media (max-width: $md) {
-    font-size: 32px;
-    line-height: 1.2;
-  }
-}
-
-.title-2 {
   font-size: 38px;
   line-height: 46px;
   font-weight: 700;
   color: $c-main;
-  margin-bottom: $gutter * 6;
 
   @media (max-width: $lg) {
     font-size: 24px;
@@ -33,18 +12,28 @@
   @media (max-width: $md) {
     font-size: 20px;
     line-height: 1.2;
-    margin-bottom: $gutter * 4;
+  }
+
+  &--mb {
+    margin-bottom: $gutter * 6;
+
+    @media (max-width: $md) {
+      margin-bottom: $gutter * 4;
+    }
   }
 }
 
-.title-3 {
+.title-2 {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   color: $c-main-88;
-  margin-bottom: $gutter * 3;
 
-  @media (max-width: $md) {
+  &--mb {
     margin-bottom: $gutter * 3;
+
+    @media (max-width: $md) {
+      margin-bottom: $gutter * 3;
+    }
   }
 }

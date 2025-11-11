@@ -38,7 +38,7 @@
     display: grid;
     grid-template-columns: 1fr repeat(3, 216px);
     gap: $gutter * 6;
-    grid-template-areas: "main sub1 sub2 sub3";
+    grid-template-areas: "company category contacts schedule";
 
     @media (max-width: $xl) {
       gap: $gutter * 2;
@@ -49,35 +49,35 @@
       row-gap: $gutter * 5;
 
       grid-template-areas:
-        "main sub1"
-        "sub2 sub3";
+        "company category"
+        "contacts schedule";
     }
 
     @media (max-width: $sm) {
       grid-template-columns: 1fr;
       justify-items: center;
       grid-template-areas:
-        "main"
-        "sub1"
-        "sub2"
-        "sub3";
+        "company"
+        "category"
+        "contacts"
+        "schedule";
     }
   }
 
   &__company {
-    grid-area: main;
+    grid-area: company;
   }
 
   &__category {
-    grid-area: sub1;
+    grid-area: category;
   }
 
   &__contacts {
-    grid-area: sub2;
+    grid-area: contacts;
   }
 
   &__schedule {
-    grid-area: sub3;
+    grid-area: schedule;
   }
 
   &__company,
@@ -94,7 +94,8 @@
     display: grid;
     grid-template-columns: 1fr repeat(3, 216px);
     gap: $gutter * 6;
-    grid-template-areas: "copy conf offer pay";
+    grid-template-areas: "copy privacy offer pay";
+    justify-items: start;
 
     @media (max-width: $xl) {
       gap: $gutter * 2;
@@ -103,7 +104,7 @@
     @media (max-width: $lg) {
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas:
-        "copy conf"
+        "copy privacy"
         "copy offer"
         "copy pay";
     }
@@ -112,15 +113,15 @@
       grid-template-columns: 1fr;
       justify-items: center;
       grid-template-areas:
-        "conf"
+        "privacy"
         "offer"
         "pay"
         "copy";
     }
   }
 
-  &__conf {
-    grid-area: conf;
+  &__privacy {
+    grid-area: privacy;
   }
   &__offer {
     grid-area: offer;

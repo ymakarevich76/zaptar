@@ -1,6 +1,4 @@
 .breadcrumb {
-  @extend .list-reset;
-
   display: flex;
   flex-wrap: wrap;
 }
@@ -16,19 +14,16 @@
 .breadcrumb__link {
   color: $c-main-45;
   padding-right: $gutter * 6;
+  transition: color 0.2s;
 
   &::after {
     content: "/";
     position: absolute;
     top: 0;
     right: 5px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     width: 13px;
     height: 22px;
-
     color: $c-main-45;
   }
 
