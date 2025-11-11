@@ -1,0 +1,29 @@
+.section-header {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: $gutter * 4;
+  align-content: center;
+
+  &--mb {
+    margin-bottom: $gutter * 6;
+
+    @media (max-width: $md) {
+      margin-bottom: $gutter * 4;
+    }
+  }
+
+  &__group {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: $gutter * 4;
+    align-items: center;
+
+    &:first-child {
+      justify-self: start;
+    }
+
+    &:last-child {
+      justify-self: end;
+    }
+  }
+}

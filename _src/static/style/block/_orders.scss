@@ -5,19 +5,12 @@
 }
 
 .orders-header {
-  display: grid;
-  grid-auto-flow: column;
-  column-gap: $gutter * 4;
 
   &__title {
     margin-bottom: 0;
   }
 
   &__actions {
-    display: grid;
-    grid-auto-flow: column;
-    grid-column-gap: $gutter * 4;
-    align-content: center;
-    justify-content: end;
+
   }
 }
