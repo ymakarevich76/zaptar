@@ -1,13 +1,27 @@
 .header {
   position: absolute;
+  z-index: 200;
   top: 0;
   left: 0;
   right: 0;
+  transition: transform .2s;
+  transform: translateY(0);
 
-  &--is-fixed {
-    position: fixed;
-    z-index: 200;
-    //box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+  &--is-fixed-hidden {
+    @media (max-width: $md) {
+      top: -150px;
+      position: fixed;
+      transform: translateY(-100%);
+    }
+  }
+
+  &--is-fixed-visible {
+    @media (max-width: $md) {
+      top: 0;
+      position: fixed;
+      transform: translateY(0);
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+    }
   }
 
   &__top {
