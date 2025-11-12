@@ -1,6 +1,6 @@
 const header = document.querySelector('[data-header]');
 let lastScroll = 0;
-const screenHeight = 100;
+const screenHeight = 200;
 let triggerPoint = 0; // где начался апскролл
 let downStartPoint = 0; // где начался даунскролл после показа
 const showOffset = 100; // через сколько пикселей вверх показать
