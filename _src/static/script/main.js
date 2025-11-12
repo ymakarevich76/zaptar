@@ -6,4 +6,4 @@
 @@include('block/__modal.js')
 @@include('block/__input-file.js')
 @@include('block/__notification.js')
-
+@@include('block/__anchor-smooth.js')
