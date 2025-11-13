@@ -1,0 +1,20 @@
+.btn-light {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $gutter * 0.5;
+  border-radius: 4px;
+  transition: background-color .2s;
+
+  &__ico {
+    width: 14px;
+    height: 14px;
+  }
+
+  &:hover {
+    background-color: $c-main-6;
+  }
+}

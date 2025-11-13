@@ -27,4 +27,12 @@
       box-shadow: inset 0 -1px 0 0 $c-main-45;
     }
   }
+
+  &--blue {
+    color: $c-accent;
+
+    &#{$self}::after {
+      box-shadow: inset 0 -1px 0 0 $c-accent;
+    }
+  }
 }
