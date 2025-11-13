@@ -31,6 +31,10 @@
 @import "block/select/select";
 @import "block/checkbox/checkbox";
 @import "block/tabs/tabs";
+@import "block/pagination/pagination";
+
+@import "block/scrollbar";
+@import "block/imitation-table";
 
 // modals
 @import "block/modal/modal";
@@ -42,15 +46,15 @@
 @import "block/brands";
 @import "block/categories";
 @import "block/map";
-@import "block/scrollbar";
 
 // pages
 @import "block/index-demo";
 @import "block/registration";
 @import "block/search-auto";
 @import "block/chat-list";
-@import "block/orders";
 @import "block/chat";
+@import "block/orders";
+@import "block/product";
 
 @import "block/footer/footer";
 

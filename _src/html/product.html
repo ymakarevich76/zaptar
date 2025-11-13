@@ -1,0 +1,99 @@
+@@include('block/head.html')
+@@include('block/header/header.html')
+
+<main class="main">
+    <!-- //////////////////////////////////////////////////////////  -->
+    @@include('block/breadcrumb.html')
+
+    <div class="container">
+        <section class="product">
+            <div class="section-header section-header--mb">
+                <div class="section-header__group">
+                    <h1 class="title">OSRAM 7506</h1>
+                </div>
+
+                <div class="section-header__group">
+                    <button type="button" class="btn btn--size-s product__header-btn">
+                        <svg>
+                            <use xlink:href="static/img/symbol/sprite.svg#eye"></use>
+                        </svg>
+                        Посмотреть цены
+                    </button>
+                </div>
+            </div>
+            <div class="product__content">
+                <div class="product__img-wrapper">
+                    <img class="product__img" src="static/img/background/product-car.png" alt="Автомобиль">
+                </div>
+                <div class="tabs tabs--horizontal">
+                    <div class="tabs__box-btn">
+                        <button class="tabs__btn tabs__btn--active" tab="1">Характеристики</button>
+                        <button class="tabs__btn" tab="2">Применимость</button>
+                        <button class="tabs__btn" tab="3">Замены</button>
+                    </div>
+
+                    <div class="tabs__box-content">
+                        <div class="tabs__content tabs__content--active" tab-content="1">
+                            <div class="product__wrapper-info">
+                                <span class="product__info">Информация о данном товаре отстуствует</span>
+                            </div>
+
+                        </div >
+                        <div class="tabs__content" tab-content="2">
+                            <span class="product__info">Информация о данном товаре отстуствует</span>
+                        </div>
+                        <div class="tabs__content" tab-content="3">
+                            <div class="product__table imitation-table">
+                                <div class="product__table-row imitation-table__table-row">
+                                    <div class="product__table-cell imitation-table__table-cell">
+                                        Бренд
+                                    </div>
+                                    <div class="product__table-cell imitation-table__table-cell">
+                                        Артикул
+                                    </div>
+                                    <div class="product__table-cell imitation-table__table-cell">
+                                        Действия
+                                    </div>
+                                </div>
+                                <div class="product__table-row imitation-table__table-row">
+                                    <div class="product__table-cell imitation-table__table-cell product__table-cell--id">
+                                        acdelco
+                                    </div>
+                                    <div class="product__table-cell imitation-table__table-cell product__table-cell--name">
+                                        7506
+                                    </div>
+                                    <div class="product__table-cell imitation-table__table-cell product__table-cell--data">
+                                        <button type="button" class="product__table-btn">
+                                            <svg>
+                                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product__table-row imitation-table__table-row">
+                                    <div class="product__table-cell imitation-table__table-cell product__table-cell--id">
+                                        acdelco
+                                    </div>
+                                    <div class="product__table-cell imitation-table__table-cell product__table-cell--name">
+                                        7506
+                                    </div>
+                                    <div class="product__table-cell imitation-table__table-cell product__table-cell--data">
+                                        <button type="button" class="product__table-btn">
+                                            <svg>
+                                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('block/pagination.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+@@include('block/footer/footer.html')
+@@include('block/scripts.html')

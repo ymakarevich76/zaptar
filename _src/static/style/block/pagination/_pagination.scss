@@ -1,0 +1,30 @@
+.pagination {
+  display: grid;
+  grid-auto-flow: column;
+  gap: $gutter * 4;
+
+  &__info {
+
+  }
+
+  &__controls {
+    display: grid;
+    grid-auto-flow: column;
+    gap: $gutter * 2;
+    align-items: center;
+  }
+
+  &__angle {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      color: $c-main-88;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.imitation-table {
+  $self: &;
+
+  &__table-row {
+    display: grid;
+    font-size: 12px;
+    line-height: 20px;
+    border-bottom: 1px solid #F0F0F0;
+
+    &:first-child {
+      #{$self}__table-cell {
+        background-color: #00000005;
+        color: $c-main-45;
+        padding: $gutter * 4;
+
+        @media (max-width: $sm) {
+          padding: $gutter * 2;
+        }
+      }
+    }
+  }
+
+  &__table-cell {
+    padding: $gutter * 4;
+
+    @media (max-width: $sm) {
+      padding: $gutter * 2;
+    }
+  }
+}
