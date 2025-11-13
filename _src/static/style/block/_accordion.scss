@@ -1,0 +1,59 @@
+.accordion {
+  $self: &;
+
+  display: grid;
+  gap: $gutter * 6;
+
+  &__item {
+    border: 1px solid #F0F0F0;
+    border-radius: 8px;
+  }
+
+  &__item-content {
+    padding: $gutter * 6;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-ico {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: $gutter * 2;
+
+    #{$self}__item-content--active & {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: $c-main-88;
+      transition: .2s;
+    }
+  }
+
+  &__content {
+    padding: $gutter * 6;
+    border-top: 1px solid #F0F0F0;
+  }
+
+  &__item-content + * {
+    display: none;
+  }
+
+  &__item-content--active + * {
+    display: block;
+  }
+
+  &__info {
+
+  }
+}

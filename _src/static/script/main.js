@@ -7,3 +7,4 @@
 @@include('block/__input-file.js')
 @@include('block/__notification.js')
 @@include('block/__anchor-smooth.js')
+@@include('block/__accordion.js')
