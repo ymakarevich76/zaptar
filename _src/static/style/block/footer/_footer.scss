@@ -1,6 +1,6 @@
 .footer {
   background-color: $c-light;
-  color: $c-main-45;
+  color: $c-main-65;
 
   &__top {
     padding-top: $gutter * 12;
@@ -145,7 +145,6 @@
 
   &__item {
     font-size: 12px;
-    color: $c-main-45;
 
     @media (max-width: $xl) {
       display: grid;
@@ -176,7 +175,6 @@
   &__list {
     display: grid;
     row-gap: $gutter * 2;
-    color: $c-main-45;
 
     &:not(:last-child) {
       margin-bottom: $gutter * 4;

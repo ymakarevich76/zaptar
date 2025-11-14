@@ -21,7 +21,7 @@
   }
 
   &--light {
-    color: $c-main-45;
+    color: $c-main-65;
 
     &#{$self}::after {
       box-shadow: inset 0 -1px 0 0 $c-main-45;

@@ -37,13 +37,13 @@
     }
   }
 
-  &__top-left {
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 16px;
-  }
+  //&__top-left {
+  //  display: grid;
+  //  grid-auto-flow: column;
+  //  column-gap: 16px;
+  //}
 
-  &__contacts {
+  &__top-contacts {
     margin-left: auto;
     display: grid;
     grid-auto-flow: column;
@@ -75,18 +75,14 @@
     margin-right: $gutter * 6;
 
     @media (max-width: $md) {
-      margin-right: 0;
+      margin-right: $gutter * 2;
       max-width: 100%;
     }
   }
 
-  &__actions {
+  &__bottom-actions {
     margin-left: auto;
     flex-shrink: 0;
-
-    @media (max-width: $md) {
-      display: none;
-    }
   }
 }
 
@@ -216,6 +212,7 @@
   }
 }
 
+// todo: переименовать классы и объединить стили дропдаунов
 .header-search-dropdown {
   $self: &;
 
@@ -306,32 +303,24 @@
   }
 }
 
-.header-actions {
-  &__groups {
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 32px;
-  }
+.header-bottom-actions {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: $gutter * 4;
+  color: #fff;
 
-  &__group {
-    color: #fff;
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 16px;
-    align-content: center;
+  &__btn-divider {
+    position: relative;
+    margin-right: $gutter * 4;
 
-    &:not(:first-child) {
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: -16px;
-        width: 1px;
-        background-color: $c-light-20;
-      }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -$gutter * 4;
+      width: 1px;
+      background-color: $c-light-20;
     }
   }
 }
@@ -340,12 +329,18 @@
   $self: &;
   min-width: 32px;
   min-height: 32px;
-  display: flex;
-  padding: $gutter $gutter * 2;
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: $gutter * 2;
+  padding: $gutter var(--header-btn-padding-x, $gutter * 4);
   border-radius: 6px;
   align-items: center;
   justify-content: center;
   transition: background-color .2s;
+
+  &--narrow {
+    --header-btn-padding-x: $gutter * 2;
+  }
 
   &:hover {
     background-color: $c-light-20;
@@ -367,17 +362,6 @@
     }
   }
 
-  &__container {
-    display: flex;
-    align-items: center;
-    padding-left: $gutter * 2;
-    padding-right: $gutter * 2;
-
-    & > *:not(:first-child) {
-      margin-left: $gutter * 2;
-    }
-  }
-
   &__ico {
     width: 16px;
     height: 16px;
@@ -387,17 +371,13 @@
       height: 12px;
     }
   }
-
-  &__caption {
-    color: $c-light-80;
-  }
-
-  b {
-    font-weight: 700;
-  }
 }
 
 .header-btn-wallet {
+  @media (max-width: $lg) {
+  --header-btn-padding-x: #{$gutter * 2};
+  }
+
   &__ico {
     display: none;
 
@@ -406,10 +386,14 @@
     }
   }
 
-  &__container {
+  &__caption {
     @media (max-width: $lg) {
       display: none;
     }
+  }
+
+  &__balance {
+    font-weight: 700;
   }
 }
 
@@ -418,6 +402,10 @@
   position: relative;
 
   &__toggle {
+    @media (max-width: $lg) {
+      --header-btn-padding-x: #{$gutter * 2};
+    }
+
     #{$self}:hover & {
       background-color: $c-light-30;
     }
