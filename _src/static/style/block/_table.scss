@@ -1,5 +1,5 @@
 .table {
-  line-height: 16px;
+  position: relative;
 
   &__scrollbar {
     padding-bottom: 2px;
@@ -7,29 +7,29 @@
   }
 
   &__inner {
-    position: relative;
+    border-collapse: collapse;
+    border-spacing: 0;
   }
 
   th,
-  td {
+  td,
+  &__floating-table-cell {
     padding: $gutter * 2 $gutter * 4;
     vertical-align: middle;
     font-size: 12px;
-    max-width: var(--table-td-max-width , 300px);
+    line-height: 16px;
+    max-width: var(--table-col-max-width , 250px);
   }
 
-  th {
+  th,
+  &__floating-table-row:first-child {
     color: $c-main-45;
-  }
-
-  tr {
-    &:not(:first-child) {
-      border-bottom: 1px solid $c-gray;
-    }
-  }
-
-  th {
     background-color: $c-light;
+  }
+
+  tr:not(:first-child),
+  &__floating-table-row:not(:first-child){
+    border-bottom: 1px solid $c-gray;
   }
 
   &__actions {
@@ -39,6 +39,11 @@
     align-items: center;
   }
 
+  &__cell-address,
+  &__floating-table {
+    width: 160px;
+  }
+
   &__address {
     width: 128px;
     display: -webkit-box;
@@ -46,5 +51,18 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     cursor: default;
+  }
+
+  &__floating-table {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: -8px 0px 5px -5px rgba(0, 0, 0, 0.12);
+  }
+
+  &__floating-table-cell {
+    //display: flex;
+    //align-items: center;
   }
 }
