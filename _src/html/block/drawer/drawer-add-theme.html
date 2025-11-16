@@ -9,38 +9,39 @@
             <div class="drawer__header">
                 <h3 class="title-2 title-2--mb">Добавление темы</h3>
             </div>
-            <form action="" class="drawer__form form">
-                <div class="drawer__wrapper-input">
-                    <label for="theme-add" class="form__label">
+            <div class="drawer__info">
+                <form action="" class="drawer__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="theme-add" class="form__label">
                         Тема
-                    </label>
-                    <input type="text" class="form-input" id="theme-add" placeholder="Введите тему сообщения">
-                </div>
-                <div class="drawer__wrapper-input">
-                    <div class="form-input form-file form-file--bg" tabindex="0" role="button" aria-label="Загрузить файл. Нажмите или перетащите файл сюда" data-dropzone >
-                        <input id="fileInput" class="form-file__input" type="file" multiple data-input="file" />
-                        <label for="fileInput"
-                           class="form-file__content"
-                           data-input="label"
-                           data-input-error="Один из файлов не является изображением. Доступные типы: jpg, png, bmp"
-                           data-input-placeholder="Нажмите в эту область, чтобы загрузить">
-                            Нажмите или перетащите файл в эту область, чтобы загрузить
                         </label>
+                        <input type="text" class="form-input" id="theme-add" placeholder="Введите тему сообщения">
                     </div>
-                </div>
-                <div class="drawer__wrapper-input">
-                    <textarea class="form-textarea" id="theme-text"  placeholder="Сообщение"></textarea>
-                </div>
-
+                    <div class="drawer__wrapper-input">
+                        <div class="form-input form-file form-file--bg" tabindex="0" role="button" aria-label="Загрузить файл. Нажмите или перетащите файл сюда" data-dropzone >
+                            <input id="fileInput" class="form-file__input" type="file" multiple data-input="file" />
+                            <label for="fileInput"
+                            class="form-file__content"
+                            data-input="label"
+                            data-input-error="Один из файлов не является изображением. Доступные типы: jpg, png, bmp"
+                            data-input-placeholder="Нажмите в эту область, чтобы загрузить">
+                            Нажмите или перетащите файл в эту область, чтобы загрузить
+                            </label>
+                        </div>
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <textarea class="form-textarea" id="theme-text"  placeholder="Сообщение"></textarea>
+                    </div>
+                </form>
                 <div class="drawer__footer">
                     <button type="reset" class="drawer__footer-btn btn-primary">
-                        Отменить
+                    Отменить
                     </button>
                     <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
-                        Сохранить
+                    Сохранить
                     </button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>

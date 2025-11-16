@@ -1,0 +1,81 @@
+<div id="drawer-edit-car" class="drawer modal">
+    <div class="modal__inner modal__inner--open-right">
+        <div class="modal__content drawer__content">
+            <button type="button" class="modal__close modal__close--left" data-btn="close">
+                <svg>
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="drawer__header">
+                <h3 class="title-2 title-2--mb">Редактировать информацию</h3>
+            </div>
+            <div class="drawer__info">
+                <form action="" class="drawer__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="car-edit" class="form__label">
+                            Название
+                        </label>
+                        <input type="text" class="form-input" id="car-edit" value="Мой авто" placeholder="Введите название" >
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="car-edit-name" class="form__label">
+                            ФИО
+                        </label>
+                        <input type="text" class="form-input" id="car-edit-name" value="Иванов Иван Иванович" placeholder="Введите ФИО" >
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="car-edit-phone" class="form__label">
+                            Телефон
+                        </label>
+                        <input type="tel" class="form-input" id="car-edit-phone" value="+7 (985) 111-00-00" placeholder="+7 (000) 000-00-00" >
+                    </div>
+                    <div class="drawer__form-container">
+                        <div class="drawer__radio-actions form__radio-actions">
+                            <div class="form-radio">
+                                <input type="radio" id="card-edit-vin-radio" name="options-car" value="vin" checked>
+                                <label for="card-edit-vin-radio">VIN номер</label>
+                            </div>
+                            <div class="form-radio">
+                                <input type="radio" id="card-edit-number-radio" name="options-car" value="read">
+                                <label for="card-edit-number-radio">Номер кузова (FRAME)</label>
+                            </div>
+                        </div>
+                        <div class="drawer__form-content">
+                            <input type="text" class="form-input" id="car-edit-vin" value="Q1231313" placeholder="Введите VIN" >
+                            <input type="text" class="form-input" id="car-edit-license" value="T374OB" placeholder="Введите госномер" >
+                            <input type="text" class="form-input" id="car-edit-mileage" value="120 000" placeholder="Введите пробег" >
+                            @@include('../select.html', {
+                            "id": "car-edit-year",
+                            "data": "data-select-sort",
+                            "classItem": "select__item--selected",
+                            "text": "Выберите год выпуска автомобиля",
+                            "value": "2023",
+                            "option1": { "title": "2021", "value": "2021" },
+                            "option2": { "title": "2022", "value": "2022" },
+                            "option3": { "title": "2023", "value": "2023" },
+                            })
+                            <textarea class="form-textarea" id="car-edit-text" placeholder="Комментарий к автомобилю"></textarea>
+                            <div class="form-input form-file-2__info" data-input="file-download-block">
+                                <img src="static/img/background/product-car.png" alt="Автомобиль" data-input="file-download-img" class="form-file-2__img">
+                                <span class="form-file-2__text" data-input="file-download-text">product-car.png</span>
+                                <button type="button" class="form-file-2__delete btn-light" data-input="file-download-delete">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="drawer__footer">
+                    <button type="reset" class="drawer__footer-btn btn-primary test123">
+                        Отменить
+                    </button>
+                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                        Сохранить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

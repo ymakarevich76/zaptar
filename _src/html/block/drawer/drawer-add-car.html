@@ -9,95 +9,97 @@
             <div class="drawer__header">
                 <h3 class="title-2 title-2--mb">Добавление автомобиля</h3>
             </div>
-            <form action="" class="drawer__form form">
-                <div class="drawer__wrapper-input">
-                    <label for="car-add" class="form__label">
-                        Название
-                    </label>
-                    <input type="text" class="form-input" id="car-add" placeholder="Введите название">
-                </div>
-                <div class="drawer__wrapper-input">
-                    <label for="car-add-name" class="form__label">
-                        ФИО
-                    </label>
-                    <input type="text" class="form-input" id="car-add-name" placeholder="Введите ФИО" >
-                </div>
-                <div class="drawer__wrapper-input">
-                    <label for="car-add-phone" class="form__label">
-                        Телефон
-                    </label>
-                    <input type="tel" class="form-input" id="car-add-phone" placeholder="+7 (000) 000-00-00" >
-                </div>
-                <div class="drawer__form-container">
-                    <div class="drawer__radio-actions form__radio-actions">
-                        <div class="form-radio">
-                            <input type="radio" id="vin" name="options-car" value="vin" checked>
-                            <label for="vin">VIN номер</label>
-                        </div>
-                        <div class="form-radio">
-                            <input type="radio" id="car-number" name="options-car" value="read">
-                            <label for="car-number">Номер кузова (FRAME)</label>
-                        </div>
+            <div class="drawer__info">
+                <form action="" class="drawer__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="car-add" class="form__label">
+                            Название
+                        </label>
+                        <input type="text" class="form-input" id="car-add" placeholder="Введите название" >
                     </div>
-                    <div class="drawer__form-content">
-                        <input type="text" class="form-input" id="car-add-vin" placeholder="Введите VIN" >
-                        @@include('../select.html', {
-                            "id": "car-brand",
+                    <div class="drawer__wrapper-input">
+                        <label for="car-add-name" class="form__label">
+                            ФИО
+                        </label>
+                        <input type="text" class="form-input" id="car-add-name" placeholder="Введите ФИО" >
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="car-add-phone" class="form__label">
+                            Телефон
+                        </label>
+                        <input type="tel" class="form-input" id="car-add-phone" placeholder="+7 (000) 000-00-00" >
+                    </div>
+                    <div class="drawer__form-container">
+                        <div class="drawer__radio-actions form__radio-actions">
+                            <div class="form-radio">
+                                <input type="radio" id="car-add-vin-radio" name="options-car" value="vin" checked>
+                                <label for="car-add-vin-radio">VIN номер</label>
+                            </div>
+                            <div class="form-radio">
+                                <input type="radio" id="car-add-number-radio" name="options-car" value="read">
+                                <label for="car-add-number-radio">Номер кузова (FRAME)</label>
+                            </div>
+                        </div>
+                        <div class="drawer__form-content">
+                            <input type="text" class="form-input" id="car-add-vin" placeholder="Введите VIN" >
+                            @@include('../select.html', {
+                            "id": "car-add-brand",
                             "data": "data-select-sort",
                             "text": "Выберите марку автомобиля",
                             "option1": { "title": "Alfa Romeo", "value": "alfa-romeo" },
                             "option2": { "title": "Lexus", "value": "lexus" },
                             "option3": { "title": "Mercedes", "value": "mercedes" },
-                        })
-                        @@include('../select.html', {
-                            "id": "car-model",
+                            })
+                            @@include('../select.html', {
+                            "id": "car-add-model",
                             "data": "data-select-sort",
                             "text": "Выберите модель автомобиля",
                             "option1": { "title": "Model 1", "value": "model-1" },
                             "option2": { "title": "Model 2", "value": "model-2" },
                             "option3": { "title": "Model 3", "value": "model-3" },
-                        })
-                        @@include('../select.html', {
-                            "id": "car-power",
+                            })
+                            @@include('../select.html', {
+                            "id": "car-add-power",
                             "data": "data-select-sort",
                             "text": "Выберите объем двигателя и мощность",
                             "option1": { "title": "Power 1", "value": "power-1" },
                             "option2": { "title": "power 2", "value": "power-2" },
                             "option3": { "title": "power 3", "value": "power-3" },
-                        })
-                        <input type="text" class="form-input" id="car-license" placeholder="Введите госномер" >
-                        <input type="text" class="form-input" id="car-mileage" placeholder="Введите пробег" >
-                        @@include('../select.html', {
-                            "id": "car-year",
+                            })
+                            <input type="text" class="form-input" id="car-add-license" placeholder="Введите госномер" >
+                            <input type="text" class="form-input" id="car-add-mileage" placeholder="Введите пробег" >
+                            @@include('../select.html', {
+                            "id": "car-add-year",
                             "data": "data-select-sort",
                             "text": "Выберите год выпуска автомобиля",
                             "option1": { "title": "2021", "value": "2021" },
                             "option2": { "title": "2022", "value": "2022" },
                             "option3": { "title": "2023", "value": "2023" },
-                        })
-                        <textarea class="form-textarea" id="car-text" placeholder="Комментарий к автомобилю"></textarea>
-                        <div class="form-input form-file-2" tabindex="0" role="button" aria-label="Загрузить фото автомобиля" data-dropzone data-input="file-download-wrapper">
-                            <input id="fileInput-2" class="form-file-2__input" type="file" data-input="file-download" />
-                            <label for="fileInput-2"
-                               class="form-file-2__content"
-                               data-input="file-download-label"
-                               data-input-error="Один из файлов не является изображением. Доступные типы: jpg, png, bmp"
-                               data-input-placeholder="Загрузить фото автомобиля"
-                            >
-                                <span class="form-file-2__action">Загрузить фото автомобиля</span>
-                            </label>
-                        </div>
-                        <div class="form-input form-file-2__info d-none" data-input="file-download-block">
-                            <img src="" alt="" data-input="file-download-img" class="form-file-2__img">
-                            <span class="form-file-2__text" data-input="file-download-text"></span>
-                            <button type="button" class="form-file-2__delete btn-light" data-input="file-download-delete">
-                                <svg aria-hidden="true">
-                                    <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                </svg>
-                            </button>
+                            })
+                            <textarea class="form-textarea" id="car-add-text" placeholder="Комментарий к автомобилю"></textarea>
+                            <div class="form-input form-file-2" tabindex="0" role="button" aria-label="Загрузить фото автомобиля" data-dropzone data-input="file-download-wrapper">
+                                <input id="fileInput-2" class="form-file-2__input" type="file" data-input="file-download" />
+                                <label for="fileInput-2"
+                                       class="form-file-2__content"
+                                       data-input="file-download-label"
+                                       data-input-error="Один из файлов не является изображением. Доступные типы: jpg, png, bmp"
+                                       data-input-placeholder="Загрузить фото автомобиля"
+                                >
+                                    <span class="form-file-2__action">Загрузить фото автомобиля</span>
+                                </label>
+                            </div>
+                            <div class="form-input form-file-2__info d-none" data-input="file-download-block">
+                                <img src="" alt="" data-input="file-download-img" class="form-file-2__img">
+                                <span class="form-file-2__text" data-input="file-download-text"></span>
+                                <button type="button" class="form-file-2__delete btn-light" data-input="file-download-delete">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
                 <div class="drawer__footer">
                     <button type="reset" class="drawer__footer-btn btn-primary test123">
                         Отменить
@@ -106,7 +108,7 @@
                         Сохранить
                     </button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>

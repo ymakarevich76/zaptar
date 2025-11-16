@@ -2,6 +2,8 @@ const modalLinks = document.querySelectorAll('[data-modal]');
 
 if (modalLinks.length) {
   const body = document.querySelector('body');
+  const header = document.querySelector('header');
+  const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
   const modalClose = (currentModal) => {
     if (!currentModal) return;
@@ -10,6 +12,10 @@ if (modalLinks.length) {
     // если нет открытых модалок — возвращаем прокрутку
     if (!document.querySelector('.modal--open')) {
       body.classList.remove('fixed');
+      body.style.paddingRight = '';
+      if (header) {
+        header.style.paddingRight = '';
+      }
     }
   };
 
@@ -23,6 +29,10 @@ if (modalLinks.length) {
 
     currentModal.classList.add('modal--open');
     body.classList.add('fixed');
+    body.style.paddingRight = `${scrollbarWidth}px`;
+    if (header) {
+      header.style.paddingRight = `${scrollbarWidth}px`;
+    }
 
     // закрытие при клике вне модального контента
     currentModal.addEventListener('click', (e) => {
