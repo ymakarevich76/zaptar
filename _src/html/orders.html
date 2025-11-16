@@ -59,10 +59,10 @@
                                      Поставщик
                                  </th>
                                  <th>
-                                    <!-- Синхронизация -->
+                                    <!-- Возврат -->
                                  </th>
                                  <th>
-                                    <!-- Банковская карта -->
+                                    <!-- Дистрибьютер -->
                                  </th>
                                  <th>
                                      Склад
@@ -140,15 +140,15 @@
                                      zsps-
                                  </td>
                                  <td>
-                                     <!-- Синхронизация -->
-                                     <button aria-label="информация возврата товаров" class="indicator-return">
-                                         <svg class="indicator-return__ico" aria-hidden="true">
+                                     <!-- Возврат -->
+                                     <button aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                         <svg aria-hidden="true">
                                              <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
                                          </svg>
                                      </button>
                                  </td>
                                  <td>
-                                    <!--  Банковская карта -->
+                                    <!--  Дистрибьютер -->
                                     Карта
                                  </td>
                                  <td>
@@ -177,7 +177,9 @@
                                  </td>
                                  <td>
                                      <!-- Статус -->
-                                     Отказ
+                                     <div class="status status--rejected">
+                                         Отказ в возврате
+                                     </div>
                                  </td>
                                  <td>
                                      <!-- Комментарий -->

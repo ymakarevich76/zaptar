@@ -18,6 +18,26 @@ $c-accent: #1677FF;
 $c-accent-dark: #0958D9;
 $c-accent-light: #E6F4FF;
 
+// статусы
+$c-status: #E6F4FF;
+$c-status-rejected: #FF4D4F;
+$c-status-shipped: #00000073;
+$c-status-delayed: #FFF1B8;
+$c-status-issued: #00000040;
+$c-status-return-review: #FFADD2;
+$c-status-shortage: #FFC069;
+$c-status-rejected-insufficient: #F759AB;
+$c-status-return-sent: #ADC6FF;
+$c-status-incoming: #73D13D;
+$c-status-return-completed: #5CDBD3;
+$c-status-arrived: #BAE637;
+$c-status-processing: #B37FEB;
+
+// статусы возврата
+$c-return-status-1: #52C41A;
+$c-return-status-1-hover: #95DE64;
+$c-return-status-2: #FAAD14;
+$c-return-status-2-hover: #FFD666;
 
 $c-light: #F5F5F5;
 $c-light-80: #FFFFFFCC;

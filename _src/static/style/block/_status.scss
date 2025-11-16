@@ -1,0 +1,63 @@
+.status {
+  $self: &;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $c-status;
+    margin-right: $gutter * 2;
+    flex-shrink: 0;
+  }
+
+  &--rejected::before {
+    background-color: $c-status-rejected;
+  }
+
+  &--shipped::before {
+    background-color: $c-status-shipped;
+  }
+
+  &--delayed::before {
+    background-color: $c-status-delayed;
+  }
+
+  &--issued::before {
+    background-color: $c-status-issued;
+  }
+
+  &--return-review::before {
+    background-color: $c-status-return-review;
+  }
+
+  &--shortage::before {
+    background-color: $c-status-shortage;
+  }
+
+  &--rejected-insufficient::before {
+    background-color: $c-status-rejected-insufficient;
+  }
+
+  &--return-sent::before {
+    background-color: $c-status-return-sent;
+  }
+
+  &--incoming::before {
+    background-color: $c-status-incoming;
+  }
+
+  &--return-completed::before {
+    background-color: $c-status-return-completed;
+  }
+
+  &--arrived::before {
+    background-color: $c-status-arrived;
+  }
+
+  &--processing::before {
+    background-color: $c-status-processing;
+  }
+}
