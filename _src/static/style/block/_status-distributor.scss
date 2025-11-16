@@ -1,0 +1,15 @@
+.status-distributor {
+  width: 15px;
+  height: 15px;
+  color: $c-main-65;
+  transition: color .2s;
+
+  &:hover {
+    color: $c-dark;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

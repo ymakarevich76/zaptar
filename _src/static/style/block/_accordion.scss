@@ -5,7 +5,7 @@
   gap: $gutter * 6;
 
   &__item {
-    border: 1px solid #F0F0F0;
+    border: 1px solid $c-gray;
     border-radius: 8px;
   }
 
@@ -42,7 +42,7 @@
 
   &__content {
     padding: $gutter * 6;
-    border-top: 1px solid #F0F0F0;
+    border-top: 1px solid $c-gray;
   }
 
   &__item-content + * {
