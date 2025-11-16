@@ -1,4 +1,12 @@
 <div class="select @@class" data-select @@data>
+    <div class="form-input select__search d-none" data-select-search>
+        <input type="text" name="select-category" data-select-input id="@@id" class="select__input" value="@@value">
+        <span class="select__ico">
+            <svg>
+                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+        </span>
+    </div>
     <button type="button" class="form-input select__button" data-select-btn>
         <span data-select-text="@@text" class="select__text">@@text</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
@@ -6,19 +14,13 @@
             <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
           </svg>
         </span>
-        <span class="select__ico d-none">
-            <svg>
-                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-            </svg>
-        </span>
     </button>
     <div class="select__list" data-select-list>
-        <button type="button" class="select__item"
+        <button type="button" class="select__item select__item--active @@classItem"
                 data-select-value="@@option1.value">@@option1.title</button>
         <button type="button" class="select__item"
                 data-select-value="@@option2.value">@@option2.title</button>
         <button type="button" class="select__item"
                 data-select-value="@@option3.value">@@option3.title</button>
     </div>
-    <input type="text" name="select-category" data-select-input id="@@id" class="select__input-hidden">
 </div>

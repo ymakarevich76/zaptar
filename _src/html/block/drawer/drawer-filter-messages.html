@@ -9,57 +9,61 @@
             <div class="drawer__header">
                 <h3 class="title-2 title-2--mb">Фильтр</h3>
             </div>
-            <form action="" class="drawer__form form">
-                <div class="drawer__radio-actions form__radio-actions">
-                    <div class="form-radio">
-                        <input type="radio" id="all" name="options-1" value="all" checked>
-                        <label for="all">Все</label>
+            <div class="drawer__info">
+                <form action="" class="drawer__form form">
+                    <div class="drawer__radio-actions form__radio-actions">
+                        <div class="form-radio">
+                            <input type="radio" id="all" name="options-1" value="all" checked>
+                            <label for="all">Все</label>
+                        </div>
+                        <div class="form-radio">
+                            <input type="radio" id="read" name="options-1" value="read">
+                            <label for="read">Прочитанные</label>
+                        </div>
+                        <div class="form-radio">
+                            <input type="radio" id="unread" name="options-1" value="unread">
+                            <label for="unread">Непрочитанные</label>
+                        </div>
                     </div>
-                    <div class="form-radio">
-                        <input type="radio" id="read" name="options-1" value="read">
-                        <label for="read">Прочитанные</label>
-                    </div>
-                    <div class="form-radio">
-                        <input type="radio" id="unread" name="options-1" value="unread">
-                        <label for="unread">Непрочитанные</label>
-                    </div>
-                </div>
 
-                <div class="drawer__radio-actions form__radio-actions">
-                    <div class="form-radio">
-                        <input type="radio" class="form__radio" id="all-2" name="options-2" value="all-2" checked>
-                        <label for="all-2">Все</label>
+                    <div class="drawer__radio-actions form__radio-actions">
+                        <div class="form-radio">
+                            <input type="radio" class="form__radio" id="all-2" name="options-2" value="all-2" checked>
+                            <label for="all-2">Все</label>
+                        </div>
+                        <div class="form-radio">
+                            <input type="radio" class="form__radio" id="work" name="options-2" value="work">
+                            <label for="work">В работе</label>
+                        </div>
+                        <div class="form-radio">
+                            <input type="radio" class="form__radio" id="closed" name="options-2" value="closed">
+                            <label for="closed">Закрытые</label>
+                        </div>
                     </div>
-                    <div class="form-radio">
-                        <input type="radio" class="form__radio" id="work" name="options-2" value="work">
-                        <label for="work">В работе</label>
+
+                    <div class="drawer__wrapper-input">
+                        <label for="filter-messages">Тип сообщения</label>
+                        @@include('../select.html', {
+                        "id": "filter-messages",
+                        "text": "Все сообщения",
+                        "option1": { "title": "Сообщение 1", "value": "message-1" },
+                        "option2": { "title": "Сообщение 2", "value": "message-2" },
+                        "option3": { "title": "Сообщение 3", "value": "message-3" },
+                        })
                     </div>
-                    <div class="form-radio">
-                        <input type="radio" class="form__radio" id="closed" name="options-2" value="closed">
-                        <label for="closed">Закрытые</label>
+                    <div class="drawer__wrapper-input">
+                        <label for="reason">Причина возврата</label>
+                        @@include('../select.html', {
+                        "id": "reason",
+                        "text": "Все причины возврата",
+                        "option1": { "title": "Брак 1", "value": "defective-1" },
+                        "option2": { "title": "Брак 2", "value": "defective-2" },
+                        "option3": { "title": "Брак 3", "value": "defective-3" },
+                        "data": "data-select-multiple",
+                        "class": "select--multiple",
+                        })
                     </div>
-                </div>
-
-                <label for="filter-messages" class="drawer__select-label">Тип сообщения</label>
-                @@include('../select.html', {
-                "id": "filter-messages",
-                "text": "Все сообщения",
-                "option1": { "title": "Сообщение 1", "value": "message-1" },
-                "option2": { "title": "Сообщение 2", "value": "message-2" },
-                "option3": { "title": "Сообщение 3", "value": "message-3" },
-                })
-
-                <label for="reason" class="drawer__select-label">Причина возврата</label>
-                @@include('../select.html', {
-                "id": "reason",
-                "text": "Все причины возврата",
-                "option1": { "title": "Брак 1", "value": "defective-1" },
-                "option2": { "title": "Брак 2", "value": "defective-2" },
-                "option3": { "title": "Брак 3", "value": "defective-3" },
-                "data": "data-select-multiple",
-                "class": "select--multiple",
-                })
-
+                </form>
                 <div class="drawer__footer">
                     <button type="submit" class="drawer__footer-btn btn-primary">
                         Сбросить
@@ -68,7 +72,7 @@
                         Применить
                     </button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>

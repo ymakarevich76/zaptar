@@ -159,8 +159,9 @@
     color: $c-main-45;
   }
 
-  &:focus {
-    border-color: $c-main-88;
+  &:focus, &:not(:disabled):hover {
+    border-color: $c-accent;
+    box-shadow: 0 0 0 2px $c-accent-light;
   }
 
   @media (max-width: $md) {
