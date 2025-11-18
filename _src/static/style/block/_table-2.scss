@@ -1,0 +1,26 @@
+.table-2 {
+  $self: &;
+
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  tr {
+    font-size: 12px;
+    line-height: 20px;
+    border-bottom: 1px solid $c-gray;
+  }
+
+  td, th {
+    padding: $gutter * 4;
+
+    @media (max-width: $md) {
+      padding: $gutter * 2;
+    }
+  }
+
+  th {
+    background-color: #00000005;
+    color: $c-main-65;
+  }
+}

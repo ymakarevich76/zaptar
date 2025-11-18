@@ -1,8 +1,12 @@
 .section-header {
   display: grid;
   grid-auto-flow: column;
-  column-gap: $gutter * 4;
+  gap: $gutter * 4;
   align-content: center;
+
+  @media (max-width: $md) {
+    grid-auto-flow: row;
+  }
 
   &--mb {
     margin-bottom: $gutter * 6;
@@ -24,6 +28,14 @@
 
     &:last-child {
       justify-self: end;
+
+      @media (max-width: $md) {
+        justify-self: start;
+      }
+
+      @media (max-width: $xs) {
+        justify-self: auto;
+      }
     }
   }
 }

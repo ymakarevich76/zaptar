@@ -4,10 +4,18 @@
   position: relative;
   width: 100%;
 
+  @media (max-width: $sm) {
+    max-width: 180px;
+  }
+
   &__text {
     font-size: 14px;
     line-height: 22px;
     color: $c-main-45;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     &--active {
       color: $c-main-88;

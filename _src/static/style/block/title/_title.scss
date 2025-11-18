@@ -11,7 +11,6 @@
 
   @media (max-width: $md) {
     font-size: 20px;
-    line-height: 1.2;
   }
 
   &--mb {
@@ -24,6 +23,28 @@
 }
 
 .title-2 {
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 600;
+
+  @media (max-width: $lg) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  @media (max-width: $md) {
+    font-size: 16px;
+  }
+}
+
+.title-3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: $c-main;
+}
+
+.title-4 {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -36,11 +57,4 @@
       margin-bottom: $gutter * 3;
     }
   }
-}
-
-.title-3 {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 600;
-  color: $c-main;
 }

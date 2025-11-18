@@ -17,10 +17,8 @@
   }
 
   &__table-row {
-    grid-template-columns: minmax(69px, auto) 1fr minmax(165px, auto) minmax(176px, auto);
-    grid-template-areas: "id name data action";
-
     @media (max-width: $sm) {
+      display: grid;
       grid-template-columns: 1fr auto;
       grid-template-areas:
         "name action"
@@ -39,32 +37,46 @@
   &__table-cell {
 
     &--id {
-      grid-area: id;
+      min-width: 69px;
 
       @media (max-width: $sm) {
+        grid-area: id;
         padding-top: 0;
+        min-width: auto;
       }
     }
 
     &--name {
-      grid-area: name;
+      width: 100%;
+
+      @media (max-width: $sm) {
+        grid-area: name;
+        width: auto;
+      }
     }
 
     &--data {
-      grid-area: data;
+      min-width: 165px;
 
       @media (max-width: $sm) {
+        grid-area: data;
         padding-top: 0;
         justify-self: right;
+        min-width: auto;
       }
     }
 
     &--action {
-      grid-area: action;
+      min-width: 176px;
 
       display: grid;
       grid-auto-flow: column;
       gap: $gutter * 4;
+
+      @media (max-width: $sm) {
+        grid-area: action;
+        min-width: auto;
+      }
     }
   }
 

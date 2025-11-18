@@ -48,6 +48,10 @@
     margin-bottom: $gutter * 4;
     width: 100%;
     max-width: 321px;
+
+    @media (max-width: $md) {
+      gap: $gutter * 3;
+    }
   }
  }
 

@@ -40,52 +40,54 @@
 
                         </div >
                         <div class="tabs__content" tab-content="2">
-                            <span class="product__info">Информация о данном товаре отстуствует</span>
+                            <div class="product__wrapper-info">
+                                <span class="product__info">Информация о данном товаре отстуствует</span>
+                            </div>
                         </div>
                         <div class="tabs__content" tab-content="3">
-                            <div class="product__table imitation-table">
-                                <div class="product__table-row imitation-table__table-row">
-                                    <div class="imitation-table__table-cell">
+                            <table class="table-2">
+                                <tr>
+                                    <th>
                                         Бренд
-                                    </div>
-                                    <div class="imitation-table__table-cell">
+                                    </th>
+                                    <th>
                                         Артикул
-                                    </div>
-                                    <div class="imitation-table__table-cell">
+                                    </th>
+                                    <th>
                                         Действия
-                                    </div>
-                                </div>
-                                <div class="product__table-row imitation-table__table-row">
-                                    <div class="imitation-table__table-cell">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
                                         acdelco
-                                    </div>
-                                    <div class="imitation-table__table-cell">
+                                    </td>
+                                    <td>
                                         7506
-                                    </div>
-                                    <div class="imitation-table__table-cell">
+                                    </td>
+                                    <td>
                                         <button type="button" class="btn-light">
                                             <svg class="btn-light__ico">
                                                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
                                             </svg>
                                         </button>
-                                    </div>
-                                </div>
-                                <div class="product__table-row imitation-table__table-row">
-                                    <div class="imitation-table__table-cell">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
                                         acdelco
-                                    </div>
-                                    <div class="imitation-table__table-cell">
+                                    </td>
+                                    <td>
                                         7506
-                                    </div>
-                                    <div class="imitation-table__table-cell">
+                                    </td>
+                                    <td>
                                         <button type="button" class="btn-light">
                                             <svg class="btn-light__ico">
                                                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
                                             </svg>
                                         </button>
-                                    </div>
-                                </div>
-                            </div>
+                                    </td>
+                                </tr>
+                            </table>
                             @@include('block/pagination.html')
                         </div>
                     </div>

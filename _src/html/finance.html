@@ -13,6 +13,7 @@
                 </div>
 
                 <div class="section-header__group">
+                <!--     Todo: Саше кнопки -->
                     <button type="button" class="btn-primary finance__header-btn">
                         <svg>
                             <use xlink:href="static/img/symbol/sprite.svg#arrow-down"></use>
@@ -29,69 +30,76 @@
             </div>
             <div class="finance__info">
                 <div class="finance__left finance-block">
-                    <h2 class="finance__title">Состояние счетов</h2>
-                    <div class="finance__table-1 imitation-table">
-                        <div class="finance__table-row imitation-table__table-row">
-                            <div class="imitation-table__table-cell">
+                    <h2 class="title-2">Состояние счетов</h2>
+                    <table class="finance-table-1 table-2">
+                        <tr>
+                            <th>
                                 Баланс клиента
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </th>
+                            <th>
                                 Сумма последнего зачисления
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </th>
+                            <th>
                                 Доступная сумма заказа
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </th>
+                            <th>
                                 Кредитный лимит
-                            </div>
-                        </div>
-                        <div class="finance__table-row imitation-table__table-row">
-                            <div class="imitation-table__table-cell">
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Баланс клиента: </span>
                                 81,00
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td>
+                                <span>Сумма последнего зачисления: </span>
                                 11,00
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td>
+                                <span> Доступная сумма заказа: </span>
                                 81,00
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td>
+                                <span>Кредитный лимит: </span>
                                 Без ограничений
-                            </div>
-                        </div>
-                    </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="finance__right finance-block">
-                    <h2 class="finance__title">Информация о заказах</h2>
-                    <div class="finance__table-2 imitation-table">
-                        <div class="finance__table-row imitation-table__table-row">
-                            <div class="imitation-table__table-cell">
+                    <h2 class="title-2">Информация о заказах</h2>
+                    <table class="finance-table-2 table-2">
+                        <tr>
+                            <th>
                                 Заказы в работе
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </th>
+                            <th>
                                 Возвраты в работе
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </th>
+                            <th>
                                 Ожидаемая отгрузка на завтра
-                            </div>
-                        </div>
-                        <div class="finance__table-row imitation-table__table-row">
-                            <div class="imitation-table__table-cell">
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Заказы в работе: </span>
                                 0,00
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td>
+                                <span>Возвраты в работе: </span>
                                 0,00
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td>
+                                <span>Ожидаемая отгрузка на завтра: </span>
                                 0,00
-                            </div>
-                        </div>
-                    </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="finance__bottom finance-block">
                     <div class="section-header">
                         <div class="section-header__group">
-                            <h2 class="finance__title">Операции</h2>
+                            <h2 class="title-2">Операции</h2>
                         </div>
 
                         <div class="section-header__group">
@@ -113,92 +121,144 @@
                             </button>
                         </div>
                     </div>
-                    <div class="finance__table-3 imitation-table">
-                        <div class="finance__table-row imitation-table__table-row">
-                            <div class="imitation-table__table-cell">
+                    <table class="finance-table-3 table-2">
+                        <tr>
+                            <th class="finance-table-3__data">
                                 Дата
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </th>
+                            <th>
                                 Оплата
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </th>
+                            <th>
                                 Отгружено
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </th>
+                            <th>
                                 Сальдо
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </th>
+                            <th class="finance-table-3__document">
                                 Документ
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </th>
+                            <th class="finance-table-3__comment">
                                 Комментарий
-                            </div>
-                        </div>
-                        <div class="finance__table-row imitation-table__table-row">
-                            <div class="imitation-table__table-cell">
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="finance-table-3__data">
                                 26.11.2024 19:11:00
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__payment">
+                                <span>Оплата: </span>
                                 11,00
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__shipped">
+                                <span>Отгружено: </span>
                                 -
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__balance finance-table-3__balance--accent">
+                                <span>Сальдо: </span>
                                 81,00
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__document">
                                 -
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__comment">
+                                <span>Комментарий: </span>
                                 Аванс (Эквайринг)
-                            </div>
-                        </div>
-                        <div class="finance__table-row imitation-table__table-row">
-                            <div class="imitation-table__table-cell">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="finance-table-3__data">
                                 26.11.2024 19:11:00
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__payment">
+                                <span>Оплата: </span>
                                 156,00
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__shipped">
+                                <span>Отгружено: </span>
                                 -
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__balance">
+                                <span>Сальдо: </span>
                                 70,00
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__document">
                                 -
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__comment">
+                                <span>Комментарий: </span>
                                 Возврат OSRAM 7506 кол-во 1 шт. лампа накаливания из заказа №7138367
-                            </div>
-                        </div>
-                        <div class="finance__table-row imitation-table__table-row">
-                            <div class="imitation-table__table-cell">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="finance-table-3__data">
                                 26.11.2024 19:11:00
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__payment">
+                                <span>Оплата: </span>
                                 -
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__shipped">
+                                <span>Отгружено: </span>
                                 156,00
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__balance finance-table-3__balance--bad">
+                                <span>Сальдо: </span>
                                 -86,00
-                            </div>
-                            <div class="imitation-table__table-cell">
-                                <button type="button" class="btn-light">
-                                    <svg class="btn-light__ico">
-                                        <use xlink:href="static/img/symbol/sprite.svg#download"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="imitation-table__table-cell">
+                            </td>
+                            <td class="finance-table-3__document">
+                                <div class="finance-table-3__wrapper-btn">
+                                    <a href="#" class="finance-table-3__download" download>
+                                        <svg>
+                                            <use xlink:href="static/img/symbol/sprite.svg#download"></use>
+                                        </svg>
+                                        Лист отгрузки
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="finance-table-3__comment">
+                                <span>Комментарий: </span>
                                 Выдача
-                            </div>
-                        </div>
-                    </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="finance-table-3__data">
+                                26.11.2024 19:11:00
+                            </td>
+                            <td class="finance-table-3__payment">
+                                <span>Оплата: </span>
+                                -
+                            </td>
+                            <td class="finance-table-3__shipped">
+                                <span>Отгружено: </span>
+                                156,00
+                            </td>
+                            <td class="finance-table-3__balance finance-table-3__balance--bad">
+                                <span>Сальдо: </span>
+                                -86,00
+                            </td>
+                            <td class="finance-table-3__document">
+                                <div class="finance-table-3__wrapper-btn">
+                                    <a href="#" class="finance-table-3__download" download>
+                                        <svg>
+                                            <use xlink:href="static/img/symbol/sprite.svg#download"></use>
+                                        </svg>
+                                        Упд
+                                    </a>
+                                    <a href="#" class="finance-table-3__download" download>
+                                        <svg>
+                                            <use xlink:href="static/img/symbol/sprite.svg#download"></use>
+                                        </svg>
+                                        Счет
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="finance-table-3__comment">
+                                <span>Комментарий: </span>
+                                Выдача
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </section>
