@@ -9,3 +9,4 @@
 @@include('block/__anchor-smooth.js')
 @@include('block/__accordion.js')
 @@include('block/__floating-table.js')
+@@include('block/__check-all-checkbox.js')
