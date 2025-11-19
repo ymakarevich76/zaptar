@@ -24,44 +24,9 @@
                     </button>
                 </div>
             </div>
-            <!-- Todo: Саше фильтр -->
-            <div class="chat-list__filter d-none">
-                <span class="chat-list__filter-text">Фильтр:</span>
-                <div class="chat-list__filter-item">
-                    Прочитанные
-                    <button type="button" class="chat-list__filter-btn">
-                        <svg aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#close"></use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="chat-list__filter-item">
-                    В работе
-                    <button type="button" class="chat-list__filter-btn">
-                        <svg aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#close"></use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="chat-list__filter-item">
-                    <span>Тип сообщения: </span>
-                    Возврат произведен
-                    <button type="button" class="chat-list__filter-btn">
-                        <svg aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#close"></use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="chat-list__filter-item">
-                    <span>Причина возврата: </span>
-                    Брак
-                    <button type="button" class="chat-list__filter-btn">
-                        <svg aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#close"></use>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+
+            @@include('block/filter-bar.html', {"class": "chat-list__filter-bar"})
+
             <table class="table-2">
                 <tr class="chat-list__table-row">
                     <th class="chat-list__table-cell chat-list__table-cell--id d-sm-none">

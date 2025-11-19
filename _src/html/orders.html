@@ -13,7 +13,6 @@
                     <svg class="orders__btn-ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#mark"></use>
                     </svg>
-
                     Архив заказов
                 </a>
 
@@ -21,11 +20,12 @@
                     <svg class="orders__btn-ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#filter"></use>
                     </svg>
-
                     Фильтр
                 </button>
             </div>
         </div>
+
+        @@include('block/filter-bar.html', {"class": "orders__filter-bar"})
 
         <div class="orders__table table">
             <div class="table__scrollbar scrollbar scrollbar--horizontal">

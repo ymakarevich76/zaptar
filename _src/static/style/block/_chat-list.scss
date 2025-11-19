@@ -80,49 +80,7 @@
     }
   }
 
-  &__filter {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: $gutter * 2;
+  &__filter-bar {
     margin-bottom: $gutter * 6;
-  }
-
-  &__filter-text {
-    color: #000000A6;
-  }
-
-  &__filter-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    border-radius: 4px;
-    background-color: #00000005;
-    padding-left: $gutter * 2;
-    padding-right: $gutter * 2;
-
-    font-size: 12px;
-    line-height: 20px;
-    color: $c-main-88;
-
-    span {
-      color: $c-main-45;
-      padding-right: 2px;
-    }
-  }
-
-  &__filter-btn {
-    margin-left: $gutter;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    svg {
-      width: 12px;
-      height: 12px;
-      fill: $c-main-88;
-
-    }
   }
 }

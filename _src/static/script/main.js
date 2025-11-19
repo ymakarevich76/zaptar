@@ -10,3 +10,5 @@
 @@include('block/__accordion.js')
 @@include('block/__floating-table.js')
 @@include('block/__check-all-checkbox.js')
+@@include('block/__filter-bar-shadow.js')
+
