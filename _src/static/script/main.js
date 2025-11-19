@@ -11,4 +11,4 @@
 @@include('block/__floating-table.js')
 @@include('block/__check-all-checkbox.js')
 @@include('block/__filter-bar-shadow.js')
-@@include('block/__recharge.js')
+@@include('block/__payment.js')

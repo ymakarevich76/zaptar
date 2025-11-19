@@ -21,6 +21,8 @@
 
   @media (max-width: $sm) {
     width: 100%;
+    border-radius: 0;
+    padding: $gutter * 3;
   }
 
   &--open {

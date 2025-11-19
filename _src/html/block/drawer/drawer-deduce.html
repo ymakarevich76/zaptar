@@ -1,0 +1,35 @@
+<div id="drawer-deduce" class="drawer modal">
+    <div class="modal__inner modal__inner--open-right">
+        <div class="modal__content drawer__content">
+            <button type="button" class="modal__close modal__close--left" data-btn="close">
+                <svg>
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="drawer__header">
+                <h3 class="title-4 title-4--mb">Запрос на вывод средств</h3>
+            </div>
+            <div class="drawer__info" data-deduce>
+                <form action="" class="drawer__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="deduce-total" class="form__label">
+                            Сумма
+                        </label>
+                        <div class="form-input-tail" tabindex="0" data-input-tail>
+                            <input type="text" class="form-input-tail__input" id="deduce-total" placeholder="Введите сумму" data-deduce-input>
+                            <span class="form-input-tail__label">руб</span>
+                        </div>
+                    </div>
+                </form>
+                <div class="drawer__footer">
+                    <button type="reset" class="drawer__footer-btn btn-primary btn-primary--disabled" data-deduce-reset>
+                        Сбросить
+                    </button>
+                    <button type="submit" class="drawer__footer-btn btn btn--size-s btn--disabled" data-deduce-submit data-notification="notification-deduce">
+                        Применить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
