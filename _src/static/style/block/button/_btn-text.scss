@@ -1,0 +1,30 @@
+.btn-text {
+
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $gutter * 2;
+  border-radius: 4px;
+  transition: .2s;
+
+  &[disabled] {
+    color: $c-main-65;
+  }
+
+  &--theme-default {
+    color: $c-main-88;
+
+    &:hover {
+      background-color: $c-main-6;
+    }
+  }
+
+  &--theme-danger {
+    color: $c-text-bad;
+
+    &:hover {
+      background-color: $c-bad;
+    }
+  }
+}

@@ -1,4 +1,6 @@
 .table {
+  // элементы со следующими классами, создаются динамически
+  // table__floating-table, table__floating-table-row, table__floating-table-col
   position: relative;
 
   &__scrollbar {
@@ -19,11 +21,16 @@
     font-size: 12px;
     line-height: 16px;
     max-width: var(--table-col-max-width , 250px);
+
+    @media (max-width: $md) {
+      padding-left: $gutter * 2;
+      padding-right: $gutter * 2;
+    }
   }
 
   th,
   &__floating-table-row:first-child {
-    color: $c-main-45;
+    color: $c-main-65;
     background-color: $c-light;
   }
 
@@ -59,5 +66,9 @@
     right: 0;
     background-color: #fff;
     box-shadow: -8px 0px 5px -5px rgba(0, 0, 0, 0.12);
+
+    @media (max-width: $sm) {
+      display: none;
+    }
   }
 }

@@ -28,10 +28,6 @@
   //  }
   //}
 
-  //&--outside {
-  //  padding-right: 1px;
-  //}
-
   &--vertical {
     overflow-x: hidden;
     overflow-y: auto;
@@ -52,7 +48,7 @@
 
   &::-webkit-scrollbar-thumb {
     background-color: $c-main-15;
-    transition: color .2s;
+    transition: background-color .2s;
 
     &:hover {
       background-color: $c-main-25;
@@ -64,19 +60,15 @@
   }
 
   &::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 8px;
+    height: 8px;
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: 3px;
+    border-radius: 4px;
   }
 
   &::-webkit-scrollbar-track {
-    border-radius: 3px;
+    border-radius: 4px;
   }
-
-  //&#{$base}--outside {
-  //  margin-right: -1 * map_get($options, width);
-  //}
 }

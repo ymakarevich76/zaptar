@@ -150,21 +150,6 @@
   }
 }
 
-table {
-  display: grid;
-}
-
-tr,
-thead,
-tbody {
-  all: unset;
-  display: contents;
-}
-
-td {
-  display: block; /* теперь это grid-item */
-}
-
 .finance-table-3 {
   tr {
     @media (max-width: $md) {

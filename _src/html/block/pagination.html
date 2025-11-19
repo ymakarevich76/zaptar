@@ -1,28 +1,35 @@
-<div class="pagination">
-    <div class="pagination__info">1–10 из 13</div>
+<div class="pagination @@class">
+    <div class="pagination__info">1-10 из 13</div>
 
-    <div class="pagination__controls">
-        <a href="#" title="Предыдущая страница" class="pagination__angle pagination__angle--left">
+    <div class="pagination__actions">
+        <a aria-label="Предыдущая страница" class="pagination__control pagination__control--disabled">
             <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#chevron-left"></use>
             </svg>
         </a>
-        <div class="pagination__pages">
-            <a href="#" class="pagination__page pagination__page--current">1</a>
-            <a href="#" class="pagination__page">2</a>
-        </div>
-        <a href="#" title="Следующая страница" class="pagination__angle pagination__angle--left">
+
+        <a href="#" class="pagination__page pagination__page--current">1</a>
+
+        <a href="#" class="pagination__page">2</a>
+
+        <a href="#" class="pagination__page">3</a>
+
+        <a href="#" class="pagination__page">4</a>
+
+        <a href="#" aria-label="Следующая страница" class="pagination__control">
             <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#chevron-right"></use>
             </svg>
         </a>
     </div>
 
-    <div class="pagination__per-page">
-        <select class="pagination__select" name="items-per-page">
-            <option value="10" selected>10 / страниц</option>
-            <option value="20">20 / страниц</option>
-            <option value="50">50 / страниц</option>
-        </select>
-    </div>
+    @@include('select.html', {
+    "class": "pagination__option",
+    "classItem": "select__item--selected",
+    "id": "page",
+    "text": "10 / страниц",
+    "option1": { "title": "10 / страниц", "value": "10" },
+    "option2": { "title": "20 / страниц", "value": "20" },
+    "option3": { "title": "30 / страниц", "value": "30" }
+    })
 </div>
