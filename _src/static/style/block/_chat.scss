@@ -200,7 +200,7 @@
   &__person {
     font-size: 12px;
     line-height: 20px;
-    color: $c-main-25;
+    color: $c-main-45;
 
     #{$self}--admin & {
       justify-self: end;
@@ -250,7 +250,7 @@
     position: relative;
     font-size: 12px;
     line-height: 20px;
-    color: $c-main-25;
+    color: $c-main-45;
 
     #{$self}--admin & {
       margin-left: $gutter * 2;

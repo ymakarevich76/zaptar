@@ -9,13 +9,18 @@
 
   &__label {
     position: relative;
-    width: 16px;
-    height: 16px;
+    width: var(--checkbox-label-width, 16px);
+    height: var(--checkbox-label-height, 16px);
     border-radius: 4px;
     border: 1px solid #D9D9D9;
     transition: background-color .2s;
     cursor: pointer;
     flex-shrink: 0;
+
+    #{$self}--size-l & {
+      --checkbox-label-width: 24px;
+      --checkbox-label-height: 24px;
+    }
 
     #{$self}--has-text & {
       top: 3px;

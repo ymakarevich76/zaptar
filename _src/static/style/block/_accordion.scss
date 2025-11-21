@@ -11,6 +11,10 @@
 
   &__item-content {
     padding: $gutter * 6;
+
+    @media (max-width: $sm) {
+      padding: $gutter * 3;
+    }
   }
 
   &__btn {
@@ -43,6 +47,10 @@
   &__content {
     padding: $gutter * 6;
     border-top: 1px solid $c-gray;
+
+    @media (max-width: $sm) {
+      padding: $gutter * 3;
+    }
   }
 
   &__item-content + * {

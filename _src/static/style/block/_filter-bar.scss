@@ -4,10 +4,14 @@
 
   &__label {
     color: $c-main-65;
+    margin-right: $gutter * 2;
+
+    @media (max-width: $md) {
+      display: none;
+    }
   }
 
   &__shadow-wrap {
-    margin-left: $gutter * 2;
     position: relative;
     min-width: 0;
 
