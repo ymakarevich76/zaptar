@@ -33,53 +33,79 @@
   &__card {
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 200px 1fr 1fr;
     gap: $gutter * 6;
     padding-bottom: $gutter * 6;
     border-bottom: 1px solid $c-main-6;
+
+    @media (max-width: $lg) {
+      gap: $gutter * 6;
+    }
+
+    @media (max-width: 830px) {
+      grid-auto-flow: row;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 0;
+    }
+
+    @media (max-width: $sm) {
+      grid-auto-flow: column;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto auto;
+    }
   }
 
-  &__card-left {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 200px 1fr;
-    gap: $gutter * 6;
+  &__car {
+    @media (max-width: 830px) {
+      grid-column: 2;
+    }
+
+    @media (max-width: $sm) {
+      grid-column: 1;
+      grid-row: 3;
+    }
   }
 
-  &__card-photo {
+  &__photo {
     width: 200px;
     height: 200px;
 
-    //@media (max-width: $md) {
-    //  width: 100%;
-    //  height: 100%;
-    //}
+    @media (max-width: 830px) {
+      grid-column: 1;
+      grid-row: span 2;
+    }
+
+    @media (max-width: $sm) {
+      grid-column: 1;
+      width: 100%;
+      height: 250px;
+      grid-row: 1;
+      margin-bottom: $gutter * 3;
+      justify-self: center;
+    }
   }
 
-  &__card-img {
+  &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 6px;
   }
 
-  &__card-info {
-
-  }
-
-  &__card-row {
+  &__row {
     display: flex;
     gap: $gutter * 2;
   }
 
-  &__card-term {
+  &__term {
     font-size: 14px;
     line-height: 22px;
-    color: $c-main-25;
+    color: $c-main-45;
     min-width: auto;
   }
 
-  &__card-value {
+  &__value {
     font-size: 14px;
     line-height: 22px;
     color: $c-main-88;
@@ -89,28 +115,41 @@
     justify-content: space-between;
   }
 
-  &__card-copy {
+  &__copy {
     margin-left: $gutter;
   }
 
-  &__card-right {
+  &__person {
     position: relative;
-    padding-left: $gutter * 6;
-    padding-right: $gutter * 7;
+    padding-right: $gutter * 8;
+
+    @media (max-width: 830px) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    @media (max-width: $sm) {
+      grid-column: 1;
+      grid-row: 2;
+    }
 
     &::before {
       content: "";
       display: block;
       position: absolute;
       top: 0;
-      left: 0;
+      left: -24px;
       height: 100%;
       width: 1px;
       background-color: $c-main-6;
+
+      @media (max-width: 830px) {
+        display: none;
+      }
     }
   }
 
-  &__card-edit {
+  &__edit {
     position: absolute;
     top: 0;
     right: 0;
