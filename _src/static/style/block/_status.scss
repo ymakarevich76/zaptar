@@ -1,63 +1,93 @@
 .status {
   $self: &;
   display: flex;
-  align-items: center;
 
-  &::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
+  &::before,
+  &::after {
     background-color: $c-status;
-    margin-right: $gutter * 2;
     flex-shrink: 0;
+    border-radius: 50%;
   }
 
-  &--rejected::before {
+  &--type-left {
+    align-items: center;
+
+    &::before {
+      width: 6px;
+      height: 6px;
+      margin-right: $gutter * 2;
+      content: "";
+    }
+  }
+
+  &--type-right {
+    &::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      margin-left: $gutter;
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  &--rejected::before,
+  &--rejected::after {
     background-color: $c-status-rejected;
   }
 
-  &--shipped::before {
+  &--shipped::before,
+  &--shipped::after {
     background-color: $c-status-shipped;
   }
 
-  &--delayed::before {
+  &--delayed::before,
+  &--delayed::after {
     background-color: $c-status-delayed;
   }
 
-  &--issued::before {
+  &--issued::before,
+  &--issued::after {
     background-color: $c-status-issued;
   }
 
-  &--return-review::before {
+  &--return-review::before,
+  &--return-review::after {
     background-color: $c-status-return-review;
   }
 
-  &--shortage::before {
+  &--shortage::before,
+  &--shortage::after {
     background-color: $c-status-shortage;
   }
 
-  &--rejected-insufficient::before {
+  &--rejected-insufficient::before,
+  &--rejected-insufficient::after {
     background-color: $c-status-rejected-insufficient;
   }
 
-  &--return-sent::before {
+  &--return-sent::before,
+  &--return-sent::after {
     background-color: $c-status-return-sent;
   }
 
-  &--incoming::before {
+  &--incoming::before,
+  &--incoming::after {
     background-color: $c-status-incoming;
   }
 
-  &--return-completed::before {
+  &--return-completed::before,
+  &--return-completed::after {
     background-color: $c-status-return-completed;
   }
 
-  &--arrived::before {
+  &--arrived::before,
+  &--arrived::after {
     background-color: $c-status-arrived;
   }
 
-  &--processing::before {
+  &--processing::before,
+  &--processing::after {
     background-color: $c-status-processing;
   }
 }

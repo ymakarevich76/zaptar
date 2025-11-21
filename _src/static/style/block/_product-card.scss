@@ -1,0 +1,120 @@
+.product-card {
+  border: 1px solid $c-main-25;
+  border-radius: 8px;
+  padding: 16px;
+  line-height: normal;
+
+  &__head {
+    display: flex;
+    padding-bottom: $gutter * 3;
+  }
+
+  &__date {
+    margin-top: $gutter * 2;
+    color: $c-main-65;
+  }
+
+  &__status {
+    margin-left: auto;
+    max-width: 150px;
+    color: #000;
+  }
+
+  &__body {
+    border-top: 1px solid $c-main-15;
+    border-bottom: 1px solid $c-main-15;
+    padding-top: $gutter * 3;
+    padding-bottom: $gutter * 3;
+    display: grid;
+    gap: $gutter * 2;
+  }
+
+  &__product {
+    display: grid;
+    grid-auto-flow: column;
+    gap: $gutter * 4;
+    grid-template-columns: 1fr auto;
+  }
+
+  &__product-info {
+    width: 100%;
+    display: grid;
+    gap: $gutter * 2;
+  }
+
+  &__article {
+    margin-left: $gutter * 3;
+  }
+
+  &__name {
+    color: #000;
+    font-weight: 500;
+  }
+
+  &__supplier {
+    color: $c-main-65;
+  }
+
+  &__product-btns {
+    align-self: start;
+    display: grid;
+    gap: $gutter * 2;
+    justify-items: start;
+  }
+
+  &__service-btns {
+    display: grid;
+    gap: $gutter * 2;
+  }
+
+  &__info {
+    position: relative;
+    margin-left: -$gutter * 4;
+    margin-right: -$gutter * 4;
+    padding: $gutter * 1.5 $gutter * 4;
+    min-height: 30px;
+    background-color: $c-main-6;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: $gutter * 4;
+  }
+
+  &__term {
+    span {
+      color: $c-main-65;
+    }
+  }
+
+  &__sum {
+    justify-self: end;
+  }
+
+  &__actions,
+  &__note {
+    margin-top: $gutter * 3;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+
+    & > *:not(:last-child) {
+      margin-right: $gutter * 2;
+    }
+  }
+
+  &__checkbox {
+    display: grid;
+    grid-auto-flow: column;
+    gap: $gutter * 2;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &__note {
+    background-color: $c-main-2;
+    padding: $gutter * 2;
+    font-size: 12px;
+  }
+}
