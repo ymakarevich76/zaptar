@@ -53,6 +53,14 @@
   gap: $gutter * 6;
   align-items: center;
 
+  & > *:last-child {
+    justify-self: end;
+
+    @media (max-width: $lg) {
+      justify-self: center;
+    }
+  }
+
   @media (max-width: $lg) {
     grid-auto-flow: row;
     justify-content: center;
@@ -73,14 +81,6 @@
   &__info {
     color: $c-main-65;
     text-align: center;
-  }
-
-  &__pagination {
-    justify-self: end;
-
-    @media (max-width: $lg) {
-      justify-self: center;
-    }
   }
 
   &__cards {

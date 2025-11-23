@@ -1,4 +1,6 @@
 .modal {
+  $self: &;
+
   position: fixed;
   inset: 0;
   z-index: 1000;
@@ -56,6 +58,10 @@
     &--radius {
       border-radius: 16px;
       width: 434px;
+    }
+
+    #{$self}--wide & {
+      width: 520px;
     }
   }
 

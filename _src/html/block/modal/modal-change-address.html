@@ -1,0 +1,40 @@
+<div id="modal-change-address" class="modal modal--wide">
+    <div class="modal__inner modal__inner--open-top">
+        <div class="modal__content modal__content--radius">
+            <button type="button" class="modal__close modal__close--right" data-btn="close">
+                <svg>
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__header">
+                <h3 class="title-4 title-4--mb">Изменить пункт самовывоза</h3>
+            </div>
+            <div class="modal__wrapper">
+                <form action="" class="modal__form form">
+                    <div class="form__radio-actions">
+                        <div class="form-radio">
+                            <input type="radio" id="change-address-1" name="option-address" value="first-address" checked>
+                            <label for="change-address-1">ул. Луначарского, д.202, строение 1, корпус 4, офис 1005</label>
+                        </div>
+                        <div class="form-radio">
+                            <input type="radio" id="change-address-2" name="option-address" value="second-address">
+                            <label for="change-address-2">ул. Встроченко, д. 1 (офис 405)</label>
+                        </div>
+                        <div class="form-radio">
+                            <input type="radio" id="change-address-3" name="option-address" value="third-address">
+                            <label for="change-address-3">ул. Клары-Цеткин, д. 25 (офис 1004)</label>
+                        </div>
+                    </div>
+                    <div class="modal__footer modal__footer--row">
+                        <button type="reset" class="btn-primary">
+                            Отменить
+                        </button>
+                        <button type="submit" class="btn btn--size-s" data-btn="close" data-notification="notification-change-address">
+                            Изменить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

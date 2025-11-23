@@ -11,7 +11,7 @@ if (selects.length) {
     const hasSearch = item.hasAttribute('data-select-sort');
     const search = item.querySelector('[data-select-search]');
     const resetButtons = [...document.querySelectorAll('[type="reset"]')];
-    const datepicker = document.querySelector('[data-datepicker]');
+    const specificFields = document.querySelectorAll('[data-specific-field]');
 
     let lastHovered = null;
 
@@ -180,23 +180,40 @@ if (selects.length) {
         selectText.textContent = selectText.dataset.selectText;
         selectText.classList.remove('select__text--active');
         input.value = '';
-        datepicker.classList.add('d-none');
+        specificFields.forEach(item => item.classList.add('d-none'));
         selectSingle(items[0]);
       });
     });
 
-    const chooseLastItem = () => {
-      items.forEach(item => {
-        if(item.dataset.selectValue === 'choose-days') {
-          item.addEventListener('click', () => {
-            datepicker.classList.remove('d-none');
-          })
-        }
-      })
-    }
+    // const toggleSpecificBlock = () => {
+    //   items.forEach(option => {
+    //     option.addEventListener('click', () => {
+    //       const isSpecific = option.hasAttribute('data-specific-option');
+    //
+    //       specificFields.forEach(f => {
+    //         f.classList.toggle('d-none', !isSpecific);
+    //       });
+    //     });
+    //   });
+    // };
+
+    const toggleSpecificBlock = () => {
+      // вычисляет поля, относящиеся к текущему селекту
+      const localFields = item.nextElementSibling
+        ? [...item.nextElementSibling.querySelectorAll('[data-specific-field]')]
+        : [];
+
+      items.forEach(option => {
+        option.addEventListener('click', () => {
+          const isSpecific = option.hasAttribute('data-specific-option');
+
+          localFields.forEach(f => f.classList.toggle('d-none', !isSpecific));
+        });
+      });
+    };
 
     applyPreset();
     bindItems();
-    chooseLastItem();
+    toggleSpecificBlock();
   });
 }

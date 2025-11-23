@@ -119,6 +119,7 @@
                                     <div class="table-dropdown__content">
                                         <!--     todo: Юля сделай выпадаху сортировки и дровер сортировки на моби  -->
                                     </div>
+                                </div>
                             </th>
                             <th>
                                 Комментарий
@@ -128,7 +129,7 @@
                             </th>
                         </tr>
 
-                        <tr>
+                        <tr data-order="1">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-1" type="checkbox" class="checkbox__input" data-checkbox>
@@ -209,7 +210,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td>
+                            <td data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -231,7 +232,7 @@
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="2">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-2" type="checkbox" class="checkbox__input" data-checkbox>
@@ -312,7 +313,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td>
+                            <td data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -334,7 +335,7 @@
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="3">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-3" type="checkbox" class="checkbox__input" data-checkbox>
@@ -415,7 +416,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -437,7 +438,7 @@
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="4">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-4" type="checkbox" class="checkbox__input" data-checkbox>
@@ -518,7 +519,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -540,7 +541,7 @@
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="5">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-5" type="checkbox" class="checkbox__input" data-checkbox>
@@ -621,7 +622,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -643,7 +644,7 @@
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="6">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-6" type="checkbox" class="checkbox__input" data-checkbox>
@@ -724,7 +725,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -746,7 +747,7 @@
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="7">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-7" type="checkbox" class="checkbox__input" data-checkbox>
@@ -827,7 +828,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -849,7 +850,7 @@
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="8">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-8" type="checkbox" class="checkbox__input" data-checkbox>
@@ -930,7 +931,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -952,7 +953,7 @@
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="9">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-9" type="checkbox" class="checkbox__input" data-checkbox>
@@ -1033,7 +1034,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -1055,7 +1056,7 @@
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="10">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-10" type="checkbox" class="checkbox__input" data-checkbox>
@@ -1136,7 +1137,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -1163,23 +1164,21 @@
 
             <div class="orders__footer orders-footer">
                 <div class="orders-footer__actions">
-                    <button type="button" disabled class="btn-text" href="#">
+                    <button type="button" disabled class="btn-text" data-not-checked-product>
                         Товар не выбран
                     </button>
 
-                    <!-- todo: выводить когда выбраны чекбоксы -->
-                    <!-- <button type="button" class="btn-text btn-text&#45;&#45;theme-danger"> -->
-                    <!--     В архив -->
-                    <!-- </button> -->
-                    <!-- <button type="button" class="btn-text btn-text&#45;&#45;theme-default"> -->
-                    <!--     Изменить пункт самовывоза -->
-                    <!-- </button> -->
+                    <button type="button" class="btn-text btn-text--theme-danger d-none" data-checked-product>
+                        В архив
+                    </button>
+                    <button type="button" class="btn-text btn-text--theme-default d-none" data-checked-product data-modal="modal-change-address">
+                        Изменить пункт самовывоза
+                    </button>
                 </div>
 
-                <!-- todo: выводить когда выбраны чекбоксы -->
-                <!-- <div class="orders-footer__info"> -->
-                <!--     Выбрано 10 товаров на сумму 13 255,00 руб -->
-                <!-- </div> -->
+                <div class="orders-footer__info d-none" data-checked-product>
+                    Выбрано <span data-order-count>1</span> товаров на сумму <span data-order-total>13 255,00</span> руб
+                </div>
 
                 <div class="orders-footer__pagination">
                     @@include('block/pagination.html')
