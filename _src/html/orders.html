@@ -77,18 +77,48 @@
                             </th>
                             <th>
                                 <!-- todo: кнопка фильтра цены. Нужно узнать как будет выглядеть выпадашка -->
-                                <button>
-                                    Цена
-                                </button>
+                                <!-- <button type="button" class="table-filter-btn"> -->
+                                <!--     Цена -->
+                                <!--     <svg class="table-filter-btn__ico" aria-hidden="true"> -->
+                                <!--         <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use> -->
+                                <!--     </svg> -->
+                                <!-- </button> -->
+
+                                <div class="table-dropdown">
+                                    <div class="table-dropdown__inner">
+                                        Цена
+
+                                        <button type="button" class="table-dropdown__trigger btn-light">
+                                            <svg class="btn-light__ico" aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="table-dropdown__content">
+                                    <!--     todo: Юля сделай выпадаху сортировки и дровер сортировки на моби  -->
+                                    </div>
+                                </div>
                             </th>
                             <th>
                                 Сумма
                             </th>
                             <th>
                                 <!-- todo: кнопка фильтра статуса. Нужно узнать как будет выглядеть выпадашка -->
-                                <button>
-                                    Статус
-                                </button>
+                                <div class="table-dropdown">
+                                    <div class="table-dropdown__inner">
+                                        Статус
+
+                                        <button type="button" class="table-dropdown__trigger btn-light">
+                                            <svg class="btn-light__ico" aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="table-dropdown__content">
+                                        <!--     todo: Юля сделай выпадаху сортировки и дровер сортировки на моби  -->
+                                    </div>
                             </th>
                             <th>
                                 Комментарий

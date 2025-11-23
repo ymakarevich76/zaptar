@@ -51,8 +51,8 @@
     width: 0;
   }
 
-  &__cell-term {
-    min-width: 73px
+  &__cell-100 {
+    min-width: 100px
   }
 
   th:last-child,
@@ -71,5 +71,21 @@
     @media (max-width: $sm) {
       display: none;
     }
+  }
+}
+
+.table-dropdown {
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__trigger {
+    margin-left: $gutter * 2;
+    --btn-light-ico-fill: #{$c-main-45};
+  }
+
+  &__content {
+    display: none;
   }
 }
