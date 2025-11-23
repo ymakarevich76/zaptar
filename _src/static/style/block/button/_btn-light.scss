@@ -3,7 +3,6 @@
 
   width: 24px;
   height: 24px;
-  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +14,7 @@
   &__ico {
     width: 14px;
     height: 14px;
-    fill: $c-main-88;
+    fill: var(--btn-light-ico-fill , $c-main-88);
   }
 
   &:hover {

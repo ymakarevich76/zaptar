@@ -15,13 +15,14 @@
   }
 
   th,
-  td,
-  &__floating-table-cell {
+  td {
     padding: $gutter * 2 $gutter * 4;
     vertical-align: middle;
     font-size: 12px;
     line-height: 16px;
-    max-width: var(--table-col-max-width , 250px);
+    max-width: var(--table-col-max-width , 200px);
+    height: 54px;
+    display: table-cell;
 
     @media (max-width: $md) {
       padding-left: $gutter * 2;
@@ -35,41 +36,56 @@
     background-color: $c-main-2;
   }
 
-  tr:not(:first-child),
-  &__floating-table-row:not(:first-child){
+  tr {
     border-bottom: 1px solid $c-gray;
   }
 
   &__actions {
-    display: grid;
+    display: inline-grid;
     grid-auto-flow: column;
     column-gap: $gutter * 4;
     align-items: center;
   }
 
-  &__cell-address,
-  &__floating-table {
-    width: 160px;
+  &__cell-slim {
+    width: 0;
   }
 
-  &__address {
-    width: 128px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    cursor: default;
+  &__cell-100 {
+    min-width: 100px
+  }
+
+  th:last-child,
+  td:last-child,
+  &__floating-table {
+    width: var(--table-cell-last-width);
   }
 
   &__floating-table {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -1px;
     background-color: #fff;
     box-shadow: -8px 0px 5px -5px rgba(0, 0, 0, 0.12);
 
     @media (max-width: $sm) {
       display: none;
     }
+  }
+}
+
+.table-dropdown {
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__trigger {
+    margin-left: $gutter * 2;
+    --btn-light-ico-fill: #{$c-main-45};
+  }
+
+  &__content {
+    display: none;
   }
 }

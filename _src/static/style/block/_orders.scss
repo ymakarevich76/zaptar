@@ -10,10 +10,15 @@
   }
 
   // //////////////// desktop
-  &__desk {
-    @media (max-width: $md) {
-      display: none;
-    }
+  --table-cell-last-width: 160px;
+
+  &__address {
+    width: 128px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    cursor: default;
   }
 
   &__footer {
@@ -30,14 +35,6 @@
   }
 
   // //////////// mobile
-  &__mobi {
-    display: none;
-
-    @media (max-width: $md) {
-      display: block;
-    }
-  }
-
   &__cards {
     display: grid;
     gap: $gutter * 4;
