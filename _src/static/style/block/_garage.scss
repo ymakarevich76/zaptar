@@ -154,4 +154,9 @@
     top: 0;
     right: 0;
   }
+
+  &__table {
+    --table-cell-last-width: 136px;
+    min-width: 0;
+  }
 }

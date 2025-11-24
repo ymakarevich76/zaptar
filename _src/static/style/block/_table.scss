@@ -51,8 +51,12 @@
     width: 0;
   }
 
-  &__cell-100 {
+  &__cell-min-100 {
     min-width: 100px
+  }
+
+  &__cell-min-150 {
+    min-width: 150px
   }
 
   th:last-child,

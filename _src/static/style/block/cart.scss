@@ -1,0 +1,54 @@
+.cart {
+  --table-cell-last-width: 176px;
+
+  &__alert {
+    margin-bottom: $gutter * 8;
+  }
+
+  &__total {
+    margin-top: $gutter * 12;
+  }
+}
+
+.cart-total {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    border-top: 1px solid $c-main-6;
+    display: flex;
+    padding-top: $gutter * 6;
+  }
+
+  &__actions {
+    margin-left: auto;
+    display: grid;
+    grid-auto-flow: column;
+    gap: $gutter * 2;
+  }
+
+  &__pickup {
+    display: grid;
+    grid-auto-flow: column;
+    gap: $gutter * 2;
+    align-items: center;
+  }
+
+  &__pickup-caption {
+    color: $c-main-65;
+  }
+
+  &__pickup-option {
+    width: 320px;
+  }
+
+  &__order {
+    min-width: 312px;
+
+    @media (max-width: $lg) {
+      min-width: auto;
+    }
+  }
+}

@@ -4,31 +4,16 @@
 <main class="main">
     @@include('block/breadcrumb.html')
 
-    <section class="orders container">
-        <div class="section-header section-header--mb">
-            <h1 class="title">Заказы</h1>
+    <section class="cart container">
+        <h1 class="title title--mb">Корзина</h1>
 
-            <div class="section-header__group">
-                <a class="btn-primary" href="#">
-                    <svg class="orders__btn-ico" aria-hidden="true">
-                        <use xlink:href="static/img/symbol/sprite.svg#mark"></use>
-                    </svg>
-                    Архив заказов
-                </a>
-
-                <button class="btn-primary" type="button" data-modal="drawer-filter-orders">
-                    <svg class="orders__btn-ico" aria-hidden="true">
-                        <use xlink:href="static/img/symbol/sprite.svg#filter"></use>
-                    </svg>
-                    Фильтр
-                </button>
-            </div>
-        </div>
-
-        @@include('block/filter-bar.html', {"class": "orders__filter-bar"})
+        @@include('block/alert.html', {
+        "class": "alert--info cart__alert",
+        "text": "При оформлении заказа, ожидаемая дата доставки указана с момента добавления в корзину. Цены в корзине актуальны в течении 24-х часов с момента добавления товара",
+        })
 
         <div class="d-md-none">
-            <div class="orders__table table">
+            <div class="cart__table table">
                 <div class="table__scrollbar scrollbar scrollbar--horizontal">
                     <table class="table__inner">
                         <tr>
@@ -37,12 +22,6 @@
                                     <input id="cel-head" type="checkbox" class="checkbox__input" data-checkbox-main>
                                     <label for="cel-head" class="checkbox__label"></label>
                                 </div>
-                            </th>
-                            <th>
-                                Заказ
-                            </th>
-                            <th>
-                                Действия
                             </th>
                             <th>
                                 Бренд
@@ -56,10 +35,10 @@
                             <th>
                                 Поставщик
                             </th>
-                            <th>
+                            <th class="table__cell-slim">
                                 <!-- Возврат -->
                             </th>
-                            <th>
+                            <th class="table__cell-slim">
                                 <!-- Дистрибьютер -->
                             </th>
                             <th>
@@ -69,45 +48,12 @@
                                 Срок
                             </th>
                             <th>
-                                <!-- &nbsp; неразрывный пробел, для того чтобы два слова неразрывались при переносе -->
-                                Ожидаемая дата&nbsp;доставки
-                            </th>
-                            <th>
                                 Количество
                             </th>
                             <th>
-                                <!-- todo: кнопка фильтра цены. Нужно узнать как будет выглядеть выпадашка -->
-                                <!-- <button type="button" class="table-filter-btn"> -->
-                                <!--     Цена -->
-                                <!--     <svg class="table-filter-btn__ico" aria-hidden="true"> -->
-                                <!--         <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use> -->
-                                <!--     </svg> -->
-                                <!-- </button> -->
-
                                 <div class="table-dropdown">
                                     <div class="table-dropdown__inner">
                                         Цена
-
-                                        <button type="button" class="table-dropdown__trigger btn-light">
-                                            <svg class="btn-light__ico" aria-hidden="true">
-                                                <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                    <div class="table-dropdown__content">
-                                    <!--     todo: Юля сделай выпадаху сортировки и дровер сортировки на моби  -->
-                                    </div>
-                                </div>
-                            </th>
-                            <th>
-                                Сумма
-                            </th>
-                            <th>
-                                <!-- todo: кнопка фильтра статуса. Нужно узнать как будет выглядеть выпадашка -->
-                                <div class="table-dropdown">
-                                    <div class="table-dropdown__inner">
-                                        Статус
 
                                         <button type="button" class="table-dropdown__trigger btn-light">
                                             <svg class="btn-light__ico" aria-hidden="true">
@@ -121,40 +67,22 @@
                                     </div>
                                 </div>
                             </th>
+                            <th>
+                                Сумма
+                            </th>
                             <th class="table__cell-min-150">
                                 Комментарий
                             </th>
                             <th>
-                                Адрес
+                                Действия
                             </th>
                         </tr>
 
-                        <tr data-order="1">
+                        <tr>
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-1" type="checkbox" class="checkbox__input" data-checkbox>
                                     <label for="cel-1" class="checkbox__label"></label>
-                                </div>
-                            </td>
-                            <td class="orders-table__data">
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
                                 </div>
                             </td>
                             <td>
@@ -163,7 +91,7 @@
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
@@ -198,61 +126,39 @@
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
                                 10
                             </td>
-                            <td>
+                            <td class="nowrap">
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td data-order-amount>
+                            <td class="nowrap">
                                 <!-- Сумма -->
                                 1 427,00
-                            </td>
-                            <td>
-                                <!-- Статус -->
-                                <div class="status status--type-left status--rejected">
-                                    Отказ в возврате
-                                </div>
                             </td>
                             <td>
                                 <!-- Комментарий -->
                                 -
                             </td>
                             <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
-                            </td>
-                        </tr>
-
-                        <tr data-order="2">
-                            <td>
-                                <div class="checkbox">
-                                    <input id="cel-2" type="checkbox" class="checkbox__input" data-checkbox>
-                                    <label for="cel-2" class="checkbox__label"></label>
-                                </div>
-                            </td>
-                            <td class="orders-table__data">
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
+                                    <button aria-label="создать обсуждение" class="btn-light">
                                         <svg class="btn-light__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
-                                    </a>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
                                     <button aria-label="информация по заказу" class="btn-light">
                                         <svg class="btn-light__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
@@ -260,17 +166,26 @@
                                     </button>
                                 </div>
                             </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <input id="cel-2" type="checkbox" class="checkbox__input" data-checkbox>
+                                    <label for="cel-2" class="checkbox__label"></label>
+                                </div>
+                            </td>
                             <td>
                                 <!-- Бренд -->
-                                Philips32342323
+                                Philips
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
-                                Лампа ксенон d2r 5000кsdfsdfas dfdsf asdfsfadfsdf asdf afdfa
+                                Лампа ксенон d2r 5000к
                             </td>
                             <td>
                                 <!-- Поставщик -->
@@ -278,7 +193,7 @@
                             </td>
                             <td>
                                 <!-- Возврат -->
-                                <button aria-label="информация возврата товаров" class="status-return status-return--special">
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
                                     </svg>
@@ -301,41 +216,49 @@
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
-                                1
+                                10
                             </td>
-                            <td>
+                            <td class="nowrap">
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td data-order-amount>
+                            <td class="nowrap">
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
                             <td>
-                                <!-- Статус -->
-                                <div class="status status--type-left status--rejected">
-                                    Отказ в возврате
-                                </div>
-                            </td>
-                            <td>
                                 <!-- Комментарий -->
-                                -
+                                Какой-то комментарий с очень длинным текстом
                             </td>
                             <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
+                                <!-- Действия -->
+                                <div class="table__actions">
+                                    <button aria-label="создать обсуждение" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
 
-                        <tr data-order="3">
+                        <tr>
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-3" type="checkbox" class="checkbox__input" data-checkbox>
@@ -343,33 +266,12 @@
                                 </div>
                             </td>
                             <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                            <td>
                                 <!-- Бренд -->
                                 Philips
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
@@ -404,41 +306,49 @@
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
-                                1
+                                10
                             </td>
                             <td class="nowrap">
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap" data-order-amount>
+                            <td class="nowrap">
                                 <!-- Сумма -->
                                 1 427,00
-                            </td>
-                            <td>
-                                <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
-                                </div>
                             </td>
                             <td>
                                 <!-- Комментарий -->
                                 -
                             </td>
                             <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
+                                <!-- Действия -->
+                                <div class="table__actions">
+                                    <button aria-label="создать обсуждение" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
 
-                        <tr data-order="4">
+                        <tr>
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-4" type="checkbox" class="checkbox__input" data-checkbox>
@@ -446,33 +356,12 @@
                                 </div>
                             </td>
                             <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                            <td>
                                 <!-- Бренд -->
                                 Philips
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
@@ -507,41 +396,49 @@
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
-                                1
+                                10
                             </td>
                             <td class="nowrap">
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap" data-order-amount>
+                            <td class="nowrap">
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
                             <td>
-                                <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
-                                </div>
-                            </td>
-                            <td>
                                 <!-- Комментарий -->
-                                -
+                                Какой-то комментарий с очень длинным текстом
                             </td>
                             <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                                    ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                                </span>
+                                <!-- Действия -->
+                                <div class="table__actions">
+                                    <button aria-label="создать обсуждение" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
 
-                        <tr data-order="5">
+                        <tr>
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-5" type="checkbox" class="checkbox__input" data-checkbox>
@@ -549,33 +446,12 @@
                                 </div>
                             </td>
                             <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                            <td>
                                 <!-- Бренд -->
                                 Philips
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
@@ -610,41 +486,49 @@
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
-                                1
+                                10
                             </td>
                             <td class="nowrap">
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap" data-order-amount>
+                            <td class="nowrap">
                                 <!-- Сумма -->
                                 1 427,00
-                            </td>
-                            <td>
-                                <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
-                                </div>
                             </td>
                             <td>
                                 <!-- Комментарий -->
                                 -
                             </td>
                             <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
+                                <!-- Действия -->
+                                <div class="table__actions">
+                                    <button aria-label="создать обсуждение" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
 
-                        <tr data-order="6">
+                        <tr>
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-6" type="checkbox" class="checkbox__input" data-checkbox>
@@ -652,33 +536,12 @@
                                 </div>
                             </td>
                             <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <button href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </button>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                            <td>
                                 <!-- Бренд -->
                                 Philips
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
@@ -713,449 +576,45 @@
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
-                                1
+                                10
                             </td>
                             <td class="nowrap">
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap" data-order-amount>
+                            <td class="nowrap">
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
                             <td>
-                                <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
-                                </div>
-                            </td>
-                            <td>
                                 <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
-                            </td>
-                        </tr>
-
-                        <tr data-order="7">
-                            <td>
-                                <div class="checkbox">
-                                    <input id="cel-7" type="checkbox" class="checkbox__input" data-checkbox>
-                                    <label for="cel-7" class="checkbox__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
+                                Какой-то комментарий с очень длинным текстом
                             </td>
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
+                                    <button aria-label="создать обсуждение" class="btn-light">
                                         <svg class="btn-light__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
-                                    </a>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
+                                    <button aria-label="информация по заказу" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                        </svg>
+                                    </button>
                                     <button aria-label="информация по заказу" class="btn-light">
                                         <svg class="btn-light__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
                                     </button>
                                 </div>
-                            </td>
-                            <td>
-                                <!-- Бренд -->
-                                Philips
-                            </td>
-                            <td>
-                                <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
-                            </td>
-                            <td>
-                                <!-- Наименование -->
-                                Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
-                            </td>
-                            <td class="nowrap">
-                                <!-- Срок -->
-                                3-6 дн.
-                            </td>
-                            <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
-                                <!-- Количество -->
-                                1
-                            </td>
-                            <td class="nowrap">
-                                <!-- Цена -->
-                                1 427,00
-                            </td>
-                            <td class="nowrap" data-order-amount>
-                                <!-- Сумма -->
-                                1 427,00
-                            </td>
-                            <td>
-                                <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
-                            </td>
-                        </tr>
-
-                        <tr data-order="8">
-                            <td>
-                                <div class="checkbox">
-                                    <input id="cel-8" type="checkbox" class="checkbox__input" data-checkbox>
-                                    <label for="cel-8" class="checkbox__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Бренд -->
-                                Philips
-                            </td>
-                            <td>
-                                <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
-                            </td>
-                            <td>
-                                <!-- Наименование -->
-                                Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
-                            </td>
-                            <td class="nowrap">
-                                <!-- Срок -->
-                                3-6 дн.
-                            </td>
-                            <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
-                                <!-- Количество -->
-                                1
-                            </td>
-                            <td class="nowrap">
-                                <!-- Цена -->
-                                1 427,00
-                            </td>
-                            <td class="nowrap" data-order-amount>
-                                <!-- Сумма -->
-                                1 427,00
-                            </td>
-                            <td>
-                                <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
-                            </td>
-                        </tr>
-
-                        <tr data-order="9">
-                            <td>
-                                <div class="checkbox">
-                                    <input id="cel-9" type="checkbox" class="checkbox__input" data-checkbox>
-                                    <label for="cel-9" class="checkbox__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Бренд -->
-                                Philips
-                            </td>
-                            <td>
-                                <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
-                            </td>
-                            <td>
-                                <!-- Наименование -->
-                                Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
-                            </td>
-                            <td class="nowrap">
-                                <!-- Срок -->
-                                3-6 дн.
-                            </td>
-                            <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
-                                <!-- Количество -->
-                                1
-                            </td>
-                            <td class="nowrap">
-                                <!-- Цена -->
-                                1 427,00
-                            </td>
-                            <td class="nowrap" data-order-amount>
-                                <!-- Сумма -->
-                                1 427,00
-                            </td>
-                            <td>
-                                <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
-                            </td>
-                        </tr>
-
-                        <tr data-order="10">
-                            <td>
-                                <div class="checkbox">
-                                    <input id="cel-10" type="checkbox" class="checkbox__input" data-checkbox>
-                                    <label for="cel-10" class="checkbox__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Бренд -->
-                                Philips
-                            </td>
-                            <td>
-                                <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
-                            </td>
-                            <td>
-                                <!-- Наименование -->
-                                Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
-                            </td>
-                            <td class="nowrap">
-                                <!-- Срок -->
-                                3-6 дн.
-                            </td>
-                            <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
-                                <!-- Количество -->
-                                1
-                            </td>
-                            <td class="nowrap">
-                                <!-- Цена -->
-                                1 427,00
-                            </td>
-                            <td class="nowrap" data-order-amount>
-                                <!-- Сумма -->
-                                1 427,00
-                            </td>
-                            <td>
-                                <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
                             </td>
                         </tr>
                     </table>
@@ -1164,40 +623,54 @@
 
             <div class="orders__footer orders-footer">
                 <div class="orders-footer__actions">
-                    <button type="button" disabled class="btn-text" data-not-checked-product>
+                    <button type="button" disabled class="btn-text" href="#">
                         Товар не выбран
                     </button>
 
-                    <button type="button" class="btn-text btn-text--theme-danger d-none" data-checked-product>
-                        В архив
-                    </button>
-                    <button type="button" class="btn-text btn-text--theme-default d-none" data-checked-product data-modal="modal-change-address">
-                        Изменить пункт самовывоза
-                    </button>
+                    <!-- todo: выводить когда выбраны чекбоксы -->
+                    <!-- <button type="button" class="btn-text btn-text&#45;&#45;theme-danger"> -->
+                    <!--     В архив -->
+                    <!-- </button> -->
+                    <!-- <button type="button" class="btn-text btn-text&#45;&#45;theme-default"> -->
+                    <!--     Изменить пункт самовывоза -->
+                    <!-- </button> -->
                 </div>
 
-                <div class="orders-footer__info d-none" data-checked-product>
-                    Выбрано <span data-order-count>1</span> товаров на сумму <span data-order-total>13 255,00</span> руб
-                </div>
+                <!-- todo: выводить когда выбраны чекбоксы -->
+                <!-- <div class="orders-footer__info"> -->
+                <!--     Выбрано 10 товаров на сумму 13 255,00 руб -->
+                <!-- </div> -->
 
                 <div class="orders-footer__pagination">
                     @@include('block/pagination.html')
                 </div>
             </div>
 
-            <table class="orders__summary table-2">
-                <tr>
-                    <th>Клиент</th>
-                    <th>Количество позиций</th>
-                    <th>Сумма</th>
-                </tr>
+            <div class="cart__total cart-total">
+                <div class="cart-total__title title-2 title--mb">
+                    <span>Итого к оплате:</span>
+                    <span>0,00 руб.</span>
+                </div>
 
-                <tr>
-                    <td>Все позиции</td>
-                    <td>13 шт.</td>
-                    <td>78 350,00 руб</td>
-                </tr>
-            </table>
+                <div class="cart-total__bottom">
+                    <div class="cart-total__actions">
+                        <div class="cart-total__pickup">
+                            <div class="cart-total__pickup-caption">Пункт самовывоза</div>
+
+                            @@include('block/select.html', {
+                            "class": "cart-total__pickup-option",
+                            "classItem": "select__item--selected",
+                            "id": "cart",
+                            "option1": { "title": "ул. Луначарского, д.202, строение 1, корпус 4, офис 1005", "value": "address 1" },
+                            "option2": { "title": "еще один адрес", "value": "address 2" },
+                            "option3": { "title": "и еще другой адресс", "value": "address 3" }
+                            })
+                        </div>
+
+                        <button type="button" class="cart-total__order btn-primary btn-primary--disabled" disabled>Оформить заказ</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="d-none d-md-block">

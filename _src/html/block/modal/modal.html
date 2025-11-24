@@ -10,14 +10,11 @@
                 <h3 class="title-4 title-4--mb">Авторизация</h3>
             </div>
             <div class="modal__wrapper">
-<!--                <div class="modal__alert">-->
-<!--                    <span class="modal__alert-ico">-->
-<!--                        <svg>-->
-<!--                            <use xlink:href="static/img/symbol/sprite.svg#info-circle-fill"></use>-->
-<!--                        </svg>-->
-<!--                    </span>-->
-<!--                    <span class="modal__alert-text">Чтобы просмотреть содержимое страницы, войдите в личный кабинет или зарегистрируйтесь</span>-->
-<!--                </div>-->
+                @@include('../alert.html', {
+                "class": "alert--info",
+                "text": "Чтобы просмотреть содержимое страницы, войдите в личный кабинет или зарегистрируйтесь",
+                })
+
                 <form action="" class="modal__form form">
                     <div class="modal__wrapper-input-login">
                         <input type="text" class="form-input modal__input" id="login-auth" placeholder="Введите логин" required>

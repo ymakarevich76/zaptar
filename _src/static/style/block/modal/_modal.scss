@@ -207,29 +207,4 @@
       color: $c-accent-dark;
     }
   }
-
-  &__alert {
-    display: flex;
-    align-items: center;
-    background-color: $c-accent-light;
-    border-radius: 8px;
-    border: 1px solid #91CAFF;
-    padding: $gutter * 2 $gutter * 3;
-  }
-
-  &__alert-ico {
-    margin-right: $gutter * 2;
-
-    svg {
-      width: 14px;
-      height: 14px;
-      fill: $c-accent;
-    }
-  }
-
-  &__alert-text {
-    font-size: 12px;
-    line-height: 20px;
-    color: $c-accent;
-  }
 }
