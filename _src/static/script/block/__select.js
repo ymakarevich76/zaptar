@@ -175,42 +175,48 @@ if (selects.length) {
       }
     });
 
+    // Получить и обновить блоки, зависящие от спец селекторов
+    const updateLocalFields = (value) => {
+      const getLocalFields = () => {
+        let el = item;
+        while (el && el !== document.body) {
+          const found = el.querySelectorAll('[data-specific-field]');
+          if (found.length) return Array.from(found);
+          el = el.parentElement;
+        }
+        return [];
+      };
+
+      const local = getLocalFields();
+      local.forEach(f => {
+        f.classList.toggle('d-none', f.dataset.specificField !== value);
+      });
+    };
+
+    const toggleSpecificBlock = () => {
+      const update = () => {
+        const selected = items.filter(i => i.classList.contains('select__item--selected'));
+        const values = selected.length
+          ? selected.map(s => s.dataset.selectValue)
+          : [items[0].dataset.selectValue];
+
+        updateLocalFields(values[0]);
+      };
+
+      update();
+      items.forEach(opt => opt.addEventListener('click', () => setTimeout(update, 0)));
+    };
+
     resetButtons.forEach(btn => {
       btn.addEventListener('click', () => {
+        updateLocalFields(items[0].dataset.selectValue);
+
         selectText.textContent = selectText.dataset.selectText;
         selectText.classList.remove('select__text--active');
         input.value = '';
-        specificFields.forEach(item => item.classList.add('d-none'));
         selectSingle(items[0]);
       });
     });
-
-    // const toggleSpecificBlock = () => {
-    //   items.forEach(option => {
-    //     option.addEventListener('click', () => {
-    //       const isSpecific = option.hasAttribute('data-specific-option');
-    //
-    //       specificFields.forEach(f => {
-    //         f.classList.toggle('d-none', !isSpecific);
-    //       });
-    //     });
-    //   });
-    // };
-
-    const toggleSpecificBlock = () => {
-      // вычисляет поля, относящиеся к текущему селекту
-      const localFields = item.nextElementSibling
-        ? [...item.nextElementSibling.querySelectorAll('[data-specific-field]')]
-        : [];
-
-      items.forEach(option => {
-        option.addEventListener('click', () => {
-          const isSpecific = option.hasAttribute('data-specific-option');
-
-          localFields.forEach(f => f.classList.toggle('d-none', !isSpecific));
-        });
-      });
-    };
 
     applyPreset();
     bindItems();
