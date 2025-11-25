@@ -1,6 +1,6 @@
 .alert {
   $self: &;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   border-radius: 8px;
   padding: $gutter * 2 $gutter * 3;

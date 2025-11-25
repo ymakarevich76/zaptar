@@ -4,6 +4,7 @@
   gap: $gutter * 6;
   align-items: center;
   min-height: 32px;
+  margin-top: $gutter * 4;
 
   & > *:last-child {
     justify-self: end;

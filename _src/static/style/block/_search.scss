@@ -1,0 +1,47 @@
+.search {
+  &__template {
+    display: grid;
+    grid-template-columns: 336px 1fr;
+    gap: $gutter * 6;
+  }
+
+  &__content {
+    display: grid;
+    gap: $gutter * 6;
+    justify-items: start;
+  }
+}
+
+.search-filter {
+  &__title {
+
+  }
+
+  &__group {
+
+  }
+
+  &__group-title {
+
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+
+  }
+
+  &__checkbox {
+
+  }
+
+  &__price {
+
+  }
+
+  &__action {
+
+  }
+}

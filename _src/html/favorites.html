@@ -10,9 +10,9 @@
         <h1 class="title title--mb">Избранное</h1>
 
         <div class="d-md-none">
-            <div class=" table">
-                <div class="table__scrollbar scrollbar scrollbar--horizontal">
-                    <table class="table__inner">
+            <div class="table" data-table>
+                <div class="table__scrollbar scrollbar scrollbar--horizontal" data-table-scrollbar>
+                    <table class="table__inner" data-table-inner>
                         <tr>
                             <th>
                                 Бренд
@@ -226,6 +226,12 @@
                             </td>
                         </tr>
                     </table>
+                </div>
+            </div>
+
+            <div class="table-footer">
+                <div class="table-footer__pagination">
+                    @@include('block/pagination.html')
                 </div>
             </div>
         </div>

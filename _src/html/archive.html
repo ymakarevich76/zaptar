@@ -4,45 +4,31 @@
 <main class="main">
     @@include('block/breadcrumb.html')
 
-    <section class="orders container">
+    <section class="archive container">
         <div class="section-header section-header--mb">
-            <h1 class="title">Заказы</h1>
+            <h1 class="title">Архив</h1>
 
             <div class="section-header__group">
-                <a class="btn-primary" href="#">
-                    <svg class="orders__btn-ico" aria-hidden="true">
-                        <use xlink:href="static/img/symbol/sprite.svg#mark"></use>
-                    </svg>
-                    Архив заказов
-                </a>
-
                 <button class="btn-primary" type="button" data-modal="drawer-filter-orders">
-                    <svg class="orders__btn-ico" aria-hidden="true">
-                        <use xlink:href="static/img/symbol/sprite.svg#filter"></use>
-                    </svg>
-                    Фильтр
+                    Назад
                 </button>
             </div>
         </div>
 
-        @@include('block/filter-bar.html', {"class": "orders__filter-bar"})
-
         <div class="d-md-none">
-            <div class="orders__table table" data-table>
-                <div class="table__scrollbar scrollbar scrollbar--horizontal" data-table-scrollbar>
-                    <table class="table__inner" data-table-inner>
+            <div class="table">
+                <div class="table__scrollbar scrollbar scrollbar--horizontal">
+                    <table class="table__inner">
                         <tr>
-                            <th>
+                            <th class="table__cell-slim">
                                 <div class="checkbox">
                                     <input id="cel-head" type="checkbox" class="checkbox__input" data-checkbox-main>
                                     <label for="cel-head" class="checkbox__label"></label>
                                 </div>
                             </th>
-                            <th>
-                                Заказ
-                            </th>
-                            <th>
-                                Действия
+                            <th class="table__cell-slim">
+                                <!-- &nbsp; неразрывный пробел, для того чтобы два слова не разрывались при переносе -->
+                                Ожидаемая дата&nbsp;доставки
                             </th>
                             <th>
                                 Бренд
@@ -54,23 +40,7 @@
                                 Наименование
                             </th>
                             <th>
-                                Поставщик
-                            </th>
-                            <th>
-                                <!-- Возврат -->
-                            </th>
-                            <th>
-                                <!-- Дистрибьютер -->
-                            </th>
-                            <th>
-                                Склад
-                            </th>
-                            <th>
                                 Срок
-                            </th>
-                            <th>
-                                <!-- &nbsp; неразрывный пробел, для того чтобы два слова неразрывались при переносе -->
-                                Ожидаемая дата&nbsp;доставки
                             </th>
                             <th>
                                 Количество
@@ -88,7 +58,7 @@
                                     </div>
 
                                     <div class="table-dropdown__content">
-                                    <!--     todo: сделать выпадаху сортировки и дровер сортировки на моби  -->
+                                        <!--     todo: сделать выпадаху сортировки и дровер сортировки на моби  -->
                                     </div>
                                 </div>
                             </th>
@@ -113,12 +83,6 @@
                                     </div>
                                 </div>
                             </th>
-                            <th class="table__cell-min-150">
-                                Комментарий
-                            </th>
-                            <th>
-                                Адрес
-                            </th>
                         </tr>
 
                         <tr data-order="1">
@@ -128,26 +92,10 @@
                                     <label for="cel-1" class="checkbox__label"></label>
                                 </div>
                             </td>
-                            <td class="orders-table__data">
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
                             <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
                             </td>
                             <td>
                                 <!-- Бренд -->
@@ -155,72 +103,33 @@
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
                                 Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
                             </td>
                             <td class="nowrap">
                                 <!-- Срок -->
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
                                 10
                             </td>
-                            <td>
+                            <td class="nowrap">
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td data-order-amount>
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
                             <td>
                                 <!-- Статус -->
                                 <div class="status status--type-left status--rejected">
-                                    Отказ в возврате
+                                    Отказ
                                 </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
                             </td>
                         </tr>
 
@@ -231,99 +140,44 @@
                                     <label for="cel-2" class="checkbox__label"></label>
                                 </div>
                             </td>
-                            <td class="orders-table__data">
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Бренд -->
-                                Philips32342323
-                            </td>
-                            <td>
-                                <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
-                            </td>
-                            <td>
-                                <!-- Наименование -->
-                                Лампа ксенон d2r 5000кsdfsdfas dfdsf asdfsfadfsdf asdf afdfa
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button aria-label="информация возврата товаров" class="status-return status-return--special">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
-                            </td>
-                            <td class="nowrap">
-                                <!-- Срок -->
-                                3-6 дн.
-                            </td>
                             <td>
                                 <!-- Ожидаемая дата доставки -->
                                 22.11.2024 -
                                 27.11.2024
                             </td>
                             <td>
-                                <!-- Количество -->
-                                1
+                                <!-- Бренд -->
+                                Philips
                             </td>
                             <td>
+                                <!-- Артикул -->
+                                85126
+                            </td>
+                            <td>
+                                <!-- Наименование -->
+                                Лампа ксенон d2r 5000к
+                            </td>
+                            <td class="nowrap">
+                                <!-- Срок -->
+                                3-6 дн.
+                            </td>
+                            <td>
+                                <!-- Количество -->
+                                10
+                            </td>
+                            <td class="nowrap">
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td data-order-amount>
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
                             <td>
                                 <!-- Статус -->
                                 <div class="status status--type-left status--rejected">
-                                    Отказ в возврате
+                                    Отказ
                                 </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
                             </td>
                         </tr>
 
@@ -335,25 +189,9 @@
                                 </div>
                             </td>
                             <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
                             </td>
                             <td>
                                 <!-- Бренд -->
@@ -361,48 +199,19 @@
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
                                 Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
                             </td>
                             <td class="nowrap">
                                 <!-- Срок -->
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
-                                1
+                                10
                             </td>
                             <td class="nowrap">
                                 <!-- Цена -->
@@ -414,19 +223,9 @@
                             </td>
                             <td>
                                 <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
                                 </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
                             </td>
                         </tr>
 
@@ -438,25 +237,9 @@
                                 </div>
                             </td>
                             <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
                             </td>
                             <td>
                                 <!-- Бренд -->
@@ -464,48 +247,19 @@
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
                                 Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
                             </td>
                             <td class="nowrap">
                                 <!-- Срок -->
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
-                                1
+                                10
                             </td>
                             <td class="nowrap">
                                 <!-- Цена -->
@@ -517,19 +271,9 @@
                             </td>
                             <td>
                                 <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
                                 </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                                    ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                                </span>
                             </td>
                         </tr>
 
@@ -541,25 +285,9 @@
                                 </div>
                             </td>
                             <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
                             </td>
                             <td>
                                 <!-- Бренд -->
@@ -567,48 +295,19 @@
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
                                 Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
                             </td>
                             <td class="nowrap">
                                 <!-- Срок -->
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
-                                1
+                                10
                             </td>
                             <td class="nowrap">
                                 <!-- Цена -->
@@ -620,19 +319,9 @@
                             </td>
                             <td>
                                 <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
                                 </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
                             </td>
                         </tr>
 
@@ -644,25 +333,9 @@
                                 </div>
                             </td>
                             <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <button href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </button>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
                             </td>
                             <td>
                                 <!-- Бренд -->
@@ -670,48 +343,19 @@
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
                                 Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
                             </td>
                             <td class="nowrap">
                                 <!-- Срок -->
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
-                                1
+                                10
                             </td>
                             <td class="nowrap">
                                 <!-- Цена -->
@@ -723,19 +367,9 @@
                             </td>
                             <td>
                                 <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
                                 </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
                             </td>
                         </tr>
 
@@ -747,25 +381,9 @@
                                 </div>
                             </td>
                             <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
                             </td>
                             <td>
                                 <!-- Бренд -->
@@ -773,48 +391,19 @@
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
                                 Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
                             </td>
                             <td class="nowrap">
                                 <!-- Срок -->
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
-                                1
+                                10
                             </td>
                             <td class="nowrap">
                                 <!-- Цена -->
@@ -826,19 +415,9 @@
                             </td>
                             <td>
                                 <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
                                 </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
                             </td>
                         </tr>
 
@@ -850,25 +429,9 @@
                                 </div>
                             </td>
                             <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
                             </td>
                             <td>
                                 <!-- Бренд -->
@@ -876,48 +439,19 @@
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
                                 Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
                             </td>
                             <td class="nowrap">
                                 <!-- Срок -->
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
-                                1
+                                10
                             </td>
                             <td class="nowrap">
                                 <!-- Цена -->
@@ -929,19 +463,9 @@
                             </td>
                             <td>
                                 <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
                                 </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
                             </td>
                         </tr>
 
@@ -953,25 +477,9 @@
                                 </div>
                             </td>
                             <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
                             </td>
                             <td>
                                 <!-- Бренд -->
@@ -979,48 +487,19 @@
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
                                 Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
                             </td>
                             <td class="nowrap">
                                 <!-- Срок -->
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
-                                1
+                                10
                             </td>
                             <td class="nowrap">
                                 <!-- Цена -->
@@ -1032,19 +511,9 @@
                             </td>
                             <td>
                                 <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
                                 </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
                             </td>
                         </tr>
 
@@ -1056,25 +525,9 @@
                                 </div>
                             </td>
                             <td>
-                                <!-- Заказ -->
-                                71413536<br>
-                                15.11.2024<br>
-                                20:41:51
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
                             </td>
                             <td>
                                 <!-- Бренд -->
@@ -1082,48 +535,19 @@
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                85126
                             </td>
                             <td>
                                 <!-- Наименование -->
                                 Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
                             </td>
                             <td class="nowrap">
                                 <!-- Срок -->
                                 3-6 дн.
                             </td>
                             <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
                                 <!-- Количество -->
-                                1
+                                10
                             </td>
                             <td class="nowrap">
                                 <!-- Цена -->
@@ -1135,19 +559,9 @@
                             </td>
                             <td>
                                 <!-- Статус -->
-                                <div class="status status--type-left status--return-sent">
-                                    Возврат отправлен поставщику
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
                                 </div>
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Адрес -->
-                                <span class="orders__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
                             </td>
                         </tr>
                     </table>
@@ -1161,14 +575,12 @@
                     </button>
 
                     <button type="button" class="btn-text btn-text--theme-danger d-none" data-checked-product>
-                        В архив
-                    </button>
-                    <button type="button" class="btn-text btn-text--theme-default d-none" data-checked-product data-modal="modal-change-address">
-                        Изменить пункт самовывоза
+                        Восстановить заказ
                     </button>
                 </div>
 
-                <div class="table-footer__info d-none" data-checked-product>
+                <!-- todo: переписать js, на этой странице блок не нужен -->
+                <div class="table-footer__info d-none">
                     Выбрано <span data-order-count>1</span> товаров на сумму <span data-order-total></span> руб
                 </div>
 
@@ -1176,20 +588,6 @@
                     @@include('block/pagination.html')
                 </div>
             </div>
-
-            <table class="orders__summary table-2">
-                <tr>
-                    <th>Клиент</th>
-                    <th>Количество позиций</th>
-                    <th>Сумма</th>
-                </tr>
-
-                <tr>
-                    <td>Все позиции</td>
-                    <td>13 шт.</td>
-                    <td>78 350,00 руб</td>
-                </tr>
-            </table>
         </div>
 
         <div class="d-none d-md-block">

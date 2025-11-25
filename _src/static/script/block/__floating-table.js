@@ -1,8 +1,8 @@
-const table = document.querySelector('.table');
+const table = document.querySelector('[data-table]');
 
 if(table) {
-    const container = document.querySelector('.table__scrollbar');
-    const inner = document.querySelector('.table__inner');
+    const container = document.querySelector('[data-table-scrollbar]');
+    const inner = document.querySelector('[data-table-inner]');
 
     let floatingTable = null;
 
@@ -69,5 +69,3 @@ if(table) {
         syncHeights();
     });
 }
-
-
