@@ -31,16 +31,16 @@
                                 <div class="details__tree">
                                     <div class="details__search">
                                         <input class="details__search-input" type="text" tabindex="0" placeholder="Поиск по списку категорий" />
-                                        <button type="button" class="btn-light btn-light--size-l details__search-btn">
-                                            <svg aria-hidden="true" class="btn-light__ico">
+                                        <button type="button" class="details__search-btn">
+                                            <svg aria-hidden="true">
                                                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
                                             </svg>
                                         </button>
                                     </div>
-                                    <ul class="details__list">
-                                        <li class="details__item details__item--open">
+                                    <ul class="details__list" data-categories-list>
+                                        <li class="details__item" data-categories-item>
                                             <div class="details__group">
-                                                <button type="button" class="btn-light">
+                                                <button type="button" class="btn-light" data-categories-btn>
                                                     <svg aria-hidden="true" class="btn-light__ico">
                                                         <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
                                                     </svg>
@@ -49,15 +49,15 @@
                                                     Детали для ТО
                                                 </span>
                                             </div>
-                                            <ul class="details__sublist">
+                                            <ul class="details__sublist d-none" data-categories-sublist>
                                                 <li class="details__subitem">Фильтр масляный</li>
                                                 <li class="details__subitem">Фильтр воздушный</li>
                                                 <li class="details__subitem">Фильтр салонный</li>
                                             </ul>
                                         </li>
-                                        <li class="details__item">
+                                        <li class="details__item" data-categories-item>
                                             <div class="details__group">
-                                                <button type="button" class="btn-light">
+                                                <button type="button" class="btn-light" data-categories-btn>
                                                     <svg aria-hidden="true" class="btn-light__ico">
                                                         <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
                                                     </svg>
@@ -66,22 +66,32 @@
                                                     Двигатель
                                                 </span>
                                             </div>
+                                            <ul class="details__sublist d-none" data-categories-sublist>
+                                                <li class="details__subitem">Двигатель масляный</li>
+                                                <li class="details__subitem">Двигатель воздушный</li>
+                                                <li class="details__subitem">Двигатель салонный</li>
+                                            </ul>
                                         </li>
-                                        <li class="details__item">
+                                        <li class="details__item" data-categories-item>
                                             <div class="details__group">
-                                                <button type="button" class="btn-light">
+                                                <button type="button" class="btn-light" data-categories-btn>
                                                     <svg aria-hidden="true" class="btn-light__ico">
                                                         <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
                                                     </svg>
                                                 </button>
                                                 <span class="details__label">
-                                                    Топливная система
+                                                   Топливная система
                                                 </span>
                                             </div>
+                                            <ul class="details__sublist d-none" data-categories-sublist>
+                                                <li class="details__subitem">Система</li>
+                                                <li class="details__subitem">Система</li>
+                                                <li class="details__subitem">Система</li>
+                                            </ul>
                                         </li>
-                                        <li class="details__item details__item--open">
+                                        <li class="details__item" data-categories-item>
                                             <div class="details__group">
-                                                <button type="button" class="btn-light">
+                                                <button type="button" class="btn-light" data-categories-btn>
                                                     <svg aria-hidden="true" class="btn-light__ico">
                                                         <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
                                                     </svg>
@@ -90,10 +100,10 @@
                                                     Система охлаждения
                                                 </span>
                                             </div>
-                                            <ul class="details__list">
-                                                <li class="details__item">
+                                            <ul class="details__list d-none" data-categories-sublist>
+                                                <li class="details__item" data-categories-item>
                                                     <div class="details__group">
-                                                        <button type="button" class="btn-light">
+                                                        <button type="button" class="btn-light" data-categories-btn>
                                                             <svg aria-hidden="true" class="btn-light__ico">
                                                                 <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
                                                             </svg>
@@ -102,15 +112,15 @@
                                                            Топливная система
                                                         </span>
                                                     </div>
-                                                    <ul class="details__sublist">
+                                                    <ul class="details__sublist d-none" data-categories-sublist>
                                                         <li class="details__subitem">Фильтр масляный</li>
                                                         <li class="details__subitem">Фильтр воздушный</li>
                                                         <li class="details__subitem">Фильтр салонный</li>
                                                     </ul>
                                                 </li>
-                                                <li class="details__item">
+                                                <li class="details__item" data-categories-item>
                                                     <div class="details__group">
-                                                        <button type="button" class="btn-light">
+                                                        <button type="button" class="btn-light" data-categories-btn>
                                                             <svg aria-hidden="true" class="btn-light__ico">
                                                                 <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
                                                             </svg>
@@ -119,6 +129,59 @@
                                                            Топливная система
                                                         </span>
                                                     </div>
+                                                    <ul class="details__sublist d-none" data-categories-sublist>
+                                                        <li class="details__subitem">Фильтр масляный</li>
+                                                        <li class="details__subitem">Фильтр воздушный</li>
+                                                        <li class="details__subitem">Фильтр салонный</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="details__item" data-categories-item>
+                                                    <div class="details__group">
+                                                        <button type="button" class="btn-light" data-categories-btn>
+                                                            <svg aria-hidden="true" class="btn-light__ico">
+                                                                <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <span class="details__label">
+                                                           Топливная система
+                                                        </span>
+                                                    </div>
+                                                    <ul class="details__list d-none" data-categories-sublist>
+                                                        <li class="details__item" data-categories-item>
+                                                            <div class="details__group">
+                                                                <button type="button" class="btn-light" data-categories-btn>
+                                                                    <svg aria-hidden="true" class="btn-light__ico">
+                                                                        <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                                    </svg>
+                                                                </button>
+                                                                <span class="details__label">
+                                                           Топливная система
+                                                        </span>
+                                                            </div>
+                                                            <ul class="details__sublist d-none" data-categories-sublist>
+                                                                <li class="details__subitem">Фильтр масляный</li>
+                                                                <li class="details__subitem">Фильтр воздушный</li>
+                                                                <li class="details__subitem">Фильтр салонный</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="details__item" data-categories-item>
+                                                            <div class="details__group">
+                                                                <button type="button" class="btn-light" data-categories-btn>
+                                                                    <svg aria-hidden="true" class="btn-light__ico">
+                                                                        <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                                    </svg>
+                                                                </button>
+                                                                <span class="details__label">
+                                                           Топливная система
+                                                        </span>
+                                                            </div>
+                                                            <ul class="details__sublist d-none" data-categories-sublist>
+                                                                <li class="details__subitem">Фильтр масляный</li>
+                                                                <li class="details__subitem">Фильтр воздушный</li>
+                                                                <li class="details__subitem">Фильтр салонный</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                             </ul>
                                         </li>
@@ -127,13 +190,134 @@
 
                             </div >
                             <div class="tabs-2__content" tab-2-content="2">
+                                <div class="details__nodes">
+                                    <div class="details__scrollbar scrollbar scrollbar--vertical">
+                                        <ul class="details__nodes-list">
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель и подвески
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески и силовой агрегат
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески двигателя
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель и подвески
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески и силовой агрегат
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески двигателя
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель и подвески
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески и силовой агрегат
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески двигателя
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель и подвески
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески и силовой агрегат
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески двигателя
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель и подвески
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески и силовой агрегат
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески двигателя
+                                                </a>
+                                            </li>
 
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="details__main">
-
+                    <div class="details__card">
+                        <h3 class="title-4 title-4--accent details__card-title">ДВИГАТЕЛЬ (Var.: 1/Rev.: 0)</h3>
+                        <img src="static/img/details/1.png" alt="Двигатель">
+                    </div>
+                    <div class="details__card">
+                        <h3 class="title-4 title-4--accent details__card-title">ПОДВЕСКИ И СИЛОВОЙ АГРЕГАТ (Var.: 1/Rev.: 0) (Var.: 1/Rev.: 0)</h3>
+                        <img src="static/img/details/2.png" alt="Двигатель">
+                    </div>
+                    <div class="details__card">
+                        <h3 class="title-4 title-4--accent details__card-title">ПОДВЕСКИ И СИЛОВОЙ АГРЕГАТ (Var.: 2/Rev.: 0)</h3>
+                        <img src="static/img/details/3.png" alt="Двигатель">
+                    </div>
+                    <div class="details__card">
+                        <h3 class="title-4 title-4--accent details__card-title">ПОДВЕСКИ ДВИГАТЕЛЯ (Var.: 1/Rev.: 0)</h3>
+                        <img src="static/img/details/4.png" alt="Двигатель">
+                    </div>
                 </div>
             </div>
         </section>
