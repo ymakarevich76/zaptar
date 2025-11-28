@@ -1,0 +1,556 @@
+@@include('block/head.html')
+@@include('block/header/header.html')
+
+<main class="main">
+    <!-- //////////////////////////////////////////////////////////  -->
+    @@include('block/breadcrumb.html')
+
+    <div class="container">
+        <section class="details">
+            <div class="section-header section-header--mb">
+                <div class="section-header__group">
+                    <h1 class="title">Abarth CINQUECENTO ABARTH [NUOVA 500 ABARTH (2008-2012)]</h1>
+                </div>
+
+                <div class="section-header__group">
+                    <a href="#" class="btn-primary">
+                       Назад
+                    </a>
+                </div>
+            </div>
+            <div class="details__wrapper">
+                <div class="details__sidebar">
+                    <div class="tabs-2">
+                        <div class="tabs-2__box-btn">
+                            <button class="tabs-2__btn tabs-2__btn--active" tab-2="1">Поиск по каталогу</button>
+                            <button class="tabs-2__btn" tab-2="2">Поиск по узлам</button>
+                        </div>
+
+                        <div class="tabs-2__box-content">
+                            <div class="tabs-2__content tabs-2__content--active" tab-2-content="1">
+                                <div class="details__tree">
+                                    <div class="details__search">
+                                        <input class="details__search-input" type="text" tabindex="0" placeholder="Поиск по списку категорий" />
+                                        <button type="button" class="details__search-btn">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="details__scrollbar scrollbar scrollbar--vertical">
+                                        <ul class="details__list" data-categories-list>
+                                            <li class="details__item" data-categories-item>
+                                                <div class="details__group">
+                                                    <button type="button" class="btn-light" data-categories-btn>
+                                                        <svg aria-hidden="true" class="btn-light__ico">
+                                                            <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span class="details__label">
+                                                    Детали для ТО
+                                                </span>
+                                                </div>
+                                                <ul class="details__sublist d-none" data-categories-sublist>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link details__link--active">Фильтр масляный</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Фильтр воздушный</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Фильтр салонный</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Свечи зажигания</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Ремень приводной</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Ремень ГРМ</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Насос системы охлаждения</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Термостат</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Колодки тормозные</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Пробка сливного отверстия</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Щетки стеклоочистителя</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="details__item" data-categories-item>
+                                                <div class="details__group">
+                                                    <button type="button" class="btn-light" data-categories-btn>
+                                                        <svg aria-hidden="true" class="btn-light__ico">
+                                                            <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span class="details__label">
+                                                    Двигатель
+                                                </span>
+                                                </div>
+                                                <ul class="details__sublist d-none" data-categories-sublist>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Двигатель масляный</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Двигатель воздушный</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Двигатель салонный</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="details__item" data-categories-item>
+                                                <div class="details__group">
+                                                    <button type="button" class="btn-light" data-categories-btn>
+                                                        <svg aria-hidden="true" class="btn-light__ico">
+                                                            <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span class="details__label">
+                                                   Топливная система
+                                                </span>
+                                                </div>
+                                                <ul class="details__sublist d-none" data-categories-sublist>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Система</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Система</a>
+                                                    </li>
+                                                    <li class="details__subitem">
+                                                        <a href="#" class="details__link">Система</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="details__item" data-categories-item>
+                                                <div class="details__group">
+                                                    <button type="button" class="btn-light" data-categories-btn>
+                                                        <svg aria-hidden="true" class="btn-light__ico">
+                                                            <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span class="details__label">
+                                                    Система охлаждения
+                                                </span>
+                                                </div>
+                                                <ul class="details__list d-none" data-categories-sublist>
+                                                    <li class="details__item" data-categories-item>
+                                                        <div class="details__group">
+                                                            <button type="button" class="btn-light" data-categories-btn>
+                                                                <svg aria-hidden="true" class="btn-light__ico">
+                                                                    <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                                </svg>
+                                                            </button>
+                                                            <span class="details__label">
+                                                           Топливная система
+                                                        </span>
+                                                        </div>
+                                                        <ul class="details__sublist d-none" data-categories-sublist>
+                                                            <li class="details__subitem">
+                                                                <a href="#" class="details__link">Фильтр масляный</a>
+                                                            </li>
+                                                            <li class="details__subitem">
+                                                                <a href="#" class="details__link">Фильтр воздушный</a>
+                                                            </li>
+                                                            <li class="details__subitem">
+                                                                <a href="#" class="details__link">Фильтр салонный</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="details__item" data-categories-item>
+                                                        <div class="details__group">
+                                                            <button type="button" class="btn-light" data-categories-btn>
+                                                                <svg aria-hidden="true" class="btn-light__ico">
+                                                                    <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                                </svg>
+                                                            </button>
+                                                            <span class="details__label">
+                                                           Топливная система
+                                                        </span>
+                                                        </div>
+                                                        <ul class="details__sublist d-none" data-categories-sublist>
+                                                            <li class="details__subitem">
+                                                                <a href="#" class="details__link">Фильтр масляный</a>
+                                                            </li>
+                                                            <li class="details__subitem">
+                                                                <a href="#" class="details__link">Фильтр воздушный</a>
+                                                            </li>
+                                                            <li class="details__subitem">
+                                                                <a href="#" class="details__link">Фильтр салонный</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="details__item" data-categories-item>
+                                                        <div class="details__group">
+                                                            <button type="button" class="btn-light" data-categories-btn>
+                                                                <svg aria-hidden="true" class="btn-light__ico">
+                                                                    <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                                </svg>
+                                                            </button>
+                                                            <span class="details__label">
+                                                           Топливная система
+                                                        </span>
+                                                        </div>
+                                                        <ul class="details__list d-none" data-categories-sublist>
+                                                            <li class="details__item" data-categories-item>
+                                                                <div class="details__group">
+                                                                    <button type="button" class="btn-light" data-categories-btn>
+                                                                        <svg aria-hidden="true" class="btn-light__ico">
+                                                                            <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                                        </svg>
+                                                                    </button>
+                                                                    <span class="details__label">
+                                                           Топливная система
+                                                        </span>
+                                                                </div>
+                                                                <ul class="details__sublist d-none" data-categories-sublist>
+                                                                    <li class="details__subitem">
+                                                                        <a href="#" class="details__link">Фильтр масляный</a>
+                                                                    </li>
+                                                                    <li class="details__subitem">
+                                                                        <a href="#" class="details__link">Фильтр воздушный</a>
+                                                                    </li>
+                                                                    <li class="details__subitem">
+                                                                        <a href="#" class="details__link">Фильтр салонный</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="details__item" data-categories-item>
+                                                                <div class="details__group">
+                                                                    <button type="button" class="btn-light" data-categories-btn>
+                                                                        <svg aria-hidden="true" class="btn-light__ico">
+                                                                            <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                                        </svg>
+                                                                    </button>
+                                                                    <span class="details__label">
+                                                           Топливная система
+                                                        </span>
+                                                                </div>
+                                                                <ul class="details__sublist d-none" data-categories-sublist>
+                                                                    <li class="details__subitem">
+                                                                        <a href="#" class="details__link">Фильтр масляный</a>
+                                                                    </li>
+                                                                    <li class="details__subitem">
+                                                                        <a href="#" class="details__link">Фильтр воздушный</a>
+                                                                    </li>
+                                                                    <li class="details__subitem">
+                                                                        <a href="#" class="details__link">Фильтр салонный</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div >
+                            <div class="tabs-2__content" tab-2-content="2">
+                                <div class="details__nodes">
+                                    <div class="details__scrollbar scrollbar scrollbar--vertical">
+                                        <ul class="details__nodes-list">
+                                            <li class="details__nodes-item details__nodes-item--active">
+                                                <a href="#">
+                                                    Двигатель и подвески
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески и силовой агрегат
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески двигателя
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель и подвески
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески и силовой агрегат
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески двигателя
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель и подвески
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески и силовой агрегат
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески двигателя
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель и подвески
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески и силовой агрегат
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески двигателя
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель и подвески
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Двигатель
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески и силовой агрегат
+                                                </a>
+                                            </li>
+                                            <li class="details__nodes-item">
+                                                <a href="#">
+                                                    Подвески двигателя
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="details__main">
+                    <div class="details__row">
+                        <div class="details__card">
+                            <h3 class="title-4 title-4--accent">51853885 - КОНДИЦИОНЕР (Var.: 1/Rev.: 0), (PNC:1; №2)</h3>
+                            <img src="static/img/details/5.png" alt="Кондиционер">
+                        </div>
+                        <div class="details__content">
+                            <h3 class="title-4">Деталь найдена в узле 50101/00</h3>
+                            <ol class="details__spareparts">
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">1</span>
+                                    <span class="details__sparepart-name">
+                                        Коробка Scarico Conden
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">2</span>
+                                    <span class="details__sparepart-name">
+                                        Фильтр воздуха
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">3</span>
+                                    <span class="details__sparepart-name">
+                                        Фильтр воздуха Multipack 6 pz
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">4</span>
+                                    <span class="details__sparepart-name">
+                                      Фильтр воздуха Carbon filter
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">5</span>
+                                    <span class="details__sparepart-name">
+                                        Крышка Filtro
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">6</span>
+                                    <span class="details__sparepart-name">
+                                       Датчик NTC
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">7</span>
+                                    <span class="details__sparepart-name">
+                                      Пружинка
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">8</span>
+                                    <span class="details__sparepart-name">
+                                      Винт 4х12
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">9</span>
+                                    <span class="details__sparepart-name">
+                                      Клапан
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">10</span>
+                                    <span class="details__sparepart-name">
+                                      Уплотнение 10.8х2.4
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">11</span>
+                                    <span class="details__sparepart-name">
+                                      Уплотнение 13.4х2.4
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="details__row">
+                        <div class="details__card">
+                            <h3 class="title-4 title-4--accent">51853885 - КОНДИЦИОНЕР (Var.: 1/Rev.: 0), (PNC:1; №2)</h3>
+                            <img src="static/img/details/5.png" alt="Кондиционер">
+                        </div>
+                        <div class="details__content">
+                            <h3 class="title-4">Деталь найдена в узле 50101/00</h3>
+                            <ol class="details__spareparts">
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">1</span>
+                                    <span class="details__sparepart-name">
+                                        Коробка Scarico Conden
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">2</span>
+                                    <span class="details__sparepart-name">
+                                        Фильтр воздуха
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">3</span>
+                                    <span class="details__sparepart-name">
+                                        Фильтр воздуха Multipack 6 pz
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">4</span>
+                                    <span class="details__sparepart-name">
+                                      Фильтр воздуха Carbon filter
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">5</span>
+                                    <span class="details__sparepart-name">
+                                        Крышка Filtro
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">6</span>
+                                    <span class="details__sparepart-name">
+                                       Датчик NTC
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">7</span>
+                                    <span class="details__sparepart-name">
+                                      Пружинка
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">8</span>
+                                    <span class="details__sparepart-name">
+                                      Винт 4х12
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">9</span>
+                                    <span class="details__sparepart-name">
+                                      Клапан
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">10</span>
+                                    <span class="details__sparepart-name">
+                                      Уплотнение 10.8х2.4
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                                <li class="details__sparepart">
+                                    <span class="details__sparepart-num">11</span>
+                                    <span class="details__sparepart-name">
+                                      Уплотнение 13.4х2.4
+                                    </span>
+                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+@@include('block/footer/footer.html')
+@@include('block/scripts.html')

@@ -234,19 +234,49 @@
   &__nodes-list {
     display: grid;
     gap: $gutter;
-    padding-left: $gutter * 8;
+    padding-left: $gutter * 4;
+    padding-right: $gutter;
   }
 
   &__nodes-item {
-    list-style: disc;
+    position: relative;
     min-height: 24px;
+    padding-left: $gutter * 6;
+    border-radius: 6px;
+
+    &--active,
+    &:hover {
+      background-color: $c-accent-light;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: $c-main-88;
+      border-radius: 50%;
+    }
   }
 
   &__main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: $gutter * 6;
+    grid-template-rows: 1fr 1fr;
+    gap: $gutter * 12;
     padding-left: $gutter * 6;
+
+    @media (max-width: $lg) {
+      padding-left: 0;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gutter * 12;
 
     @media (max-width: $xl) {
       grid-template-columns: 1fr;
@@ -260,15 +290,107 @@
     @media (max-width: $sm) {
       grid-template-columns: 1fr;
     }
+
+    &:not(:last-child) {
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -24px;
+        background-color: $c-main-6;
+        width: 100%;
+        height: 1px;
+
+        @media (max-width: $xl) {
+          display: none;
+        }
+
+        @media (max-width: $lg) {
+          display: block;
+        }
+
+        @media (max-width: $sm) {
+          display: none;
+        }
+      }
+    }
   }
 
   &__card {
     display: grid;
     gap: $gutter * 6;
 
+    &:last-child {
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -24px;
+        background-color: $c-main-6;
+        width: 1px;
+        height: 100%;
+
+        @media (max-width: $xl) {
+          display: none;
+        }
+
+        @media (max-width: $lg) {
+          display: block;
+        }
+
+        @media (max-width: $sm) {
+          display: none;
+        }
+      }
+    }
+
     img {
       width: 200px;
       height: 200px;
     }
+  }
+
+  &__content {
+    display: grid;
+    gap: $gutter * 6;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -24px;
+      background-color: $c-main-6;
+      width: 1px;
+      height: 100%;
+    }
+  }
+
+  &__spareparts {
+
+  }
+
+  &__sparepart {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: $gutter * 2;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      padding-bottom: $gutter * 3;
+      border-bottom: 1px solid $c-main-6;
+      margin-bottom: $gutter * 3;
+    }
+  }
+
+  &__sparepart-num {
+    color: $c-main-45;
   }
 }
