@@ -12,3 +12,6 @@
 @@include('block/__check-all-checkbox.js')
 @@include('block/__filter-bar-shadow.js')
 @@include('block/__payment.js')
+@@include('block/__datepicker.js')
+@@include('block/__categories-list.js')
+@@include('block/__tooltip.js')

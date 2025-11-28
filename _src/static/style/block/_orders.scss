@@ -10,14 +10,15 @@
   }
 
   // //////////////// desktop
-  &__desk {
-    @media (max-width: $md) {
-      display: none;
-    }
-  }
+  --table-cell-last-width: 160px;
 
-  &__footer {
-    margin-top: $gutter * 4;
+  &__address {
+    width: 128px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    cursor: default;
   }
 
   &__summary {
@@ -27,67 +28,5 @@
     @media (max-width: $lg) {
       margin-top: $gutter * 6;
     }
-  }
-
-  // //////////// mobile
-  &__mobi {
-    display: none;
-
-    @media (max-width: $md) {
-      display: block;
-    }
-  }
-
-  &__cards {
-    display: grid;
-    gap: $gutter * 4;
-  }
-
-  &__show-more {
-    margin-top: $gutter * 4;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.orders-footer {
-  display: grid;
-  grid-auto-flow: column;
-  gap: $gutter * 6;
-  align-items: center;
-
-  @media (max-width: $lg) {
-    grid-auto-flow: row;
-    justify-content: center;
-    gap: $gutter * 3;
-  }
-
-  &__actions {
-    display: grid;
-    grid-auto-flow: column;
-    grid-gap: $gutter * 3;
-    justify-self: start;
-
-    @media (max-width: $lg) {
-      justify-self: center;
-    }
-  }
-
-  &__info {
-    color: $c-main-65;
-    text-align: center;
-  }
-
-  &__pagination {
-    justify-self: end;
-
-    @media (max-width: $lg) {
-      justify-self: center;
-    }
-  }
-
-  &__cards {
-    display: grid;
-    gap: $gutter * 2;
   }
 }

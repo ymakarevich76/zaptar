@@ -27,4 +27,13 @@
       background-color: $c-bad;
     }
   }
+
+  &--theme-accent {
+    color: $c-accent;
+    border: 1px solid $c-accent;
+
+    &:hover {
+      border-color: $c-accent-dark;
+    }
+  }
 }

@@ -1,17 +1,22 @@
-const tabs = document.querySelectorAll('[tab]');
+const initTabs = (btnAttr, contentAttr, btnActiveClass, contentActiveClass) => {
+  const tabs = document.querySelectorAll(`[${btnAttr}]`);
+  if (!tabs.length) return;
 
-if (tabs.length) {
-  const contents = document.querySelectorAll('[tab-content]');
+  const contents = document.querySelectorAll(`[${contentAttr}]`);
 
-  tabs.forEach((tab) => {
+  tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const tabValue = tab.getAttribute('tab');
+      const value = tab.getAttribute(btnAttr);
 
-      tabs.forEach(t => t.classList.remove('tabs__btn--active'));
-      contents.forEach(c => c.classList.remove('tabs__content--active'));
+      tabs.forEach(t => t.classList.remove(btnActiveClass));
+      contents.forEach(c => c.classList.remove(contentActiveClass));
 
-      tab.classList.add('tabs__btn--active');
-      document.querySelector(`[tab-content="${tabValue}"]`).classList.add('tabs__content--active');
-    })
+      tab.classList.add(btnActiveClass);
+      const target = document.querySelector(`[${contentAttr}="${value}"]`);
+      if (target) target.classList.add(contentActiveClass);
+    });
   });
-}
+};
+
+initTabs('tab', 'tab-content', 'tabs__btn--active', 'tabs__content--active');
+initTabs('tab-2', 'tab-2-content', 'tabs-2__btn--active', 'tabs-2__content--active');

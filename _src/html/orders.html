@@ -16,7 +16,7 @@
                     Архив заказов
                 </a>
 
-                <button class="btn-primary" type="button">
+                <button class="btn-primary" type="button" data-modal="drawer-filter-orders">
                     <svg class="orders__btn-ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#filter"></use>
                     </svg>
@@ -27,10 +27,10 @@
 
         @@include('block/filter-bar.html', {"class": "orders__filter-bar"})
 
-        <div class="orders__desk">
-            <div class="orders__table table">
-                <div class="table__scrollbar scrollbar scrollbar--horizontal">
-                    <table class="table__inner">
+        <div class="d-md-none">
+            <div class="orders__table table" data-table>
+                <div class="table__scrollbar scrollbar scrollbar--horizontal" data-table-scrollbar>
+                    <table class="table__inner" data-table-inner>
                         <tr>
                             <th>
                                 <div class="checkbox">
@@ -76,21 +76,44 @@
                                 Количество
                             </th>
                             <th>
-                                <!-- todo: кнопка фильтра цены. Нужно узнать как будет выглядеть выпадашка -->
-                                <button>
-                                    Цена
-                                </button>
+                                <div class="table-dropdown">
+                                    <div class="table-dropdown__inner">
+                                        Цена
+
+                                        <button type="button" class="table-dropdown__trigger btn-light">
+                                            <svg class="btn-light__ico" aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="table-dropdown__content">
+                                    <!--     todo: сделать выпадаху сортировки и дровер сортировки на моби  -->
+                                    </div>
+                                </div>
                             </th>
                             <th>
                                 Сумма
                             </th>
                             <th>
                                 <!-- todo: кнопка фильтра статуса. Нужно узнать как будет выглядеть выпадашка -->
-                                <button>
-                                    Статус
-                                </button>
+                                <div class="table-dropdown">
+                                    <div class="table-dropdown__inner">
+                                        Статус
+
+                                        <button type="button" class="table-dropdown__trigger btn-light">
+                                            <svg class="btn-light__ico" aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="table-dropdown__content">
+                                        <!--     todo: сделать выпадаху сортировки и дровер сортировки на моби  -->
+                                    </div>
+                                </div>
                             </th>
-                            <th>
+                            <th class="table__cell-min-150">
                                 Комментарий
                             </th>
                             <th>
@@ -98,7 +121,7 @@
                             </th>
                         </tr>
 
-                        <tr>
+                        <tr data-order="1">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-1" type="checkbox" class="checkbox__input" data-checkbox>
@@ -114,12 +137,12 @@
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
+                                    <a href="#" aria-label="создать обсуждение" class="btn-light" data-tippy-content="Создать обсуждение">
                                         <svg class="btn-light__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
                                     </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
+                                    <button aria-label="информация по заказу" class="btn-light" data-tippy-content="Информация по заказу">
                                         <svg class="btn-light__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
@@ -132,7 +155,7 @@
                             </td>
                             <td>
                                 <!-- Артикул -->
-                                <a href="#" class="link link--blue">85126</a>
+                                <a href="#" class="link link--blue" data-tippy-content="Найти деталь osram 85126">85126</a>
                             </td>
                             <td>
                                 <!-- Наименование -->
@@ -144,15 +167,15 @@
                             </td>
                             <td>
                                 <!-- Возврат -->
-                                <div aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard" data-tippy-with-code-content>
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
                                     </svg>
-                                </div>
+                                </button>
                             </td>
                             <td>
                                 <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn" data-tippy-content="Дистрибьютер">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -179,7 +202,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td>
+                            <td data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -195,13 +218,13 @@
                             </td>
                             <td>
                                 <!-- Адрес -->
-                                <span class="table__address">
+                                <span class="orders__address">
                                ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
                              </span>
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="2">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-2" type="checkbox" class="checkbox__input" data-checkbox>
@@ -247,7 +270,7 @@
                             </td>
                             <td>
                                 <!-- Возврат -->
-                                <button aria-label="информация возврата товаров" class="status-return status-return--special">
+                                <button aria-label="информация возврата товаров" class="status-return status-return--special" data-tippy-content="Возврат возможен при браке, пересорте, недостающих или поврежденных деталях, а также для б/у товаров. По другим причинам — на усмотрение поставщика. Заказы с длительной доставкой (более 7 дней) не подлежат возврату. Рекламации принимаются в течение 7 дней после отгрузки. Не принимаются к возврату: масло, жидкости, электродетали и товары до 1000 руб. Возврат с зарубежных складов невозможен.">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
                                     </svg>
@@ -255,7 +278,7 @@
                             </td>
                             <td>
                                 <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -282,7 +305,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td>
+                            <td data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -298,13 +321,13 @@
                             </td>
                             <td>
                                 <!-- Адрес -->
-                                <span class="table__address">
+                                <span class="orders__address">
                                ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
                              </span>
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="3">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-3" type="checkbox" class="checkbox__input" data-checkbox>
@@ -358,7 +381,7 @@
                             </td>
                             <td>
                                 <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -385,7 +408,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -399,15 +422,15 @@
                                 <!-- Комментарий -->
                                 -
                             </td>
-                            <td class="table__cell-address">
+                            <td>
                                 <!-- Адрес -->
-                                <span class="table__address">
+                                <span class="orders__address">
                                ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
                              </span>
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="4">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-4" type="checkbox" class="checkbox__input" data-checkbox>
@@ -461,7 +484,7 @@
                             </td>
                             <td>
                                 <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -488,7 +511,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -502,15 +525,15 @@
                                 <!-- Комментарий -->
                                 -
                             </td>
-                            <td class="table__cell-address">
+                            <td>
                                 <!-- Адрес -->
-                                <span class="table__address">
-                               ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                             </span>
+                                <span class="orders__address">
+                                    ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
+                                </span>
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="5">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-5" type="checkbox" class="checkbox__input" data-checkbox>
@@ -564,7 +587,7 @@
                             </td>
                             <td>
                                 <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -591,7 +614,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -605,15 +628,15 @@
                                 <!-- Комментарий -->
                                 -
                             </td>
-                            <td class="table__cell-address">
+                            <td>
                                 <!-- Адрес -->
-                                <span class="table__address">
+                                <span class="orders__address">
                                ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
                              </span>
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="6">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-6" type="checkbox" class="checkbox__input" data-checkbox>
@@ -629,11 +652,11 @@
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
+                                    <button href="#" aria-label="создать обсуждение" class="btn-light">
                                         <svg class="btn-light__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
-                                    </a>
+                                    </button>
                                     <button aria-label="информация по заказу" class="btn-light">
                                         <svg class="btn-light__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
@@ -667,7 +690,7 @@
                             </td>
                             <td>
                                 <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -694,7 +717,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -708,15 +731,15 @@
                                 <!-- Комментарий -->
                                 -
                             </td>
-                            <td class="table__cell-address">
+                            <td>
                                 <!-- Адрес -->
-                                <span class="table__address">
+                                <span class="orders__address">
                                ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
                              </span>
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="7">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-7" type="checkbox" class="checkbox__input" data-checkbox>
@@ -770,7 +793,7 @@
                             </td>
                             <td>
                                 <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -797,7 +820,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -811,15 +834,15 @@
                                 <!-- Комментарий -->
                                 -
                             </td>
-                            <td class="table__cell-address">
+                            <td>
                                 <!-- Адрес -->
-                                <span class="table__address">
+                                <span class="orders__address">
                                ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
                              </span>
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="8">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-8" type="checkbox" class="checkbox__input" data-checkbox>
@@ -873,7 +896,7 @@
                             </td>
                             <td>
                                 <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -900,7 +923,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -914,15 +937,15 @@
                                 <!-- Комментарий -->
                                 -
                             </td>
-                            <td class="table__cell-address">
+                            <td>
                                 <!-- Адрес -->
-                                <span class="table__address">
+                                <span class="orders__address">
                                ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
                              </span>
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="9">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-9" type="checkbox" class="checkbox__input" data-checkbox>
@@ -976,7 +999,7 @@
                             </td>
                             <td>
                                 <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -1003,7 +1026,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -1017,15 +1040,15 @@
                                 <!-- Комментарий -->
                                 -
                             </td>
-                            <td class="table__cell-address">
+                            <td>
                                 <!-- Адрес -->
-                                <span class="table__address">
+                                <span class="orders__address">
                                ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
                              </span>
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr data-order="10">
                             <td>
                                 <div class="checkbox">
                                     <input id="cel-10" type="checkbox" class="checkbox__input" data-checkbox>
@@ -1079,7 +1102,7 @@
                             </td>
                             <td>
                                 <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -1106,7 +1129,7 @@
                                 <!-- Цена -->
                                 1 427,00
                             </td>
-                            <td class="nowrap">
+                            <td class="nowrap" data-order-amount>
                                 <!-- Сумма -->
                                 1 427,00
                             </td>
@@ -1120,9 +1143,9 @@
                                 <!-- Комментарий -->
                                 -
                             </td>
-                            <td class="table__cell-address">
+                            <td>
                                 <!-- Адрес -->
-                                <span class="table__address">
+                                <span class="orders__address">
                                ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
                              </span>
                             </td>
@@ -1131,27 +1154,25 @@
                 </div>
             </div>
 
-            <div class="orders__footer orders-footer">
-                <div class="orders-footer__actions">
-                    <button type="button" disabled class="btn-text" href="#">
+            <div class="table-footer">
+                <div class="table-footer__actions">
+                    <button type="button" disabled class="btn-text" data-not-checked-product>
                         Товар не выбран
                     </button>
 
-                    <!-- todo: выводить когда выбраны чекбоксы -->
-                    <!-- <button type="button" class="btn-text btn-text&#45;&#45;theme-danger"> -->
-                    <!--     В архив -->
-                    <!-- </button> -->
-                    <!-- <button type="button" class="btn-text btn-text&#45;&#45;theme-default"> -->
-                    <!--     Изменить пункт самовывоза -->
-                    <!-- </button> -->
+                    <button type="button" class="btn-text btn-text--theme-danger d-none" data-checked-product data-tippy-content="Переносятся заказы только в статусе «Отгружено», «Возврат проведен», «Отказ», Отказ по недостаче»" data-width-tooltip="196">
+                        В архив
+                    </button>
+                    <button type="button" class="btn-text btn-text--theme-default d-none" data-checked-product data-modal="modal-change-address" data-tippy-content="Переносятся заказы только в статусе «Отгружено», «Возврат проведен», «Отказ», Отказ по недостаче»" data-width-tooltip="154">
+                        Изменить пункт самовывоза
+                    </button>
                 </div>
 
-                <!-- todo: выводить когда выбраны чекбоксы -->
-                <!-- <div class="orders-footer__info"> -->
-                <!--     Выбрано 10 товаров на сумму 13 255,00 руб -->
-                <!-- </div> -->
+                <div class="table-footer__info d-none" data-checked-product>
+                    Выбрано <span data-order-count>1</span> товаров на сумму <span data-order-total></span> руб
+                </div>
 
-                <div class="orders-footer__pagination">
+                <div class="table-footer__pagination">
                     @@include('block/pagination.html')
                 </div>
             </div>
@@ -1171,8 +1192,8 @@
             </table>
         </div>
 
-        <div class="orders__mobi">
-            <ul class="orders__cards">
+        <div class="d-none d-md-block product-cards">
+            <ul class="product-cards__list">
                 <li class="product-card">
                     <div class="product-card__head">
                         <div class="product-card__meta">
@@ -1193,7 +1214,7 @@
                             </div>
 
                             <div class="product-card__product-btns">
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -1261,7 +1282,7 @@
                             </div>
 
                             <div class="product-card__product-btns">
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -1325,7 +1346,7 @@
                             </div>
 
                             <div class="product-card__product-btns">
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -1452,7 +1473,7 @@
                             </div>
 
                             <div class="product-card__product-btns">
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -1497,7 +1518,7 @@
                 </li>
             </ul>
 
-            <button type="button" class="orders__show-more btn">
+            <button type="button" class="product-cards__show-more btn">
                 Показать еще
             </button>
         </div>

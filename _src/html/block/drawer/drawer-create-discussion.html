@@ -1,0 +1,62 @@
+<div id="drawer-create-discussion" class="drawer modal">
+    <div class="modal__inner modal__inner--open-right">
+        <div class="modal__content drawer__content">
+            <button type="button" class="modal__close modal__close--left" data-btn="close">
+                <svg>
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="drawer__header">
+                <h3 class="title-4 title-4--mb">Создание обсуждения</h3>
+            </div>
+            <div class="drawer__info" data-deduce>
+                <form action="" class="drawer__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="discussion-theme">Тема</label>
+                        @@include('../select.html', {
+                            "id": "discussion-theme",
+                            "text": "Недостача",
+                            "option1": { "title": "Недостача", "value": "deficit" },
+                            "option2": { "title": "Когда придет?", "value": "when-come" },
+                            "option3": { "title": "Произвольный вопрос", "value": "free-question" },
+                            "classItem": "select__item--selected",
+                            "dataItem1": "data-specific-option",
+                        })
+                    </div>
+                    <div class="drawer__wrapper-input" data-specific-field="deficit">
+                        <label for="discussion-count" class="form__label">
+                            Количество к возврату<span>*</span>
+                        </label>
+                        <div class="form-input-tail" tabindex="0" data-input-tail>
+                            <input type="text" class="form-input-tail__input" id="discussion-count" placeholder="Укажите количество" data-deduce-input>
+                            <span class="form-input-tail__label">шт</span>
+                        </div>
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <div class="form-input form-file form-file--bg" tabindex="0" role="button" aria-label="Загрузить файл. Нажмите или перетащите файл сюда" data-dropzone >
+                            <input id="discussion-file" class="form-file__input" type="file" multiple data-input="file" />
+                            <label for="discussion-file"
+                                   class="form-file__content"
+                                   data-input="label"
+                                   data-input-error="Один из файлов не является изображением. Доступные типы: jpg, png, bmp"
+                                   data-input-placeholder="Нажмите в эту область, чтобы загрузить">
+                                Нажмите или перетащите файл в эту область, чтобы загрузить
+                            </label>
+                        </div>
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <textarea class="form-textarea" id="discussion-text"  placeholder="Сообщение"></textarea>
+                    </div>
+                </form>
+                <div class="drawer__footer">
+                    <button type="reset" class="drawer__footer-btn btn-primary">
+                        Отменить
+                    </button>
+                    <button type="submit" class="drawer__footer-btn btn btn--size-s btn--disabled" data-notification="notification-add-discussion">
+                        Сохранить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

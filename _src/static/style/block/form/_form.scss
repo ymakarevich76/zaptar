@@ -381,3 +381,19 @@
     }
   }
 }
+
+.form-date-range {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon/calendar.svg") no-repeat 50%;
+  }
+}

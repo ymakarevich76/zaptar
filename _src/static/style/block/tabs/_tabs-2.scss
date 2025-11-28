@@ -1,0 +1,48 @@
+.tabs-2 {
+  $self: &;
+
+  display: grid;
+  gap: $gutter * 6;
+
+
+  &__box-btn {
+    max-width: 322px;
+    min-height: 40px;
+    border-radius: 8px;
+    display: grid;
+    grid-auto-flow: column;
+    background-color: $c-light;
+    padding: $gutter * 0.5;
+
+    @media (max-width: $lg) {
+      max-width: 100%;
+    }
+  }
+
+  &__btn {
+    color: $c-main-65;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: $gutter * 3;
+    padding-right: $gutter * 3;
+    border-radius: 6px;
+
+    &--active {
+      background-color: #fff;
+      box-shadow: 0 2px 6px 0 #0000000A;
+      color: $c-main-88;
+    }
+  }
+
+  &__box-content {
+
+  }
+
+  &__content {
+    display: none;
+
+    &--active {
+      display: flex;
+    }
+  }
+}

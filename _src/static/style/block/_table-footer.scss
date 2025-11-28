@@ -1,0 +1,38 @@
+.table-footer {
+  display: grid;
+  grid-auto-flow: column;
+  gap: $gutter * 6;
+  align-items: center;
+  min-height: 32px;
+  margin-top: $gutter * 4;
+
+  & > *:last-child {
+    justify-self: end;
+
+    @media (max-width: $lg) {
+      justify-self: center;
+    }
+  }
+
+  @media (max-width: $lg) {
+    grid-auto-flow: row;
+    justify-content: center;
+    gap: $gutter * 3;
+  }
+
+  &__actions {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: $gutter * 3;
+    justify-self: start;
+
+    @media (max-width: $lg) {
+      justify-self: center;
+    }
+  }
+
+  &__info {
+    color: $c-main-65;
+    text-align: center;
+  }
+}

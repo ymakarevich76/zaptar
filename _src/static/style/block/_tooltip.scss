@@ -1,0 +1,30 @@
+.tooltip {
+}
+
+.tippy-box[data-theme~="default"] {
+  background-color: #2E3C50;
+  font-size: 12px;
+  line-height: 16px;
+
+  ul {
+    color: #fff;
+    list-style: disc;
+    padding-left: 20px;
+  }
+
+  &[data-placement^="top"] > .tippy-arrow::before {
+    border-top-color: #2E3C50;
+  }
+
+  &[data-theme~="default"][data-placement^="bottom"] > .tippy-arrow::before {
+    border-bottom-color: #2E3C50;
+  }
+
+  &[data-theme~="default"][data-placement^="left"] > .tippy-arrow::before {
+    border-left-color: #2E3C50;
+  }
+
+  &[data-theme~="default"][data-placement^="right"] > .tippy-arrow::before {
+    border-right-color: #2E3C50;
+  }
+}

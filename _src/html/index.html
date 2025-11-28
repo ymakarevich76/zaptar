@@ -7,7 +7,14 @@
             <a href="home.html">Главная</a>
         </li>
         <li>
-            Страница поиска
+            Главная V2
+        </li>
+        <li>
+            Главная V3
+        </li>
+        <li>
+            Поиск
+            <!-- <a href="search.html"></a> -->
         </li>
         <li>
             <a href="registration.html">Регистрация</a>
@@ -28,10 +35,13 @@
             <a href="orders.html">Заказы</a>
         </li>
         <li>
-            Избранное
+            <a href="archive.html">Архив</a>
         </li>
         <li>
-            Корзина
+            <a href="favorites.html">Избранное</a>
+        </li>
+        <li>
+            <a href="cart.html">Корзина</a>
         </li>
         <li>
             <a href="catalog.html">Каталог автозапчастей</a>
@@ -40,7 +50,22 @@
             <a href="product.html">Информация о товаре</a>
         </li>
         <li>
-            Текстовые страницы
+            <a href="details-catalog.html">Каталог деталей (Поиск по каталогу)</a>
+        </li>
+        <li>
+            <a href="details-node.html">Каталог деталей (Поиск по узлам)</a>
+        </li>
+        <li>
+            <a href="detail.html">Деталь</a>
+        </li>
+        <li>
+            <a href="privacy-policy.html">Политика конфиденциальности</a>
+        </li>
+        <li>
+            <a href="agreement.html">Договор оферты</a>
+        </li>
+        <li>
+            <a href="payment.html">Способы оплаты</a>
         </li>
     </ol>
 
@@ -52,6 +77,19 @@
         <li>
             <button data-modal="modal-auth">Авторизация</button>
         </li>
+        <li>
+            <button data-modal="modal-add-comment">Добавление комментария <br>(стр Гараж)</button>
+        </li>
+        <li>
+            <button data-modal="modal-change-address">Изменить пункт самовывоза<br> (стр Заказы)</button>
+        </li>
+    </ol>
+
+    <br>
+    <br>
+
+    <h3 class="title-4 title-4--mb">Драверы</h3>
+    <ol>
         <li>
             <button data-modal="drawer-catalog">Дравер Меню</button>
         </li>
@@ -65,34 +103,59 @@
             <button data-modal="drawer-profile-edit">Дравер Редактирование профиля</button>
         </li>
         <li>
-            <button data-modal="drawer-add-theme">Дравер Добавление темы</button>
+            <button data-modal="drawer-add-theme">Дравер Добавление темы<br> (стр Чат)</button>
         </li>
         <li>
-            <button data-modal="drawer-filter-messages">Дравер Фильтр сообщений</button>
+            <button data-modal="drawer-filter-messages">Дравер Фильтр сообщений<br> (стр Чат)</button>
         </li>
         <li>
-            <button data-modal="drawer-add-car">Дравер Добавление авто</button>
+            <button data-modal="drawer-add-car">Дравер Добавление авто<br> (стр Гараж)</button>
         </li>
         <li>
-            <button data-modal="drawer-edit-car">Дравер Редактирование авто</button>
+            <button data-modal="drawer-edit-car">Дравер Редактирование авто<br> (стр Гараж)</button>
         </li>
         <li>
-            <button data-modal="drawer-recharge">Дравер Пополнение баланса</button>
+            <button data-modal="drawer-recharge">Дравер Пополнение баланса<br> (стр Мои финансы)</button>
         </li>
         <li>
-            <button data-modal="drawer-deduce">Дравер Запрос на вывод средств</button>
+            <button data-modal="drawer-deduce">Дравер Запрос на вывод средств<br> (стр Мои финансы)</button>
         </li>
+        <li>
+            <button data-modal="drawer-filter-orders">Дравер Фильтр<br> (стр Заказы)</button>
+        </li>
+        <li>
+            <button data-modal="drawer-create-discussion">Создание обсуждения<br> (стр Заказы)</button>
+        </li>
+    </ol>
+
+    <br>
+    <br>
+
+    <h3 class="title-4 title-4--mb">Нотификации</h3>
+    <ol>
         <li>
             <button data-notification="notification">Нотификация</button>
         </li>
         <li>
-            <button data-notification="notification-deduce">Нотификация Вывод средств</button>
+            <button data-notification="notification-deduce">Нотификация Вывод средств<br> (стр Мои финансы)</button>
+        </li>
+        <li>
+            <button data-notification="notification-add-comment">Нотификация Комментарий добавлен<br> (стр Гараж)</button>
+        </li>
+        <li>
+            <button data-notification="notification-delete-product">Нотификация Товар удален<br> (стр Гараж)</button>
+        </li>
+        <li>
+            <button data-notification="notification-change-address">Нотификация Изменен пункт самовывоза<br> (стр Заказы)</button>
+        </li>
+        <li>
+            <button data-notification="notification-add-discussion">Нотификация Обсуждение создано<br> (стр Заказы)</button>
         </li>
     </ol>
 
 </main>
 
-@@include('block/modal/modal.html')
+@@include('block/modal/modal-template.html')
 @@include('block/drawer/drawer-template.html')
 @@include('block/notification/notification-template.html')
 @@include('block/scripts.html')

@@ -1,0 +1,67 @@
+.page-text {
+
+  &__content {
+    p, span, li {
+      color: $c-main-65;
+    }
+
+    ul {
+      margin-bottom: $gutter * 6;
+      list-style-type: circle;
+      padding-left: $gutter * 6;
+
+      @media (max-width: $md) {
+        margin-bottom: $gutter * 4;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      transition: color .2s;
+
+      @media (hover: hover) {
+        &:hover {
+          color: $c-main-65;
+        }
+      }
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: $gutter * 3;
+      }
+    }
+
+    p {
+      margin-bottom: $gutter * 6;
+
+      @media (max-width: $md) {
+        margin-bottom: $gutter * 4;
+      }
+    }
+
+    b {
+      font-weight: 600;
+      color: $c-main-65;
+    }
+  }
+
+  &__content,
+  &__img {
+    margin-bottom: $gutter * 12;
+
+    @media (max-width: $md) {
+      margin-bottom: $gutter * 6;
+    }
+  }
+
+  &__content {
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    max-width: 110px;
+  }
+}

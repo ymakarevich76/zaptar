@@ -1,0 +1,74 @@
+<div id="drawer-filter-orders" class="drawer modal">
+    <div class="modal__inner modal__inner--open-right">
+        <div class="modal__content drawer__content">
+            <button type="button" class="modal__close modal__close--left" data-btn="close">
+                <svg>
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="drawer__header">
+                <h3 class="title-4 title-4--mb">Фильтр</h3>
+            </div>
+            <div class="drawer__info">
+                <form action="" class="drawer__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="order-issue-date">Дата оформления</label>
+                        @@include('../select.html', {
+                            "id": "order-issue-date",
+                            "text": "Сегодня",
+                            "option1": { "title": "Сегодня", "value": "today" },
+                            "option2": { "title": "За последние 7 дней", "value": "7-days" },
+                            "option3": { "title": "Выбрать дни", "value": "choose-days" },
+                            "classItem": "select__item--selected",
+                            "dataItem3": "data-specific-option",
+                        })
+                    </div>
+
+                    <div class="drawer__wrapper-input d-none" data-specific-field="choose-days">
+                        <span class="form__label">Диапазон дней</span>
+                        <div class="form-date-range">
+                            <input class="form-input flatpickr flatpickr-input" type="text" id="order-date" placeholder="Выберите диапазон дней"/>
+                        </div>
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="order-article" class="form__label">
+                            Артикул
+                        </label>
+                        <input type="text" class="form-input" id="order-article" placeholder="Введите номер" >
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="order-brand" class="form__label">
+                            Бренд
+                        </label>
+                        <input type="text" class="form-input" id="order-brand" placeholder="Введите наименование" >
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="order-number" class="form__label">
+                            Номер заказа
+                        </label>
+                        <input type="text" class="form-input" id="order-number" placeholder="Введите номер" >
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="order-pick-up">Пункт самовывоза</label>
+                        @@include('../select.html', {
+                            "id": "order-pick-up",
+                            "text": "ул. Луначарского, д.202, строение 1, корпус 4, офис 1005",
+                            "option1": { "title": " ул. Луначарского, д.202, строение 1, корпус 4, офис 1005", "value": "first-address" },
+                            "option2": { "title": "ул. Встроченко, д. 1 (офис 405)", "value": "second-address" },
+                            "option3": { "title": "ул. Клары-Цеткин, д. 25 (офис 1004)", "value": "third-address" },
+                            "classItem": "select__item--selected",
+                        })
+                    </div>
+                </form>
+                <div class="drawer__footer">
+                    <button type="reset" class="drawer__footer-btn btn-primary">
+                        Сбросить
+                    </button>
+                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
+                        Применить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

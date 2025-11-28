@@ -1,0 +1,56 @@
+.search {
+  &__template {
+    display: grid;
+    grid-template-columns: 336px 1fr;
+    gap: $gutter * 6;
+    align-items: start;
+  }
+
+  &__content {
+    display: grid;
+
+    gap: $gutter * 6;
+    justify-items: start;
+  }
+}
+
+.search-filter {
+  &__title {
+    margin-bottom: $gutter * 2;
+  }
+
+  &__group {
+    background-color: $c-light;
+    padding: $gutter * 6;
+    border-radius: 8px;
+  }
+
+  &__group-title {
+    margin-bottom: $gutter * 6;
+  }
+
+  &__list {
+    display: grid;
+    gap: $gutter * 2;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+
+  }
+
+  &__price {
+    margin-left: auto;
+    color: $c-main-65;
+    font-size: 12px;
+  }
+
+  &__btn {
+    margin-top: $gutter * 4;
+    width: 100%;
+  }
+}

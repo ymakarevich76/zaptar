@@ -9,6 +9,16 @@
     padding-bottom: $gutter * 3;
   }
 
+  &__model-auto {
+    font-weight: 600;
+    background-color: $c-main-6;
+    padding: $gutter $gutter * 2;
+    border-radius: 4px;
+    align-self: center;
+    margin-right: $gutter * 4;
+    max-width: 250px;
+  }
+
   &__date {
     margin-top: $gutter * 2;
     color: $c-main-65;
@@ -21,12 +31,15 @@
   }
 
   &__body {
-    border-top: 1px solid $c-main-15;
     border-bottom: 1px solid $c-main-15;
-    padding-top: $gutter * 3;
     padding-bottom: $gutter * 3;
     display: grid;
     gap: $gutter * 2;
+
+    &:not(:first-child) {
+      padding-top: $gutter * 3;
+      border-top: 1px solid $c-main-15;
+    }
   }
 
   &__product {
@@ -98,6 +111,10 @@
   &__actions {
     display: flex;
     align-items: center;
+
+    &--only-btns {
+      justify-content: flex-end;
+    }
 
     & > *:not(:last-child) {
       margin-right: $gutter * 2;

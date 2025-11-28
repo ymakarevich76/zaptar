@@ -25,11 +25,14 @@
 @import "block/section-header";
 @import "block/table";
 @import "block/table-2";
+@import "block/table-footer";
 @import "block/status";
 @import "block/status-return";
-@import "block/status-distributor";
 @import "block/filter-bar";
+@import "block/product-cards";
 @import "block/product-card";
+@import "block/alert";
+@import "block/tooltip";
 
 @import "block/form/form";
 // @import "block/form/form-group";
@@ -39,6 +42,7 @@
 @import "block/select/select";
 @import "block/checkbox/checkbox";
 @import "block/tabs/tabs";
+@import "block/tabs/tabs-2";
 @import "block/pagination/pagination";
 
 @import "block/scrollbar";
@@ -62,9 +66,16 @@
 @import "block/chat-list";
 @import "block/chat";
 @import "block/orders";
+
 @import "block/product";
 @import "block/garage";
 @import "block/finance";
+@import "block/page-text";
+@import "block/favorites";
+@import "block/cart";
+@import "block/details";
+@import "block/archive";
+@import "block/search";
 
 @import "block/footer/footer";
 

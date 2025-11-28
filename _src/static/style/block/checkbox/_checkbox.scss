@@ -16,6 +16,7 @@
     transition: background-color .2s;
     cursor: pointer;
     flex-shrink: 0;
+    background-color: #fff;
 
     #{$self}--size-l & {
       --checkbox-label-width: 24px;

@@ -1,16 +1,17 @@
 const selects = document.querySelectorAll('[data-select]');
 
 if (selects.length) {
-  selects.forEach(select => {
-    const btn = select.querySelector('[data-select-btn]');
-    const btnText = select.querySelector('[data-select-text]');
-    const list = select.querySelector('[data-select-list]');
-    const items = [...select.querySelectorAll('[data-select-value]')];
-    const input = select.querySelector('[data-select-input]');
-    const hasMultiple = select.hasAttribute('data-select-multiple');
-    const hasSearch = select.hasAttribute('data-select-sort');
-    const search = select.querySelector('[data-select-search]');
+  selects.forEach(item => {
+    const select = item.querySelector('[data-select-btn]');
+    const selectText = item.querySelector('[data-select-text]');
+    const list = item.querySelector('[data-select-list]');
+    const items = [...item.querySelectorAll('[data-select-value]')];
+    const input = item.querySelector('[data-select-input]');
+    const hasMultiple = item.hasAttribute('data-select-multiple');
+    const hasSearch = item.hasAttribute('data-select-sort');
+    const search = item.querySelector('[data-select-search]');
     const resetButtons = [...document.querySelectorAll('[type="reset"]')];
+    const specificFields = document.querySelectorAll('[data-specific-field]');
 
     let lastHovered = null;
 
@@ -32,7 +33,7 @@ if (selects.length) {
       list.classList.add('select__list--visible');
 
       if (hasSearch) {
-        btn.classList.add('d-none');
+        select.classList.add('d-none');
         search.classList.remove('d-none');
         input.focus();
         input.value = '';
@@ -44,7 +45,7 @@ if (selects.length) {
       list.classList.remove('select__list--visible');
 
       if (hasSearch) {
-        btn.classList.remove('d-none');
+        select.classList.remove('d-none');
         search.classList.add('d-none');
       }
     };
@@ -55,7 +56,7 @@ if (selects.length) {
         select.querySelector('[data-select-list]').classList.remove('select__list--visible');
 
         if (select.hasAttribute('data-select-sort')) {
-          btn.classList.remove('d-none');
+          select.classList.remove('d-none');
           search.classList.add('d-none');
         }
       });
@@ -67,24 +68,24 @@ if (selects.length) {
     };
 
     // установка выбранного элемента
-    const applySingleSelect = (item, btnText, input) => {
+    const applySingleSelect = (item, selectText, input) => {
       item.classList.add('select__item--selected');
-      btnText.textContent = item.textContent.trim();
-      btnText.classList.add('select__text--active');
+      selectText.textContent = item.textContent.trim();
+      selectText.classList.add('select__text--active');
       input.value = item.dataset.selectValue;
       input.setAttribute('value', input.value);
     };
 
     // установка выбранных элементов
-    const applyMultiSelect = (items, btnText, input) => {
+    const applyMultiSelect = (items, selectText, input) => {
       const active = items.filter(i =>
         i.classList.contains('select__item--selected')
       );
       const texts = active.map(i => i.textContent.trim());
       const values = active.map(i => i.dataset.selectValue);
 
-      btnText.textContent = texts.join(', ') || 'Не выбрано';
-      btnText.classList.add('select__text--active');
+      selectText.textContent = texts.join(', ') || 'Не выбрано';
+      selectText.classList.add('select__text--active');
       input.value = values.join(',');
       input.setAttribute('value', input.value);
     };
@@ -98,15 +99,15 @@ if (selects.length) {
 
       if (!hasMultiple) {
         clearSingleSelect(items);
-        applySingleSelect(preset[0], btnText, input);
+        applySingleSelect(preset[0], selectText, input);
       } else {
-        applyMultiSelect(preset, btnText, input)
+        applyMultiSelect(preset, selectText, input)
       }
     };
 
     const selectSingle = item => {
       clearSingleSelect(items);
-      applySingleSelect(item, btnText, input);
+      applySingleSelect(item, selectText, input);
       close();
     };
 
@@ -120,7 +121,7 @@ if (selects.length) {
             selectSingle(item);
           } else {
             item.classList.toggle('select__item--selected');
-            applyMultiSelect(items, btnText, input)
+            applyMultiSelect(items, selectText, input)
           }
         });
 
@@ -152,7 +153,7 @@ if (selects.length) {
       });
     }
 
-    btn.addEventListener('click', e => {
+    select.addEventListener('click', e => {
       e.preventDefault();
       select.classList.contains('select--active') ? close() : open();
     });
@@ -174,15 +175,51 @@ if (selects.length) {
       }
     });
 
+    // Получить и обновить блоки, зависящие от спец селекторов
+    const updateLocalFields = (value) => {
+      const getLocalFields = () => {
+        let el = item;
+        while (el && el !== document.body) {
+          const found = el.querySelectorAll('[data-specific-field]');
+          if (found.length) return Array.from(found);
+          el = el.parentElement;
+        }
+        return [];
+      };
+
+      const local = getLocalFields();
+      local.forEach(f => {
+        f.classList.toggle('d-none', f.dataset.specificField !== value);
+      });
+    };
+
+    const toggleSpecificBlock = () => {
+      const update = () => {
+        const selected = items.filter(i => i.classList.contains('select__item--selected'));
+        const values = selected.length
+          ? selected.map(s => s.dataset.selectValue)
+          : [items[0].dataset.selectValue];
+
+        updateLocalFields(values[0]);
+      };
+
+      update();
+      items.forEach(opt => opt.addEventListener('click', () => setTimeout(update, 0)));
+    };
+
     resetButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        btnText.textContent = btnText.dataset.selectText;
-        btnText.classList.remove('select__text--active');
+        updateLocalFields(items[0].dataset.selectValue);
+
+        selectText.textContent = selectText.dataset.selectText;
+        selectText.classList.remove('select__text--active');
         input.value = '';
+        selectSingle(items[0]);
       });
     });
 
     applyPreset();
     bindItems();
+    toggleSpecificBlock();
   });
 }
