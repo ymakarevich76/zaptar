@@ -10,23 +10,25 @@
         <div class="d-md-none">
             <div class="search__template">
                 <div class="search-filter">
-                    <p class="search-filter__title">Filter</p>
+                    <div class="search-filter__title">Фильтр</div>
 
                     <div class="search-filter__group">
-                        <h2 class="search-filter__group-title">Бренд</h2>
+                        <h2 class="search-filter__group-title title-4">Бренд</h2>
 
                         <ul class="search-filter__list">
                             <li class="search-filter__item">
-                                <div class="search-filter__checkbox">
-
+                                <div class="search-filter__checkbox checkbox checkbox--has-text">
+                                    <input id="search-filter-checkbox" type="checkbox" class="checkbox__input">
+                                    <label for="search-filter-checkbox" class="checkbox__label"></label>
+                                    <p class="checkbox__text">OSMAR</p>
                                 </div>
-                                <span class="search-filter__price">
+                                <div class="search-filter__price">
                                     от 66 руб
-                                </span>
+                                </div>
                             </li>
                         </ul>
 
-                        <button type="button" class="search-filter__action btn">
+                        <button type="button" class="search-filter__btn btn btn--size-s">
                             Показать аналоги
                         </button>
                     </div>
@@ -38,135 +40,157 @@
                     "text": "Авторезину, грузовые шины не продаем. Запчасти объёмом более 1 м3 доставляются до ПВЗ за отдельную плату при согласовании цены доставки по телефону",
                     })
 
-                    <div>
+                    <div class="d-md-none">
+                        <div class="table" data-table>
+                            <div class="table__scrollbar scrollbar scrollbar--horizontal" data-table-scrollbar>
+                                <table class="table__inner" data-table-inner>
+                                    <tr>
+                                        <th class="nowrap">
+                                            Бренд / Артику
+                                        </th>
+                                        <th>
+                                            <!-- Картинка -->
+                                        </th>
+                                        <th>
+                                            Наименование
+                                        </th>
+                                        <th>
+                                            Поставщик&nbsp;/
+                                            Склад
+                                        </th>
+                                        <th class="table__cell-slim table__cell-narrow">
+                                            <!-- Возврат -->
+                                        </th>
+                                        <th>
+                                            <!-- Дистрибьютер -->
+                                        </th>
+                                        <th>
+                                            <div class="table-head-info">
+                                                Наличие
+                                                <svg aria-hidden="true" class="table-head-info__ico">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                                </svg>
+                                            </div>
+                                        </th>
+                                        <th class="table__cell-slim table__cell-narrow">
+                                            <!-- Статус -->
+                                        </th>
+                                        <th>
+                                            <div class="table-head-info">
+                                                Срок
+                                                <svg aria-hidden="true" class="table-head-info__ico">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                                </svg>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head-info">
+                                                Ожидаемая
+                                                дата&nbsp;доставки
+                                                <svg aria-hidden="true" class="table-head-info__ico">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                                </svg>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-dropdown">
+                                                <div class="table-dropdown__inner">
+                                                    Цена
+                                                    <button type="button" class="table-dropdown__trigger btn-light">
+                                                        <svg class="btn-light__ico" aria-hidden="true">
+                                                            <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
 
+                                                <div class="table-dropdown__content">
+                                                    <!--     todo: Юля сделай выпадаху сортировки и дровер сортировки на моби  -->
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            Купить
+                                        </th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <!-- Бренд / Артику -->
+                                            <div class="table-cel-info">
+                                                OSMAR<br> 7506
+                                                <svg aria-hidden="true" class="table-cel-info__ico">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                                </svg>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <!-- Картинка -->
+                                            <button type="button" class="table-btn">
+                                                <svg aria-hidden="true" class="table-btn__ico">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#picture"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <!-- Наименование -->
+                                            лампа 12 v 21 w стопсигнал повторитель 1-конт (ba 15) (o ram)
+                                        </td>
+                                        <td>
+                                            <!-- Поставщик / Склад -->
+                                            TMNR
+                                        </td>
+                                        <td class="table__cell-slim table__cell-narrow">
+                                            <!-- Возврат -->
+                                            <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <!--  Дистрибьютер -->
+                                            <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <!-- Наличие -->
+                                            >&nbsp;1000
+                                        </td>
+                                        <td class="table__cell-slim table__cell-narrow">
+                                            <!-- Статус -->
+                                            <div class="status status--alone status--type-left status--rejected">
+                                            </div>
+                                        </td>
+                                        <td class="nowrap">
+                                            <!-- Срок -->
+                                            1 день<br>
+                                            (до 13:20)
+                                        </td>
+                                        <td>
+                                            <!-- Ожидаемая дата доставки -->
+                                            04.07 Чт
+                                        </td>
+                                        <td class="nowrap">
+                                            <!-- Цена -->
+                                            1 427,00
+                                        </td>
+                                        <td>
+                                            <!-- Купить -->
+                                            Кнопки, инпут, корзина
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
 
                     @@include('block/alert.html', {
                     "class": "alert--warning",
                     "text": "Информация по подбору аналогов является справочной, требует уточнений и не является безусловной причиной для возврата",
                     })
-                </div>
-            </div>
-
-
-            <div class="table d-none">
-                <div class="table__scrollbar scrollbar scrollbar--horizontal">
-                    <table class="table__inner">
-                        <tr>
-                            <th class="table__cell-slim">
-                                <div class="checkbox">
-                                    <input id="cel-head" type="checkbox" class="checkbox__input" data-checkbox-main>
-                                    <label for="cel-head" class="checkbox__label"></label>
-                                </div>
-                            </th>
-                            <th class="table__cell-slim">
-                                <!-- &nbsp; неразрывный пробел, для того чтобы два слова не разрывались при переносе -->
-                                Ожидаемая дата&nbsp;доставки
-                            </th>
-                            <th>
-                                Бренд
-                            </th>
-                            <th>
-                                Артикул
-                            </th>
-                            <th>
-                                Наименование
-                            </th>
-                            <th>
-                                Срок
-                            </th>
-                            <th>
-                                Количество
-                            </th>
-                            <th>
-                                <div class="table-dropdown">
-                                    <div class="table-dropdown__inner">
-                                        Цена
-
-                                        <button type="button" class="table-dropdown__trigger btn-light">
-                                            <svg class="btn-light__ico" aria-hidden="true">
-                                                <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                    <div class="table-dropdown__content">
-                                        <!--     todo: сделать выпадаху сортировки и дровер сортировки на моби  -->
-                                    </div>
-                                </div>
-                            </th>
-                            <th>
-                                Сумма
-                            </th>
-                            <th>
-                                <!-- todo: кнопка фильтра статуса. Нужно узнать как будет выглядеть выпадашка -->
-                                <div class="table-dropdown">
-                                    <div class="table-dropdown__inner">
-                                        Статус
-
-                                        <button type="button" class="table-dropdown__trigger btn-light">
-                                            <svg class="btn-light__ico" aria-hidden="true">
-                                                <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                    <div class="table-dropdown__content">
-                                        <!--     todo: сделать выпадаху сортировки и дровер сортировки на моби  -->
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-
-                        <tr data-order="1">
-                            <td>
-                                <div class="checkbox">
-                                    <input id="cel-1" type="checkbox" class="checkbox__input" data-checkbox>
-                                    <label for="cel-1" class="checkbox__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Ожидаемая дата доставки -->
-                                22.11.2024 -
-                                27.11.2024
-                            </td>
-                            <td>
-                                <!-- Бренд -->
-                                Philips
-                            </td>
-                            <td>
-                                <!-- Артикул -->
-                                85126
-                            </td>
-                            <td>
-                                <!-- Наименование -->
-                                Лампа ксенон d2r 5000к
-                            </td>
-                            <td class="nowrap">
-                                <!-- Срок -->
-                                3-6 дн.
-                            </td>
-                            <td>
-                                <!-- Количество -->
-                                10
-                            </td>
-                            <td class="nowrap">
-                                <!-- Цена -->
-                                1 427,00
-                            </td>
-                            <td class="nowrap" data-order-amount>
-                                <!-- Сумма -->
-                                1 427,00
-                            </td>
-                            <td>
-                                <!-- Статус -->
-                                <div class="status status--type-left status--rejected">
-                                    Отказ
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
                 </div>
             </div>
         </div>
@@ -193,7 +217,7 @@
                             </div>
 
                             <div class="product-card__product-btns">
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -261,7 +285,7 @@
                             </div>
 
                             <div class="product-card__product-btns">
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -325,7 +349,7 @@
                             </div>
 
                             <div class="product-card__product-btns">
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
@@ -452,7 +476,7 @@
                             </div>
 
                             <div class="product-card__product-btns">
-                                <button type="button" aria-label="дистрибьютер" class="status-distributor">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>

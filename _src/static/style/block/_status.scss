@@ -31,6 +31,13 @@
     }
   }
 
+  &--alone {
+    &#{$self}::before,
+    &#{$self}::after {
+      margin: 0;
+    }
+  }
+
   &--rejected::before,
   &--rejected::after {
     background-color: $c-status-rejected;
