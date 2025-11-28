@@ -33,7 +33,8 @@
     border: 1px solid $c-accent;
 
     &:hover {
-      border-color: $c-accent-dark;
+      background-color: $c-accent-dark;
+      color: #fff;
     }
   }
 }
