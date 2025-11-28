@@ -285,8 +285,9 @@
 </header>
 
 
+
 <main class="main">
-  <!-- //////////////////////////////////////////////////////////  -->
+    <!-- //////////////////////////////////////////////////////////  -->
     <div class="container">
     <ol class="breadcrumb">
         <li class="breadcrumb__item">
@@ -297,237 +298,651 @@
 </div>
 
 
-    <div class="container">
-        <section class="registration">
-            <h1 class="title title--mb">Регистрация</h1>
-            <div class="tabs tabs--vertiсal">
-                <div class="tabs__box-btn">
-                    <button class="tabs__btn tabs__btn--active" tab="1">Физическое лицо <br><span class="d-md-none">(только самовывоз)</span></button>
-                    <button class="tabs__btn" tab="2">Юридическое лицо</button>
-                </div>
+    <section class="favorites container">
+        <h1 class="title title--mb">Избранное</h1>
 
-                <div class="tabs__box-content">
-                    <div class="tabs__content tabs__content--active" tab-content="1">
-                        <form action="" class="form">
-                            <div class="form__top">
-                                <div class="form__column">
-                                    <h3 class="title-4 form__title">Данные пользователя</h3>
-                                    <div class="form__wrapper-input">
-                                        <label for="phone" class="form__label">
-                                            Телефон<span>*</span>
-                                        </label>
-                                        <input type="tel" class="form-input" id="phone" placeholder="+7 (000) 000-00-00" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="password" class="form__label">Пароль<span>*</span></label>
-                                        <input type="password" class="form-input" id="password" placeholder="Введите пароль" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="repeat-password" class="form__label">Подтверждение пароля<span>*</span></label>
-                                        <input type="password" class="form-input" id="repeat-password" placeholder="Введите пароль повторно" required disabled>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="email" class="form__label">E-mail<span>*</span></label>
-                                        <input type="email" class="form-input" id="email"  placeholder="Введите e-mail" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="name" class="form__label">ФИО<span>*</span></label>
-                                        <input type="text" class="form-input" id="name" placeholder="Введите ФИО" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="city" class="form__label">Город<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
-    <div class="form-input select__search d-none" data-select-search>
-        <input type="text" name="select-category" data-select-input id="city" class="select__input" value="@@value">
-        <span class="select__ico">
-            <svg>
-                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-            </svg>
-        </span>
-    </div>
-    <button type="button" class="form-input select__button" data-select-btn>
-        <span data-select-text="Выберите город" class="select__text">Выберите город</span>
-        <span class="select__ico select__ico--rotate" data-select-ico>
-          <svg>
-            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-          </svg>
-        </span>
-    </button>
-    <div class="select__list" data-select-list>
-        <button type="button" class="select__item select__item--active @@classItem"
-                data-select-value="Bryansk" @@dataItem1>Брянск</button>
-        <button type="button" class="select__item"
-                data-select-value="Moscow" @@dataItem2>Москва</button>
-        <button type="button" class="select__item"
-                data-select-value="Yaroslavl" @@dataItem3>Ярославль</button>
-    </div>
-</div>
+        <div class="d-md-none">
+            <div class="table" data-table>
+                <div class="table__scrollbar scrollbar scrollbar--horizontal" data-table-scrollbar>
+                    <table class="table__inner" data-table-inner>
+                        <tr>
+                            <th>
+                                Бренд
+                            </th>
+                            <th>
+                                Артикул
+                            </th>
+                            <th>
+                                Наименование
+                            </th>
+                            <th>
+                                Поставщик
+                            </th>
+                            <th class="table__cell-slim">
+                                <!-- Возврат -->
+                            </th>
+                            <th class="table__cell-slim">
+                                <!-- Дистрибьютер -->
+                            </th>
+                            <th>
+                                Склад
+                            </th>
+                            <th class="table__cell-min-100">
+                                Авто
+                            </th>
+                            <th>
+                                Срок
+                            </th>
+                            <th>
+                                Количество
+                            </th>
+                            <th>
+                                Цена
+                            </th>
+                            <th class="nowrap">
+                                Сумма
+                            </th>
+                            <th class="table__cell-min-150">
+                                Комментарий
+                            </th>
+                            <th class="table__cell-slim">
+                                Действия
+                            </th>
+                        </tr>
 
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="address" class="form__label">Адрес</label>
-                                        <input type="text" class="form-input" id="address" placeholder="Введите адрес">
-                                    </div>
+                        <tr>
+                            <td>
+                                <!-- Бренд -->
+                                Philips
+                            </td>
+                            <td>
+                                <!-- Артикул -->
+                                <a href="#" class="link link--blue">85126</a>
+                            </td>
+                            <td>
+                                <!-- Наименование -->
+                                Лампа ксенон<br>
+                                d2r 5000к
+                            </td>
+                            <td>
+                                <!-- Поставщик -->
+                                zsps-
+                            </td>
+                            <td>
+                                <!-- Возврат -->
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>
+                                <!-- Дистрибьютер -->
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>
+                                <!-- Склад -->
+                                -
+                            </td>
+                            <td>
+                                <!-- Авто -->
+                                acura mdx i
+                            </td>
+                            <td class="nowrap">
+                                <!-- Срок -->
+                                3-6 дн.
+                            </td>
+                            <td>
+                                <!-- Количество -->
+                                1
+                            </td>
+                            <td>
+                                <!-- Цена -->
+                                202,00
+                            </td>
+                            <td class="nowrap">
+                                <!-- Сумма -->
+                                1 427,00
+                            </td>
+                            <td>
+                                <!--Комментарий -->
+                                -
+                            </td>
+                            <td>
+                                <!-- Действия -->
+                                <div class="table__actions">
+                                    <button type="button" aria-label="поиск" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                        </svg>
+                                    </button>
+                                    <button type="button" aria-label="создать обсуждение" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                        </svg>
+                                    </button>
+                                    <button type="button" aria-label="удалить" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                        </svg>
+                                    </button>
                                 </div>
-                            </div>
-                            <div class="form__bottom form__bottom--column">
-                                <div class="checkbox checkbox--has-text">
-    <input id="agree" type="checkbox" class="checkbox__input" checked required>
-    <label for="agree" class="checkbox__label"></label>
-    <p class="checkbox__text">Я ознакомлен(а) с условиями <a href="#" target="_blank" class="checkbox__link">договора-оферты</a> и <a href="#" target="_blank" class="checkbox__link">политикой конфенденциальности</a></p>
-</div>
+                            </td>
+                        </tr>
 
-                                <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
-                            </div>
-                        </form>
-                    </div >
-                    <div class="tabs__content" tab-content="2">
-                        <form action="" class="tabs__form form">
-                            <div class="form__top">
-                                <div class="form__column">
-                                    <h3 class="title-4 form__title">Данные пользователя</h3>
-                                    <div class="form__wrapper-input">
-                                        <label for="phone-1" class="form__label">
-                                            Телефон<span>*</span>
-                                        </label>
-                                        <input type="tel" class="form-input" id="phone-1" placeholder="+7 (000) 000-00-00" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="password-1" class="form__label">Пароль<span>*</span></label>
-                                        <input type="password" class="form-input" id="password-1" placeholder="Введите пароль" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="repeat-password-1" class="form__label">Подтверждение пароля<span>*</span></label>
-                                        <input type="password" class="form-input" id="repeat-password-1" placeholder="Введите пароль повторно" required disabled>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="email-1" class="form__label">E-mail<span>*</span></label>
-                                        <input type="email" class="form-input" id="email-1"  placeholder="Введите e-mail" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="name-1" class="form__label">ФИО<span>*</span></label>
-                                        <input type="text" class="form-input" id="name-1" placeholder="Введите ФИО" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="city-1" class="form__label">Город<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
-    <div class="form-input select__search d-none" data-select-search>
-        <input type="text" name="select-category" data-select-input id="city-1" class="select__input" value="@@value">
-        <span class="select__ico">
-            <svg>
-                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-            </svg>
-        </span>
-    </div>
-    <button type="button" class="form-input select__button" data-select-btn>
-        <span data-select-text="Выберите город" class="select__text">Выберите город</span>
-        <span class="select__ico select__ico--rotate" data-select-ico>
-          <svg>
-            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-          </svg>
-        </span>
-    </button>
-    <div class="select__list" data-select-list>
-        <button type="button" class="select__item select__item--active @@classItem"
-                data-select-value="Bryansk" @@dataItem1>Брянск</button>
-        <button type="button" class="select__item"
-                data-select-value="Moscow" @@dataItem2>Москва</button>
-        <button type="button" class="select__item"
-                data-select-value="Yaroslavl" @@dataItem3>Ярославль</button>
-    </div>
-</div>
-
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="address" class="form__label">Адрес</label>
-                                        <input type="text" class="form-input" id="address-1" placeholder="Введите адрес">
-                                    </div>
+                        <tr>
+                            <td>
+                                <!-- Бренд -->
+                                Philips
+                            </td>
+                            <td>
+                                <!-- Артикул -->
+                                <a href="#" class="link link--blue">85126</a>
+                            </td>
+                            <td>
+                                <!-- Наименование -->
+                                Лампа ксенон<br>
+                                d2r 5000к
+                            </td>
+                            <td>
+                                <!-- Поставщик -->
+                                zsps-
+                            </td>
+                            <td>
+                                <!-- Возврат -->
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>
+                                <!-- Дистрибьютер -->
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>
+                                <!-- Склад -->
+                                -
+                            </td>
+                            <td>
+                                <!-- Авто -->
+                                acura mdx i
+                            </td>
+                            <td class="nowrap">
+                                <!-- Срок -->
+                                3-6 дн.
+                            </td>
+                            <td>
+                                <!-- Количество -->
+                                1
+                            </td>
+                            <td>
+                                <!-- Цена -->
+                                202,00
+                            </td>
+                            <td class="nowrap">
+                                <!-- Сумма -->
+                                1 427,00
+                            </td>
+                            <td>
+                                <!--Комментарий -->
+                                Какой-то комментарий с очень длинным текстом
+                            </td>
+                            <td>
+                                <!-- Действия -->
+                                <div class="table__actions">
+                                    <button type="button" aria-label="поиск" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                        </svg>
+                                    </button>
+                                    <button type="button" aria-label="создать обсуждение" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                        </svg>
+                                    </button>
+                                    <button type="button" aria-label="удалить" class="btn-light">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                        </svg>
+                                    </button>
                                 </div>
-                                <div class="form__column">
-                                    <h3 class="title-4 form__title">Данные юридического лица</h3>
-                                    <div class="form__wrapper-input">
-                                        <label for="type-organization" class="form__label">Тип организации<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
-    <div class="form-input select__search d-none" data-select-search>
-        <input type="text" name="select-category" data-select-input id="type-organization" class="select__input" value="@@value">
-        <span class="select__ico">
-            <svg>
-                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-            </svg>
-        </span>
-    </div>
-    <button type="button" class="form-input select__button" data-select-btn>
-        <span data-select-text="Выберите тип организации" class="select__text">Выберите тип организации</span>
-        <span class="select__ico select__ico--rotate" data-select-ico>
-          <svg>
-            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-          </svg>
-        </span>
-    </button>
-    <div class="select__list" data-select-list>
-        <button type="button" class="select__item select__item--active @@classItem"
-                data-select-value="IP" @@dataItem1>ИП</button>
-        <button type="button" class="select__item"
-                data-select-value="ООО" @@dataItem2>ООО</button>
-        <button type="button" class="select__item"
-                data-select-value="ООО" @@dataItem3>ООО</button>
-    </div>
-</div>
-
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="name-organization" class="form__label">Наименование организации<span>*</span></label>
-                                        <input type="text" class="form-input" id="name-organization" placeholder="Введите наименование" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="inn" class="form__label">ИНН<span>*</span></label>
-                                        <input type="text" class="form-input" id="inn" placeholder="Введите ИНН" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="kpp" class="form__label">КПП</label>
-                                        <input type="text" class="form-input" id="kpp" placeholder="Введите КПП">
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="ogrn" class="form__label">ОГРН<span>*</span></label>
-                                        <input type="text" class="form-input" id="ogrn" placeholder="Введите ОГРН" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="address-2" class="form__label">Юридический адрес<span>*</span></label>
-                                        <input type="text" class="form-input" id="address-2" placeholder="Введите адрес" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="bank" class="form__label">Название банка<span>*</span></label>
-                                        <input type="text" class="form-input" id="bank" placeholder="Введите название" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="bic" class="form__label">БИК банка<span>*</span></label>
-                                        <input type="text" class="form-input" id="bic" placeholder="Введите БИК" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="r-count" class="form__label">Р/Счет<span>*</span></label>
-                                        <input type="text" class="form-input" id="r-count" placeholder="Введите номер" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="k-count" class="form__label">К/Счет<span>*</span></label>
-                                        <input type="text" class="form-input" id="k-count" placeholder="Введите номер" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form__bottom">
-                                <div class="checkbox checkbox--has-text">
-    <input id="agree-1" type="checkbox" class="checkbox__input" checked required>
-    <label for="agree-1" class="checkbox__label"></label>
-    <p class="checkbox__text">Я ознакомлен(а) с условиями <a href="#" target="_blank" class="checkbox__link">договора-оферты</a> и <a href="#" target="_blank" class="checkbox__link">политикой конфенденциальности</a></p>
-</div>
-
-                                <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
-                            </div>
-                        </form>
-                    </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-        </section>
+
+            <div class="table-footer">
+                <div class="table-footer__pagination">
+                    <div class="pagination @@class">
+    <div class="pagination__info">1-10 из 13</div>
+
+    <div class="pagination__actions">
+        <a aria-label="Предыдущая страница" class="pagination__control pagination__control--disabled">
+            <svg aria-hidden="true">
+                <use xlink:href="static/img/symbol/sprite.svg#chevron-left"></use>
+            </svg>
+        </a>
+
+        <a href="#" class="pagination__page pagination__page--current">1</a>
+
+        <a href="#" class="pagination__page">2</a>
+
+        <a href="#" class="pagination__page">3</a>
+
+        <a href="#" class="pagination__page">4</a>
+
+        <a href="#" aria-label="Следующая страница" class="pagination__control">
+            <svg aria-hidden="true">
+                <use xlink:href="static/img/symbol/sprite.svg#chevron-right"></use>
+            </svg>
+        </a>
     </div>
+
+    <div class="select pagination__option" data-select @@data>
+    <div class="form-input select__search d-none" data-select-search>
+        <input type="text" name="select-category" data-select-input id="page" class="select__input" value="@@value">
+        <span class="select__ico">
+            <svg>
+                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+        </span>
+    </div>
+    <button type="button" class="form-input select__button" data-select-btn>
+        <span data-select-text="10 / страниц" class="select__text">10 / страниц</span>
+        <span class="select__ico select__ico--rotate" data-select-ico>
+          <svg>
+            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+          </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item select__item--active select__item--selected"
+                data-select-value="10" @@dataItem1>10 / страниц</button>
+        <button type="button" class="select__item"
+                data-select-value="20" @@dataItem2>20 / страниц</button>
+        <button type="button" class="select__item"
+                data-select-value="30" @@dataItem3>30 / страниц</button>
+    </div>
+</div>
+
+</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="d-none d-md-block product-cards">
+            <ul class="product-cards__list">
+                <li class="product-card">
+                    <div class="product-card__head">
+                        <div class="product-card__model-auto">
+                          acura mdx i
+                        </div>
+                        <div class="product-card__status status status--type-right">
+                            Возврат отправлен поставщику
+                        </div>
+                    </div>
+
+                    <div class="product-card__body">
+                        <div class="product-card__product">
+                            <div class="product-card__product-info">
+                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                <div class="product-card__supplier">zsps–</div>
+                            </div>
+
+                            <div class="product-card__product-btns">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__info">
+                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card__actions product-card__actions--only-btns">
+                        <button type="button" aria-label="поиск" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="создать обсуждение" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="удалить" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="product-card__note">
+                        Текст комментария (заметки), может быть длинный на несколько строк
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <div class="product-card__head">
+                        <div class="product-card__model-auto">
+                          BMW
+                        </div>
+                        <div class="product-card__status status status--incoming status--type-right">
+                            Приходование
+                        </div>
+                    </div>
+
+                    <div class="product-card__body">
+                        <div class="product-card__product">
+                            <div class="product-card__product-info">
+                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                <div class="product-card__supplier">zsps–</div>
+                            </div>
+
+                            <div class="product-card__product-btns">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__info">
+                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card__actions product-card__actions--only-btns">
+                        <button type="button" aria-label="поиск" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="создать обсуждение" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="удалить" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <div class="product-card__head">
+                        <div class="product-card__model-auto">
+                          acura mdx i
+                        </div>
+                        <div class="product-card__status status status--type-right">
+                            Возврат отправлен поставщику
+                        </div>
+                    </div>
+
+                    <div class="product-card__body">
+                        <div class="product-card__product">
+                            <div class="product-card__product-info">
+                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                <div class="product-card__supplier">zsps–</div>
+                            </div>
+
+                            <div class="product-card__product-btns">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__info">
+                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card__actions product-card__actions--only-btns">
+                        <button type="button" aria-label="поиск" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="создать обсуждение" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="удалить" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="product-card__note">
+                        Текст комментария (заметки), может быть длинный на несколько строк
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <div class="product-card__head">
+                        <div class="product-card__model-auto">
+                          BMW
+                        </div>
+                        <div class="product-card__status status status--incoming status--type-right">
+                            Приходование
+                        </div>
+                    </div>
+
+                    <div class="product-card__body">
+                        <div class="product-card__product">
+                            <div class="product-card__product-info">
+                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                <div class="product-card__supplier">zsps–</div>
+                            </div>
+
+                            <div class="product-card__product-btns">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__info">
+                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card__actions product-card__actions--only-btns">
+                        <button type="button" aria-label="поиск" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="создать обсуждение" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="удалить" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <div class="product-card__head">
+                        <div class="product-card__model-auto">
+                          acura mdx i
+                        </div>
+                        <div class="product-card__status status status--type-right">
+                            Возврат отправлен поставщику
+                        </div>
+                    </div>
+
+                    <div class="product-card__body">
+                        <div class="product-card__product">
+                            <div class="product-card__product-info">
+                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                <div class="product-card__supplier">zsps–</div>
+                            </div>
+
+                            <div class="product-card__product-btns">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__info">
+                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card__actions product-card__actions--only-btns">
+                        <button type="button" aria-label="поиск" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="создать обсуждение" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="удалить" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="product-card__note">
+                        Текст комментария (заметки), может быть длинный на несколько строк
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <div class="product-card__head">
+                        <div class="product-card__model-auto">
+                          BMW
+                        </div>
+                        <div class="product-card__status status status--incoming status--type-right">
+                            Приходование
+                        </div>
+                    </div>
+
+                    <div class="product-card__body">
+                        <div class="product-card__product">
+                            <div class="product-card__product-info">
+                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                <div class="product-card__supplier">zsps–</div>
+                            </div>
+
+                            <div class="product-card__product-btns">
+                                <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__info">
+                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card__actions product-card__actions--only-btns">
+                        <button type="button" aria-label="поиск" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="создать обсуждение" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="удалить" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+
+            <button type="button" class="product-cards__show-more btn">
+                Показать еще
+            </button>
+        </div>
+    </section>
 </main>
 
 <footer class="footer">

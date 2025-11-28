@@ -298,234 +298,25 @@
 
 
     <div class="container">
-        <section class="registration">
-            <h1 class="title title--mb">Регистрация</h1>
-            <div class="tabs tabs--vertiсal">
-                <div class="tabs__box-btn">
-                    <button class="tabs__btn tabs__btn--active" tab="1">Физическое лицо <br><span class="d-md-none">(только самовывоз)</span></button>
-                    <button class="tabs__btn" tab="2">Юридическое лицо</button>
-                </div>
+        <section class="page-text">
+            <h1 class="title title--mb">Способы оплаты</h1>
 
-                <div class="tabs__box-content">
-                    <div class="tabs__content tabs__content--active" tab-content="1">
-                        <form action="" class="form">
-                            <div class="form__top">
-                                <div class="form__column">
-                                    <h3 class="title-4 form__title">Данные пользователя</h3>
-                                    <div class="form__wrapper-input">
-                                        <label for="phone" class="form__label">
-                                            Телефон<span>*</span>
-                                        </label>
-                                        <input type="tel" class="form-input" id="phone" placeholder="+7 (000) 000-00-00" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="password" class="form__label">Пароль<span>*</span></label>
-                                        <input type="password" class="form-input" id="password" placeholder="Введите пароль" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="repeat-password" class="form__label">Подтверждение пароля<span>*</span></label>
-                                        <input type="password" class="form-input" id="repeat-password" placeholder="Введите пароль повторно" required disabled>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="email" class="form__label">E-mail<span>*</span></label>
-                                        <input type="email" class="form-input" id="email"  placeholder="Введите e-mail" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="name" class="form__label">ФИО<span>*</span></label>
-                                        <input type="text" class="form-input" id="name" placeholder="Введите ФИО" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="city" class="form__label">Город<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
-    <div class="form-input select__search d-none" data-select-search>
-        <input type="text" name="select-category" data-select-input id="city" class="select__input" value="@@value">
-        <span class="select__ico">
-            <svg>
-                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-            </svg>
-        </span>
-    </div>
-    <button type="button" class="form-input select__button" data-select-btn>
-        <span data-select-text="Выберите город" class="select__text">Выберите город</span>
-        <span class="select__ico select__ico--rotate" data-select-ico>
-          <svg>
-            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-          </svg>
-        </span>
-    </button>
-    <div class="select__list" data-select-list>
-        <button type="button" class="select__item select__item--active @@classItem"
-                data-select-value="Bryansk" @@dataItem1>Брянск</button>
-        <button type="button" class="select__item"
-                data-select-value="Moscow" @@dataItem2>Москва</button>
-        <button type="button" class="select__item"
-                data-select-value="Yaroslavl" @@dataItem3>Ярославль</button>
-    </div>
-</div>
+            <div class="page-text__content">
+                <p><b>Наличный расчёт</b></p>
+                <p>Оплата наличными производится в магазине по фактическому адресу: Брянская обл., г. Брянск ул. Карачижская д. 104 к. 1. После оплаты деньги в течение некоторого времени деньги отобразятся на баланске в личном кабинете клиента.</p>
 
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="address" class="form__label">Адрес</label>
-                                        <input type="text" class="form-input" id="address" placeholder="Введите адрес">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form__bottom form__bottom--column">
-                                <div class="checkbox checkbox--has-text">
-    <input id="agree" type="checkbox" class="checkbox__input" checked required>
-    <label for="agree" class="checkbox__label"></label>
-    <p class="checkbox__text">Я ознакомлен(а) с условиями <a href="#" target="_blank" class="checkbox__link">договора-оферты</a> и <a href="#" target="_blank" class="checkbox__link">политикой конфенденциальности</a></p>
-</div>
-
-                                <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
-                            </div>
-                        </form>
-                    </div >
-                    <div class="tabs__content" tab-content="2">
-                        <form action="" class="tabs__form form">
-                            <div class="form__top">
-                                <div class="form__column">
-                                    <h3 class="title-4 form__title">Данные пользователя</h3>
-                                    <div class="form__wrapper-input">
-                                        <label for="phone-1" class="form__label">
-                                            Телефон<span>*</span>
-                                        </label>
-                                        <input type="tel" class="form-input" id="phone-1" placeholder="+7 (000) 000-00-00" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="password-1" class="form__label">Пароль<span>*</span></label>
-                                        <input type="password" class="form-input" id="password-1" placeholder="Введите пароль" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="repeat-password-1" class="form__label">Подтверждение пароля<span>*</span></label>
-                                        <input type="password" class="form-input" id="repeat-password-1" placeholder="Введите пароль повторно" required disabled>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="email-1" class="form__label">E-mail<span>*</span></label>
-                                        <input type="email" class="form-input" id="email-1"  placeholder="Введите e-mail" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="name-1" class="form__label">ФИО<span>*</span></label>
-                                        <input type="text" class="form-input" id="name-1" placeholder="Введите ФИО" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="city-1" class="form__label">Город<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
-    <div class="form-input select__search d-none" data-select-search>
-        <input type="text" name="select-category" data-select-input id="city-1" class="select__input" value="@@value">
-        <span class="select__ico">
-            <svg>
-                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-            </svg>
-        </span>
-    </div>
-    <button type="button" class="form-input select__button" data-select-btn>
-        <span data-select-text="Выберите город" class="select__text">Выберите город</span>
-        <span class="select__ico select__ico--rotate" data-select-ico>
-          <svg>
-            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-          </svg>
-        </span>
-    </button>
-    <div class="select__list" data-select-list>
-        <button type="button" class="select__item select__item--active @@classItem"
-                data-select-value="Bryansk" @@dataItem1>Брянск</button>
-        <button type="button" class="select__item"
-                data-select-value="Moscow" @@dataItem2>Москва</button>
-        <button type="button" class="select__item"
-                data-select-value="Yaroslavl" @@dataItem3>Ярославль</button>
-    </div>
-</div>
-
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="address" class="form__label">Адрес</label>
-                                        <input type="text" class="form-input" id="address-1" placeholder="Введите адрес">
-                                    </div>
-                                </div>
-                                <div class="form__column">
-                                    <h3 class="title-4 form__title">Данные юридического лица</h3>
-                                    <div class="form__wrapper-input">
-                                        <label for="type-organization" class="form__label">Тип организации<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
-    <div class="form-input select__search d-none" data-select-search>
-        <input type="text" name="select-category" data-select-input id="type-organization" class="select__input" value="@@value">
-        <span class="select__ico">
-            <svg>
-                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-            </svg>
-        </span>
-    </div>
-    <button type="button" class="form-input select__button" data-select-btn>
-        <span data-select-text="Выберите тип организации" class="select__text">Выберите тип организации</span>
-        <span class="select__ico select__ico--rotate" data-select-ico>
-          <svg>
-            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-          </svg>
-        </span>
-    </button>
-    <div class="select__list" data-select-list>
-        <button type="button" class="select__item select__item--active @@classItem"
-                data-select-value="IP" @@dataItem1>ИП</button>
-        <button type="button" class="select__item"
-                data-select-value="ООО" @@dataItem2>ООО</button>
-        <button type="button" class="select__item"
-                data-select-value="ООО" @@dataItem3>ООО</button>
-    </div>
-</div>
-
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="name-organization" class="form__label">Наименование организации<span>*</span></label>
-                                        <input type="text" class="form-input" id="name-organization" placeholder="Введите наименование" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="inn" class="form__label">ИНН<span>*</span></label>
-                                        <input type="text" class="form-input" id="inn" placeholder="Введите ИНН" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="kpp" class="form__label">КПП</label>
-                                        <input type="text" class="form-input" id="kpp" placeholder="Введите КПП">
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="ogrn" class="form__label">ОГРН<span>*</span></label>
-                                        <input type="text" class="form-input" id="ogrn" placeholder="Введите ОГРН" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="address-2" class="form__label">Юридический адрес<span>*</span></label>
-                                        <input type="text" class="form-input" id="address-2" placeholder="Введите адрес" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="bank" class="form__label">Название банка<span>*</span></label>
-                                        <input type="text" class="form-input" id="bank" placeholder="Введите название" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="bic" class="form__label">БИК банка<span>*</span></label>
-                                        <input type="text" class="form-input" id="bic" placeholder="Введите БИК" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="r-count" class="form__label">Р/Счет<span>*</span></label>
-                                        <input type="text" class="form-input" id="r-count" placeholder="Введите номер" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="k-count" class="form__label">К/Счет<span>*</span></label>
-                                        <input type="text" class="form-input" id="k-count" placeholder="Введите номер" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form__bottom">
-                                <div class="checkbox checkbox--has-text">
-    <input id="agree-1" type="checkbox" class="checkbox__input" checked required>
-    <label for="agree-1" class="checkbox__label"></label>
-    <p class="checkbox__text">Я ознакомлен(а) с условиями <a href="#" target="_blank" class="checkbox__link">договора-оферты</a> и <a href="#" target="_blank" class="checkbox__link">политикой конфенденциальности</a></p>
-</div>
-
-                                <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <p><b>Банковской картой</b></p>
+                <p>Пополнение счёта с помощью банковской карты необходимо зайти в раздел "Балансы", в форме пополнения баланса онлайн выберите наиболее подходящий способ, введите сумму и нажмите "Пополнить". Товар отпускается, только при наличии депозита на балансе. При возникновении проблем с оплатой обратитесь по телефонам, указанным на сайте. Оплата происходит через ПАО СБЕРБАНК с использованием банковских карт следующих платёжных систем: МИР, VISA, Mastercard.
+                </p>
+                <p>Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены на платёжный шлюз ПАО СБЕРБАНК. Соединение с платёжным шлюзом и передача информации осуществляется в защищённом режиме с использованием протокола шифрования SSL. В случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By Visa, MasterCard SecureCode, MIR Accept, J-Secure, для проведения платежа также может потребоваться ввод специального пароля.
+                </p>
+                <p>Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК. Введённая информация не будет предоставлена третьим лицам за исключением случаев, предусмотренных законодательством РФ. Проведение платежей по банковским картам осуществляется в строгом соответствии с требованиями платёжных систем МИР, Visa Int., MasterCard Europe Sprl, JCB.
+                </p>
             </div>
+
+            <img class="page-text__img" width="336" height="25" src="static/img/payment/payment.png" alt="Способы оплаты">
+
+            <a href="/" class="btn-primary page-text__btn">На главную</a>
         </section>
     </div>
 </main>

@@ -286,7 +286,6 @@
 
 
 <main class="main">
-  <!-- //////////////////////////////////////////////////////////  -->
     <div class="container">
     <ol class="breadcrumb">
         <li class="breadcrumb__item">
@@ -297,237 +296,851 @@
 </div>
 
 
-    <div class="container">
-        <section class="registration">
-            <h1 class="title title--mb">Регистрация</h1>
-            <div class="tabs tabs--vertiсal">
-                <div class="tabs__box-btn">
-                    <button class="tabs__btn tabs__btn--active" tab="1">Физическое лицо <br><span class="d-md-none">(только самовывоз)</span></button>
-                    <button class="tabs__btn" tab="2">Юридическое лицо</button>
-                </div>
+    <section class="archive container">
+        <div class="section-header section-header--mb">
+            <h1 class="title">Архив</h1>
 
-                <div class="tabs__box-content">
-                    <div class="tabs__content tabs__content--active" tab-content="1">
-                        <form action="" class="form">
-                            <div class="form__top">
-                                <div class="form__column">
-                                    <h3 class="title-4 form__title">Данные пользователя</h3>
-                                    <div class="form__wrapper-input">
-                                        <label for="phone" class="form__label">
-                                            Телефон<span>*</span>
-                                        </label>
-                                        <input type="tel" class="form-input" id="phone" placeholder="+7 (000) 000-00-00" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="password" class="form__label">Пароль<span>*</span></label>
-                                        <input type="password" class="form-input" id="password" placeholder="Введите пароль" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="repeat-password" class="form__label">Подтверждение пароля<span>*</span></label>
-                                        <input type="password" class="form-input" id="repeat-password" placeholder="Введите пароль повторно" required disabled>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="email" class="form__label">E-mail<span>*</span></label>
-                                        <input type="email" class="form-input" id="email"  placeholder="Введите e-mail" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="name" class="form__label">ФИО<span>*</span></label>
-                                        <input type="text" class="form-input" id="name" placeholder="Введите ФИО" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="city" class="form__label">Город<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
-    <div class="form-input select__search d-none" data-select-search>
-        <input type="text" name="select-category" data-select-input id="city" class="select__input" value="@@value">
-        <span class="select__ico">
-            <svg>
-                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-            </svg>
-        </span>
-    </div>
-    <button type="button" class="form-input select__button" data-select-btn>
-        <span data-select-text="Выберите город" class="select__text">Выберите город</span>
-        <span class="select__ico select__ico--rotate" data-select-ico>
-          <svg>
-            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-          </svg>
-        </span>
-    </button>
-    <div class="select__list" data-select-list>
-        <button type="button" class="select__item select__item--active @@classItem"
-                data-select-value="Bryansk" @@dataItem1>Брянск</button>
-        <button type="button" class="select__item"
-                data-select-value="Moscow" @@dataItem2>Москва</button>
-        <button type="button" class="select__item"
-                data-select-value="Yaroslavl" @@dataItem3>Ярославль</button>
-    </div>
-</div>
+            <div class="section-header__group">
+                <button class="btn-primary" type="button" data-modal="drawer-filter-orders">
+                    Назад
+                </button>
+            </div>
+        </div>
 
+        <div class="d-md-none">
+            <div class="table">
+                <div class="table__scrollbar scrollbar scrollbar--horizontal">
+                    <table class="table__inner">
+                        <tr>
+                            <th class="table__cell-slim">
+                                <div class="checkbox">
+                                    <input id="cel-head" type="checkbox" class="checkbox__input" data-checkbox-main>
+                                    <label for="cel-head" class="checkbox__label"></label>
+                                </div>
+                            </th>
+                            <th class="table__cell-slim">
+                                <!-- &nbsp; неразрывный пробел, для того чтобы два слова не разрывались при переносе -->
+                                Ожидаемая дата&nbsp;доставки
+                            </th>
+                            <th>
+                                Бренд
+                            </th>
+                            <th>
+                                Артикул
+                            </th>
+                            <th>
+                                Наименование
+                            </th>
+                            <th>
+                                Срок
+                            </th>
+                            <th>
+                                Количество
+                            </th>
+                            <th>
+                                <div class="table-dropdown">
+                                    <div class="table-dropdown__inner">
+                                        Цена
+
+                                        <button type="button" class="table-dropdown__trigger btn-light">
+                                            <svg class="btn-light__ico" aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
+                                            </svg>
+                                        </button>
                                     </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="address" class="form__label">Адрес</label>
-                                        <input type="text" class="form-input" id="address" placeholder="Введите адрес">
+
+                                    <div class="table-dropdown__content">
+                                        <!--     todo: сделать выпадаху сортировки и дровер сортировки на моби  -->
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form__bottom form__bottom--column">
-                                <div class="checkbox checkbox--has-text">
-    <input id="agree" type="checkbox" class="checkbox__input" checked required>
-    <label for="agree" class="checkbox__label"></label>
-    <p class="checkbox__text">Я ознакомлен(а) с условиями <a href="#" target="_blank" class="checkbox__link">договора-оферты</a> и <a href="#" target="_blank" class="checkbox__link">политикой конфенденциальности</a></p>
-</div>
+                            </th>
+                            <th>
+                                Сумма
+                            </th>
+                            <th>
+                                <!-- todo: кнопка фильтра статуса. Нужно узнать как будет выглядеть выпадашка -->
+                                <div class="table-dropdown">
+                                    <div class="table-dropdown__inner">
+                                        Статус
 
-                                <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
-                            </div>
-                        </form>
-                    </div >
-                    <div class="tabs__content" tab-content="2">
-                        <form action="" class="tabs__form form">
-                            <div class="form__top">
-                                <div class="form__column">
-                                    <h3 class="title-4 form__title">Данные пользователя</h3>
-                                    <div class="form__wrapper-input">
-                                        <label for="phone-1" class="form__label">
-                                            Телефон<span>*</span>
-                                        </label>
-                                        <input type="tel" class="form-input" id="phone-1" placeholder="+7 (000) 000-00-00" required>
+                                        <button type="button" class="table-dropdown__trigger btn-light">
+                                            <svg class="btn-light__ico" aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
+                                            </svg>
+                                        </button>
                                     </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="password-1" class="form__label">Пароль<span>*</span></label>
-                                        <input type="password" class="form-input" id="password-1" placeholder="Введите пароль" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="repeat-password-1" class="form__label">Подтверждение пароля<span>*</span></label>
-                                        <input type="password" class="form-input" id="repeat-password-1" placeholder="Введите пароль повторно" required disabled>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="email-1" class="form__label">E-mail<span>*</span></label>
-                                        <input type="email" class="form-input" id="email-1"  placeholder="Введите e-mail" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="name-1" class="form__label">ФИО<span>*</span></label>
-                                        <input type="text" class="form-input" id="name-1" placeholder="Введите ФИО" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="city-1" class="form__label">Город<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
-    <div class="form-input select__search d-none" data-select-search>
-        <input type="text" name="select-category" data-select-input id="city-1" class="select__input" value="@@value">
-        <span class="select__ico">
-            <svg>
-                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-            </svg>
-        </span>
-    </div>
-    <button type="button" class="form-input select__button" data-select-btn>
-        <span data-select-text="Выберите город" class="select__text">Выберите город</span>
-        <span class="select__ico select__ico--rotate" data-select-ico>
-          <svg>
-            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-          </svg>
-        </span>
-    </button>
-    <div class="select__list" data-select-list>
-        <button type="button" class="select__item select__item--active @@classItem"
-                data-select-value="Bryansk" @@dataItem1>Брянск</button>
-        <button type="button" class="select__item"
-                data-select-value="Moscow" @@dataItem2>Москва</button>
-        <button type="button" class="select__item"
-                data-select-value="Yaroslavl" @@dataItem3>Ярославль</button>
-    </div>
-</div>
 
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="address" class="form__label">Адрес</label>
-                                        <input type="text" class="form-input" id="address-1" placeholder="Введите адрес">
+                                    <div class="table-dropdown__content">
+                                        <!--     todo: сделать выпадаху сортировки и дровер сортировки на моби  -->
                                     </div>
                                 </div>
-                                <div class="form__column">
-                                    <h3 class="title-4 form__title">Данные юридического лица</h3>
-                                    <div class="form__wrapper-input">
-                                        <label for="type-organization" class="form__label">Тип организации<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
-    <div class="form-input select__search d-none" data-select-search>
-        <input type="text" name="select-category" data-select-input id="type-organization" class="select__input" value="@@value">
-        <span class="select__ico">
-            <svg>
-                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-            </svg>
-        </span>
-    </div>
-    <button type="button" class="form-input select__button" data-select-btn>
-        <span data-select-text="Выберите тип организации" class="select__text">Выберите тип организации</span>
-        <span class="select__ico select__ico--rotate" data-select-ico>
-          <svg>
-            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-          </svg>
-        </span>
-    </button>
-    <div class="select__list" data-select-list>
-        <button type="button" class="select__item select__item--active @@classItem"
-                data-select-value="IP" @@dataItem1>ИП</button>
-        <button type="button" class="select__item"
-                data-select-value="ООО" @@dataItem2>ООО</button>
-        <button type="button" class="select__item"
-                data-select-value="ООО" @@dataItem3>ООО</button>
-    </div>
-</div>
+                            </th>
+                        </tr>
 
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="name-organization" class="form__label">Наименование организации<span>*</span></label>
-                                        <input type="text" class="form-input" id="name-organization" placeholder="Введите наименование" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="inn" class="form__label">ИНН<span>*</span></label>
-                                        <input type="text" class="form-input" id="inn" placeholder="Введите ИНН" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="kpp" class="form__label">КПП</label>
-                                        <input type="text" class="form-input" id="kpp" placeholder="Введите КПП">
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="ogrn" class="form__label">ОГРН<span>*</span></label>
-                                        <input type="text" class="form-input" id="ogrn" placeholder="Введите ОГРН" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="address-2" class="form__label">Юридический адрес<span>*</span></label>
-                                        <input type="text" class="form-input" id="address-2" placeholder="Введите адрес" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="bank" class="form__label">Название банка<span>*</span></label>
-                                        <input type="text" class="form-input" id="bank" placeholder="Введите название" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="bic" class="form__label">БИК банка<span>*</span></label>
-                                        <input type="text" class="form-input" id="bic" placeholder="Введите БИК" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="r-count" class="form__label">Р/Счет<span>*</span></label>
-                                        <input type="text" class="form-input" id="r-count" placeholder="Введите номер" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="k-count" class="form__label">К/Счет<span>*</span></label>
-                                        <input type="text" class="form-input" id="k-count" placeholder="Введите номер" required>
-                                    </div>
+                        <tr data-order="1">
+                            <td>
+                                <div class="checkbox">
+                                    <input id="cel-1" type="checkbox" class="checkbox__input" data-checkbox>
+                                    <label for="cel-1" class="checkbox__label"></label>
                                 </div>
-                            </div>
-                            <div class="form__bottom">
-                                <div class="checkbox checkbox--has-text">
-    <input id="agree-1" type="checkbox" class="checkbox__input" checked required>
-    <label for="agree-1" class="checkbox__label"></label>
-    <p class="checkbox__text">Я ознакомлен(а) с условиями <a href="#" target="_blank" class="checkbox__link">договора-оферты</a> и <a href="#" target="_blank" class="checkbox__link">политикой конфенденциальности</a></p>
-</div>
+                            </td>
+                            <td>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
+                            </td>
+                            <td>
+                                <!-- Бренд -->
+                                Philips
+                            </td>
+                            <td>
+                                <!-- Артикул -->
+                                85126
+                            </td>
+                            <td>
+                                <!-- Наименование -->
+                                Лампа ксенон d2r 5000к
+                            </td>
+                            <td class="nowrap">
+                                <!-- Срок -->
+                                3-6 дн.
+                            </td>
+                            <td>
+                                <!-- Количество -->
+                                10
+                            </td>
+                            <td class="nowrap">
+                                <!-- Цена -->
+                                1 427,00
+                            </td>
+                            <td class="nowrap" data-order-amount>
+                                <!-- Сумма -->
+                                1 427,00
+                            </td>
+                            <td>
+                                <!-- Статус -->
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
+                                </div>
+                            </td>
+                        </tr>
 
-                                <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
-                            </div>
-                        </form>
-                    </div>
+                        <tr data-order="2">
+                            <td>
+                                <div class="checkbox">
+                                    <input id="cel-2" type="checkbox" class="checkbox__input" data-checkbox>
+                                    <label for="cel-2" class="checkbox__label"></label>
+                                </div>
+                            </td>
+                            <td>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
+                            </td>
+                            <td>
+                                <!-- Бренд -->
+                                Philips
+                            </td>
+                            <td>
+                                <!-- Артикул -->
+                                85126
+                            </td>
+                            <td>
+                                <!-- Наименование -->
+                                Лампа ксенон d2r 5000к
+                            </td>
+                            <td class="nowrap">
+                                <!-- Срок -->
+                                3-6 дн.
+                            </td>
+                            <td>
+                                <!-- Количество -->
+                                10
+                            </td>
+                            <td class="nowrap">
+                                <!-- Цена -->
+                                1 427,00
+                            </td>
+                            <td class="nowrap" data-order-amount>
+                                <!-- Сумма -->
+                                1 427,00
+                            </td>
+                            <td>
+                                <!-- Статус -->
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr data-order="3">
+                            <td>
+                                <div class="checkbox">
+                                    <input id="cel-3" type="checkbox" class="checkbox__input" data-checkbox>
+                                    <label for="cel-3" class="checkbox__label"></label>
+                                </div>
+                            </td>
+                            <td>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
+                            </td>
+                            <td>
+                                <!-- Бренд -->
+                                Philips
+                            </td>
+                            <td>
+                                <!-- Артикул -->
+                                85126
+                            </td>
+                            <td>
+                                <!-- Наименование -->
+                                Лампа ксенон d2r 5000к
+                            </td>
+                            <td class="nowrap">
+                                <!-- Срок -->
+                                3-6 дн.
+                            </td>
+                            <td>
+                                <!-- Количество -->
+                                10
+                            </td>
+                            <td class="nowrap">
+                                <!-- Цена -->
+                                1 427,00
+                            </td>
+                            <td class="nowrap" data-order-amount>
+                                <!-- Сумма -->
+                                1 427,00
+                            </td>
+                            <td>
+                                <!-- Статус -->
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr data-order="4">
+                            <td>
+                                <div class="checkbox">
+                                    <input id="cel-4" type="checkbox" class="checkbox__input" data-checkbox>
+                                    <label for="cel-4" class="checkbox__label"></label>
+                                </div>
+                            </td>
+                            <td>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
+                            </td>
+                            <td>
+                                <!-- Бренд -->
+                                Philips
+                            </td>
+                            <td>
+                                <!-- Артикул -->
+                                85126
+                            </td>
+                            <td>
+                                <!-- Наименование -->
+                                Лампа ксенон d2r 5000к
+                            </td>
+                            <td class="nowrap">
+                                <!-- Срок -->
+                                3-6 дн.
+                            </td>
+                            <td>
+                                <!-- Количество -->
+                                10
+                            </td>
+                            <td class="nowrap">
+                                <!-- Цена -->
+                                1 427,00
+                            </td>
+                            <td class="nowrap" data-order-amount>
+                                <!-- Сумма -->
+                                1 427,00
+                            </td>
+                            <td>
+                                <!-- Статус -->
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr data-order="5">
+                            <td>
+                                <div class="checkbox">
+                                    <input id="cel-5" type="checkbox" class="checkbox__input" data-checkbox>
+                                    <label for="cel-5" class="checkbox__label"></label>
+                                </div>
+                            </td>
+                            <td>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
+                            </td>
+                            <td>
+                                <!-- Бренд -->
+                                Philips
+                            </td>
+                            <td>
+                                <!-- Артикул -->
+                                85126
+                            </td>
+                            <td>
+                                <!-- Наименование -->
+                                Лампа ксенон d2r 5000к
+                            </td>
+                            <td class="nowrap">
+                                <!-- Срок -->
+                                3-6 дн.
+                            </td>
+                            <td>
+                                <!-- Количество -->
+                                10
+                            </td>
+                            <td class="nowrap">
+                                <!-- Цена -->
+                                1 427,00
+                            </td>
+                            <td class="nowrap" data-order-amount>
+                                <!-- Сумма -->
+                                1 427,00
+                            </td>
+                            <td>
+                                <!-- Статус -->
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr data-order="6">
+                            <td>
+                                <div class="checkbox">
+                                    <input id="cel-6" type="checkbox" class="checkbox__input" data-checkbox>
+                                    <label for="cel-6" class="checkbox__label"></label>
+                                </div>
+                            </td>
+                            <td>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
+                            </td>
+                            <td>
+                                <!-- Бренд -->
+                                Philips
+                            </td>
+                            <td>
+                                <!-- Артикул -->
+                                85126
+                            </td>
+                            <td>
+                                <!-- Наименование -->
+                                Лампа ксенон d2r 5000к
+                            </td>
+                            <td class="nowrap">
+                                <!-- Срок -->
+                                3-6 дн.
+                            </td>
+                            <td>
+                                <!-- Количество -->
+                                10
+                            </td>
+                            <td class="nowrap">
+                                <!-- Цена -->
+                                1 427,00
+                            </td>
+                            <td class="nowrap" data-order-amount>
+                                <!-- Сумма -->
+                                1 427,00
+                            </td>
+                            <td>
+                                <!-- Статус -->
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr data-order="7">
+                            <td>
+                                <div class="checkbox">
+                                    <input id="cel-7" type="checkbox" class="checkbox__input" data-checkbox>
+                                    <label for="cel-7" class="checkbox__label"></label>
+                                </div>
+                            </td>
+                            <td>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
+                            </td>
+                            <td>
+                                <!-- Бренд -->
+                                Philips
+                            </td>
+                            <td>
+                                <!-- Артикул -->
+                                85126
+                            </td>
+                            <td>
+                                <!-- Наименование -->
+                                Лампа ксенон d2r 5000к
+                            </td>
+                            <td class="nowrap">
+                                <!-- Срок -->
+                                3-6 дн.
+                            </td>
+                            <td>
+                                <!-- Количество -->
+                                10
+                            </td>
+                            <td class="nowrap">
+                                <!-- Цена -->
+                                1 427,00
+                            </td>
+                            <td class="nowrap" data-order-amount>
+                                <!-- Сумма -->
+                                1 427,00
+                            </td>
+                            <td>
+                                <!-- Статус -->
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr data-order="8">
+                            <td>
+                                <div class="checkbox">
+                                    <input id="cel-8" type="checkbox" class="checkbox__input" data-checkbox>
+                                    <label for="cel-8" class="checkbox__label"></label>
+                                </div>
+                            </td>
+                            <td>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
+                            </td>
+                            <td>
+                                <!-- Бренд -->
+                                Philips
+                            </td>
+                            <td>
+                                <!-- Артикул -->
+                                85126
+                            </td>
+                            <td>
+                                <!-- Наименование -->
+                                Лампа ксенон d2r 5000к
+                            </td>
+                            <td class="nowrap">
+                                <!-- Срок -->
+                                3-6 дн.
+                            </td>
+                            <td>
+                                <!-- Количество -->
+                                10
+                            </td>
+                            <td class="nowrap">
+                                <!-- Цена -->
+                                1 427,00
+                            </td>
+                            <td class="nowrap" data-order-amount>
+                                <!-- Сумма -->
+                                1 427,00
+                            </td>
+                            <td>
+                                <!-- Статус -->
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr data-order="9">
+                            <td>
+                                <div class="checkbox">
+                                    <input id="cel-9" type="checkbox" class="checkbox__input" data-checkbox>
+                                    <label for="cel-9" class="checkbox__label"></label>
+                                </div>
+                            </td>
+                            <td>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
+                            </td>
+                            <td>
+                                <!-- Бренд -->
+                                Philips
+                            </td>
+                            <td>
+                                <!-- Артикул -->
+                                85126
+                            </td>
+                            <td>
+                                <!-- Наименование -->
+                                Лампа ксенон d2r 5000к
+                            </td>
+                            <td class="nowrap">
+                                <!-- Срок -->
+                                3-6 дн.
+                            </td>
+                            <td>
+                                <!-- Количество -->
+                                10
+                            </td>
+                            <td class="nowrap">
+                                <!-- Цена -->
+                                1 427,00
+                            </td>
+                            <td class="nowrap" data-order-amount>
+                                <!-- Сумма -->
+                                1 427,00
+                            </td>
+                            <td>
+                                <!-- Статус -->
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr data-order="10">
+                            <td>
+                                <div class="checkbox">
+                                    <input id="cel-10" type="checkbox" class="checkbox__input" data-checkbox>
+                                    <label for="cel-10" class="checkbox__label"></label>
+                                </div>
+                            </td>
+                            <td>
+                                <!-- Ожидаемая дата доставки -->
+                                22.11.2024 -
+                                27.11.2024
+                            </td>
+                            <td>
+                                <!-- Бренд -->
+                                Philips
+                            </td>
+                            <td>
+                                <!-- Артикул -->
+                                85126
+                            </td>
+                            <td>
+                                <!-- Наименование -->
+                                Лампа ксенон d2r 5000к
+                            </td>
+                            <td class="nowrap">
+                                <!-- Срок -->
+                                3-6 дн.
+                            </td>
+                            <td>
+                                <!-- Количество -->
+                                10
+                            </td>
+                            <td class="nowrap">
+                                <!-- Цена -->
+                                1 427,00
+                            </td>
+                            <td class="nowrap" data-order-amount>
+                                <!-- Сумма -->
+                                1 427,00
+                            </td>
+                            <td>
+                                <!-- Статус -->
+                                <div class="status status--type-left status--rejected">
+                                    Отказ
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-        </section>
+
+            <div class="table-footer">
+                <div class="table-footer__actions">
+                    <button type="button" disabled class="btn-text" data-not-checked-product>
+                        Товар не выбран
+                    </button>
+
+                    <button type="button" class="btn-text btn-text--theme-danger d-none" data-checked-product>
+                        Восстановить заказ
+                    </button>
+                </div>
+
+                <!-- todo: переписать js, на этой странице блок не нужен -->
+                <div class="table-footer__info d-none">
+                    Выбрано <span data-order-count>1</span> товаров на сумму <span data-order-total></span> руб
+                </div>
+
+                <div class="table-footer__pagination">
+                    <div class="pagination @@class">
+    <div class="pagination__info">1-10 из 13</div>
+
+    <div class="pagination__actions">
+        <a aria-label="Предыдущая страница" class="pagination__control pagination__control--disabled">
+            <svg aria-hidden="true">
+                <use xlink:href="static/img/symbol/sprite.svg#chevron-left"></use>
+            </svg>
+        </a>
+
+        <a href="#" class="pagination__page pagination__page--current">1</a>
+
+        <a href="#" class="pagination__page">2</a>
+
+        <a href="#" class="pagination__page">3</a>
+
+        <a href="#" class="pagination__page">4</a>
+
+        <a href="#" aria-label="Следующая страница" class="pagination__control">
+            <svg aria-hidden="true">
+                <use xlink:href="static/img/symbol/sprite.svg#chevron-right"></use>
+            </svg>
+        </a>
     </div>
+
+    <div class="select pagination__option" data-select @@data>
+    <div class="form-input select__search d-none" data-select-search>
+        <input type="text" name="select-category" data-select-input id="page" class="select__input" value="@@value">
+        <span class="select__ico">
+            <svg>
+                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+        </span>
+    </div>
+    <button type="button" class="form-input select__button" data-select-btn>
+        <span data-select-text="10 / страниц" class="select__text">10 / страниц</span>
+        <span class="select__ico select__ico--rotate" data-select-ico>
+          <svg>
+            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+          </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item select__item--active select__item--selected"
+                data-select-value="10" @@dataItem1>10 / страниц</button>
+        <button type="button" class="select__item"
+                data-select-value="20" @@dataItem2>20 / страниц</button>
+        <button type="button" class="select__item"
+                data-select-value="30" @@dataItem3>30 / страниц</button>
+    </div>
+</div>
+
+</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="d-none d-md-block product-cards">
+            <ul class="product-cards__list">
+                <li class="product-card">
+                    <div class="product-card__body">
+                        <div class="product-card__product">
+                            <div class="product-card__product-info">
+                                <div class="product-card__brand">Philips 85126</div>
+                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                <div class="product-card__supplier">zsps–</div>
+                            </div>
+
+                            <div class="product-card__product-btns">
+                                <div class="product-card__status status status--type-right">
+                                    Возврат отправлен поставщику
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card__info">
+                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card__actions">
+                        <div class="product-card__checkbox">
+                            Выбрать
+                            <div class="checkbox checkbox--size-l">
+                                <input id="cel-1m" type="checkbox" class="checkbox__input" data-checkbox>
+                                <label for="cel-1m" class="checkbox__label"></label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <div class="product-card__body">
+                        <div class="product-card__product">
+                            <div class="product-card__product-info">
+                                <div class="product-card__brand">Philips 85126</div>
+                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                <div class="product-card__supplier">zsps–</div>
+                            </div>
+
+                            <div class="product-card__product-btns">
+                                <div class="product-card__status status status--type-right">
+                                    Возврат отправлен поставщику
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card__info">
+                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card__actions">
+                        <div class="product-card__checkbox">
+                            Выбрать
+                            <div class="checkbox checkbox--size-l">
+                                <input id="cel-2m" type="checkbox" class="checkbox__input" data-checkbox>
+                                <label for="cel-2m" class="checkbox__label"></label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <div class="product-card__body">
+                        <div class="product-card__product">
+                            <div class="product-card__product-info">
+                                <div class="product-card__brand">Philips 85126</div>
+                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                <div class="product-card__supplier">zsps–</div>
+                            </div>
+
+                            <div class="product-card__product-btns">
+                                <div class="product-card__status status status--type-right">
+                                    Возврат отправлен поставщику
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card__info">
+                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card__actions">
+                        <div class="product-card__checkbox">
+                            Выбрать
+                            <div class="checkbox checkbox--size-l">
+                                <input id="cel-3m" type="checkbox" class="checkbox__input" data-checkbox>
+                                <label for="cel-3m" class="checkbox__label"></label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <div class="product-card__body">
+                        <div class="product-card__product">
+                            <div class="product-card__product-info">
+                                <div class="product-card__brand">Philips 85126</div>
+                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                <div class="product-card__supplier">zsps–</div>
+                            </div>
+
+                            <div class="product-card__product-btns">
+                                <div class="product-card__status status status--type-right">
+                                    Возврат отправлен поставщику
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card__info">
+                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card__actions">
+                        <div class="product-card__checkbox">
+                            Выбрать
+                            <div class="checkbox checkbox--size-l">
+                                <input id="cel-4m" type="checkbox" class="checkbox__input" data-checkbox>
+                                <label for="cel-4m" class="checkbox__label"></label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <div class="product-card__body">
+                        <div class="product-card__product">
+                            <div class="product-card__product-info">
+                                <div class="product-card__brand">Philips 85126</div>
+                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                <div class="product-card__supplier">zsps–</div>
+                            </div>
+
+                            <div class="product-card__product-btns">
+                                <div class="product-card__status status status--type-right">
+                                    Возврат отправлен поставщику
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card__info">
+                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card__actions">
+                        <div class="product-card__checkbox">
+                            Выбрать
+                            <div class="checkbox checkbox--size-l">
+                                <input id="cel-5m" type="checkbox" class="checkbox__input" data-checkbox>
+                                <label for="cel-5m" class="checkbox__label"></label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <div class="product-card__body">
+                        <div class="product-card__product">
+                            <div class="product-card__product-info">
+                                <div class="product-card__brand">Philips 85126</div>
+                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                <div class="product-card__supplier">zsps–</div>
+                            </div>
+
+                            <div class="product-card__product-btns">
+                                <div class="product-card__status status status--type-right">
+                                    Возврат отправлен поставщику
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card__info">
+                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card__actions">
+                        <div class="product-card__checkbox">
+                            Выбрать
+                            <div class="checkbox checkbox--size-l">
+                                <input id="cel-6m" type="checkbox" class="checkbox__input" data-checkbox>
+                                <label for="cel-6m" class="checkbox__label"></label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <button type="button" class="product-cards__show-more btn">
+                Показать еще
+            </button>
+        </div>
+    </section>
 </main>
 
 <footer class="footer">

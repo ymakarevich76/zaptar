@@ -286,7 +286,7 @@
 
 
 <main class="main">
-  <!-- //////////////////////////////////////////////////////////  -->
+    <!-- //////////////////////////////////////////////////////////  -->
     <div class="container">
     <ol class="breadcrumb">
         <li class="breadcrumb__item">
@@ -298,232 +298,103 @@
 
 
     <div class="container">
-        <section class="registration">
-            <h1 class="title title--mb">Регистрация</h1>
-            <div class="tabs tabs--vertiсal">
-                <div class="tabs__box-btn">
-                    <button class="tabs__btn tabs__btn--active" tab="1">Физическое лицо <br><span class="d-md-none">(только самовывоз)</span></button>
-                    <button class="tabs__btn" tab="2">Юридическое лицо</button>
+        <section class="details">
+            <div class="section-header section-header--mb">
+                <div class="section-header__group">
+                    <h1 class="title">51853885 - КОНДИЦИОНЕР (Var.: 1/Rev.: 0), (PNC:1; №2)</h1>
                 </div>
 
-                <div class="tabs__box-content">
-                    <div class="tabs__content tabs__content--active" tab-content="1">
-                        <form action="" class="form">
-                            <div class="form__top">
-                                <div class="form__column">
-                                    <h3 class="title-4 form__title">Данные пользователя</h3>
-                                    <div class="form__wrapper-input">
-                                        <label for="phone" class="form__label">
-                                            Телефон<span>*</span>
-                                        </label>
-                                        <input type="tel" class="form-input" id="phone" placeholder="+7 (000) 000-00-00" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="password" class="form__label">Пароль<span>*</span></label>
-                                        <input type="password" class="form-input" id="password" placeholder="Введите пароль" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="repeat-password" class="form__label">Подтверждение пароля<span>*</span></label>
-                                        <input type="password" class="form-input" id="repeat-password" placeholder="Введите пароль повторно" required disabled>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="email" class="form__label">E-mail<span>*</span></label>
-                                        <input type="email" class="form-input" id="email"  placeholder="Введите e-mail" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="name" class="form__label">ФИО<span>*</span></label>
-                                        <input type="text" class="form-input" id="name" placeholder="Введите ФИО" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="city" class="form__label">Город<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
-    <div class="form-input select__search d-none" data-select-search>
-        <input type="text" name="select-category" data-select-input id="city" class="select__input" value="@@value">
-        <span class="select__ico">
-            <svg>
-                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-            </svg>
-        </span>
-    </div>
-    <button type="button" class="form-input select__button" data-select-btn>
-        <span data-select-text="Выберите город" class="select__text">Выберите город</span>
-        <span class="select__ico select__ico--rotate" data-select-ico>
-          <svg>
-            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-          </svg>
-        </span>
-    </button>
-    <div class="select__list" data-select-list>
-        <button type="button" class="select__item select__item--active @@classItem"
-                data-select-value="Bryansk" @@dataItem1>Брянск</button>
-        <button type="button" class="select__item"
-                data-select-value="Moscow" @@dataItem2>Москва</button>
-        <button type="button" class="select__item"
-                data-select-value="Yaroslavl" @@dataItem3>Ярославль</button>
-    </div>
-</div>
-
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="address" class="form__label">Адрес</label>
-                                        <input type="text" class="form-input" id="address" placeholder="Введите адрес">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form__bottom form__bottom--column">
-                                <div class="checkbox checkbox--has-text">
-    <input id="agree" type="checkbox" class="checkbox__input" checked required>
-    <label for="agree" class="checkbox__label"></label>
-    <p class="checkbox__text">Я ознакомлен(а) с условиями <a href="#" target="_blank" class="checkbox__link">договора-оферты</a> и <a href="#" target="_blank" class="checkbox__link">политикой конфенденциальности</a></p>
-</div>
-
-                                <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
-                            </div>
-                        </form>
-                    </div >
-                    <div class="tabs__content" tab-content="2">
-                        <form action="" class="tabs__form form">
-                            <div class="form__top">
-                                <div class="form__column">
-                                    <h3 class="title-4 form__title">Данные пользователя</h3>
-                                    <div class="form__wrapper-input">
-                                        <label for="phone-1" class="form__label">
-                                            Телефон<span>*</span>
-                                        </label>
-                                        <input type="tel" class="form-input" id="phone-1" placeholder="+7 (000) 000-00-00" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="password-1" class="form__label">Пароль<span>*</span></label>
-                                        <input type="password" class="form-input" id="password-1" placeholder="Введите пароль" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="repeat-password-1" class="form__label">Подтверждение пароля<span>*</span></label>
-                                        <input type="password" class="form-input" id="repeat-password-1" placeholder="Введите пароль повторно" required disabled>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="email-1" class="form__label">E-mail<span>*</span></label>
-                                        <input type="email" class="form-input" id="email-1"  placeholder="Введите e-mail" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="name-1" class="form__label">ФИО<span>*</span></label>
-                                        <input type="text" class="form-input" id="name-1" placeholder="Введите ФИО" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="city-1" class="form__label">Город<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
-    <div class="form-input select__search d-none" data-select-search>
-        <input type="text" name="select-category" data-select-input id="city-1" class="select__input" value="@@value">
-        <span class="select__ico">
-            <svg>
-                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-            </svg>
-        </span>
-    </div>
-    <button type="button" class="form-input select__button" data-select-btn>
-        <span data-select-text="Выберите город" class="select__text">Выберите город</span>
-        <span class="select__ico select__ico--rotate" data-select-ico>
-          <svg>
-            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-          </svg>
-        </span>
-    </button>
-    <div class="select__list" data-select-list>
-        <button type="button" class="select__item select__item--active @@classItem"
-                data-select-value="Bryansk" @@dataItem1>Брянск</button>
-        <button type="button" class="select__item"
-                data-select-value="Moscow" @@dataItem2>Москва</button>
-        <button type="button" class="select__item"
-                data-select-value="Yaroslavl" @@dataItem3>Ярославль</button>
-    </div>
-</div>
-
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="address" class="form__label">Адрес</label>
-                                        <input type="text" class="form-input" id="address-1" placeholder="Введите адрес">
-                                    </div>
-                                </div>
-                                <div class="form__column">
-                                    <h3 class="title-4 form__title">Данные юридического лица</h3>
-                                    <div class="form__wrapper-input">
-                                        <label for="type-organization" class="form__label">Тип организации<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
-    <div class="form-input select__search d-none" data-select-search>
-        <input type="text" name="select-category" data-select-input id="type-organization" class="select__input" value="@@value">
-        <span class="select__ico">
-            <svg>
-                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-            </svg>
-        </span>
-    </div>
-    <button type="button" class="form-input select__button" data-select-btn>
-        <span data-select-text="Выберите тип организации" class="select__text">Выберите тип организации</span>
-        <span class="select__ico select__ico--rotate" data-select-ico>
-          <svg>
-            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-          </svg>
-        </span>
-    </button>
-    <div class="select__list" data-select-list>
-        <button type="button" class="select__item select__item--active @@classItem"
-                data-select-value="IP" @@dataItem1>ИП</button>
-        <button type="button" class="select__item"
-                data-select-value="ООО" @@dataItem2>ООО</button>
-        <button type="button" class="select__item"
-                data-select-value="ООО" @@dataItem3>ООО</button>
-    </div>
-</div>
-
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="name-organization" class="form__label">Наименование организации<span>*</span></label>
-                                        <input type="text" class="form-input" id="name-organization" placeholder="Введите наименование" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="inn" class="form__label">ИНН<span>*</span></label>
-                                        <input type="text" class="form-input" id="inn" placeholder="Введите ИНН" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="kpp" class="form__label">КПП</label>
-                                        <input type="text" class="form-input" id="kpp" placeholder="Введите КПП">
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="ogrn" class="form__label">ОГРН<span>*</span></label>
-                                        <input type="text" class="form-input" id="ogrn" placeholder="Введите ОГРН" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="address-2" class="form__label">Юридический адрес<span>*</span></label>
-                                        <input type="text" class="form-input" id="address-2" placeholder="Введите адрес" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="bank" class="form__label">Название банка<span>*</span></label>
-                                        <input type="text" class="form-input" id="bank" placeholder="Введите название" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="bic" class="form__label">БИК банка<span>*</span></label>
-                                        <input type="text" class="form-input" id="bic" placeholder="Введите БИК" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="r-count" class="form__label">Р/Счет<span>*</span></label>
-                                        <input type="text" class="form-input" id="r-count" placeholder="Введите номер" required>
-                                    </div>
-                                    <div class="form__wrapper-input">
-                                        <label for="k-count" class="form__label">К/Счет<span>*</span></label>
-                                        <input type="text" class="form-input" id="k-count" placeholder="Введите номер" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form__bottom">
-                                <div class="checkbox checkbox--has-text">
-    <input id="agree-1" type="checkbox" class="checkbox__input" checked required>
-    <label for="agree-1" class="checkbox__label"></label>
-    <p class="checkbox__text">Я ознакомлен(а) с условиями <a href="#" target="_blank" class="checkbox__link">договора-оферты</a> и <a href="#" target="_blank" class="checkbox__link">политикой конфенденциальности</a></p>
-</div>
-
-                                <button type="submit" class="form__btn btn" disabled>Зарегистрироваться</button>
-                            </div>
-                        </form>
-                    </div>
+                <div class="section-header__group">
+                    <a href="#" class="btn-primary">
+                       Назад
+                    </a>
+                </div>
+            </div>
+            <div class="details__row-2">
+                <div class="details__card-2">
+                    <img src="static/img/details/5.png" class="details__card-img details__card-img--large" alt="Кондиционер">
+                </div>
+                <div class="details__content">
+                    <h3 class="title-4">Деталь найдена в узле 50101/00</h3>
+                    <ol class="details__spareparts">
+                        <li class="details__sparepart">
+                            <span class="details__sparepart-num">1</span>
+                            <span class="details__sparepart-name">
+                                        Коробка Scarico Conden
+                                    </span>
+                            <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                        </li>
+                        <li class="details__sparepart">
+                            <span class="details__sparepart-num">2</span>
+                            <span class="details__sparepart-name">
+                                        Фильтр воздуха
+                                    </span>
+                            <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                        </li>
+                        <li class="details__sparepart">
+                            <span class="details__sparepart-num">3</span>
+                            <span class="details__sparepart-name">
+                                        Фильтр воздуха Multipack 6 pz
+                                    </span>
+                            <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                        </li>
+                        <li class="details__sparepart">
+                            <span class="details__sparepart-num">4</span>
+                            <span class="details__sparepart-name">
+                                      Фильтр воздуха Carbon filter
+                                    </span>
+                            <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                        </li>
+                        <li class="details__sparepart">
+                            <span class="details__sparepart-num">5</span>
+                            <span class="details__sparepart-name">
+                                        Крышка Filtro
+                                    </span>
+                            <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                        </li>
+                        <li class="details__sparepart">
+                            <span class="details__sparepart-num">6</span>
+                            <span class="details__sparepart-name">
+                                       Датчик NTC
+                                    </span>
+                            <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                        </li>
+                        <li class="details__sparepart">
+                            <span class="details__sparepart-num">7</span>
+                            <span class="details__sparepart-name">
+                                      Пружинка
+                                    </span>
+                            <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                        </li>
+                        <li class="details__sparepart">
+                            <span class="details__sparepart-num">8</span>
+                            <span class="details__sparepart-name">
+                                      Винт 4х12
+                                    </span>
+                            <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                        </li>
+                        <li class="details__sparepart">
+                            <span class="details__sparepart-num">9</span>
+                            <span class="details__sparepart-name">
+                                      Клапан
+                                    </span>
+                            <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                        </li>
+                        <li class="details__sparepart">
+                            <span class="details__sparepart-num">10</span>
+                            <span class="details__sparepart-name">
+                                      Уплотнение 10.8х2.4
+                                    </span>
+                            <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                        </li>
+                        <li class="details__sparepart">
+                            <span class="details__sparepart-num">11</span>
+                            <span class="details__sparepart-name">
+                                      Уплотнение 13.4х2.4
+                                    </span>
+                            <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </section>
