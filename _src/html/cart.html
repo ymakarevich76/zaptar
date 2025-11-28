@@ -670,23 +670,13 @@
             </div>
         </div>
 
-        <div class="d-none d-md-block">
-            <ul class="orders__cards">
+        <div class="d-none d-md-block product-cards">
+            <ul class="product-cards__list">
                 <li class="product-card">
-                    <div class="product-card__head">
-                        <div class="product-card__meta">
-                            <div class="product-card__number">71413536</div>
-                            <div class="product-card__date">15.11.2024 20:41</div>
-                        </div>
-                        <div class="product-card__status status status--type-right">
-                            Возврат отправлен поставщику
-                        </div>
-                    </div>
-
                     <div class="product-card__body">
                         <div class="product-card__product">
                             <div class="product-card__product-info">
-                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                <div class="product-card__brand">Philips 85126</div>
                                 <div class="product-card__name">Лампа ксенон d2r 5000k</div>
                                 <div class="product-card__supplier">zsps–</div>
                             </div>
@@ -709,23 +699,30 @@
                             <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
                             <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
                         </div>
-
-                        <div class="product-card__address">
-                            ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                        </div>
                     </div>
 
                     <div class="product-card__actions">
-                        <button type="button" aria-label="создать обсуждение" class="btn-light">
+                        <button type="button" aria-label="Перезаказать" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="Добавить в избранное" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="Добавить комментарий" class="btn-light">
                             <svg class="btn-light__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                             </svg>
                         </button>
-                        <button type="button" aria-label="информация по заказу" class="btn-light">
+                        <button type="button" aria-label="Удалить" class="btn-light">
                             <svg class="btn-light__ico" aria-hidden="true">
-                                <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                             </svg>
                         </button>
+
                         <div class="product-card__checkbox">
                             Выбрать
                             <div class="checkbox checkbox--size-l">
@@ -741,20 +738,10 @@
                 </li>
 
                 <li class="product-card">
-                    <div class="product-card__head">
-                        <div class="product-card__meta">
-                            <div class="product-card__number">71413536</div>
-                            <div class="product-card__date">15.11.2024 20:41</div>
-                        </div>
-                        <div class="product-card__status status status--type-right status--rejected">
-                            Отказ
-                        </div>
-                    </div>
-
                     <div class="product-card__body">
                         <div class="product-card__product">
                             <div class="product-card__product-info">
-                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                <div class="product-card__brand">Philips 85126</div>
                                 <div class="product-card__name">Лампа ксенон d2r 5000k</div>
                                 <div class="product-card__supplier">zsps–</div>
                             </div>
@@ -765,7 +752,7 @@
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
                                 </button>
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--special">
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
                                     </svg>
@@ -777,23 +764,30 @@
                             <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
                             <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
                         </div>
-
-                        <div class="product-card__address">
-                            ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                        </div>
                     </div>
 
                     <div class="product-card__actions">
-                        <button type="button" aria-label="создать обсуждение" class="btn-light">
+                        <button type="button" aria-label="Перезаказать" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="Добавить в избранное" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="Добавить комментарий" class="btn-light">
                             <svg class="btn-light__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                             </svg>
                         </button>
-                        <button type="button" aria-label="информация по заказу" class="btn-light">
+                        <button type="button" aria-label="Удалить" class="btn-light">
                             <svg class="btn-light__ico" aria-hidden="true">
-                                <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                             </svg>
                         </button>
+
                         <div class="product-card__checkbox">
                             Выбрать
                             <div class="checkbox checkbox--size-l">
@@ -805,20 +799,10 @@
                 </li>
 
                 <li class="product-card">
-                    <div class="product-card__head">
-                        <div class="product-card__meta">
-                            <div class="product-card__number">71413536</div>
-                            <div class="product-card__date">15.11.2024 20:41</div>
-                        </div>
-                        <div class="product-card__status status status--type-right status--rejected">
-                            Отказ
-                        </div>
-                    </div>
-
                     <div class="product-card__body">
                         <div class="product-card__product">
                             <div class="product-card__product-info">
-                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                <div class="product-card__brand">Philips 85126</div>
                                 <div class="product-card__name">Лампа ксенон d2r 5000k</div>
                                 <div class="product-card__supplier">zsps–</div>
                             </div>
@@ -829,7 +813,7 @@
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
                                 </button>
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--special">
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
                                     </svg>
@@ -841,86 +825,30 @@
                             <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
                             <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
                         </div>
-
-                        <div class="product-card__address">
-                            ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                        </div>
                     </div>
 
                     <div class="product-card__actions">
-                        <button type="button" aria-label="создать обсуждение" class="btn-light">
+                        <button type="button" aria-label="Перезаказать" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="Добавить в избранное" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="Добавить комментарий" class="btn-light">
                             <svg class="btn-light__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                             </svg>
                         </button>
-                        <button type="button" aria-label="информация по заказу" class="btn-light">
+                        <button type="button" aria-label="Удалить" class="btn-light">
                             <svg class="btn-light__ico" aria-hidden="true">
-                                <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                             </svg>
                         </button>
-                        <div class="product-card__checkbox">
-                            Выбрать
-                            <div class="checkbox checkbox--size-l">
-                                <input id="cel-4m" type="checkbox" class="checkbox__input" data-checkbox>
-                                <label for="cel-4m" class="checkbox__label"></label>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="product-card__note">
-                        Текст комментария (заметки), может быть длинный на несколько строк
-                    </div>
-                </li>
-
-                <li class="product-card">
-                    <div class="product-card__head">
-                        <div class="product-card__meta">
-                            <div class="product-card__number">71413536</div>
-                            <div class="product-card__date">15.11.2024 20:41</div>
-                        </div>
-                        <div class="product-card__status status status--type-right status--return-completed">
-                            Возврат проведен
-                        </div>
-                    </div>
-
-                    <div class="product-card__body">
-                        <div class="product-card__product">
-                            <div class="product-card__product-info">
-                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
-                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
-                                <div class="product-card__supplier">zsps–</div>
-                            </div>
-
-                            <div class="product-card__product-btns">
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--special">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="product-card__info">
-                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
-                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
-                        </div>
-
-                        <div class="product-card__address">
-                            ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                        </div>
-                    </div>
-
-                    <div class="product-card__actions">
-                        <button type="button" aria-label="создать обсуждение" class="btn-light">
-                            <svg class="btn-light__ico" aria-hidden="true">
-                                <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                            </svg>
-                        </button>
-                        <button type="button" aria-label="информация по заказу" class="btn-light">
-                            <svg class="btn-light__ico" aria-hidden="true">
-                                <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
-                            </svg>
-                        </button>
                         <div class="product-card__checkbox">
                             Выбрать
                             <div class="checkbox checkbox--size-l">
@@ -932,20 +860,10 @@
                 </li>
 
                 <li class="product-card">
-                    <div class="product-card__head">
-                        <div class="product-card__meta">
-                            <div class="product-card__number">71413536</div>
-                            <div class="product-card__date">15.11.2024 20:41</div>
-                        </div>
-                        <div class="product-card__status status status--type-right status--rejected">
-                            Отказ
-                        </div>
-                    </div>
-
                     <div class="product-card__body">
                         <div class="product-card__product">
                             <div class="product-card__product-info">
-                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                <div class="product-card__brand">Philips 85126</div>
                                 <div class="product-card__name">Лампа ксенон d2r 5000k</div>
                                 <div class="product-card__supplier">zsps–</div>
                             </div>
@@ -956,7 +874,7 @@
                                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                                     </svg>
                                 </button>
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--special">
+                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
                                     <svg aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
                                     </svg>
@@ -968,35 +886,42 @@
                             <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
                             <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
                         </div>
-
-                        <div class="product-card__address">
-                            ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
-                        </div>
                     </div>
 
                     <div class="product-card__actions">
-                        <button type="button" aria-label="создать обсуждение" class="btn-light">
+                        <button type="button" aria-label="Перезаказать" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="Добавить в избранное" class="btn-light">
+                            <svg class="btn-light__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="Добавить комментарий" class="btn-light">
                             <svg class="btn-light__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                             </svg>
                         </button>
-                        <button type="button" aria-label="информация по заказу" class="btn-light">
+                        <button type="button" aria-label="Удалить" class="btn-light">
                             <svg class="btn-light__ico" aria-hidden="true">
-                                <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
+                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                             </svg>
                         </button>
+
                         <div class="product-card__checkbox">
                             Выбрать
                             <div class="checkbox checkbox--size-l">
-                                <input id="cel-5m" type="checkbox" class="checkbox__input" data-checkbox>
-                                <label for="cel-5m" class="checkbox__label"></label>
+                                <input id="cel-4m" type="checkbox" class="checkbox__input" data-checkbox>
+                                <label for="cel-4m" class="checkbox__label"></label>
                             </div>
                         </div>
                     </div>
                 </li>
             </ul>
 
-            <button type="button" class="orders__show-more btn">
+            <button type="button" class="product-cards__show-more btn">
                 Показать еще
             </button>
         </div>
