@@ -47,6 +47,7 @@
                             @@include('../select.html', {
                             "id": "car-edit-year",
                             "data": "data-select-sort",
+                            "dataSelectItem": "data-selected-value-first",
                             "classItem": "select__item--selected",
                             "text": "Выберите год выпуска автомобиля",
                             "value": "2023",
@@ -68,7 +69,7 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="car-edit-year">
                         Отменить
                     </button>
                     <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">

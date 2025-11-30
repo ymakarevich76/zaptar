@@ -16,6 +16,7 @@
                         @@include('../select.html', {
                             "id": "order-issue-date",
                             "text": "Сегодня",
+                            "dataSelectItem": "data-selected-value-first",
                             "option1": { "title": "Сегодня", "value": "today" },
                             "option2": { "title": "За последние 7 дней", "value": "7-days" },
                             "option3": { "title": "Выбрать дни", "value": "choose-days" },
@@ -52,6 +53,7 @@
                         <label for="order-pick-up">Пункт самовывоза</label>
                         @@include('../select.html', {
                             "id": "order-pick-up",
+                            "dataSelectItem": "data-selected-value-first",
                             "text": "ул. Луначарского, д.202, строение 1, корпус 4, офис 1005",
                             "option1": { "title": " ул. Луначарского, д.202, строение 1, корпус 4, офис 1005", "value": "first-address" },
                             "option2": { "title": "ул. Встроченко, д. 1 (офис 405)", "value": "second-address" },
@@ -61,7 +63,7 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="order-issue-date, order-pick-up">
                         Сбросить
                     </button>
                     <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
