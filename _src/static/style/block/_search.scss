@@ -4,18 +4,50 @@
     grid-template-columns: 336px 1fr;
     gap: $gutter * 6;
     align-items: start;
+
+    @media (max-width: $lg) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__content {
     display: grid;
 
     gap: $gutter * 6;
+    min-width: 0
+  }
+
+  &__info {
+    justify-self: start;
+  }
+
+  &__result {
     min-width: 0;
-    //justify-items: start;
+  }
+
+  &__result-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: $gutter * 2;
+
+    svg {
+      width: 12px;
+      height: 12px;
+      margin-right: $gutter * 3;
+      color: $c-main-45;
+    }
+  }
+
+  &__table {
+    --table-cell-last-width: 182px;
   }
 
   &__form-number {
     width: 70px;
+
+    @media (max-width: $md) {
+      width: 100px;
+    }
   }
 }
 

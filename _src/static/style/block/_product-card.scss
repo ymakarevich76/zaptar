@@ -28,6 +28,10 @@
     margin-left: auto;
     max-width: 150px;
     color: #000;
+
+    &--w100 {
+      max-width: 100%;
+    }
   }
 
   &__body {
@@ -114,6 +118,10 @@
 
     &--only-btns {
       justify-content: flex-end;
+    }
+
+    &--has-input {
+      justify-content: space-around;
     }
 
     & > *:not(:last-child) {

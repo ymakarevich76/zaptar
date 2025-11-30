@@ -8,6 +8,7 @@
 @@include('block/__notification.js')
 @@include('block/__anchor-smooth.js')
 @@include('block/__accordion.js')
+@@include('block/__form-number.js')
 @@include('block/__floating-table.js')
 @@include('block/__check-all-checkbox.js')
 @@include('block/__filter-bar-shadow.js')
@@ -15,4 +16,3 @@
 @@include('block/__datepicker.js')
 @@include('block/__categories-list.js')
 @@include('block/__tooltip.js')
-@@include('block/__form-number.js')

@@ -1,4 +1,6 @@
 .form-number {
+  $self: &;
+
   /* Chrome, Safari, Edge */
   input[type="number"]::-webkit-outer-spin-button,
   input[type="number"]::-webkit-inner-spin-button {
@@ -18,8 +20,8 @@
     padding-right: $gutter * 6;
   }
 
-  &__btn-up,
-  &__btn-down {
+  &__increment,
+  &__decrement {
     content: "";
     position: absolute;
     border-left: 1px solid #D9D9D9;
@@ -32,6 +34,13 @@
     justify-content: center;
     color: $c-main-45;
     background-color: $c-main-2;
+    opacity: 0;
+
+    @media (hover: hover) {
+      #{$self}:hover & {
+        opacity: 1;
+      }
+    }
 
     &:hover {
       background-color: $c-main-6;
@@ -39,12 +48,12 @@
     }
   }
 
-  &__btn-up {
+  &__increment {
     top: 1px;
     border-top-right-radius: inherit;
   }
 
-  &__btn-down {
+  &__decrement {
     border-top: 1px solid #D9D9D9;
     border-bottom-right-radius: inherit;
     bottom: 1px;

@@ -12,6 +12,16 @@
   }
 }
 
+@media (max-width: $lg) {
+  .d-lg-grid {
+    display: grid;
+  }
+
+  .d-lg-none {
+    display: none;
+  }
+}
+
 @media (max-width: $md) {
   .d-md-block {
     display: block;
