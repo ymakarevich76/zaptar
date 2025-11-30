@@ -15,3 +15,4 @@
 @@include('block/__datepicker.js')
 @@include('block/__categories-list.js')
 @@include('block/__tooltip.js')
+@@include('block/__form-number.js')
