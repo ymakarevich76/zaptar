@@ -1,4 +1,5 @@
 .btn-text {
+  $self: &;
 
   min-height: 24px;
   display: inline-flex;
@@ -7,6 +8,9 @@
   padding: 0 $gutter * 2;
   border-radius: 4px;
   transition: .2s;
+
+  font-size: 14px;
+  line-height: 22px;
 
   &[disabled] {
     color: $c-main-45;
@@ -35,6 +39,24 @@
     &:hover {
       background-color: $c-accent-dark;
       color: #fff;
+
+      #{$self}__ico {
+        fill: #fff;
+      }
+    }
+
+    #{$self}__ico {
+      fill: $c-accent;
+    }
+  }
+
+  &__ico {
+    width: 16px;
+    height: 16px;
+    margin-right: $gutter * 2;
+
+    @media (max-width: $lg) {
+      margin-right: 0;
     }
   }
 }
