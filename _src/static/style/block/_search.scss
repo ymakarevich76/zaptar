@@ -10,7 +10,12 @@
     display: grid;
 
     gap: $gutter * 6;
-    justify-items: start;
+    min-width: 0;
+    //justify-items: start;
+  }
+
+  &__form-number {
+    width: 70px;
   }
 }
 
