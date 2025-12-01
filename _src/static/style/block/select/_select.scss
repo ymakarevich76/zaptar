@@ -124,11 +124,16 @@
     }
   }
 
-  &__input-hidden {
-    display: none;
-  }
-
   &__empty {
     padding: $gutter $gutter * 3;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    flex-grow: 1;
   }
 }

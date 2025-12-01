@@ -10,8 +10,7 @@ if (selects.length) {
     const hasMultiple = item.hasAttribute('data-select-multiple');
     const hasSearch = item.hasAttribute('data-select-sort');
     const search = item.querySelector('[data-select-search]');
-    const resetButtons = [...document.querySelectorAll('[type="reset"]')];
-    const specificFields = document.querySelectorAll('[data-specific-field]');
+    const selectedValueFirst = item.hasAttribute('data-selected-value-first');
 
     let lastHovered = null;
 
@@ -51,13 +50,19 @@ if (selects.length) {
     };
 
     const closeAll = () => {
-      document.querySelectorAll('[data-select].select--active').forEach(select => {
-        select.classList.remove('select--active');
-        select.querySelector('[data-select-list]').classList.remove('select__list--visible');
+      document.querySelectorAll('[data-select].select--active').forEach(other => {
+        if (other === item) return;
 
-        if (select.hasAttribute('data-select-sort')) {
-          select.classList.remove('d-none');
-          search.classList.add('d-none');
+        const otherBtn = other.querySelector('[data-select-btn]');
+        const otherList = other.querySelector('[data-select-list]');
+        const otherSearch = other.querySelector('[data-select-search]');
+
+        otherBtn.classList.remove('select--active');
+        otherList.classList.remove('select__list--visible');
+
+        if (other.hasAttribute('data-select-sort')) {
+          otherBtn.classList.remove('d-none');
+          if (otherSearch) otherSearch.classList.add('d-none');
         }
       });
     };
@@ -111,11 +116,20 @@ if (selects.length) {
       close();
     };
 
+    const resetButtons = [...document.querySelectorAll('[data-reset-select]')]
+      .filter(btn =>
+        btn.dataset.resetSelect
+          .split(',')
+          .map(x => x.trim())
+          .includes(item.dataset.selectId)
+      );
+
     // выбор элемента списка + hover-логика
     const bindItems = () => {
       items.forEach(item => {
         item.addEventListener('click', e => {
           e.preventDefault();
+          resetButtons.forEach(btn => btn.removeAttribute('disabled'));
 
           if (!hasMultiple) {
             selectSingle(item);
@@ -214,7 +228,8 @@ if (selects.length) {
         selectText.textContent = selectText.dataset.selectText;
         selectText.classList.remove('select__text--active');
         input.value = '';
-        selectSingle(items[0]);
+        selectedValueFirst ? selectSingle(items[0]) : null;
+        btn.setAttribute('disabled', true);
       });
     });
 
