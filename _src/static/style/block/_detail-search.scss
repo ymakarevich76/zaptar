@@ -1,0 +1,9 @@
+.detail-search {
+  &__view-offers {
+    margin-left: auto;
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+  }
+}
