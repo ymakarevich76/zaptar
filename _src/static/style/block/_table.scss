@@ -60,6 +60,10 @@
     min-width: 100px
   }
 
+  &__cell-min-125 {
+    min-width: 125px
+  }
+
   &__cell-min-150 {
     min-width: 150px
   }
@@ -68,6 +72,7 @@
   td:last-child,
   &__floating-table {
     width: var(--table-cell-last-width);
+    min-width: var(--table-cell-last-width);
   }
 
   &__floating-table {
