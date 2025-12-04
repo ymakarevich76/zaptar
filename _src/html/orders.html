@@ -1512,6 +1512,31 @@
             <button type="button" class="product-cards__show-more btn">
                 Показать еще
             </button>
+
+            <!-- всплывающий бар на моби -->
+            <div class="action-bar action-bar--is-visible" data-action-bar>
+                <div class="action-bar__summary">
+                    <span>выбрано: 10</span>
+                    <span>сумма: 9 414,00 ₽</span>
+                </div>
+
+                <div class="action-bar__controls">
+                    <div class="action-bar__select-all checkbox checkbox--size-l">
+                        <input id="bar-select-all" type="checkbox" class="checkbox__input" data-checkbox="">
+                        <label for="bar-select-all" class="checkbox__label"></label>
+                        <span class="action-bar__select-caption">Выбрать все</span>
+                    </div>
+
+                    <div class="action-bar__btns">
+                        <button class="action-bar__btn header-btn header-btn--gray" type="button">
+                            В архив
+                        </button>
+                        <button class="action-bar__btn header-btn header-btn--gray" type="button">
+                            Изменить пункт самовывоза
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>

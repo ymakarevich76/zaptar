@@ -1,0 +1,71 @@
+.action-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+  visibility: hidden;
+  transform: translateY(200%);
+  transition: transform 0.2s ease, visibility 0s linear 0.2s;
+
+  &--is-visible {
+    visibility: visible;
+    transform: translateY(0);
+    transition: transform 0.2s ease, visibility 0s linear 0s;
+  }
+
+  &__summary {
+    background-color: $c-accent;
+    color: #fff;
+    min-height: 23px;
+    padding: $gutter $gutter * 2;
+    text-align: center;
+
+    display: grid;
+    grid-auto-flow: column;
+    gap: $gutter * 4;
+    justify-content: center;
+  }
+
+  &__controls {
+    background-color: $c-dark;
+    min-height: 50px;
+    padding: $gutter $gutter * 2;
+    display: flex;
+    grid-auto-flow: column;
+  }
+
+  &__select-all {
+    margin-right: auto;
+    align-self: center;
+    display: flex;
+    align-items: center;
+  }
+
+  &__select-caption,
+  &__btn {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  &__select-caption {
+    margin-left: $gutter * 2;
+  }
+
+  &__btns {
+    display: flex;
+    margin-left: $gutter * 4;
+  }
+
+  &__btn {
+    text-align: center;
+    --header-btn-padding-x: #{$gutter * 2};
+    max-width: 110px;
+
+    & + & {
+      margin-left: $gutter * 2;
+    }
+  }
+}
