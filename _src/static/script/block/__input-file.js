@@ -60,56 +60,58 @@ if (fileInputs.length) {
 const fileInputsWithImage = document.querySelectorAll('[data-input="file-download"]');
 
 if (fileInputsWithImage.length) {
-  const fileInputWithImage = document.querySelector('[data-input="file-download"]');
-  const fileInputWithImageWrapper = document.querySelector('[data-input="file-download-wrapper"]');
-  const fileLabelWithImage = document.querySelector('[data-input="file-download-label"]');
-  const fileBlockWithImage = document.querySelector('[data-input="file-download-block"]');
-  const fileBlockWithImageImg = document.querySelector('[data-input="file-download-img"]');
-  const fileBlockWithImageText = document.querySelector('[data-input="file-download-text"]');
-  const fileBlockWithImageDelete = document.querySelector('[data-input="file-download-delete"]');
+  fileInputsWithImage.forEach((fileInput, index) => {
+    const wrappers = document.querySelectorAll('[data-input="file-download-wrapper"]');
+    const labels = document.querySelectorAll('[data-input="file-download-label"]');
+    const blocks = document.querySelectorAll('[data-input="file-download-block"]');
+    const images = document.querySelectorAll('[data-input="file-download-img"]');
+    const texts = document.querySelectorAll('[data-input="file-download-text"]');
+    const btnsDelete = document.querySelectorAll('[data-input="file-download-delete"]');
 
-  const updateFileLabelWithImage = (files) => {
-    if (!files || files.length === 0) {
-      fileLabelWithImage.textContent = fileLabelPlaceholder.dataset.inputPlaceholder;
-      return;
-    }
+    const updateFileLabelWithImage = (files) => {
+        if (!files || files.length === 0) {
+          labels[index].textContent = fileLabelPlaceholder.dataset.inputPlaceholder;
+          return;
+        }
 
-    const invalidFiles = Array.from(files).filter(file => !file.type.startsWith('image/'));
+        const invalidFiles = Array.from(files).filter(file => !file.type.startsWith('image/'));
 
-    if (invalidFiles.length > 0) {
-      fileLabelWithImage.textContent = fileLabelErrorText.dataset.inputError;
-      fileInputWithImage.value = '';
-      return;
-    }
+        if (invalidFiles.length > 0) {
+          labels[index].textContent = fileLabelErrorText.dataset.inputError;
+          fileInput.value = '';
+          return;
+        }
 
-    // Создаём URL для предпросмотра
-    const imageURL = URL.createObjectURL(files[0]);
+        // URL для предпросмотра
+        const imageURL = URL.createObjectURL(files[0]);
 
-    fileBlockWithImage.classList.remove('d-none');
-    fileBlockWithImageImg.src = imageURL;
-    fileBlockWithImageText.textContent = files[0].name;
-    fileInputWithImageWrapper.classList.add('d-none');
+        blocks[index].classList.remove('d-none');
+        images[index].src = imageURL;
+        texts[index].textContent = files[0].name;
+        wrappers[index].classList.add('d-none');
 
-    fileBlockWithImageImg.onload = () => URL.revokeObjectURL(imageURL);
-  }
+        images[index].onload = () => URL.revokeObjectURL(imageURL);
+      }
 
-  fileInputWithImage.addEventListener('change', () => updateFileLabelWithImage(fileInputWithImage.files));
+    const clearFileLabelWithImage = () => {
+        fileInput.value = '';
+        labels[index].innerHTML = `<span class="form-file-2__action">Загрузить фото автомобиля</span>`;
+        blocks[index].classList.add('d-none');
+        images[index].src = '';
+        texts[index].textContent = '';
+        wrappers[index].classList.remove('d-none');
+      }
 
-  fileBlockWithImageDelete.addEventListener('click', () => {
-    fileInputWithImage.value = '';
-    fileBlockWithImage.classList.add('d-none');
-    fileBlockWithImageImg.src = '';
-    fileBlockWithImageText.textContent = '';
-    fileInputWithImageWrapper.classList.remove('d-none');
-  })
+    fileInput.addEventListener('change', () => updateFileLabelWithImage(fileInput.files));
 
-  Array.from(buttonsReset).filter(btnReset =>
-    btnReset.addEventListener('click', () => {
-      fileInputWithImage.value = '';
-      fileBlockWithImage.classList.add('d-none');
-      fileBlockWithImageImg.src = '';
-      fileBlockWithImageText.textContent = '';
-      fileInputWithImageWrapper.classList.remove('d-none');
+    btnsDelete[index].addEventListener('click', () => {
+      clearFileLabelWithImage();
     })
-  )
+
+    Array.from(buttonsReset).filter(btnReset =>
+      btnReset.addEventListener('click', () => {
+        clearFileLabelWithImage();
+      })
+    )
+  })
 }

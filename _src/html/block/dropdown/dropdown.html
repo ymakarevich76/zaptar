@@ -1,0 +1,19 @@
+<div class="dropdown" data-dropdown="@@id">
+    <div class="dropdown__select">
+        @@include('../select.html', {
+        "id": "@@idSelect",
+        "text": "@@text",
+        "option1": { "title": "@@optionTitle1", "value": "@@optionValue1" },
+        "option2": { "title": "@@optionTitle2", "value": "@@optionValue2" },
+        "option3": { "title": "@@optionTitle3", "value": "@@optionValue3" },
+        })
+    </div>
+    <div class="dropdown__actions">
+        <button type="reset" class="btn-text" disabled data-reset-select="@@idSelect">
+            Сброс
+        </button>
+        <button type="submit" class="btn btn--size-xs">
+            Применить
+        </button>
+    </div>
+</div>

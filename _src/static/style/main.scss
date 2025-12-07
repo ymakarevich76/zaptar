@@ -32,21 +32,25 @@
 @import "block/product-cards";
 @import "block/product-card";
 @import "block/alert";
+@import "block/tippy";
 @import "block/tooltip";
 
 @import "block/form/form";
 // @import "block/form/form-group";
 // @import "block/form/form-label";
 // @import "block/form/form-control";
+@import "block/form/form-number";
 
 @import "block/select/select";
 @import "block/checkbox/checkbox";
 @import "block/tabs/tabs";
 @import "block/tabs/tabs-2";
 @import "block/pagination/pagination";
+@import "block/dropdown/dropdown";
 
 @import "block/scrollbar";
 @import "block/accordion";
+@import "block/action-bar";
 
 // modals
 @import "block/modal/modal";
@@ -76,6 +80,8 @@
 @import "block/details";
 @import "block/archive";
 @import "block/search";
+@import "block/catalog-search-result";
+@import "block/detail-search";
 
 @import "block/footer/footer";
 

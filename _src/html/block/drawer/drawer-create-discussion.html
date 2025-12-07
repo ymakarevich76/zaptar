@@ -15,6 +15,7 @@
                         <label for="discussion-theme">Тема</label>
                         @@include('../select.html', {
                             "id": "discussion-theme",
+                            "dataSelectItem": "data-selected-value-first",
                             "text": "Недостача",
                             "option1": { "title": "Недостача", "value": "deficit" },
                             "option2": { "title": "Когда придет?", "value": "when-come" },
@@ -49,7 +50,7 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="discussion-theme">
                         Отменить
                     </button>
                     <button type="submit" class="drawer__footer-btn btn btn--size-s btn--disabled" data-notification="notification-add-discussion">

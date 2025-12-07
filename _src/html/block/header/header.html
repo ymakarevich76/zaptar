@@ -1,28 +1,13 @@
 <header class="header" data-header>
     <div class="header__top">
         <div class="header__container container">
-            <!-- todo: переписать стили и убрать обертку, если больше ссылка на карту не понадобится -->
-            <div class="header__top-left">
-                <a class="logo" href="/zaptar/dist">
-                    <img class="logo__img" src="static/img/logo/logo.svg" width="198" height="32" alt="zaptar">
-                </a>
-
-               <!-- <a class="header-address" href="#map"> -->
-               <!--     <svg class="header-address__ico" aria-hidden="true"> -->
-               <!--         <use xlink:href="static/img/symbol/sprite.svg#mark"></use> -->
-               <!--     </svg> -->
-
-               <!--     <span class="header-address__city">Брянск</span> -->
-
-               <!--     <svg class="header-address__ico d-md-none" aria-hidden="true"> -->
-               <!--         <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use> -->
-               <!--     </svg> -->
-               <!-- </a> -->
-            </div>
+            <a class="logo" href="/zaptar/dist">
+                <img class="logo__img" src="static/img/logo/logo.svg" width="198" height="32" alt="zaptar">
+            </a>
 
             <div class="header__top-contacts">
                 <a class="header-contact" href="tel:89308255335">
-                    <svg class="header-contact__icon" aria-hidden="true">
+                    <svg class="header-contact__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
                     </svg>
 
@@ -30,7 +15,7 @@
                 </a>
 
                 <a class="header-contact" href="tel:89206055335">
-                    <svg class="header-contact__icon" aria-hidden="true">
+                    <svg class="header-contact__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
                     </svg>
 
@@ -38,7 +23,7 @@
                 </a>
 
                 <a class="header-contact header-contact--has-divider" href="mailto:info@zaptar.ru">
-                    <svg class="header-contact__icon" aria-hidden="true">
+                    <svg class="header-contact__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#mail"></use>
                     </svg>
 
@@ -46,21 +31,18 @@
                 </a>
             </div>
 
-            <!-- Пользователь не авторизован -->
-
-            <!-- <div class="header__top-actions"> -->
-            <!--     <a href="#" class="btn-primary"> -->
-            <!--         Регистрация -->
-            <!--     </a> -->
-
-            <!--     <a href="#" class="btn btn&#45;&#45;size-s"> -->
-            <!--         Войти -->
-            <!--     </a> -->
-            <!-- </div> -->
-
-            <!-- Пользователь авторизован -->
-
+            <!-- мобайл -->
             <nav class="header__top-actions">
+                <!-- Пользователь не авторизован -->
+                <!--     <a href="#" class="btn-primary"> -->
+                <!--         Регистрация -->
+                <!--     </a> -->
+
+                <!--     <a href="#" class="btn btn&#45;&#45;size-s"> -->
+                <!--         Войти -->
+                <!--     </a> -->
+
+                <!-- Пользователь авторизован -->
                 <a class="header-btn header-btn--gray header-btn--narrow" href="#">
                     <svg aria-hidden="true" class="header-btn__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
@@ -105,13 +87,13 @@
             <div class="header__search header-search">
                 <div class="header-search__dropdown header-search-dropdown">
                     <button class="header-search-dropdown__toggle d-md-none">
-                        <svg class="header-search-dropdown__icon" aria-hidden="true">
+                        <svg class="header-search-dropdown__ico" aria-hidden="true">
                             <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
                         </svg>
                         <span class="header-search-dropdown__caption">Каталог</span>
                     </button>
                     <button class="header-search-dropdown__toggle d-none d-md-flex" data-modal="drawer-catalog">
-                        <svg class="header-search-dropdown__icon" aria-hidden="true">
+                        <svg class="header-search-dropdown__ico" aria-hidden="true">
                             <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
                         </svg>
                         <span class="header-search-dropdown__caption">Каталог</span>
@@ -151,8 +133,8 @@
                 <input class="header-search__input" type="text" placeholder="Поиск по артикулу или наименованию" />
 
                 <!-- todo: активировать кнопку когда ввели текст -->
-                <button class="header-search__button">
-                    <svg class="header-search__button-icon" aria-hidden="true">
+                <button class="header-search__btn">
+                    <svg class="header-search__btn-ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#search"></use>
                     </svg>
                 </button>

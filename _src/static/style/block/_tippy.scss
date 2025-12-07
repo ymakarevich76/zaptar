@@ -1,0 +1,51 @@
+.tippy-box[data-theme~="default"] {
+  background-color: #2E3C50;
+  font-size: 12px;
+  line-height: 16px;
+
+  ul {
+    color: #fff;
+    list-style: disc;
+    padding-left: 20px;
+  }
+
+  &[data-placement^="top"] > .tippy-arrow::before {
+    border-top-color: #2E3C50;
+  }
+
+  &[data-placement^="bottom"] > .tippy-arrow::before {
+    border-bottom-color: #2E3C50;
+  }
+
+  &[data-placement^="left"] > .tippy-arrow::before {
+    border-left-color: #2E3C50;
+  }
+
+  &[data-placement^="right"] > .tippy-arrow::before {
+    border-right-color: #2E3C50;
+  }
+}
+
+.tippy-box[data-theme~="light"] {
+  background-color: #fff;
+  color: $c-main-88;
+  font-size: 12px;
+  line-height: 16px;
+  box-shadow: 0 9px 28px 8px #0000000D;
+
+  &[data-placement^="top"] > .tippy-arrow::before {
+    border-top-color: #fff;
+  }
+
+  &[data-placement^="bottom"] > .tippy-arrow::before {
+    border-bottom-color: #fff;
+  }
+
+  &[data-placement^="left"] > .tippy-arrow::before {
+    border-left-color: #fff;
+  }
+
+  &[data-placement^="right"] > .tippy-arrow::before {
+    border-right-color: #fff;
+  }
+}

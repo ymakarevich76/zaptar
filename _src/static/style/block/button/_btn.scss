@@ -36,6 +36,13 @@
     padding: $gutter $gutter * 4;
   }
 
+  &--size-xs {
+    min-height: 24px;
+    font-size: 14px;
+    line-height: 22px;
+    padding: $gutter $gutter * 4;
+  }
+
   @media (max-width: $md) {
     padding: $gutter $gutter * 2;
     min-height: 32px;

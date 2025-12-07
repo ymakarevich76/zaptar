@@ -60,6 +60,10 @@
     min-width: 100px
   }
 
+  &__cell-min-125 {
+    min-width: 125px
+  }
+
   &__cell-min-150 {
     min-width: 150px
   }
@@ -68,6 +72,7 @@
   td:last-child,
   &__floating-table {
     width: var(--table-cell-last-width);
+    min-width: var(--table-cell-last-width);
   }
 
   &__floating-table {
@@ -76,6 +81,7 @@
     right: -1px;
     background-color: #fff;
     box-shadow: -8px 0px 5px -5px rgba(0, 0, 0, 0.12);
+    z-index: 10;
 
     @media (max-width: $sm) {
       display: none;
@@ -84,6 +90,9 @@
 }
 
 .table-dropdown {
+  position: relative;
+  display: inline-flex;
+
   &__inner {
     display: flex;
     align-items: center;
@@ -92,10 +101,6 @@
   &__trigger {
     margin-left: $gutter * 2;
     --btn-light-ico-fill: #{$c-main-25};
-  }
-
-  &__content {
-    display: none;
   }
 }
 

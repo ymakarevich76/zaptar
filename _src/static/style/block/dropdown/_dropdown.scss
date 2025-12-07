@@ -1,0 +1,33 @@
+.dropdown {
+  font-size: 14px;
+  line-height: 22px;
+  width: 248px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.12);
+  border-radius: 6px;
+
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .12s ease;
+  z-index: 5;
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  &__select {
+    padding: $gutter * 2;
+  }
+
+  &__actions {
+    padding: $gutter * 2;
+    border-top: 1px solid $c-main-6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gutter * 2;
+  }
+}

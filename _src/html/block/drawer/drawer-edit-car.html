@@ -47,6 +47,7 @@
                             @@include('../select.html', {
                             "id": "car-edit-year",
                             "data": "data-select-sort",
+                            "dataSelectItem": "data-selected-value-first",
                             "classItem": "select__item--selected",
                             "text": "Выберите год выпуска автомобиля",
                             "value": "2023",
@@ -55,6 +56,17 @@
                             "option3": { "title": "2023", "value": "2023" },
                             })
                             <textarea class="form-textarea" id="car-edit-text" placeholder="Комментарий к автомобилю"></textarea>
+                            <div class="form-input form-file-2 d-none" tabindex="0" role="button" aria-label="Загрузить фото автомобиля" data-dropzone data-input="file-download-wrapper">
+                                <input id="fileInput-3" class="form-file-2__input" type="file" data-input="file-download" />
+                                <label for="fileInput-3"
+                                       class="form-file-2__content"
+                                       data-input="file-download-label"
+                                       data-input-error="Один из файлов не является изображением. Доступные типы: jpg, png, bmp"
+                                       data-input-placeholder="Загрузить фото автомобиля"
+                                >
+                                    <span class="form-file-2__action">Загрузить фото автомобиля</span>
+                                </label>
+                            </div>
                             <div class="form-input form-file-2__info" data-input="file-download-block">
                                 <img src="static/img/background/product-car.png" alt="Автомобиль" data-input="file-download-img" class="form-file-2__img">
                                 <span class="form-file-2__text" data-input="file-download-text">product-car.png</span>
@@ -68,10 +80,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="car-edit-year" data-btn="close">
                         Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification" disabled>
                         Сохранить
                     </button>
                 </div>

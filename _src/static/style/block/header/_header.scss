@@ -37,12 +37,6 @@
     }
   }
 
-  //&__top-left {
-  //  display: grid;
-  //  grid-auto-flow: column;
-  //  column-gap: 16px;
-  //}
-
   &__top-contacts {
     margin-left: auto;
     display: grid;
@@ -86,50 +80,13 @@
   }
 }
 
-.header-address {
-  $self: &;
-  display: grid;
-  grid-auto-flow: column;
-  column-gap: 8px;
-  align-items: center;
-
-  &__ico {
-    width: 12px;
-    height: 12px;
-    color: $c-main;
-    opacity: 0.45;
-    transition: opacity 0.2s;
-
-    @media (hover: hover) {
-      #{$self}:hover & {
-        opacity: 1;
-      }
-    }
-
-    @media (max-width: $md) {
-      width: 16px;
-      height: 16px;
-    }
-  }
-
-  &__city {
-    font-size: 12px;
-    line-height: 20px;
-    font-weight: 500;
-
-    @media (max-width: $md) {
-      display: none;
-    }
-  }
-}
-
 .header-contact {
   $self: &;
   display: flex;
   align-items: center;
   min-height: 24px;
 
-  &__icon {
+  &__ico {
     width: 12px;
     height: 12px;
     margin-right: $gutter * 2;
@@ -187,7 +144,7 @@
     }
   }
 
-  &__button {
+  &__btn {
     position: absolute;
     right: 8px;
     top: 50%;
@@ -199,14 +156,14 @@
     height: 100%;
   }
 
-  &__button-icon {
+  &__btn-ico {
     width: 16px;
     height: 16px;
     color: $c-main;
     opacity: 0.45;
     transition: opacity 0.2s;
 
-    #{$self}__button:hover & {
+    #{$self}__btn:hover & {
       opacity: 1;
     }
   }
@@ -239,7 +196,7 @@
     }
   }
 
-  &__icon {
+  &__ico {
     width: 16px;
     height: 16px;
     color: #fff;

@@ -79,16 +79,11 @@
                                 <div class="table-dropdown">
                                     <div class="table-dropdown__inner">
                                         Цена
-
-                                        <button type="button" class="table-dropdown__trigger btn-light">
+                                        <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn="1">
                                             <svg class="btn-light__ico" aria-hidden="true">
                                                 <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                             </svg>
                                         </button>
-                                    </div>
-
-                                    <div class="table-dropdown__content">
-                                    <!--     todo: сделать выпадаху сортировки и дровер сортировки на моби  -->
                                     </div>
                                 </div>
                             </th>
@@ -96,20 +91,14 @@
                                 Сумма
                             </th>
                             <th>
-                                <!-- todo: кнопка фильтра статуса. Нужно узнать как будет выглядеть выпадашка -->
                                 <div class="table-dropdown">
                                     <div class="table-dropdown__inner">
                                         Статус
-
-                                        <button type="button" class="table-dropdown__trigger btn-light">
+                                        <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn="2">
                                             <svg class="btn-light__ico" aria-hidden="true">
                                                 <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                             </svg>
                                         </button>
-                                    </div>
-
-                                    <div class="table-dropdown__content">
-                                        <!--     todo: сделать выпадаху сортировки и дровер сортировки на моби  -->
                                     </div>
                                 </div>
                             </th>
@@ -218,7 +207,7 @@
                             </td>
                             <td>
                                 <!-- Адрес -->
-                                <span class="orders__address">
+                                <span class="orders__address" data-tippy-content="ул. Луначарского, д.202, строение 1, корпус 4, офис 1005">
                                ул. Луначарского, д.202, строение 1, корпус 4, офис 1005
                              </span>
                             </td>
@@ -1521,9 +1510,56 @@
             <button type="button" class="product-cards__show-more btn">
                 Показать еще
             </button>
+
+            <!-- всплывающий бар на моби -->
+            <div class="action-bar action-bar--is-visible" data-action-bar>
+                <div class="action-bar__summary">
+                    <span>выбрано: 10</span>
+                    <span>сумма: 9 414,00 ₽</span>
+                </div>
+
+                <div class="action-bar__controls">
+                    <div class="action-bar__select-all checkbox checkbox--size-l">
+                        <input id="bar-select-all" type="checkbox" class="checkbox__input" data-checkbox="">
+                        <label for="bar-select-all" class="checkbox__label"></label>
+                        <span class="action-bar__select-caption">Выбрать все</span>
+                    </div>
+
+                    <div class="action-bar__btns">
+                        <button class="action-bar__btn header-btn header-btn--gray" type="button">
+                            В архив
+                        </button>
+                        <button class="action-bar__btn header-btn header-btn--gray" type="button">
+                            Изменить пункт самовывоза
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>
 
+@@include('block/dropdown/dropdown.html', {
+    "id": "1",
+    "text": "Выберите цену",
+    "idSelect": "price",
+    "optionTitle1": "Наценка (10,00)",
+    "optionValue1": "1",
+    "optionTitle2": "Наценка (20,00)",
+    "optionValue2": "2",
+    "optionTitle3": "Без наценки",
+    "optionValue3": "3",
+})
+@@include('block/dropdown/dropdown.html', {
+    "id": "2",
+    "text": "Выберите статус",
+    "idSelect": "status",
+    "optionTitle1": "В обработке",
+    "optionValue1": "1",
+    "optionTitle2": "Возврат проведен",
+    "optionValue2": "2",
+    "optionTitle3": "В разборе",
+    "optionValue3": "3",
+})
 @@include('block/footer/footer.html')
 @@include('block/scripts.html')

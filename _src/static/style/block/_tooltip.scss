@@ -1,30 +1,74 @@
-.tooltip {
+.tooltip-statistic {
+  display: grid;
+  gap: $gutter * 2;
+
+  &__indicator {
+    position: relative;
+    padding-left: $gutter * 4;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    &--1 {
+      &::before {
+        background-color: $c-return-status-1;
+      }
+    }
+
+    &--2 {
+      &::before {
+        background-color: $c-return-status-1-hover;
+      }
+    }
+
+    &--3 {
+      &::before {
+        background-color: $c-return-status-2;
+      }
+    }
+
+    &--4 {
+      &::before {
+        background-color: #FF7875;
+      }
+    }
+
+    &--5 {
+      &::before {
+        background-color: $c-status-rejected;
+      }
+    }
+  }
 }
 
-.tippy-box[data-theme~="default"] {
-  background-color: #2E3C50;
-  font-size: 12px;
-  line-height: 16px;
+.tooltip-status {
+  display: grid;
+  gap: $gutter * 2;
 
-  ul {
-    color: #fff;
-    list-style: disc;
-    padding-left: 20px;
+  &__title {
+    font-weight: 600;
   }
 
-  &[data-placement^="top"] > .tippy-arrow::before {
-    border-top-color: #2E3C50;
+  &__text {
+    color: $c-main-45;
   }
 
-  &[data-theme~="default"][data-placement^="bottom"] > .tippy-arrow::before {
-    border-bottom-color: #2E3C50;
-  }
-
-  &[data-theme~="default"][data-placement^="left"] > .tippy-arrow::before {
-    border-left-color: #2E3C50;
-  }
-
-  &[data-theme~="default"][data-placement^="right"] > .tippy-arrow::before {
-    border-right-color: #2E3C50;
+  &__procent {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #F6FFED;
+    border: 1px solid #B7EB8F;
+    color: $c-text-accent;
+    min-width: 40px;
+    text-align: center;
   }
 }
