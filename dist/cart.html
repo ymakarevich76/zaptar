@@ -23,28 +23,13 @@
 <header class="header" data-header>
     <div class="header__top">
         <div class="header__container container">
-            <!-- todo: переписать стили и убрать обертку, если больше ссылка на карту не понадобится -->
-            <div class="header__top-left">
-                <a class="logo" href="/zaptar/dist">
-                    <img class="logo__img" src="static/img/logo/logo.svg" width="198" height="32" alt="zaptar">
-                </a>
-
-               <!-- <a class="header-address" href="#map"> -->
-               <!--     <svg class="header-address__ico" aria-hidden="true"> -->
-               <!--         <use xlink:href="static/img/symbol/sprite.svg#mark"></use> -->
-               <!--     </svg> -->
-
-               <!--     <span class="header-address__city">Брянск</span> -->
-
-               <!--     <svg class="header-address__ico d-md-none" aria-hidden="true"> -->
-               <!--         <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use> -->
-               <!--     </svg> -->
-               <!-- </a> -->
-            </div>
+            <a class="logo" href="/zaptar/dist">
+                <img class="logo__img" src="static/img/logo/logo.svg" width="198" height="32" alt="zaptar">
+            </a>
 
             <div class="header__top-contacts">
                 <a class="header-contact" href="tel:89308255335">
-                    <svg class="header-contact__icon" aria-hidden="true">
+                    <svg class="header-contact__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
                     </svg>
 
@@ -52,7 +37,7 @@
                 </a>
 
                 <a class="header-contact" href="tel:89206055335">
-                    <svg class="header-contact__icon" aria-hidden="true">
+                    <svg class="header-contact__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
                     </svg>
 
@@ -60,7 +45,7 @@
                 </a>
 
                 <a class="header-contact header-contact--has-divider" href="mailto:info@zaptar.ru">
-                    <svg class="header-contact__icon" aria-hidden="true">
+                    <svg class="header-contact__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#mail"></use>
                     </svg>
 
@@ -68,21 +53,18 @@
                 </a>
             </div>
 
-            <!-- Пользователь не авторизован -->
-
-            <!-- <div class="header__top-actions"> -->
-            <!--     <a href="#" class="btn-primary"> -->
-            <!--         Регистрация -->
-            <!--     </a> -->
-
-            <!--     <a href="#" class="btn btn&#45;&#45;size-s"> -->
-            <!--         Войти -->
-            <!--     </a> -->
-            <!-- </div> -->
-
-            <!-- Пользователь авторизован -->
-
+            <!-- мобайл -->
             <nav class="header__top-actions">
+                <!-- Пользователь не авторизован -->
+                <!--     <a href="#" class="btn-primary"> -->
+                <!--         Регистрация -->
+                <!--     </a> -->
+
+                <!--     <a href="#" class="btn btn&#45;&#45;size-s"> -->
+                <!--         Войти -->
+                <!--     </a> -->
+
+                <!-- Пользователь авторизован -->
                 <a class="header-btn header-btn--gray header-btn--narrow" href="#">
                     <svg aria-hidden="true" class="header-btn__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
@@ -127,13 +109,13 @@
             <div class="header__search header-search">
                 <div class="header-search__dropdown header-search-dropdown">
                     <button class="header-search-dropdown__toggle d-md-none">
-                        <svg class="header-search-dropdown__icon" aria-hidden="true">
+                        <svg class="header-search-dropdown__ico" aria-hidden="true">
                             <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
                         </svg>
                         <span class="header-search-dropdown__caption">Каталог</span>
                     </button>
                     <button class="header-search-dropdown__toggle d-none d-md-flex" data-modal="drawer-catalog">
-                        <svg class="header-search-dropdown__icon" aria-hidden="true">
+                        <svg class="header-search-dropdown__ico" aria-hidden="true">
                             <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
                         </svg>
                         <span class="header-search-dropdown__caption">Каталог</span>
@@ -173,8 +155,8 @@
                 <input class="header-search__input" type="text" placeholder="Поиск по артикулу или наименованию" />
 
                 <!-- todo: активировать кнопку когда ввели текст -->
-                <button class="header-search__button">
-                    <svg class="header-search__button-icon" aria-hidden="true">
+                <button class="header-search__btn">
+                    <svg class="header-search__btn-ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#search"></use>
                     </svg>
                 </button>
@@ -308,632 +290,626 @@
 </div>
 
 
-        <div class="d-md-none">
-            <div class="table" data-table>
-                <div class="table__scrollbar scrollbar scrollbar--horizontal" data-table-scrollbar>
-                    <table class="table__inner" data-table-inner>
-                        <tr>
-                            <th>
-                                <div class="checkbox">
-                                    <input id="cel-head" type="checkbox" class="checkbox__input" data-checkbox-main>
-                                    <label for="cel-head" class="checkbox__label"></label>
+        <div class="table d-md-none" data-table>
+            <div class="table__scrollbar scrollbar scrollbar--horizontal" data-table-scrollbar>
+                <table class="table__inner" data-table-inner>
+                    <tr>
+                        <th>
+                            <div class="checkbox">
+                                <input id="cel-head" type="checkbox" class="checkbox__input" data-checkbox-main>
+                                <label for="cel-head" class="checkbox__label"></label>
+                            </div>
+                        </th>
+                        <th>
+                            Бренд
+                        </th>
+                        <th>
+                            Артикул
+                        </th>
+                        <th>
+                            Наименование
+                        </th>
+                        <th>
+                            Поставщик
+                        </th>
+                        <th class="table__cell-slim">
+                            <!-- Возврат -->
+                        </th>
+                        <th class="table__cell-slim">
+                            <!-- Дистрибьютер -->
+                        </th>
+                        <th>
+                            Склад
+                        </th>
+                        <th>
+                            Срок
+                        </th>
+                        <th>
+                            Количество
+                        </th>
+                        <th>
+                            <div class="table-dropdown">
+                                <div class="table-dropdown__inner">
+                                    Цена
+                                    <button type="button" class="table-dropdown__trigger btn-light"  data-dropdown-btn="1">
+                                        <svg class="btn-light__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
+                                        </svg>
+                                    </button>
                                 </div>
-                            </th>
-                            <th>
-                                Бренд
-                            </th>
-                            <th>
-                                Артикул
-                            </th>
-                            <th>
-                                Наименование
-                            </th>
-                            <th>
-                                Поставщик
-                            </th>
-                            <th class="table__cell-slim">
-                                <!-- Возврат -->
-                            </th>
-                            <th class="table__cell-slim">
-                                <!-- Дистрибьютер -->
-                            </th>
-                            <th>
-                                Склад
-                            </th>
-                            <th>
-                                Срок
-                            </th>
-                            <th>
-                                Количество
-                            </th>
-                            <th>
-                                <div class="table-dropdown">
-                                    <div class="table-dropdown__inner">
-                                        Цена
+                            </div>
+                        </th>
+                        <th>
+                            Сумма
+                        </th>
+                        <th class="table__cell-min-150">
+                            Комментарий
+                        </th>
+                        <th>
+                            Действия
+                        </th>
+                    </tr>
 
-                                        <button type="button" class="table-dropdown__trigger btn-light">
-                                            <svg class="btn-light__ico" aria-hidden="true">
-                                                <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
+                    <tr data-order="1">
+                        <td>
+                            <div class="checkbox">
+                                <input id="cel-1" type="checkbox" class="checkbox__input" data-checkbox>
+                                <label for="cel-1" class="checkbox__label"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <!-- Бренд -->
+                            Philips
+                        </td>
+                        <td>
+                            <!-- Артикул -->
+                            85126
+                        </td>
+                        <td>
+                            <!-- Наименование -->
+                            Лампа ксенон d2r 5000к
+                        </td>
+                        <td>
+                            <!-- Поставщик -->
+                            zsps-
+                        </td>
+                        <td>
+                            <!-- Возврат -->
+                            <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard" data-tippy-with-code-content>
+                                <svg aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <!--  Дистрибьютер -->
+                            <button type="button" aria-label="дистрибьютер" class="table-btn" data-tippy-content="Дистрибьютер">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <!-- Склад -->
+                            -
+                        </td>
+                        <td class="nowrap">
+                            <!-- Срок -->
+                            3-6 дн.
+                        </td>
+                        <td>
+                            <!-- Количество -->
+                            10
+                        </td>
+                        <td class="nowrap">
+                            <!-- Цена -->
+                            1 427,00
+                        </td>
+                        <td class="nowrap" data-order-amount>
+                            <!-- Сумма -->
+                            1 427,00
+                        </td>
+                        <td>
+                            <!-- Комментарий -->
+                            -
+                        </td>
+                        <td>
+                            <!-- Действия -->
+                            <div class="table__actions">
+                                <button type="button" aria-label="Перезаказать" class="btn-light" data-tippy-content="Перезаказать">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="Добавить в избранное" class="btn-light" data-tippy-content="Добавить в избранное">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="Добавить комментарий" class="btn-light" data-tippy-content="Добавить комментарий">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="Удалить" class="btn-light" data-tippy-content="Удалить">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
 
-                                    <div class="table-dropdown__content">
-                                        <!--     todo: Юля сделай выпадаху сортировки и дровер сортировки на моби  -->
-                                    </div>
-                                </div>
-                            </th>
-                            <th>
-                                Сумма
-                            </th>
-                            <th class="table__cell-min-150">
-                                Комментарий
-                            </th>
-                            <th>
-                                Действия
-                            </th>
-                        </tr>
+                    <tr data-order="2">
+                        <td>
+                            <div class="checkbox">
+                                <input id="cel-2" type="checkbox" class="checkbox__input" data-checkbox>
+                                <label for="cel-2" class="checkbox__label"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <!-- Бренд -->
+                            Philips
+                        </td>
+                        <td>
+                            <!-- Артикул -->
+                            85126
+                        </td>
+                        <td>
+                            <!-- Наименование -->
+                            Лампа ксенон d2r 5000к
+                        </td>
+                        <td>
+                            <!-- Поставщик -->
+                            zsps-
+                        </td>
+                        <td>
+                            <!-- Возврат -->
+                            <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <!--  Дистрибьютер -->
+                            <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <!-- Склад -->
+                            -
+                        </td>
+                        <td class="nowrap">
+                            <!-- Срок -->
+                            3-6 дн.
+                        </td>
+                        <td>
+                            <!-- Количество -->
+                            10
+                        </td>
+                        <td class="nowrap">
+                            <!-- Цена -->
+                            1 427,00
+                        </td>
+                        <td class="nowrap" data-order-amount>
+                            <!-- Сумма -->
+                            1 427,00
+                        </td>
+                        <td>
+                            <!-- Комментарий -->
+                            Какой-то комментарий с очень длинным текстом
+                        </td>
+                        <td>
+                            <!-- Действия -->
+                            <div class="table__actions">
+                                <button type="button" aria-label="Перезаказать" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="Добавить в избранное" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="Добавить комментарий" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="Удалить" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
 
-                        <tr data-order="1">
-                            <td>
-                                <div class="checkbox">
-                                    <input id="cel-1" type="checkbox" class="checkbox__input" data-checkbox>
-                                    <label for="cel-1" class="checkbox__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Бренд -->
-                                Philips
-                            </td>
-                            <td>
-                                <!-- Артикул -->
-                                85126
-                            </td>
-                            <td>
-                                <!-- Наименование -->
-                                Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard" data-tippy-with-code-content>
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                    <tr data-order="3">
+                        <td>
+                            <div class="checkbox">
+                                <input id="cel-3" type="checkbox" class="checkbox__input" data-checkbox>
+                                <label for="cel-3" class="checkbox__label"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <!-- Бренд -->
+                            Philips
+                        </td>
+                        <td>
+                            <!-- Артикул -->
+                            85126
+                        </td>
+                        <td>
+                            <!-- Наименование -->
+                            Лампа ксенон d2r 5000к
+                        </td>
+                        <td>
+                            <!-- Поставщик -->
+                            zsps-
+                        </td>
+                        <td>
+                            <!-- Возврат -->
+                            <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <!--  Дистрибьютер -->
+                            <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <!-- Склад -->
+                            -
+                        </td>
+                        <td class="nowrap">
+                            <!-- Срок -->
+                            3-6 дн.
+                        </td>
+                        <td>
+                            <!-- Количество -->
+                            10
+                        </td>
+                        <td class="nowrap">
+                            <!-- Цена -->
+                            1 427,00
+                        </td>
+                        <td class="nowrap" data-order-amount>
+                            <!-- Сумма -->
+                            1 427,00
+                        </td>
+                        <td>
+                            <!-- Комментарий -->
+                            -
+                        </td>
+                        <td>
+                            <!-- Действия -->
+                            <div class="table__actions">
+                                <button type="button" aria-label="Перезаказать" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
                                     </svg>
                                 </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="table-btn" data-tippy-content="Дистрибьютер">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                <button type="button" aria-label="Добавить в избранное" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                     </svg>
                                 </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
-                            </td>
-                            <td class="nowrap">
-                                <!-- Срок -->
-                                3-6 дн.
-                            </td>
-                            <td>
-                                <!-- Количество -->
-                                10
-                            </td>
-                            <td class="nowrap">
-                                <!-- Цена -->
-                                1 427,00
-                            </td>
-                            <td class="nowrap" data-order-amount>
-                                <!-- Сумма -->
-                                1 427,00
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <button type="button" aria-label="Перезаказать" class="btn-light" data-tippy-content="Перезаказать">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Добавить в избранное" class="btn-light" data-tippy-content="Добавить в избранное">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Добавить комментарий" class="btn-light" data-tippy-content="Добавить комментарий">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Удалить" class="btn-light" data-tippy-content="Удалить">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                                <button type="button" aria-label="Добавить комментарий" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="Удалить" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
 
-                        <tr data-order="2">
-                            <td>
-                                <div class="checkbox">
-                                    <input id="cel-2" type="checkbox" class="checkbox__input" data-checkbox>
-                                    <label for="cel-2" class="checkbox__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Бренд -->
-                                Philips
-                            </td>
-                            <td>
-                                <!-- Артикул -->
-                                85126
-                            </td>
-                            <td>
-                                <!-- Наименование -->
-                                Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                    <tr data-order="4">
+                        <td>
+                            <div class="checkbox">
+                                <input id="cel-4" type="checkbox" class="checkbox__input" data-checkbox>
+                                <label for="cel-4" class="checkbox__label"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <!-- Бренд -->
+                            Philips
+                        </td>
+                        <td>
+                            <!-- Артикул -->
+                            85126
+                        </td>
+                        <td>
+                            <!-- Наименование -->
+                            Лампа ксенон d2r 5000к
+                        </td>
+                        <td>
+                            <!-- Поставщик -->
+                            zsps-
+                        </td>
+                        <td>
+                            <!-- Возврат -->
+                            <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <!--  Дистрибьютер -->
+                            <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <!-- Склад -->
+                            -
+                        </td>
+                        <td class="nowrap">
+                            <!-- Срок -->
+                            3-6 дн.
+                        </td>
+                        <td>
+                            <!-- Количество -->
+                            10
+                        </td>
+                        <td class="nowrap">
+                            <!-- Цена -->
+                            1 427,00
+                        </td>
+                        <td class="nowrap" data-order-amount>
+                            <!-- Сумма -->
+                            1 427,00
+                        </td>
+                        <td>
+                            <!-- Комментарий -->
+                            Какой-то комментарий с очень длинным текстом
+                        </td>
+                        <td>
+                            <!-- Действия -->
+                            <div class="table__actions">
+                                <button type="button" aria-label="Перезаказать" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
                                     </svg>
                                 </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="table-btn">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                <button type="button" aria-label="Добавить в избранное" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                     </svg>
                                 </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
-                            </td>
-                            <td class="nowrap">
-                                <!-- Срок -->
-                                3-6 дн.
-                            </td>
-                            <td>
-                                <!-- Количество -->
-                                10
-                            </td>
-                            <td class="nowrap">
-                                <!-- Цена -->
-                                1 427,00
-                            </td>
-                            <td class="nowrap" data-order-amount>
-                                <!-- Сумма -->
-                                1 427,00
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                Какой-то комментарий с очень длинным текстом
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <button type="button" aria-label="Перезаказать" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Добавить в избранное" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Добавить комментарий" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Удалить" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                                <button type="button" aria-label="Добавить комментарий" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="Удалить" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
 
-                        <tr data-order="3">
-                            <td>
-                                <div class="checkbox">
-                                    <input id="cel-3" type="checkbox" class="checkbox__input" data-checkbox>
-                                    <label for="cel-3" class="checkbox__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Бренд -->
-                                Philips
-                            </td>
-                            <td>
-                                <!-- Артикул -->
-                                85126
-                            </td>
-                            <td>
-                                <!-- Наименование -->
-                                Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                    <tr data-order="5">
+                        <td>
+                            <div class="checkbox">
+                                <input id="cel-5" type="checkbox" class="checkbox__input" data-checkbox>
+                                <label for="cel-5" class="checkbox__label"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <!-- Бренд -->
+                            Philips
+                        </td>
+                        <td>
+                            <!-- Артикул -->
+                            85126
+                        </td>
+                        <td>
+                            <!-- Наименование -->
+                            Лампа ксенон d2r 5000к
+                        </td>
+                        <td>
+                            <!-- Поставщик -->
+                            zsps-
+                        </td>
+                        <td>
+                            <!-- Возврат -->
+                            <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <!--  Дистрибьютер -->
+                            <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <!-- Склад -->
+                            -
+                        </td>
+                        <td class="nowrap">
+                            <!-- Срок -->
+                            3-6 дн.
+                        </td>
+                        <td>
+                            <!-- Количество -->
+                            10
+                        </td>
+                        <td class="nowrap">
+                            <!-- Цена -->
+                            1 427,00
+                        </td>
+                        <td class="nowrap" data-order-amount>
+                            <!-- Сумма -->
+                            1 427,00
+                        </td>
+                        <td>
+                            <!-- Комментарий -->
+                            -
+                        </td>
+                        <td>
+                            <!-- Действия -->
+                            <div class="table__actions">
+                                <button type="button" aria-label="Перезаказать" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
                                     </svg>
                                 </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="table-btn">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                <button type="button" aria-label="Добавить в избранное" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                     </svg>
                                 </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
-                            </td>
-                            <td class="nowrap">
-                                <!-- Срок -->
-                                3-6 дн.
-                            </td>
-                            <td>
-                                <!-- Количество -->
-                                10
-                            </td>
-                            <td class="nowrap">
-                                <!-- Цена -->
-                                1 427,00
-                            </td>
-                            <td class="nowrap" data-order-amount>
-                                <!-- Сумма -->
-                                1 427,00
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <button type="button" aria-label="Перезаказать" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Добавить в избранное" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Добавить комментарий" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Удалить" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                                <button type="button" aria-label="Добавить комментарий" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="Удалить" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
 
-                        <tr data-order="4">
-                            <td>
-                                <div class="checkbox">
-                                    <input id="cel-4" type="checkbox" class="checkbox__input" data-checkbox>
-                                    <label for="cel-4" class="checkbox__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Бренд -->
-                                Philips
-                            </td>
-                            <td>
-                                <!-- Артикул -->
-                                85126
-                            </td>
-                            <td>
-                                <!-- Наименование -->
-                                Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                    <tr data-order="6">
+                        <td>
+                            <div class="checkbox">
+                                <input id="cel-6" type="checkbox" class="checkbox__input" data-checkbox>
+                                <label for="cel-6" class="checkbox__label"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <!-- Бренд -->
+                            Philips
+                        </td>
+                        <td>
+                            <!-- Артикул -->
+                            85126
+                        </td>
+                        <td>
+                            <!-- Наименование -->
+                            Лампа ксенон d2r 5000к
+                        </td>
+                        <td>
+                            <!-- Поставщик -->
+                            zsps-
+                        </td>
+                        <td>
+                            <!-- Возврат -->
+                            <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <!--  Дистрибьютер -->
+                            <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <!-- Склад -->
+                            -
+                        </td>
+                        <td class="nowrap">
+                            <!-- Срок -->
+                            3-6 дн.
+                        </td>
+                        <td>
+                            <!-- Количество -->
+                            10
+                        </td>
+                        <td class="nowrap">
+                            <!-- Цена -->
+                            1 427,00
+                        </td>
+                        <td class="nowrap" data-order-amount>
+                            <!-- Сумма -->
+                            1 427,00
+                        </td>
+                        <td>
+                            <!-- Комментарий -->
+                            Какой-то комментарий с очень длинным текстом
+                        </td>
+                        <td>
+                            <!-- Действия -->
+                            <div class="table__actions">
+                                <button type="button" aria-label="Перезаказать" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
                                     </svg>
                                 </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="table-btn">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                <button type="button" aria-label="Добавить в избранное" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                     </svg>
                                 </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
-                            </td>
-                            <td class="nowrap">
-                                <!-- Срок -->
-                                3-6 дн.
-                            </td>
-                            <td>
-                                <!-- Количество -->
-                                10
-                            </td>
-                            <td class="nowrap">
-                                <!-- Цена -->
-                                1 427,00
-                            </td>
-                            <td class="nowrap" data-order-amount>
-                                <!-- Сумма -->
-                                1 427,00
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                Какой-то комментарий с очень длинным текстом
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <button type="button" aria-label="Перезаказать" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Добавить в избранное" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Добавить комментарий" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Удалить" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                                <button type="button" aria-label="Добавить комментарий" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" aria-label="Удалить" class="btn-light">
+                                    <svg class="btn-light__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
 
-                        <tr data-order="5">
-                            <td>
-                                <div class="checkbox">
-                                    <input id="cel-5" type="checkbox" class="checkbox__input" data-checkbox>
-                                    <label for="cel-5" class="checkbox__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Бренд -->
-                                Philips
-                            </td>
-                            <td>
-                                <!-- Артикул -->
-                                85126
-                            </td>
-                            <td>
-                                <!-- Наименование -->
-                                Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="table-btn">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
-                            </td>
-                            <td class="nowrap">
-                                <!-- Срок -->
-                                3-6 дн.
-                            </td>
-                            <td>
-                                <!-- Количество -->
-                                10
-                            </td>
-                            <td class="nowrap">
-                                <!-- Цена -->
-                                1 427,00
-                            </td>
-                            <td class="nowrap" data-order-amount>
-                                <!-- Сумма -->
-                                1 427,00
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                -
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <button type="button" aria-label="Перезаказать" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Добавить в избранное" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Добавить комментарий" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Удалить" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+        <div class="table-footer d-md-none">
+            <div class="table-footer__actions">
+                <button type="button" disabled class="btn-text" data-not-checked-product>
+                    Товар не выбран
+                </button>
 
-                        <tr data-order="6">
-                            <td>
-                                <div class="checkbox">
-                                    <input id="cel-6" type="checkbox" class="checkbox__input" data-checkbox>
-                                    <label for="cel-6" class="checkbox__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <!-- Бренд -->
-                                Philips
-                            </td>
-                            <td>
-                                <!-- Артикул -->
-                                85126
-                            </td>
-                            <td>
-                                <!-- Наименование -->
-                                Лампа ксенон d2r 5000к
-                            </td>
-                            <td>
-                                <!-- Поставщик -->
-                                zsps-
-                            </td>
-                            <td>
-                                <!-- Возврат -->
-                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!--  Дистрибьютер -->
-                                <button type="button" aria-label="дистрибьютер" class="table-btn">
-                                    <svg aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                    </svg>
-                                </button>
-                            </td>
-                            <td>
-                                <!-- Склад -->
-                                -
-                            </td>
-                            <td class="nowrap">
-                                <!-- Срок -->
-                                3-6 дн.
-                            </td>
-                            <td>
-                                <!-- Количество -->
-                                10
-                            </td>
-                            <td class="nowrap">
-                                <!-- Цена -->
-                                1 427,00
-                            </td>
-                            <td class="nowrap" data-order-amount>
-                                <!-- Сумма -->
-                                1 427,00
-                            </td>
-                            <td>
-                                <!-- Комментарий -->
-                                Какой-то комментарий с очень длинным текстом
-                            </td>
-                            <td>
-                                <!-- Действия -->
-                                <div class="table__actions">
-                                    <button type="button" aria-label="Перезаказать" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#reload"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Добавить в избранное" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Добавить комментарий" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" aria-label="Удалить" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                <button type="button" class="btn-text btn-text--theme-danger d-none" data-checked-product>
+                    Удалить выбранные
+                </button>
             </div>
 
-            <div class="table-footer">
-                <div class="table-footer__actions">
-                    <button type="button" disabled class="btn-text" data-not-checked-product>
-                        Товар не выбран
-                    </button>
+            <div class="table-footer__info d-none" data-checked-product>
+                Выбрано <span data-order-count>1</span> товаров на сумму <span data-order-total></span> руб
+            </div>
 
-                    <button type="button" class="btn-text btn-text--theme-danger d-none" data-checked-product>
-                        Удалить выбранные
-                    </button>
-                </div>
-
-                <div class="table-footer__info d-none" data-checked-product>
-                    Выбрано <span data-order-count>1</span> товаров на сумму <span data-order-total></span> руб
-                </div>
-
-                <div class="table-footer__pagination">
-                    <div class="pagination @@class">
+            <div class="table-footer__pagination">
+                <div class="pagination @@class">
     <div class="pagination__info">1-10 из 13</div>
 
     <div class="pagination__actions">
@@ -958,7 +934,7 @@
         </a>
     </div>
 
-    <div class="select pagination__option" data-select @@data>
+    <div class="select pagination__option" data-select data-select-id=page @@data @@dataSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="page" class="select__input" value="@@value">
         <span class="select__ico">
@@ -967,7 +943,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="10 / страниц" class="select__text">10 / страниц</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -987,20 +963,20 @@
 
 </div>
 
-                </div>
+            </div>
+        </div>
+
+        <div class="cart__total cart-total d-md-none">
+            <div class="cart-total__title title-2 title--mb">
+                <span>Итого к оплате:</span>
+                <span>0,00 руб.</span>
             </div>
 
-            <div class="cart__total cart-total">
-                <div class="cart-total__title title-2 title--mb">
-                    <span>Итого к оплате:</span>
-                    <span>0,00 руб.</span>
-                </div>
+            <div class="cart-total__actions">
+                <div class="cart-total__pickup">
+                    <div class="cart-total__pickup-caption">Пункт самовывоза</div>
 
-                <div class="cart-total__actions">
-                    <div class="cart-total__pickup">
-                        <div class="cart-total__pickup-caption">Пункт самовывоза</div>
-
-                        <div class="select cart-total__pickup-option" data-select @@data>
+                    <div class="select cart-total__pickup-option" data-select data-select-id=cart @@data @@dataSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="cart" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1009,7 +985,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="@@text" class="select__text">@@text</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1027,18 +1003,17 @@
     </div>
 </div>
 
-                    </div>
-
-                    <button type="button" class="cart-total__order btn-primary btn-primary--disabled" disabled>Оформить заказ</button>
                 </div>
 
-                <div class="cart-total__legal-confirm">
-                    Я был ознакомлен(а) c условиями <a href="#" target="_blank" class="link link--blue">договора-оферты</a> и <a href="#" target="_blank" class="link link--blue">политикой конфенденциальности</a>
-                </div>
+                <button type="button" class="cart-total__order btn-primary btn-primary--disabled" disabled>Оформить заказ</button>
+            </div>
+
+            <div class="cart-total__legal-confirm">
+                Я был ознакомлен(а) c условиями <a href="#" target="_blank" class="link link--blue">договора-оферты</a> и <a href="#" target="_blank" class="link link--blue">политикой конфенденциальности</a>
             </div>
         </div>
 
-        <div class="d-none d-md-block product-cards">
+        <div class="product-cards d-none d-md-block">
             <ul class="product-cards__list">
                 <li class="product-card">
                     <div class="product-card__body">
@@ -1292,9 +1267,74 @@
             <button type="button" class="product-cards__show-more btn">
                 Показать еще
             </button>
+
+            <!-- всплывающий бар на моби -->
+            <div class="action-bar action-bar--is-visible" data-action-bar>
+                <div class="action-bar__summary">
+                    <span>выбрано: 10</span>
+                    <span>к оплате: 5 414,00 руб</span>
+                </div>
+
+                <div class="action-bar__controls">
+                    <div class="action-bar__select-all checkbox checkbox--size-l">
+                        <input id="bar-select-all" type="checkbox" class="checkbox__input" data-checkbox="">
+                        <label for="bar-select-all" class="checkbox__label"></label>
+                        <span class="action-bar__select-caption">Выбрать все</span>
+                    </div>
+
+                    <div class="action-bar__btns">
+                        <button class="action-bar__btn header-btn header-btn--gray" type="button">
+                            Изменить пункт<br> самовывоза
+                        </button>
+                        <button class="action-bar__btn btn" type="button">
+                            Оформить<br> заказ
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>
+
+<div class="dropdown" data-dropdown="1">
+    <div class="dropdown__select">
+        <div class="select @@class" data-select data-select-id=price @@data @@dataSelectItem>
+    <div class="form-input select__search d-none" data-select-search>
+        <input type="text" name="select-category" data-select-input id="price" class="select__input" value="@@value">
+        <span class="select__ico">
+            <svg>
+                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+        </span>
+    </div>
+    <button type="button" class="form-input select__btn" data-select-btn>
+        <span data-select-text="Выберите цену" class="select__text">Выберите цену</span>
+        <span class="select__ico select__ico--rotate" data-select-ico>
+          <svg>
+            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+          </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item select__item--active @@classItem"
+                data-select-value="1" @@dataItem1>Наценка (10,00)</button>
+        <button type="button" class="select__item"
+                data-select-value="2" @@dataItem2>Наценка (20,00)</button>
+        <button type="button" class="select__item"
+                data-select-value="3" @@dataItem3>Без наценки</button>
+    </div>
+</div>
+
+    </div>
+    <div class="dropdown__actions">
+        <button type="reset" class="btn-text" disabled data-reset-select="price">
+            Сброс
+        </button>
+        <button type="submit" class="btn btn--size-xs">
+            Применить
+        </button>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer__top">
@@ -1747,7 +1787,7 @@
 
                     <div class="drawer__wrapper-input">
                         <label for="filter-messages">Тип сообщения</label>
-                        <div class="select @@class" data-select @@data>
+                        <div class="select @@class" data-select data-select-id=filter-messages @@data @@dataSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="filter-messages" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1756,7 +1796,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Все сообщения" class="select__text">Все сообщения</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1777,7 +1817,7 @@
                     </div>
                     <div class="drawer__wrapper-input">
                         <label for="reason">Причина возврата</label>
-                        <div class="select select--multiple" data-select data-select-multiple>
+                        <div class="select select--multiple" data-select data-select-id=reason data-select-multiple data-select-multipleSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="reason" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1786,7 +1826,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Все причины возврата" class="select__text">Все причины возврата</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1807,11 +1847,60 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="submit" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="reason, filter-messages">
                         Сбросить
                     </button>
-                    <button type="reset" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
                         Применить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="drawer-filter-search" class="drawer modal">
+    <div class="modal__inner modal__inner--open-right">
+        <div class="modal__content drawer__content">
+            <button type="button" class="modal__close modal__close--left" data-btn="close">
+                <svg>
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="drawer__header">
+                <h3 class="title-4 title-4--mb">Фильтр</h3>
+            </div>
+            <div class="drawer__info">
+                <form action="" class="drawer__form form search-filter">
+                    <h2 class="title-4">Бренд</h2>
+
+                    <ul class="search-filter__list">
+                        <li class="search-filter__item">
+                            <div class="search-filter__checkbox checkbox checkbox--has-text">
+                                <input id="search-filter-checkbox" type="checkbox" class="checkbox__input">
+                                <label for="search-filter-checkbox" class="checkbox__label"></label>
+                                <p class="checkbox__text">OSMAR</p>
+                            </div>
+                            <div class="search-filter__price">
+                                от 66 руб
+                            </div>
+                        </li>
+                        <li class="search-filter__item">
+                            <div class="search-filter__checkbox checkbox checkbox--has-text">
+                                <input id="search-filter-checkbox-2" type="checkbox" class="checkbox__input">
+                                <label for="search-filter-checkbox-2" class="checkbox__label"></label>
+                                <p class="checkbox__text">OSMAR</p>
+                            </div>
+                            <div class="search-filter__price">
+                                от 66 руб
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+
+                <div class="drawer__footer">
+                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
+                        Показать аналоги
                     </button>
                 </div>
             </div>
@@ -1961,7 +2050,7 @@
                         </div>
                         <div class="drawer__form-content">
                             <input type="text" class="form-input" id="car-add-vin" placeholder="Введите VIN" >
-                            <div class="select @@class" data-select data-select-sort>
+                            <div class="select @@class" data-select data-select-id=car-add-brand data-select-sort data-select-sortSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-brand" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1970,7 +2059,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите марку автомобиля" class="select__text">Выберите марку автомобиля</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1988,7 +2077,7 @@
     </div>
 </div>
 
-                            <div class="select @@class" data-select data-select-sort>
+                            <div class="select @@class" data-select data-select-id=car-add-model data-select-sort data-select-sortSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-model" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1997,7 +2086,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите модель автомобиля" class="select__text">Выберите модель автомобиля</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -2015,7 +2104,7 @@
     </div>
 </div>
 
-                            <div class="select @@class" data-select data-select-sort>
+                            <div class="select @@class" data-select data-select-id=car-add-power data-select-sort data-select-sortSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-power" class="select__input" value="@@value">
         <span class="select__ico">
@@ -2024,7 +2113,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите объем двигателя и мощность" class="select__text">Выберите объем двигателя и мощность</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -2044,7 +2133,7 @@
 
                             <input type="text" class="form-input" id="car-add-license" placeholder="Введите госномер" >
                             <input type="text" class="form-input" id="car-add-mileage" placeholder="Введите пробег" >
-                            <div class="select @@class" data-select data-select-sort>
+                            <div class="select @@class" data-select data-select-id=car-add-year data-select-sort data-select-sortSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-year" class="select__input" value="@@value">
         <span class="select__ico">
@@ -2053,7 +2142,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите год выпуска автомобиля" class="select__text">Выберите год выпуска автомобиля</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -2096,7 +2185,7 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="car-add-power, car-add-year, car-add-model, car-add-brand">
                         Отменить
                     </button>
                     <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
@@ -2154,7 +2243,7 @@
                             <input type="text" class="form-input" id="car-edit-vin" value="Q1231313" placeholder="Введите VIN" >
                             <input type="text" class="form-input" id="car-edit-license" value="T374OB" placeholder="Введите госномер" >
                             <input type="text" class="form-input" id="car-edit-mileage" value="120 000" placeholder="Введите пробег" >
-                            <div class="select @@class" data-select data-select-sort>
+                            <div class="select @@class" data-select data-select-id=car-edit-year data-select-sort data-selected-value-first>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-edit-year" class="select__input" value="2023">
         <span class="select__ico">
@@ -2163,7 +2252,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите год выпуска автомобиля" class="select__text">Выберите год выпуска автомобиля</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -2182,6 +2271,17 @@
 </div>
 
                             <textarea class="form-textarea" id="car-edit-text" placeholder="Комментарий к автомобилю"></textarea>
+                            <div class="form-input form-file-2 d-none" tabindex="0" role="button" aria-label="Загрузить фото автомобиля" data-dropzone data-input="file-download-wrapper">
+                                <input id="fileInput-3" class="form-file-2__input" type="file" data-input="file-download" />
+                                <label for="fileInput-3"
+                                       class="form-file-2__content"
+                                       data-input="file-download-label"
+                                       data-input-error="Один из файлов не является изображением. Доступные типы: jpg, png, bmp"
+                                       data-input-placeholder="Загрузить фото автомобиля"
+                                >
+                                    <span class="form-file-2__action">Загрузить фото автомобиля</span>
+                                </label>
+                            </div>
                             <div class="form-input form-file-2__info" data-input="file-download-block">
                                 <img src="static/img/background/product-car.png" alt="Автомобиль" data-input="file-download-img" class="form-file-2__img">
                                 <span class="form-file-2__text" data-input="file-download-text">product-car.png</span>
@@ -2195,10 +2295,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="car-edit-year" data-btn="close">
                         Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification" disabled>
                         Сохранить
                     </button>
                 </div>
@@ -2222,7 +2322,7 @@
                 <form action="" class="drawer__form form">
                     <div class="drawer__wrapper-input">
                         <label for="recharge-method" class="form__label">Способ оплаты</label>
-                        <div class="select @@class" data-select @@data>
+                        <div class="select @@class" data-select data-select-id=recharge-method @@data @@dataSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="recharge-method" class="select__input" value="@@value">
         <span class="select__ico">
@@ -2231,7 +2331,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите способ оплаты" class="select__text">Выберите способ оплаты</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -2324,7 +2424,7 @@
                 <form action="" class="drawer__form form">
                     <div class="drawer__wrapper-input">
                         <label for="order-issue-date">Дата оформления</label>
-                        <div class="select @@class" data-select @@data>
+                        <div class="select @@class" data-select data-select-id=order-issue-date @@data data-selected-value-first>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="order-issue-date" class="select__input" value="@@value">
         <span class="select__ico">
@@ -2333,7 +2433,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Сегодня" class="select__text">Сегодня</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -2379,7 +2479,7 @@
                     </div>
                     <div class="drawer__wrapper-input">
                         <label for="order-pick-up">Пункт самовывоза</label>
-                        <div class="select @@class" data-select @@data>
+                        <div class="select @@class" data-select data-select-id=order-pick-up @@data data-selected-value-first>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="order-pick-up" class="select__input" value="@@value">
         <span class="select__ico">
@@ -2388,7 +2488,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="ул. Луначарского, д.202, строение 1, корпус 4, офис 1005" class="select__text">ул. Луначарского, д.202, строение 1, корпус 4, офис 1005</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -2409,7 +2509,7 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="order-issue-date, order-pick-up">
                         Сбросить
                     </button>
                     <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
@@ -2436,7 +2536,7 @@
                 <form action="" class="drawer__form form">
                     <div class="drawer__wrapper-input">
                         <label for="discussion-theme">Тема</label>
-                        <div class="select @@class" data-select @@data>
+                        <div class="select @@class" data-select data-select-id=discussion-theme @@data data-selected-value-first>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="discussion-theme" class="select__input" value="@@value">
         <span class="select__ico">
@@ -2445,7 +2545,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Недостача" class="select__text">Недостача</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -2490,7 +2590,7 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="discussion-theme">
                         Отменить
                     </button>
                     <button type="submit" class="drawer__footer-btn btn btn--size-s btn--disabled" data-notification="notification-add-discussion">

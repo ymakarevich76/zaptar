@@ -23,28 +23,13 @@
 <header class="header" data-header>
     <div class="header__top">
         <div class="header__container container">
-            <!-- todo: переписать стили и убрать обертку, если больше ссылка на карту не понадобится -->
-            <div class="header__top-left">
-                <a class="logo" href="/zaptar/dist">
-                    <img class="logo__img" src="static/img/logo/logo.svg" width="198" height="32" alt="zaptar">
-                </a>
-
-               <!-- <a class="header-address" href="#map"> -->
-               <!--     <svg class="header-address__ico" aria-hidden="true"> -->
-               <!--         <use xlink:href="static/img/symbol/sprite.svg#mark"></use> -->
-               <!--     </svg> -->
-
-               <!--     <span class="header-address__city">Брянск</span> -->
-
-               <!--     <svg class="header-address__ico d-md-none" aria-hidden="true"> -->
-               <!--         <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use> -->
-               <!--     </svg> -->
-               <!-- </a> -->
-            </div>
+            <a class="logo" href="/zaptar/dist">
+                <img class="logo__img" src="static/img/logo/logo.svg" width="198" height="32" alt="zaptar">
+            </a>
 
             <div class="header__top-contacts">
                 <a class="header-contact" href="tel:89308255335">
-                    <svg class="header-contact__icon" aria-hidden="true">
+                    <svg class="header-contact__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
                     </svg>
 
@@ -52,7 +37,7 @@
                 </a>
 
                 <a class="header-contact" href="tel:89206055335">
-                    <svg class="header-contact__icon" aria-hidden="true">
+                    <svg class="header-contact__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
                     </svg>
 
@@ -60,7 +45,7 @@
                 </a>
 
                 <a class="header-contact header-contact--has-divider" href="mailto:info@zaptar.ru">
-                    <svg class="header-contact__icon" aria-hidden="true">
+                    <svg class="header-contact__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#mail"></use>
                     </svg>
 
@@ -68,21 +53,18 @@
                 </a>
             </div>
 
-            <!-- Пользователь не авторизован -->
-
-            <!-- <div class="header__top-actions"> -->
-            <!--     <a href="#" class="btn-primary"> -->
-            <!--         Регистрация -->
-            <!--     </a> -->
-
-            <!--     <a href="#" class="btn btn&#45;&#45;size-s"> -->
-            <!--         Войти -->
-            <!--     </a> -->
-            <!-- </div> -->
-
-            <!-- Пользователь авторизован -->
-
+            <!-- мобайл -->
             <nav class="header__top-actions">
+                <!-- Пользователь не авторизован -->
+                <!--     <a href="#" class="btn-primary"> -->
+                <!--         Регистрация -->
+                <!--     </a> -->
+
+                <!--     <a href="#" class="btn btn&#45;&#45;size-s"> -->
+                <!--         Войти -->
+                <!--     </a> -->
+
+                <!-- Пользователь авторизован -->
                 <a class="header-btn header-btn--gray header-btn--narrow" href="#">
                     <svg aria-hidden="true" class="header-btn__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
@@ -127,13 +109,13 @@
             <div class="header__search header-search">
                 <div class="header-search__dropdown header-search-dropdown">
                     <button class="header-search-dropdown__toggle d-md-none">
-                        <svg class="header-search-dropdown__icon" aria-hidden="true">
+                        <svg class="header-search-dropdown__ico" aria-hidden="true">
                             <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
                         </svg>
                         <span class="header-search-dropdown__caption">Каталог</span>
                     </button>
                     <button class="header-search-dropdown__toggle d-none d-md-flex" data-modal="drawer-catalog">
-                        <svg class="header-search-dropdown__icon" aria-hidden="true">
+                        <svg class="header-search-dropdown__ico" aria-hidden="true">
                             <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
                         </svg>
                         <span class="header-search-dropdown__caption">Каталог</span>
@@ -173,8 +155,8 @@
                 <input class="header-search__input" type="text" placeholder="Поиск по артикулу или наименованию" />
 
                 <!-- todo: активировать кнопку когда ввели текст -->
-                <button class="header-search__button">
-                    <svg class="header-search__button-icon" aria-hidden="true">
+                <button class="header-search__btn">
+                    <svg class="header-search__btn-ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#search"></use>
                     </svg>
                 </button>
@@ -336,7 +318,7 @@
                                     </div>
                                     <div class="form__wrapper-input">
                                         <label for="city" class="form__label">Город<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
+                                        <div class="select @@class" data-select data-select-id=city @@data @@dataSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="city" class="select__input" value="@@value">
         <span class="select__ico">
@@ -345,7 +327,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите город" class="select__text">Выберите город</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -410,7 +392,7 @@
                                     </div>
                                     <div class="form__wrapper-input">
                                         <label for="city-1" class="form__label">Город<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
+                                        <div class="select @@class" data-select data-select-id=city-1 @@data @@dataSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="city-1" class="select__input" value="@@value">
         <span class="select__ico">
@@ -419,7 +401,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите город" class="select__text">Выберите город</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -447,7 +429,7 @@
                                     <h3 class="title-4 form__title">Данные юридического лица</h3>
                                     <div class="form__wrapper-input">
                                         <label for="type-organization" class="form__label">Тип организации<span>*</span></label>
-                                        <div class="select @@class" data-select @@data>
+                                        <div class="select @@class" data-select data-select-id=type-organization @@data @@dataSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="type-organization" class="select__input" value="@@value">
         <span class="select__ico">
@@ -456,7 +438,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите тип организации" class="select__text">Выберите тип организации</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -981,7 +963,7 @@
 
                     <div class="drawer__wrapper-input">
                         <label for="filter-messages">Тип сообщения</label>
-                        <div class="select @@class" data-select @@data>
+                        <div class="select @@class" data-select data-select-id=filter-messages @@data @@dataSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="filter-messages" class="select__input" value="@@value">
         <span class="select__ico">
@@ -990,7 +972,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Все сообщения" class="select__text">Все сообщения</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1011,7 +993,7 @@
                     </div>
                     <div class="drawer__wrapper-input">
                         <label for="reason">Причина возврата</label>
-                        <div class="select select--multiple" data-select data-select-multiple>
+                        <div class="select select--multiple" data-select data-select-id=reason data-select-multiple data-select-multipleSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="reason" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1020,7 +1002,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Все причины возврата" class="select__text">Все причины возврата</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1041,11 +1023,60 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="submit" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="reason, filter-messages">
                         Сбросить
                     </button>
-                    <button type="reset" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
                         Применить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="drawer-filter-search" class="drawer modal">
+    <div class="modal__inner modal__inner--open-right">
+        <div class="modal__content drawer__content">
+            <button type="button" class="modal__close modal__close--left" data-btn="close">
+                <svg>
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="drawer__header">
+                <h3 class="title-4 title-4--mb">Фильтр</h3>
+            </div>
+            <div class="drawer__info">
+                <form action="" class="drawer__form form search-filter">
+                    <h2 class="title-4">Бренд</h2>
+
+                    <ul class="search-filter__list">
+                        <li class="search-filter__item">
+                            <div class="search-filter__checkbox checkbox checkbox--has-text">
+                                <input id="search-filter-checkbox" type="checkbox" class="checkbox__input">
+                                <label for="search-filter-checkbox" class="checkbox__label"></label>
+                                <p class="checkbox__text">OSMAR</p>
+                            </div>
+                            <div class="search-filter__price">
+                                от 66 руб
+                            </div>
+                        </li>
+                        <li class="search-filter__item">
+                            <div class="search-filter__checkbox checkbox checkbox--has-text">
+                                <input id="search-filter-checkbox-2" type="checkbox" class="checkbox__input">
+                                <label for="search-filter-checkbox-2" class="checkbox__label"></label>
+                                <p class="checkbox__text">OSMAR</p>
+                            </div>
+                            <div class="search-filter__price">
+                                от 66 руб
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+
+                <div class="drawer__footer">
+                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
+                        Показать аналоги
                     </button>
                 </div>
             </div>
@@ -1195,7 +1226,7 @@
                         </div>
                         <div class="drawer__form-content">
                             <input type="text" class="form-input" id="car-add-vin" placeholder="Введите VIN" >
-                            <div class="select @@class" data-select data-select-sort>
+                            <div class="select @@class" data-select data-select-id=car-add-brand data-select-sort data-select-sortSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-brand" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1204,7 +1235,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите марку автомобиля" class="select__text">Выберите марку автомобиля</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1222,7 +1253,7 @@
     </div>
 </div>
 
-                            <div class="select @@class" data-select data-select-sort>
+                            <div class="select @@class" data-select data-select-id=car-add-model data-select-sort data-select-sortSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-model" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1231,7 +1262,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите модель автомобиля" class="select__text">Выберите модель автомобиля</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1249,7 +1280,7 @@
     </div>
 </div>
 
-                            <div class="select @@class" data-select data-select-sort>
+                            <div class="select @@class" data-select data-select-id=car-add-power data-select-sort data-select-sortSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-power" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1258,7 +1289,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите объем двигателя и мощность" class="select__text">Выберите объем двигателя и мощность</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1278,7 +1309,7 @@
 
                             <input type="text" class="form-input" id="car-add-license" placeholder="Введите госномер" >
                             <input type="text" class="form-input" id="car-add-mileage" placeholder="Введите пробег" >
-                            <div class="select @@class" data-select data-select-sort>
+                            <div class="select @@class" data-select data-select-id=car-add-year data-select-sort data-select-sortSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-year" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1287,7 +1318,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите год выпуска автомобиля" class="select__text">Выберите год выпуска автомобиля</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1330,7 +1361,7 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="car-add-power, car-add-year, car-add-model, car-add-brand">
                         Отменить
                     </button>
                     <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
@@ -1388,7 +1419,7 @@
                             <input type="text" class="form-input" id="car-edit-vin" value="Q1231313" placeholder="Введите VIN" >
                             <input type="text" class="form-input" id="car-edit-license" value="T374OB" placeholder="Введите госномер" >
                             <input type="text" class="form-input" id="car-edit-mileage" value="120 000" placeholder="Введите пробег" >
-                            <div class="select @@class" data-select data-select-sort>
+                            <div class="select @@class" data-select data-select-id=car-edit-year data-select-sort data-selected-value-first>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-edit-year" class="select__input" value="2023">
         <span class="select__ico">
@@ -1397,7 +1428,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите год выпуска автомобиля" class="select__text">Выберите год выпуска автомобиля</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1416,6 +1447,17 @@
 </div>
 
                             <textarea class="form-textarea" id="car-edit-text" placeholder="Комментарий к автомобилю"></textarea>
+                            <div class="form-input form-file-2 d-none" tabindex="0" role="button" aria-label="Загрузить фото автомобиля" data-dropzone data-input="file-download-wrapper">
+                                <input id="fileInput-3" class="form-file-2__input" type="file" data-input="file-download" />
+                                <label for="fileInput-3"
+                                       class="form-file-2__content"
+                                       data-input="file-download-label"
+                                       data-input-error="Один из файлов не является изображением. Доступные типы: jpg, png, bmp"
+                                       data-input-placeholder="Загрузить фото автомобиля"
+                                >
+                                    <span class="form-file-2__action">Загрузить фото автомобиля</span>
+                                </label>
+                            </div>
                             <div class="form-input form-file-2__info" data-input="file-download-block">
                                 <img src="static/img/background/product-car.png" alt="Автомобиль" data-input="file-download-img" class="form-file-2__img">
                                 <span class="form-file-2__text" data-input="file-download-text">product-car.png</span>
@@ -1429,10 +1471,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="car-edit-year" data-btn="close">
                         Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification" disabled>
                         Сохранить
                     </button>
                 </div>
@@ -1456,7 +1498,7 @@
                 <form action="" class="drawer__form form">
                     <div class="drawer__wrapper-input">
                         <label for="recharge-method" class="form__label">Способ оплаты</label>
-                        <div class="select @@class" data-select @@data>
+                        <div class="select @@class" data-select data-select-id=recharge-method @@data @@dataSelectItem>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="recharge-method" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1465,7 +1507,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Выберите способ оплаты" class="select__text">Выберите способ оплаты</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1558,7 +1600,7 @@
                 <form action="" class="drawer__form form">
                     <div class="drawer__wrapper-input">
                         <label for="order-issue-date">Дата оформления</label>
-                        <div class="select @@class" data-select @@data>
+                        <div class="select @@class" data-select data-select-id=order-issue-date @@data data-selected-value-first>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="order-issue-date" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1567,7 +1609,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Сегодня" class="select__text">Сегодня</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1613,7 +1655,7 @@
                     </div>
                     <div class="drawer__wrapper-input">
                         <label for="order-pick-up">Пункт самовывоза</label>
-                        <div class="select @@class" data-select @@data>
+                        <div class="select @@class" data-select data-select-id=order-pick-up @@data data-selected-value-first>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="order-pick-up" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1622,7 +1664,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="ул. Луначарского, д.202, строение 1, корпус 4, офис 1005" class="select__text">ул. Луначарского, д.202, строение 1, корпус 4, офис 1005</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1643,7 +1685,7 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="order-issue-date, order-pick-up">
                         Сбросить
                     </button>
                     <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
@@ -1670,7 +1712,7 @@
                 <form action="" class="drawer__form form">
                     <div class="drawer__wrapper-input">
                         <label for="discussion-theme">Тема</label>
-                        <div class="select @@class" data-select @@data>
+                        <div class="select @@class" data-select data-select-id=discussion-theme @@data data-selected-value-first>
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="discussion-theme" class="select__input" value="@@value">
         <span class="select__ico">
@@ -1679,7 +1721,7 @@
             </svg>
         </span>
     </div>
-    <button type="button" class="form-input select__button" data-select-btn>
+    <button type="button" class="form-input select__btn" data-select-btn>
         <span data-select-text="Недостача" class="select__text">Недостача</span>
         <span class="select__ico select__ico--rotate" data-select-ico>
           <svg>
@@ -1724,7 +1766,7 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
+                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="discussion-theme">
                         Отменить
                     </button>
                     <button type="submit" class="drawer__footer-btn btn btn--size-s btn--disabled" data-notification="notification-add-discussion">
