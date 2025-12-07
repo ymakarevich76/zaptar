@@ -5,8 +5,7 @@
     <!-- //////////////////////////////////////////////////////////  -->
     @@include('block/breadcrumb.html')
 
-    <div class="container">
-        <section class="garage">
+    <section class="garage container">
             <div class="section-header section-header--mb">
                 <div class="section-header__group">
                     <h1 class="title">Гараж</h1>
@@ -14,7 +13,7 @@
 
                 <div class="section-header__group">
                     <button type="button" class="btn btn--size-s garage__header-btn" data-modal="drawer-add-car">
-                        <svg>
+                        <svg aria-hidden="true">
                             <use xlink:href="static/img/symbol/sprite.svg#plus"></use>
                         </svg>
                         Добавить автомобиль
@@ -27,7 +26,7 @@
                         <button class="accordion__btn title-4" data-accordion-btn>
                             Acura MDX
                             <span class="accordion__btn-ico">
-                                 <svg>
+                                 <svg aria-hidden="true">
                                     <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
                                  </svg>
                             </span>
@@ -36,8 +35,8 @@
                             <button type="button" class="btn-primary">
                                 Каталог ТО
                             </button>
-                            <button type="button" class="garage__action btn-light btn-light--size-l">
-                                <svg class="btn-light__ico">
+                            <button type="button" class="garage__action btn-light btn-light--size-l" aria-label="Удалить">
+                                <svg class="btn-light__ico" aria-hidden="true">
                                     <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                                 </svg>
                             </button>
@@ -47,7 +46,7 @@
                         <div class="garage__info">
                             <div class="garage__card">
                                 <div class="garage__photo">
-                                    <img class="garage__img" src="static/img/background/product-car.png" alt="Фото автомобиля" />
+                                    <img class="garage__img" src="static/img/background/product-car.jpg" alt="Фото автомобиля" />
                                 </div>
                                 <div class="garage__car">
                                     <div class="garage__row">
@@ -55,7 +54,7 @@
                                         <span class="garage__value">
                                             Q1231313
                                             <button class="garage__copy btn-light" aria-label="Скопировать VIN">
-                                                <svg class="btn-light__ico">
+                                                <svg class="btn-light__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#copy"></use>
                                                 </svg>
                                             </button>
@@ -90,7 +89,7 @@
 
                                 <div class="garage__person">
                                     <button class="garage__edit btn-light btn-light--size-l" aria-label="Редактировать" data-modal="drawer-edit-car">
-                                        <svg class="btn-light__ico">
+                                        <svg class="btn-light__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#edit"></use>
                                         </svg>
                                     </button>
@@ -217,7 +216,7 @@
                                                 <div class="table__actions">
                                                 <!-- Действия -->
                                                     <a href="#" aria-label="найти товар" class="btn-light">
-                                                        <svg class="btn-light__ico">
+                                                        <svg class="btn-light__ico" aria-hidden="true">
                                                             <use xlink:href="static/img/symbol/sprite.svg#search"></use>
                                                         </svg>
                                                     </a>
@@ -227,7 +226,7 @@
                                                         </svg>
                                                     </button>
                                                     <button type="button" aria-label="удалить товар" class="btn-light">
-                                                        <svg class="btn-light__ico">
+                                                        <svg class="btn-light__ico" aria-hidden="true">
                                                             <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                                                         </svg>
                                                     </button>
@@ -295,7 +294,7 @@
                                                 <div class="table__actions">
                                                     <!-- Действия -->
                                                     <a href="#" aria-label="найти товар" class="btn-light">
-                                                        <svg class="btn-light__ico">
+                                                        <svg class="btn-light__ico" aria-hidden="true">
                                                             <use xlink:href="static/img/symbol/sprite.svg#search"></use>
                                                         </svg>
                                                     </a>
@@ -305,7 +304,7 @@
                                                         </svg>
                                                     </button>
                                                     <button type="button" aria-label="удалить товар" class="btn-light">
-                                                        <svg class="btn-light__ico">
+                                                        <svg class="btn-light__ico" aria-hidden="true">
                                                             <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                                                         </svg>
                                                     </button>
@@ -349,7 +348,7 @@
 
                                         <div class="product-card__actions product-card__actions--only-btns">
                                             <a href="#" aria-label="найти товар" class="btn-light">
-                                                <svg class="btn-light__ico">
+                                                <svg class="btn-light__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#search"></use>
                                                 </svg>
                                             </a>
@@ -359,7 +358,7 @@
                                                 </svg>
                                             </button>
                                             <button type="button" aria-label="удалить товар" class="btn-light">
-                                                <svg class="btn-light__ico">
+                                                <svg class="btn-light__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                                                 </svg>
                                             </button>
@@ -524,7 +523,6 @@
                 </div>
             </div>
         </section>
-    </div>
 </main>
 
 @@include('block/footer/footer.html')

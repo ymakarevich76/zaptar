@@ -73,7 +73,7 @@
                     </svg>
                 </a>
 
-                <button type="button" class="header-user-dropdown__toggle header-btn header-btn--gray header-btn--narrow" data-modal="drawer-user">
+                <button type="button" aria-label="Пользователь" class="header-user-dropdown__toggle header-btn header-btn--gray header-btn--narrow"data-modal="drawer-user">
                     <svg aria-hidden="true" class="header-btn__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#user"></use>
                     </svg>
@@ -86,13 +86,13 @@
         <div class="header__container container">
             <div class="header__search header-search">
                 <div class="header-search__dropdown header-search-dropdown">
-                    <button class="header-search-dropdown__toggle d-md-none">
+                    <button class="header-search-dropdown__toggle d-md-none" aria-label="Меню">
                         <svg class="header-search-dropdown__ico" aria-hidden="true">
                             <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
                         </svg>
                         <span class="header-search-dropdown__caption">Каталог</span>
                     </button>
-                    <button class="header-search-dropdown__toggle d-none d-md-flex" data-modal="drawer-catalog">
+                    <button class="header-search-dropdown__toggle d-none d-md-flex" aria-label="Меню" data-modal="drawer-catalog">
                         <svg class="header-search-dropdown__ico" aria-hidden="true">
                             <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
                         </svg>
@@ -133,7 +133,7 @@
                 <input class="header-search__input" type="text" placeholder="Поиск по артикулу или наименованию" />
 
                 <!-- todo: активировать кнопку когда ввели текст -->
-                <button class="header-search__btn">
+                <button class="header-search__btn" aria-label="Поиск по артикулу или наименованию">
                     <svg class="header-search__btn-ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#search"></use>
                     </svg>

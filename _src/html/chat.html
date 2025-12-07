@@ -5,8 +5,7 @@
     <!-- //////////////////////////////////////////////////////////  -->
     @@include('block/breadcrumb.html')
 
-    <div class="container">
-        <section class="chat">
+    <section class="chat container">
             <div class="chat__header section-header section-header--mb">
                 <div class="section-header__group">
                     <h1 class="title-3">Тема</h1>
@@ -17,7 +16,7 @@
 
                 <div class="section-header__group">
                     <span class="chat__header-btn">
-                        <svg>
+                        <svg aria-hidden="true">
                             <use xlink:href="static/img/symbol/sprite.svg#unlock"></use>
                         </svg>
                     </span>
@@ -92,7 +91,7 @@
                                     data-input-placeholder="Нажмите в эту область, чтобы загрузить файлы"
                                 ></span>
                                 <span class="btn-light btn-light--size-l">
-                                    <svg class="btn-light__ico">
+                                    <svg class="btn-light__ico" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#paper"></use>
                                      </svg>
                                 </span>
@@ -113,7 +112,6 @@
                 </div>
             </div>
         </section>
-    </div>
 </main>
 
 @@include('block/footer/footer.html')

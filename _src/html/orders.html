@@ -69,7 +69,7 @@
                                 Срок
                             </th>
                             <th>
-                                <!-- &nbsp; неразрывный пробел, для того чтобы два слова неразрывались при переносе -->
+                                <!-- &nbsp; неразрывный пробел, для того чтобы два слова не разрывались при переносе -->
                                 Ожидаемая дата&nbsp;доставки
                             </th>
                             <th>
@@ -79,7 +79,8 @@
                                 <div class="table-dropdown">
                                     <div class="table-dropdown__inner">
                                         Цена
-                                        <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn="1">
+
+                                        <button type="button" class="table-dropdown__trigger btn-light" aria-label="Фильтр" data-dropdown-btn="1">
                                             <svg class="btn-light__ico" aria-hidden="true">
                                                 <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                             </svg>
@@ -94,7 +95,8 @@
                                 <div class="table-dropdown">
                                     <div class="table-dropdown__inner">
                                         Статус
-                                        <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn="2">
+
+                                        <button type="button" class="table-dropdown__trigger btn-light" aria-label="Фильтр" data-dropdown-btn="2">
                                             <svg class="btn-light__ico" aria-hidden="true">
                                                 <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                             </svg>
@@ -1512,7 +1514,7 @@
             </button>
 
             <!-- всплывающий бар на моби -->
-            <div class="action-bar action-bar--is-visible" data-action-bar>
+            <div class="action-bar" data-action-bar>
                 <div class="action-bar__summary">
                     <span>выбрано: 10</span>
                     <span>сумма: 9 414,00 ₽</span>
@@ -1520,7 +1522,7 @@
 
                 <div class="action-bar__controls">
                     <div class="action-bar__select-all checkbox checkbox--size-l">
-                        <input id="bar-select-all" type="checkbox" class="checkbox__input" data-checkbox="">
+                        <input id="bar-select-all" type="checkbox" class="checkbox__input" data-checkbox-main>
                         <label for="bar-select-all" class="checkbox__label"></label>
                         <span class="action-bar__select-caption">Выбрать все</span>
                     </div>

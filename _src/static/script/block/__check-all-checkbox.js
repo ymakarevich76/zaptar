@@ -1,10 +1,12 @@
-const checkMain = document.querySelector('[data-checkbox-main]');
+const checksMain = document.querySelectorAll('[data-checkbox-main]');
 
-if (checkMain) {
+if (checksMain.length) {
+  checksMain.forEach(checkMain => {
     const checks = document.querySelectorAll('[data-checkbox]');
-    const checkActions = document.querySelectorAll('[data-checked-product]');
-    const blockNotProduct = document.querySelector('[data-not-checked-product]');
+    const checkProducts = document.querySelectorAll('[data-checked-product]');
+    const checkNotProducts = document.querySelector('[data-not-checked-product]');
     const orders = document.querySelectorAll('[data-order]');
+    const bar = document.querySelector('[data-action-bar]');
 
     const calculateAmount = () => {
       // Распарсить сумму с пробелами и запятой
@@ -28,25 +30,31 @@ if (checkMain) {
       document.querySelector('[data-order-count]').textContent = String(count);
 
       if (count > 0) {
-        checkActions.forEach(block => block.classList.remove('d-none'));
-        blockNotProduct.classList.add('d-none');
+        checkProducts.forEach(block => block.classList.remove('d-none'));
+        checkNotProducts.classList.add('d-none');
       } else {
-        checkActions.forEach(block => block.classList.add('d-none'));
-        blockNotProduct.classList.remove('d-none');
+        checkProducts.forEach(block => block.classList.add('d-none'));
+        checkNotProducts.classList.remove('d-none');
       }
     };
 
+    const updateBar = () => {
+      const anyChecked = [...checks].some(check => check.checked);
+      bar.classList.toggle('action-bar--is-visible', anyChecked);
+    };
+
     checkMain.addEventListener('change', () => {
-        checks.forEach(check => {
-            check.checked = checkMain.checked;
-            calculateAmount();
-        });
+      checks.forEach(check => check.checked = checkMain.checked);
+      updateBar();
+      calculateAmount();
     });
 
     checks.forEach(check => {
-        check.addEventListener('change', () => {
-            checkMain.checked = [...checks].every(item => item.checked);
-            calculateAmount();
-        });
+      check.addEventListener('change', () => {
+        checkMain.checked = [...checks].every(c => c.checked);
+        updateBar();
+        calculateAmount();
+      });
     });
+  })
 }

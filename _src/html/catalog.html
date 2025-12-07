@@ -5,8 +5,7 @@
     <!-- //////////////////////////////////////////////////////////  -->
     @@include('block/breadcrumb.html')
 
-    <div class="container">
-        <section class="catalog">
+    <section class="catalog container">
             <h1 class="title title--mb">Каталог автозапчастей</h1>
             <div class="tabs tabs--vertiсal">
                 <div class="tabs__box-btn">
@@ -23,10 +22,10 @@
                                         <div class="search-auto__content">
                                             <div class="search-auto__wrapper-input">
                                                 <input type="text" name="search" class="search-auto__input form-input" placeholder="Введите VIN или FRAME">
-                                                <button type="button" class="search-auto__input-btn btn-light"
+                                                <button type="button" class="search-auto__input-btn btn-light" aria-label="Инфо"
                                                         data-tippy-content="VIN вашего автомобиля является самым надежным идентификатором.
 Если Вы не знаете VIN или сомневаетесь, подойдет ли выбранная деталь к вашему автомобилю — свяжитесь с менеджером магазина">
-                                                    <svg class="btn-light__ico">
+                                                    <svg class="btn-light__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                                     </svg>
                                                 </button>
@@ -161,7 +160,6 @@
                 </div>
             </div>
         </section>
-    </div>
 </main>
 
 @@include('block/footer/footer.html')

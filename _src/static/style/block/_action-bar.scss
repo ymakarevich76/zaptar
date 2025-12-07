@@ -31,7 +31,7 @@
   &__controls {
     background-color: $c-dark;
     min-height: 50px;
-    padding: $gutter $gutter * 2;
+    padding: $gutter * 2 $gutter * 4;
     display: flex;
     grid-auto-flow: column;
   }
