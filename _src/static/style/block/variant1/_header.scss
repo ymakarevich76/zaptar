@@ -97,6 +97,12 @@
     }
   }
 
+  &__form {
+    display: contents;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
   &__input {
     flex-grow: 1;
     background-color: #fff;
