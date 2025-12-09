@@ -80,36 +80,6 @@
   }
 }
 
-.header-contact {
-  $self: &;
-  display: flex;
-  align-items: center;
-  min-height: 24px;
-
-  &__ico {
-    width: 12px;
-    height: 12px;
-    margin-right: $gutter * 2;
-    color: $c-main;
-    opacity: 0.45;
-    transition: opacity 0.2s;
-
-    #{$self}:hover & {
-      opacity: 1;
-    }
-  }
-
-  &__text {
-    font-size: 12px;
-    line-height: 20px;
-  }
-
-  &--has-divider {
-    padding-left: $gutter * 4;
-    border-left: 1px solid $c-main-6;
-  }
-}
-
 .header-search {
   $self: &;
   border-radius: 8px;
@@ -169,7 +139,7 @@
   }
 }
 
-// todo: переименовать классы и объединить стили дропдаунов
+// todo: Саше переименовать классы и объединить стили дропдаунов
 .header-search-dropdown {
   $self: &;
 
@@ -202,7 +172,7 @@
     color: #fff;
   }
 
-  &__caption {
+  &__label {
     color: #fff;
     margin-left: $gutter * 2;
 
@@ -212,35 +182,15 @@
   }
 
   &__menu {
-    position: absolute;
-    top: calc(100% + $gutter);
-    background-color: #fff;
-    border-radius: 8px;
-    padding: $gutter;
-    box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.12);
-    display: flex;
-    flex-direction: column;
-    z-index: 100;
-    opacity: 0;
-    transition: 0.2s;
-    visibility: hidden;
-    transform: translateY(4px);
+    left: 0;
+    pointer-events: none;
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 100%;
-      left: 0;
-      right: 0;
-      height: 4px;
-    }
-
-    @media (min-width: $md) {
-      #{$self}:hover & {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-      }
+    #{$self}:hover & {
+      opacity: 1;
+      pointer-events: visible;
+      visibility: visible;
+      transform: translateY(0);
+      transition:  opacity .2s ease, transform 0.2s ease, visibility 0s linear 0s;
     }
   }
 
@@ -369,35 +319,41 @@
   }
 
   &__menu {
-    border-radius: 8px;
-    background-color: #fff;
     right: 0;
-    position: absolute;
-    top: calc(100% + 4px);
-    padding: $gutter;
-    color: $c-main;
-    z-index: 100;
-    min-width: 183px;
-    opacity: 0;
-    transition: 0.2s;
-    visibility: hidden;
-    transform: translateY(4px);
-    box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.12);
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 100%;
-      left: 0;
-      right: 0;
-      height: 4px;
-    }
+    pointer-events: none;
 
     #{$self}:hover & {
       opacity: 1;
+      pointer-events: visible;
       visibility: visible;
       transform: translateY(0);
+      transition:  opacity .2s ease, transform 0.2s ease, visibility 0s linear 0s;
     }
+  }
+}
+
+.header-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: $gutter;
+  color: $c-main;
+  min-width: 183px;
+  transition: opacity .2s ease, transform .2s ease, visibility 0s linear .2s;
+  transform: translateY(4px);
+  box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.12);
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 4px;
   }
 
   &__link {
@@ -410,7 +366,13 @@
     transition: background-color 0.2s;
     border-radius: 4px;
 
-    &:hover {
+    @media (hover: hover) {
+      &:hover {
+        background-color: $c-light;
+      }
+    }
+
+    &:active {
       background-color: $c-light;
     }
 

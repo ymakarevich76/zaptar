@@ -1,6 +1,8 @@
 .drawer {
   &__content {
     width: 400px;
+    display: flex;
+    flex-direction: column;
 
     .modal__inner--open-left & {
       border-top-right-radius: 16px;
@@ -114,5 +116,19 @@
     background-color: $c-light;
     border-radius: 8px;
     padding: $gutter * 3;
+  }
+
+  &__contacts {
+    margin-top: auto;
+    display: grid;
+    gap: $gutter;
+    padding: $gutter * 3 $gutter * 3 $gutter * 6;
+  }
+
+  &__contacts-title {
+    font-weight: 600;
+    color: $c-main-65;
+    border-bottom: 1px solid $c-main-6;
+    padding-bottom: $gutter;
   }
 }
