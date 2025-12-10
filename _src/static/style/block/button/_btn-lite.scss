@@ -11,9 +11,14 @@
   border-radius: 4px;
   transition: background-color .2s;
   cursor: pointer;
-  color: var(--btn-light-ico-color $c-main-88);
   font-size: 14px;
   line-height: 1.2;
+
+  &[disabled] {
+    color: $c-main-45 !important;
+    background-color: transparent !important;
+    cursor: not-allowed;
+  }
 
   &:not(#{$self}--compact) {
     padding-left: $gutter * 2;
@@ -21,6 +26,8 @@
   }
 
   &--theme-default {
+    color: var(--btn-lite-ico-color, $c-main-88) !important;
+
     @media (hover: hover) {
       &:hover {
         background-color: $c-main-6;
