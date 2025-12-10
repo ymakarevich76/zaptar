@@ -1,4 +1,4 @@
-.header {
+.header-v2 {
   position: absolute;
   z-index: 200;
   top: 0;
@@ -80,7 +80,7 @@
   }
 }
 
-.header-search {
+.header-v2-search {
   $self: &;
   border-radius: 8px;
   position: relative;
@@ -140,7 +140,7 @@
 }
 
 // todo: Саше переименовать классы и объединить стили дропдаунов
-.header-search-dropdown {
+.header-v2-search-dropdown {
   $self: &;
 
   &__toggle {
@@ -210,7 +210,7 @@
   }
 }
 
-.header-bottom-actions {
+.header-v2-bottom-actions {
   display: grid;
   grid-auto-flow: column;
   column-gap: $gutter * 4;
@@ -232,7 +232,7 @@
   }
 }
 
-.header-btn {
+.header-v2-btn {
   $self: &;
   min-width: 32px;
   min-height: 32px;
@@ -280,7 +280,7 @@
   }
 }
 
-.header-btn-wallet {
+.header-v2-btn-wallet {
   @media (max-width: $lg) {
     --header-btn-padding-x: #{$gutter * 2};
   }
@@ -304,7 +304,7 @@
   }
 }
 
-.header-user-dropdown {
+.header-v2-user-dropdown {
   $self: &;
   position: relative;
 
@@ -332,7 +332,7 @@
   }
 }
 
-.header-dropdown-menu {
+.header-v2-dropdown-menu {
   position: absolute;
   top: calc(100% + 4px);
   z-index: 100;
