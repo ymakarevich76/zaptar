@@ -66,17 +66,16 @@
   &__search {
     max-width: 696px;
     width: 100%;
-    margin-right: $gutter * 6;
-
-    @media (max-width: $md) {
-      margin-right: $gutter * 2;
-      max-width: 100%;
-    }
+    margin-right: auto;
   }
 
   &__bottom-actions {
-    margin-left: auto;
+    margin-left: $gutter * 6;
     flex-shrink: 0;
+
+    @media (max-width: $md) {
+      margin-left: $gutter * 2;
+    }
   }
 }
 
