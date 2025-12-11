@@ -1,11 +1,11 @@
-<header class="header-v2" data-header>
-    <div class="header-v2__top">
-        <div class="header-v2__container container">
+<header class="header" data-header>
+    <div class="header__top">
+        <div class="header__container container">
             <a class="logo" href="/">
-                <img class="logo__img" src="static/img/logo/logo.svg" width="198" height="32" alt="zaptar">
+                <img class="logo__img" src="static/img/logo/logo-2.svg" width="198" height="32" alt="zaptar">
             </a>
 
-            <div class="header-v2__top-contacts">
+            <div class="header__top-contacts">
                 <a class="contact-link" href="tel:89308255335">
                     <svg class="contact-link__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
@@ -30,51 +30,109 @@
                     <span class="contact-link__label">info@zaptar.ru</span>
                 </a>
             </div>
+            <!-- Пользователь авторизован -->
+            <div class="header-autorization header-user-dropdown d-md-none">
+                <button type="button" class="header-user-dropdown__toggle header-btn header-btn--gray">
+                    Иван
+                    <svg aria-hidden="true" class="header-btn__ico header-btn__ico--sm">
+                        <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+                    </svg>
+                </button>
+
+                <div class="header-user-dropdown__menu dropdown-menu">
+                    <a class="dropdown-menu__link" data-modal="drawer-profile" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#user"></use>
+                        </svg>
+                        Профиль
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#dollar"></use>
+                        </svg>
+                        Мои финансы
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#line-chart"></use>
+                        </svg>
+                        Ценообразование
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                        </svg>
+                        Пополнить баланс
+                    </a>
+                    <a class="dropdown-menu__link dropdown-menu__link--logout" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
+                        </svg>
+                        Выйти
+                    </a>
+                </div>
+            </div>
+
+            <!-- Пользователь не авторизован -->
+
+            <!-- <div class="header-autorization"> -->
+            <!--     <a class="header-btn" href="#"> -->
+            <!--         Регистрация -->
+            <!--     </a> -->
+
+            <!--     <button type="button" data-modal="auth" class="header-btn header-btn&#45;&#45;accent"> -->
+            <!--         <svg aria-hidden="true" class="header-btn__ico"> -->
+            <!--             <use xlink:href="static/img/symbol/sprite.svg#user"></use> -->
+            <!--         </svg> -->
+
+            <!--         <span>Войти</span> -->
+            <!--     </button> -->
+            <!-- </div> -->
 
             <!-- мобайл -->
-            <nav class="header-v2__top-actions">
+            <nav class="header__top-actions">
                 <!-- Пользователь не авторизован -->
-                    <a href="#" class="btn-primary">
-                        Регистрация
-                    </a>
+                <!--     <a href="#" class="btn-primary"> -->
+                <!--         Регистрация -->
+                <!--     </a> -->
 
-                    <a href="#" class="btn btn--size-s">
-                        Войти
-                    </a>
+                <!--     <a href="#" class="btn btn&#45;&#45;size-s"> -->
+                <!--         Войти -->
+                <!--     </a> -->
 
                 <!-- Пользователь авторизован -->
-                <a class="header-v2-btn header-v2-btn--gray header-v2-btn--narrow" aria-label="Чат" href="#">
-                    <svg aria-hidden="true" class="header-v2-btn__ico">
+                <a class="header-btn header-btn--gray header-btn--narrow" aria-label="Чат" href="#">
+                    <svg aria-hidden="true" class="header-btn__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
                     </svg>
                 </a>
 
-                <a class="header-v2-btn header-v2-btn--gray header-v2-btn--narrow" aria-label="Гараж" href="#">
-                    <svg aria-hidden="true" class="header-v2-btn__ico">
+                <a class="header-btn header-btn--gray header-btn--narrow" aria-label="Гараж" href="#">
+                    <svg aria-hidden="true" class="header-btn__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#car"></use>
                     </svg>
                 </a>
 
-                <a class="header-v2-btn header-v2-btn--gray header-v2-btn--narrow" aria-label="Гараж" href="#">
-                    <svg aria-hidden="true" class="header-v2-btn__ico">
+                <a class="header-btn header-btn--gray header-btn--narrow" aria-label="Гараж" href="#">
+                    <svg aria-hidden="true" class="header-btn__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#inbox"></use>
                     </svg>
                 </a>
 
-                <a class="header-v2-btn header-v2-btn--gray header-v2-btn--narrow" aria-label="Избранное" href="#">
-                    <svg aria-hidden="true" class="header-v2-btn__ico">
+                <a class="header-btn header-btn--gray header-btn--narrow" aria-label="Избранное" href="#">
+                    <svg aria-hidden="true" class="header-btn__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                     </svg>
                 </a>
 
-                <a class="header-v2-btn header-v2-btn--gray header-v2-btn--narrow" aria-label="Корзина" href="#">
-                    <svg aria-hidden="true" class="header-v2-btn__ico">
+                <a class="header-btn header-btn--gray header-btn--narrow" aria-label="Корзина" href="#">
+                    <svg aria-hidden="true" class="header-btn__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
                     </svg>
                 </a>
 
-                <button type="button" aria-label="Пользователь" class="header-v2-user-dropdown__toggle header-v2-btn header-v2-btn--gray header-v2-btn--narrow"data-modal="drawer-user">
-                    <svg aria-hidden="true" class="header-v2-btn__ico">
+                <button type="button" aria-label="Пользователь" class="header-user-dropdown__toggle header-btn header-btn--gray header-btn--narrow"data-modal="drawer-user">
+                    <svg aria-hidden="true" class="header-btn__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#user"></use>
                     </svg>
                 </button>
@@ -82,163 +140,48 @@
         </div>
     </div>
 
-    <div class="header-v2__bottom">
-        <div class="header-v2__container container">
-            <div class="header-v2__search header-v2-search">
-                <div class="header-v2-search__dropdown header-v2-search-dropdown">
-                    <button class="header-v2-search-dropdown__toggle d-md-none">
-                        <svg class="header-v2-search-dropdown__ico" aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
-                        </svg>
-                        <span class="header-v2-search-dropdown__label">Каталог</span>
-                    </button>
-                    <button class="header-v2-search-dropdown__toggle d-none d-md-flex" aria-label="Меню" data-modal="drawer-catalog">
-                        <svg class="header-v2-search-dropdown__ico" aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
-                        </svg>
-                    </button>
+    <!-- Пользователь авторизован -->
+    <div class="header__bottom">
+        <div class="header__container container">
+            <nav class="header__bottom-actions header-bottom-actions">
+                <a class="header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
+                    <svg aria-hidden="true" class="header-btn__ico">
+                        <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
+                    </svg>
+                </a>
 
-                    <nav class="header-v2-search-dropdown__menu header-v2-dropdown-menu">
-                        <a class="header-v2-dropdown-menu__link" href="catalog.html">
-                            Каталог запчастей
-                        </a>
-                        <a class="header-v2-dropdown-menu__link" href="#">
-                            Каталог ТО
-                        </a>
-                        <a class="header-v2-dropdown-menu__link" href="#">
-                            Масла
-                        </a>
-                        <a class="header-v2-dropdown-menu__link" href="#">
-                            Аккумуляторы
-                        </a>
-                        <a class="header-v2-dropdown-menu__link" href="#">
-                            Автолампы
-                        </a>
-                        <a class="header-v2-dropdown-menu__link" href="#">
-                            Шины
-                        </a>
-                        <a class="header-v2-dropdown-menu__link" href="#">
-                            Диски
-                        </a>
-                        <a class="header-v2-dropdown-menu__link" href="#">
-                            Колпаки
-                        </a>
-                        <a class="header-v2-dropdown-menu__link" href="#">
-                            Болты, Гайки
-                        </a>
-                    </nav>
-                </div>
+                <a class="header-bottom-actions__btn-divider header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
+                    <svg aria-hidden="true" class="header-btn__ico">
+                        <use xlink:href="static/img/symbol/sprite.svg#car"></use>
+                    </svg>
+                </a>
 
-                <form class="header-v2-search__form" action="/search.html" method="GET">
-                    <input class="header-v2-search__input" type="search" placeholder="Поиск по артикулу или наименованию" />
+                <a class="header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
+                    <svg aria-hidden="true" class="header-btn__ico">
+                        <use xlink:href="static/img/symbol/sprite.svg#inbox"></use>
+                    </svg>
+                </a>
 
-                    <button class="header-v2-search__btn" aria-label="Поиск по артикулу или наименованию">
-                        <svg class="header-v2-search__btn-ico" aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-                        </svg>
-                    </button>
-                </form>
-            </div>
+                <a class="header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
+                    <svg aria-hidden="true" class="header-btn__ico">
+                        <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                    </svg>
+                </a>
 
-            <!-- Пользователь не авторизован -->
+                <a class="header-bottom-actions__btn-divider header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
+                    <svg aria-hidden="true" class="header-btn__ico">
+                        <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
+                    </svg>
+                </a>
 
-            <div class="header-v2__bottom-actions header-v2-bottom-actions">
-               <a class="header-v2-btn" href="#">
-                   Регистрация
-               </a>
-
-               <button type="button" data-modal="auth" class="header-v2-btn header-v2-btn--accent">
-                   <svg aria-hidden="true" class="header-v2-btn__ico">
-                       <use xlink:href="static/img/symbol/sprite.svg#user"></use>
-                   </svg>
-
-                   <span>Войти</span>
-               </button>
-           </div>
-
-           <!-- Пользователь авторизован -->
-
-           <!-- <nav class="header-v2__bottom-actions header-v2-bottom-actions"> -->
-           <!--     <a class="header-v2-btn header-v2-btn&#45;&#45;gray header-v2-btn&#45;&#45;narrow d-md-none" href="#"> -->
-           <!--         <svg aria-hidden="true" class="header-v2-btn__ico"> -->
-           <!--             <use xlink:href="static/img/symbol/sprite.svg#chat"></use> -->
-           <!--         </svg> -->
-           <!--     </a> -->
-
-           <!--     <a class="header-v2-bottom-actions__btn-divider header-v2-btn header-v2-btn&#45;&#45;gray header-v2-btn&#45;&#45;narrow d-md-none" href="#"> -->
-           <!--         <svg aria-hidden="true" class="header-v2-btn__ico"> -->
-           <!--             <use xlink:href="static/img/symbol/sprite.svg#car"></use> -->
-           <!--         </svg> -->
-           <!--     </a> -->
-
-           <!--     <a class="header-v2-btn header-v2-btn&#45;&#45;gray header-v2-btn&#45;&#45;narrow d-md-none" href="#"> -->
-           <!--         <svg aria-hidden="true" class="header-v2-btn__ico"> -->
-           <!--             <use xlink:href="static/img/symbol/sprite.svg#inbox"></use> -->
-           <!--         </svg> -->
-           <!--     </a> -->
-
-           <!--     <a class="header-v2-btn header-v2-btn&#45;&#45;gray header-v2-btn&#45;&#45;narrow d-md-none" href="#"> -->
-           <!--         <svg aria-hidden="true" class="header-v2-btn__ico"> -->
-           <!--             <use xlink:href="static/img/symbol/sprite.svg#heart"></use> -->
-           <!--         </svg> -->
-           <!--     </a> -->
-
-           <!--     <a class="header-v2-bottom-actions__btn-divider header-v2-btn header-v2-btn&#45;&#45;gray header-v2-btn&#45;&#45;narrow d-md-none" href="#"> -->
-           <!--         <svg aria-hidden="true" class="header-v2-btn__ico"> -->
-           <!--             <use xlink:href="static/img/symbol/sprite.svg#cart"></use> -->
-           <!--         </svg> -->
-           <!--     </a> -->
-
-           <!--     <a class="header-v2-btn header-v2-btn&#45;&#45;gray header-v2-btn-wallet" href="#"> -->
-           <!--          <svg aria-hidden="true" class="header-v2-btn__ico header-v2-btn-wallet__ico"> -->
-           <!--             <use xlink:href="static/img/symbol/sprite.svg#wallet"></use> -->
-           <!--          </svg> -->
-           <!--         <span class="header-v2-btn-wallet__caption">Баланс</span> -->
-           <!--         <span class="header-v2-btn-wallet__balance">+999 999 руб</span> -->
-           <!--     </a> -->
-
-           <!--     <div class="header-v2-user-dropdown d-md-none"> -->
-           <!--         <button type="button" class="header-v2-user-dropdown__toggle header-v2-btn header-v2-btn&#45;&#45;gray"> -->
-           <!--             Иван -->
-           <!--             <svg aria-hidden="true" class="header-v2-btn__ico header-v2-btn__ico&#45;&#45;sm"> -->
-           <!--                 <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use> -->
-           <!--             </svg> -->
-           <!--         </button> -->
-
-           <!--          <div class="header-v2-user-dropdown__menu header-v2-dropdown-menu"> -->
-           <!--              <a class="header-v2-dropdown-menu__link" data-modal="drawer-profile" href="#"> -->
-           <!--                  <svg aria-hidden="true" class="header-v2-dropdown-menu__ico"> -->
-           <!--                      <use xlink:href="static/img/symbol/sprite.svg#user"></use> -->
-           <!--                  </svg> -->
-           <!--                  Профиль -->
-           <!--              </a> -->
-           <!--              <a class="header-v2-dropdown-menu__link" href="#"> -->
-           <!--                  <svg aria-hidden="true" class="header-v2-dropdown-menu__ico"> -->
-           <!--                      <use xlink:href="static/img/symbol/sprite.svg#dollar"></use> -->
-           <!--                  </svg> -->
-           <!--                  Мои финансы -->
-           <!--              </a> -->
-           <!--              <a class="header-v2-dropdown-menu__link" href="#"> -->
-           <!--                  <svg aria-hidden="true" class="header-v2-dropdown-menu__ico"> -->
-           <!--                      <use xlink:href="static/img/symbol/sprite.svg#line-chart"></use> -->
-           <!--                  </svg> -->
-           <!--                  Ценообразование -->
-           <!--              </a> -->
-           <!--              <a class="header-v2-dropdown-menu__link" href="#"> -->
-           <!--                  <svg aria-hidden="true" class="header-v2-dropdown-menu__ico"> -->
-           <!--                      <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use> -->
-           <!--                  </svg> -->
-           <!--                  Пополнить баланс -->
-           <!--              </a> -->
-           <!--              <a class="header-v2-dropdown-menu__link header-v2-dropdown-menu__link&#45;&#45;logout" href="#"> -->
-           <!--                  <svg aria-hidden="true" class="header-v2-dropdown-menu__ico"> -->
-           <!--                      <use xlink:href="static/img/symbol/sprite.svg#logout"></use> -->
-           <!--                  </svg> -->
-           <!--                  Выйти -->
-           <!--              </a> -->
-           <!--          </div> -->
-           <!--     </div> -->
-           <!-- </nav> -->
+                <a class="header-btn header-btn--gray header-btn-wallet" href="#">
+                    <svg aria-hidden="true" class="header-btn__ico header-btn-wallet__ico">
+                        <use xlink:href="static/img/symbol/sprite.svg#wallet"></use>
+                    </svg>
+                    <span class="header-btn-wallet__caption">Баланс</span>
+                    <span class="header-btn-wallet__balance">+999 999 руб</span>
+                </a>
+            </nav>
         </div>
     </div>
 </header>

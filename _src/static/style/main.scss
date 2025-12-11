@@ -33,7 +33,6 @@
 @import "block/alert";
 @import "block/tippy";
 @import "block/tooltip";
-@import "block/contact-link";
 @import "block/tag-bar";
 @import "block/tag";
 @import "block/stepper";
@@ -62,6 +61,7 @@
 @import "block/modal-order-details";
 
 @import "block/nav";
+@import "block/dropdown-menu";
 @import "block/brands";
 @import "block/categories";
 @import "block/map";
@@ -87,11 +87,6 @@
 @import "block/detail-search";
 
 @import "block/footer/footer";
-
-@import "block/temporarily/header/header-1";
-@import "block/temporarily/header/header-2";
-@import "block/temporarily/intro/intro-1";
-@import "block/temporarily/intro/intro-2";
 
 // ///////////////////////////////////////// display
  @import "base/display";
