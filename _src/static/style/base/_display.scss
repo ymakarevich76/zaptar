@@ -20,6 +20,10 @@
   .d-lg-none {
     display: none;
   }
+
+  .d-lg-grid {
+    display: grid;
+  }
 }
 
 @media (max-width: $md) {
