@@ -4,47 +4,165 @@
 
 .btn {
   $self: &;
-
-  background-color: $c-accent;
-  display: flex;
+  display: inline-grid;
+  column-gap: $gutter * 2;
+  grid-auto-flow: column;
   align-items: center;
   justify-content: center;
-  padding: $gutter * 2 $gutter * 4;
-  transition: .2s;
-
-  font-size: 16px;
-  line-height: 24px;
-  color: #fff;
+  transition: background-color .2s, color .2s;
   border-radius: 6px;
-  min-height: 40px;
+  line-height: 1.2;
 
-  &:not(#{$self}--disabled):not(:disabled):is(:hover, :active) {
-    background-color: $c-accent-dark;
+  &--filled {
+    &#{$self}--theme-primary {
+      background-color: $c-accent;
+      color: #fff;
+
+      @media (hover: hover) {
+        &:not(#{$self}--disabled):not(:disabled):is(:hover) {
+          background-color: $c-accent-dark;
+        }
+
+        &:not(#{$self}--disabled):not(:disabled):is(:active) {
+          background-color: #084ec5;
+        }
+      }
+
+      &:not(#{$self}--disabled):not(:disabled):is(:active) {
+        background-color: #084ec5;
+      }
+    }
+
+    &#{$self}--theme-secondary {
+
+    }
+
+    &#{$self}--theme-transparent {
+      color: #fff;
+
+      @media (hover: hover) {
+        &:not(#{$self}--disabled):not(:disabled):is(:hover) {
+          background-color: $c-light-20;
+        }
+
+        &:not(#{$self}--disabled):not(:disabled):is(:active) {
+          background-color: $c-light-30;
+        }
+      }
+
+      &:not(#{$self}--disabled):not(:disabled):is(:active) {
+        background-color: $c-light-30;
+      }
+    }
   }
+
+  &--outlined {
+
+    &#{$self}--theme-primary {
+
+    }
+
+    &#{$self}--theme-secondary {
+
+    }
+  }
+
+  &--size-m {
+    min-height: 32px;
+    min-width: 32px;
+    padding: $gutter $gutter * 4;
+    font-size: 14px;
+
+    #{$self}__ico {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &--size-s {
+
+  }
+
+  &--size-xs {
+
+  }
+
+
 
   &:disabled,
   &--disabled {
     border: 1px solid #D9D9D9;
-    background-color: #0000000A;
-    color: $c-main-45;
+    background-color: $c-light !important;
+    color: #B8B8B8;
   }
 
   &--size-s {
-    min-height: 32px;
-    font-size: 14px;
-    line-height: 22px;
-    padding: $gutter $gutter * 4;
+    //min-height: 32px;
+    //font-size: 14px;
+    //line-height: 22px;
+    //padding: $gutter $gutter * 4;
   }
 
   &--size-xs {
-    min-height: 24px;
-    font-size: 14px;
-    line-height: 22px;
-    padding: $gutter $gutter * 4;
+    //min-height: 24px;
+    //font-size: 14px;
+    //line-height: 22px;
+    //padding: $gutter $gutter * 4;
   }
 
-  @media (max-width: $md) {
-    padding: $gutter $gutter * 2;
-    min-height: 32px;
-  }
+  //@media (max-width: $md) {
+  //  &:not(#{$self}--size-s),
+  //  &:not(#{$self}--size-xs) {
+  //    padding: $gutter $gutter * 2;
+  //    min-height: 32px;
+  //  }
+  //}
 }
+
+//.header-btn {
+//  $self: &;
+//  min-width: 32px;
+//  min-height: 32px;
+//  display: grid;
+//  grid-auto-flow: column;
+//  column-gap: $gutter * 2;
+//  padding: $gutter var(--header-btn-padding-x, $gutter * 4);
+//  border-radius: 6px;
+//  align-items: center;
+//  justify-content: center;
+//  transition: background-color .2s;
+//
+//  &--narrow {
+//    --header-btn-padding-x: $gutter * 2;
+//  }
+//
+//  &:hover {
+//    background-color: $c-light-20;
+//  }
+//
+//  &--accent {
+//    background-color: $c-accent;
+//
+//    &:hover {
+//      background-color: $c-accent-dark;
+//    }
+//  }
+//
+//  &--gray {
+//    background-color: $c-light-20;
+//
+//    &:hover {
+//      background-color: $c-light-30;
+//    }
+//  }
+//
+//  &__ico {
+//    width: 16px;
+//    height: 16px;
+//
+//    &--sm {
+//      width: 12px;
+//      height: 12px;
+//    }
+//  }
+//}

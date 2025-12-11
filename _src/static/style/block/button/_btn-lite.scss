@@ -14,10 +14,11 @@
   font-size: 14px;
   line-height: 1.2;
 
-  &[disabled] {
+  &[disabled],
+  &--disabled {
     color: $c-main-45 !important;
     background-color: transparent !important;
-    cursor: not-allowed;
+    cursor: default;
   }
 
   &:not(#{$self}--compact) {
@@ -26,7 +27,7 @@
   }
 
   &--theme-default {
-    color: var(--btn-lite-ico-color, $c-main-88) !important;
+    color: var(--btn-lite-ico-color, $c-main-88);
 
     @media (hover: hover) {
       &:hover {

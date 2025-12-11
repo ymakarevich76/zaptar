@@ -101,19 +101,12 @@
     right: 8px;
     top: 50%;
     transform: translateY(-50%);
-    border-radius: 4px;
-
+    min-height: 40px;
     min-width: 104px;
 
     @media (max-width: $md) {
       min-width: auto;
     }
-  }
-
-  &__search-ico {
-    width: 16px;
-    height: 16px;
-    fill: white;
   }
 
   &__search-text {
