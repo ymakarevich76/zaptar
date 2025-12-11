@@ -16,6 +16,12 @@
   }
 }
 
+@media (max-width: $lg) {
+  .d-lg-none {
+    display: none;
+  }
+}
+
 @media (max-width: $md) {
   .d-md-block {
     display: block;

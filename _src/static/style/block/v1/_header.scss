@@ -1,4 +1,4 @@
-.header-v1 {
+.header {
   position: absolute;
   z-index: 200;
   top: 0;
@@ -80,7 +80,7 @@
   }
 }
 
-.header-v1-search {
+.header-search {
   $self: &;
   border-radius: 8px;
   position: relative;
@@ -146,7 +146,7 @@
 }
 
 // todo: Саше переименовать классы и объединить стили дропдаунов
-.header-v1-search-dropdown {
+.header-search-dropdown {
   $self: &;
 
   &__toggle {
@@ -216,7 +216,7 @@
   }
 }
 
-.header-v1-bottom-actions {
+.header-bottom-actions {
   display: grid;
   grid-auto-flow: column;
   column-gap: $gutter * 4;
@@ -238,21 +238,21 @@
   }
 }
 
-.header-v1-btn {
+.header-btn {
   $self: &;
   min-width: 32px;
   min-height: 32px;
   display: grid;
   grid-auto-flow: column;
   column-gap: $gutter * 2;
-  padding: $gutter var(--header-v1-btn-padding-x, $gutter * 4);
+  padding: $gutter var(--header-btn-padding-x, $gutter * 4);
   border-radius: 6px;
   align-items: center;
   justify-content: center;
   transition: background-color .2s;
 
   &--narrow {
-    --header-v1-btn-padding-x: $gutter * 2;
+    --header-btn-padding-x: $gutter * 2;
   }
 
   &:hover {
@@ -286,9 +286,9 @@
   }
 }
 
-.header-v1-btn-wallet {
+.header-btn-wallet {
   @media (max-width: $lg) {
-    --header-v1-btn-padding-x: #{$gutter * 2};
+    --header-btn-padding-x: #{$gutter * 2};
   }
 
   &__ico {
@@ -310,13 +310,13 @@
   }
 }
 
-.header-v1-user-dropdown {
+.header-user-dropdown {
   $self: &;
   position: relative;
 
   &__toggle {
     @media (max-width: $lg) {
-      --header-v1-btn-padding-x: #{$gutter * 2};
+      --header-btn-padding-x: #{$gutter * 2};
     }
 
     #{$self}:hover & {
@@ -338,7 +338,7 @@
   }
 }
 
-.header-v1-dropdown-menu {
+.header-dropdown-menu {
   position: absolute;
   top: calc(100% + 4px);
   z-index: 100;

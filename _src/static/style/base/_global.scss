@@ -38,6 +38,15 @@ body {
     padding-bottom: $gutter * 6;
     gap: $gutter * 6;
   }
+
+  &--mt {
+    margin-top: -128px;
+    padding-top: 0;
+
+    @media (max-width: $lg) {
+      padding-top: 0;
+    }
+  }
 }
 
 img {
