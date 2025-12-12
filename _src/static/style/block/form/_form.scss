@@ -130,7 +130,6 @@
 
   &__btn {
     width: 100%;
-    border-radius: 8px;
   }
 
   &__radio-actions {
@@ -330,9 +329,7 @@
   }
 
   &__delete {
-    svg {
-      fill: $c-main-45;
-    }
+    color: $c-main-45;
   }
 }
 

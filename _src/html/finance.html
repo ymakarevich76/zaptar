@@ -1,266 +1,265 @@
 @@include('block/head.html')
-@@include('block/header/header.html')
+@@include('$version/block/header.html')
 
 <main class="main">
     <!-- //////////////////////////////////////////////////////////  -->
     @@include('block/breadcrumb.html')
 
     <section class="finance container">
-            <div class="section-header section-header--mb section-header--mobile-row">
-                <div class="section-header__group">
-                    <h1 class="title">Мои финансы</h1>
-                </div>
-
-                <div class="section-header__group">
-                <!--     Todo: Саше кнопки -->
-                    <button type="button" class="btn-primary finance__header-btn" data-modal="drawer-deduce">
-                        <svg aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#arrow-down"></use>
-                        </svg>
-                        Вывести средства
-                    </button>
-                    <button type="button" class="btn btn--size-s finance__header-btn" data-modal="drawer-recharge">
-                        <svg aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#arrow-up"></use>
-                        </svg>
-                        Пополнить баланс
-                    </button>
-                </div>
+        <div class="section-header section-header--mb section-header--mobile-row">
+            <div class="section-header__group">
+                <h1 class="title">Мои финансы</h1>
             </div>
-            <div class="finance__info">
-                <div class="finance__left finance-block">
-                    <h2 class="title-2">Состояние счетов</h2>
-                    <table class="finance-table-1 table-2">
-                        <tr>
-                            <th>
-                                Баланс клиента
-                            </th>
-                            <th>
-                                Сумма последнего зачисления
-                            </th>
-                            <th>
-                                Доступная сумма заказа
-                            </th>
-                            <th>
-                                Кредитный лимит
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span>Баланс клиента: </span>
-                                81,00
-                            </td>
-                            <td>
-                                <span>Сумма последнего зачисления: </span>
-                                11,00
-                            </td>
-                            <td>
-                                <span> Доступная сумма заказа: </span>
-                                81,00
-                            </td>
-                            <td>
-                                <span>Кредитный лимит: </span>
-                                Без ограничений
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="finance__right finance-block">
-                    <h2 class="title-2">Информация о заказах</h2>
-                    <table class="finance-table-2 table-2">
-                        <tr>
-                            <th>
-                                Заказы в работе
-                            </th>
-                            <th>
-                                Возвраты в работе
-                            </th>
-                            <th>
-                                Ожидаемая отгрузка на завтра
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span>Заказы в работе: </span>
-                                0,00
-                            </td>
-                            <td>
-                                <span>Возвраты в работе: </span>
-                                0,00
-                            </td>
-                            <td>
-                                <span>Ожидаемая отгрузка на завтра: </span>
-                                0,00
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="finance__bottom finance-block">
-                    <div class="section-header section-header--mobile-row">
-                        <div class="section-header__group">
-                            <h2 class="title-2">Операции</h2>
-                        </div>
 
-                        <div class="section-header__group">
-                            <div class="finance__select-wrapper">
-                                <label for="filter-finance">Фильтр:</label>
-                                @@include('block/select.html', {
-                                "id": "filter-finance",
-                                "text": "За последние 12 месяцев",
-                                "option1": { "title": "За последние 12 месяцев", "value": "year" },
-                                "option2": { "title": "За последние 3 месяца", "value": "month-3" },
-                                "option3": { "title": "За последние 7 дней", "value": "week" },
-                                "class": "finance__select",
-                                })
-                            </div>
-                            <button type="button" class="btn-light btn-light--size-l" aria-label="Загрузить">
-                                <svg class="btn-light__ico" aria-hidden="true">
-                                    <use xlink:href="static/img/symbol/sprite.svg#download"></use>
-                                </svg>
-                            </button>
-                        </div>
+            <div class="section-header__group">
+                <button type="button" class="finance__header-btn btn btn--outlined btn--theme-secondary btn--size-m" data-modal="drawer-deduce">
+                    <svg class="btn__ico d-xs-none" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#arrow-down"></use>
+                    </svg>
+                    Вывести средства
+                </button>
+                <button type="button" class="finance__header-btn btn btn--filled btn--theme-primary btn--size-m" data-modal="drawer-recharge">
+                    <svg class="btn__ico d-xs-none" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#arrow-up"></use>
+                    </svg>
+                    Пополнить баланс
+                </button>
+            </div>
+        </div>
+        <div class="finance__info">
+            <div class="finance__left finance-block">
+                <h2 class="title-2">Состояние счетов</h2>
+                <table class="finance-table-1 table-2">
+                    <tr>
+                        <th>
+                            Баланс клиента
+                        </th>
+                        <th>
+                            Сумма последнего зачисления
+                        </th>
+                        <th>
+                            Доступная сумма заказа
+                        </th>
+                        <th>
+                            Кредитный лимит
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Баланс клиента: </span>
+                            81,00
+                        </td>
+                        <td>
+                            <span>Сумма последнего зачисления: </span>
+                            11,00
+                        </td>
+                        <td>
+                            <span> Доступная сумма заказа: </span>
+                            81,00
+                        </td>
+                        <td>
+                            <span>Кредитный лимит: </span>
+                            Без ограничений
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="finance__right finance-block">
+                <h2 class="title-2">Информация о заказах</h2>
+                <table class="finance-table-2 table-2">
+                    <tr>
+                        <th>
+                            Заказы в работе
+                        </th>
+                        <th>
+                            Возвраты в работе
+                        </th>
+                        <th>
+                            Ожидаемая отгрузка на завтра
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Заказы в работе: </span>
+                            0,00
+                        </td>
+                        <td>
+                            <span>Возвраты в работе: </span>
+                            0,00
+                        </td>
+                        <td>
+                            <span>Ожидаемая отгрузка на завтра: </span>
+                            0,00
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="finance__bottom finance-block">
+                <div class="section-header section-header--mobile-row">
+                    <div class="section-header__group">
+                        <h2 class="title-2">Операции</h2>
                     </div>
-                    <table class="finance-table-3 table-2">
-                        <tr>
-                            <th class="finance-table-3__data">
-                                Дата
-                            </th>
-                            <th>
-                                Оплата
-                            </th>
-                            <th>
-                                Отгружено
-                            </th>
-                            <th>
-                                Сальдо
-                            </th>
-                            <th class="finance-table-3__document">
-                                Документ
-                            </th>
-                            <th class="finance-table-3__comment">
-                                Комментарий
-                            </th>
-                        </tr>
-                        <tr>
-                            <td class="finance-table-3__data">
-                                26.11.2024 19:11:00
-                            </td>
-                            <td class="finance-table-3__payment">
-                                <span>Оплата: </span>
-                                11,00
-                            </td>
-                            <td class="finance-table-3__shipped">
-                                <span>Отгружено: </span>
-                                -
-                            </td>
-                            <td class="finance-table-3__balance finance-table-3__balance--accent">
-                                <span>Сальдо: </span>
-                                81,00
-                            </td>
-                            <td class="finance-table-3__document">
-                                -
-                            </td>
-                            <td class="finance-table-3__comment">
-                                <span>Комментарий: </span>
-                                Аванс (Эквайринг)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="finance-table-3__data">
-                                26.11.2024 19:11:00
-                            </td>
-                            <td class="finance-table-3__payment">
-                                <span>Оплата: </span>
-                                156,00
-                            </td>
-                            <td class="finance-table-3__shipped">
-                                <span>Отгружено: </span>
-                                -
-                            </td>
-                            <td class="finance-table-3__balance">
-                                <span>Сальдо: </span>
-                                70,00
-                            </td>
-                            <td class="finance-table-3__document">
-                                -
-                            </td>
-                            <td class="finance-table-3__comment">
-                                <span>Комментарий: </span>
-                                Возврат OSRAM 7506 кол-во 1 шт. лампа накаливания из заказа №7138367
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="finance-table-3__data">
-                                26.11.2024 19:11:00
-                            </td>
-                            <td class="finance-table-3__payment">
-                                <span>Оплата: </span>
-                                -
-                            </td>
-                            <td class="finance-table-3__shipped">
-                                <span>Отгружено: </span>
-                                156,00
-                            </td>
-                            <td class="finance-table-3__balance finance-table-3__balance--bad">
-                                <span>Сальдо: </span>
-                                -86,00
-                            </td>
-                            <td class="finance-table-3__document">
-                                <div class="finance-table-3__wrapper-btn">
-                                    <a href="#" class="finance-table-3__download" download data-tippy-content="Скачать">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#download"></use>
-                                        </svg>
-                                        Лист отгрузки
-                                    </a>
-                                </div>
-                            </td>
-                            <td class="finance-table-3__comment">
-                                <span>Комментарий: </span>
-                                Выдача
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="finance-table-3__data">
-                                26.11.2024 19:11:00
-                            </td>
-                            <td class="finance-table-3__payment">
-                                <span>Оплата: </span>
-                                -
-                            </td>
-                            <td class="finance-table-3__shipped">
-                                <span>Отгружено: </span>
-                                156,00
-                            </td>
-                            <td class="finance-table-3__balance finance-table-3__balance--bad">
-                                <span>Сальдо: </span>
-                                -86,00
-                            </td>
-                            <td class="finance-table-3__document">
-                                <div class="finance-table-3__wrapper-btn">
-                                    <a href="#" class="finance-table-3__download" download data-tippy-content="Скачать">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#download"></use>
-                                        </svg>
-                                        Упд
-                                    </a>
-                                    <a href="#" class="finance-table-3__download" download data-tippy-content="Скачать">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#download"></use>
-                                        </svg>
-                                        Счет
-                                    </a>
-                                </div>
-                            </td>
-                            <td class="finance-table-3__comment">
-                                <span>Комментарий: </span>
-                                Выдача
-                            </td>
-                        </tr>
-                    </table>
+
+                    <div class="section-header__group">
+                        <div class="finance__select-wrapper">
+                            <label for="filter-finance">Фильтр:</label>
+                            @@include('block/select.html', {
+                            "id": "filter-finance",
+                            "text": "За последние 12 месяцев",
+                            "option1": { "title": "За последние 12 месяцев", "value": "year" },
+                            "option2": { "title": "За последние 3 месяца", "value": "month-3" },
+                            "option3": { "title": "За последние 7 дней", "value": "week" },
+                            "class": "finance__select",
+                            })
+                        </div>
+                        <button type="button" class="btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" aria-label="Загрузить">
+                            <svg class="btn-lite__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#download"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
+                <table class="finance-table-3 table-2">
+                    <tr>
+                        <th class="finance-table-3__data">
+                            Дата
+                        </th>
+                        <th>
+                            Оплата
+                        </th>
+                        <th>
+                            Отгружено
+                        </th>
+                        <th>
+                            Сальдо
+                        </th>
+                        <th class="finance-table-3__document">
+                            Документ
+                        </th>
+                        <th class="finance-table-3__comment">
+                            Комментарий
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="finance-table-3__data">
+                            26.11.2024 19:11:00
+                        </td>
+                        <td class="finance-table-3__payment">
+                            <span>Оплата: </span>
+                            11,00
+                        </td>
+                        <td class="finance-table-3__shipped">
+                            <span>Отгружено: </span>
+                            -
+                        </td>
+                        <td class="finance-table-3__balance finance-table-3__balance--accent">
+                            <span>Сальдо: </span>
+                            81,00
+                        </td>
+                        <td class="finance-table-3__document">
+                            -
+                        </td>
+                        <td class="finance-table-3__comment">
+                            <span>Комментарий: </span>
+                            Аванс (Эквайринг)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="finance-table-3__data">
+                            26.11.2024 19:11:00
+                        </td>
+                        <td class="finance-table-3__payment">
+                            <span>Оплата: </span>
+                            156,00
+                        </td>
+                        <td class="finance-table-3__shipped">
+                            <span>Отгружено: </span>
+                            -
+                        </td>
+                        <td class="finance-table-3__balance">
+                            <span>Сальдо: </span>
+                            70,00
+                        </td>
+                        <td class="finance-table-3__document">
+                            -
+                        </td>
+                        <td class="finance-table-3__comment">
+                            <span>Комментарий: </span>
+                            Возврат OSRAM 7506 кол-во 1 шт. лампа накаливания из заказа №7138367
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="finance-table-3__data">
+                            26.11.2024 19:11:00
+                        </td>
+                        <td class="finance-table-3__payment">
+                            <span>Оплата: </span>
+                            -
+                        </td>
+                        <td class="finance-table-3__shipped">
+                            <span>Отгружено: </span>
+                            156,00
+                        </td>
+                        <td class="finance-table-3__balance finance-table-3__balance--bad">
+                            <span>Сальдо: </span>
+                            -86,00
+                        </td>
+                        <td class="finance-table-3__document">
+                            <div class="finance-table-3__wrapper-btn">
+                                <a href="#" class="finance-table-3__download nowrap btn btn--outlined btn--theme-primary btn--size-s" download data-tippy-content="Скачать">
+                                    <svg class="btn__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#download"></use>
+                                    </svg>
+                                    Лист отгрузки
+                                </a>
+                            </div>
+                        </td>
+                        <td class="finance-table-3__comment">
+                            <span>Комментарий: </span>
+                            Выдача
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="finance-table-3__data">
+                            26.11.2024 19:11:00
+                        </td>
+                        <td class="finance-table-3__payment">
+                            <span>Оплата: </span>
+                            -
+                        </td>
+                        <td class="finance-table-3__shipped">
+                            <span>Отгружено: </span>
+                            156,00
+                        </td>
+                        <td class="finance-table-3__balance finance-table-3__balance--bad">
+                            <span>Сальдо: </span>
+                            -86,00
+                        </td>
+                        <td class="finance-table-3__document">
+                            <div class="finance-table-3__wrapper-btn">
+                                <a href="#" class="finance-table-3__download btn btn--outlined btn--theme-primary btn--size-s" download data-tippy-content="Скачать">
+                                    <svg class="btn__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#download"></use>
+                                    </svg>
+                                    Упд
+                                </a>
+                                <a href="#" class="finance-table-3__download btn btn--outlined btn--theme-primary btn--size-s" download data-tippy-content="Скачать">
+                                    <svg class="btn__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#download"></use>
+                                    </svg>
+                                    Счет
+                                </a>
+                            </div>
+                        </td>
+                        <td class="finance-table-3__comment">
+                            <span>Комментарий: </span>
+                            Выдача
+                        </td>
+                    </tr>
+                </table>
             </div>
-        </section>
+        </div>
+    </section>
 </main>
 
 @@include('block/footer/footer.html')

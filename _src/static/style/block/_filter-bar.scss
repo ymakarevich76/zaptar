@@ -55,12 +55,14 @@
 .filter-bar-tag {
   display: flex;
   align-items: center;
-  line-height: 20px;
+  min-height: 22px;
+  line-height: 1.2;
   border-radius: 4px;
   background-color: $c-light;
   padding-left: $gutter * 2;
   padding-right: $gutter * 2;
   white-space: nowrap;
+  font-size: 12px;
 
   @media (max-width: $md) {
     min-height: 40px;

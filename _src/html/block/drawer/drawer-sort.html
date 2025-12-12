@@ -1,0 +1,46 @@
+<div id="drawer-sort" class="drawer modal">
+    <div class="modal__inner modal__inner--open-right">
+        <div class="modal__content drawer__content">
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="drawer__header">
+                <h3 class="title-4">Сортировка</h3>
+            </div>
+            <div class="drawer__info">
+                <form action="" class="drawer__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="sort-product-status">Выберите статус</label>
+                        @@include('../select.html', {
+                            "id": "sort-product-status",
+                            "text": "Выберите статус",
+                            "option1": { "title": "В обработке", "value": "value-1" },
+                            "option2": { "title": "Возврат проведен", "value": "value-2" },
+                            "option3": { "title": "В разборе", "value": "value-3" },
+                        })
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="sort-product-price">Выберите цену</label>
+                        @@include('../select.html', {
+                        "id": "sort-product-price",
+                        "text": "Выберите цену",
+                        "option1": { "title": "Наценка (10,00)", "value": "value-1" },
+                        "option2": { "title": "Наценка (20,00)", "value": "value-2" },
+                        "option3": { "title": "Без наценки", "value": "value-3" },
+                        })
+                    </div>
+                </form>
+                <div class="drawer__footer">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="sort-product-status, sort-product-price">
+                        Сбросить
+                    </button>
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
+                        Применить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

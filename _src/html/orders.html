@@ -1,5 +1,5 @@
 @@include('block/head.html')
-@@include('block/header/header.html')
+@@include('$version/block/header.html')
 
 <main class="main">
     @@include('block/breadcrumb.html')
@@ -9,18 +9,30 @@
             <h1 class="title">Заказы</h1>
 
             <div class="section-header__group">
-                <a class="btn-primary" href="#">
-                    <svg class="orders__btn-ico" aria-hidden="true">
-                        <use xlink:href="static/img/symbol/sprite.svg#mark"></use>
+                <a class="orders__header-btn btn btn--outlined btn--theme-secondary btn--size-m" href="#">
+                    <svg class="btn__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#folder"></use>
                     </svg>
-                    Архив заказов
+                    <span class="d-md-none">
+                        Архив заказов
+                    </span>
                 </a>
 
-                <button class="btn-primary" type="button" data-modal="drawer-filter-orders">
-                    <svg class="orders__btn-ico" aria-hidden="true">
+                <button class="orders__header-btn btn btn--outlined btn--theme-secondary btn--size-m" type="button" data-modal="drawer-filter-orders">
+                    <svg class="btn__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#filter"></use>
                     </svg>
-                    Фильтр
+                    <span class="d-md-none">
+                        Фильтр
+                    </span>
+                </button>
+                <button class="orders__header-btn btn btn--outlined btn--theme-secondary btn--size-m d-none d-md-inline-flex" type="button" data-modal="drawer-sort">
+                    <svg class="btn__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#sort"></use>
+                    </svg>
+                    <span class="d-md-none">
+                        Сортировка
+                    </span>
                 </button>
             </div>
         </div>
@@ -80,8 +92,8 @@
                                     <div class="table-dropdown__inner">
                                         Цена
 
-                                        <button type="button" class="table-dropdown__trigger btn-light" aria-label="Фильтр" data-dropdown-btn="1">
-                                            <svg class="btn-light__ico" aria-hidden="true">
+                                        <button type="button" class="table-dropdown__trigger btn-lite btn-lite--compact btn-lite--theme-default" aria-label="Фильтр" data-dropdown-btn="1">
+                                            <svg class="btn-lite__ico" aria-hidden="true">
                                                 <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                             </svg>
                                         </button>
@@ -96,8 +108,8 @@
                                     <div class="table-dropdown__inner">
                                         Статус
 
-                                        <button type="button" class="table-dropdown__trigger btn-light" aria-label="Фильтр" data-dropdown-btn="2">
-                                            <svg class="btn-light__ico" aria-hidden="true">
+                                        <button type="button" class="table-dropdown__trigger btn-lite btn-lite--compact btn-lite--theme-default" aria-label="Фильтр" data-dropdown-btn="2">
+                                            <svg class="btn-lite__ico" aria-hidden="true">
                                                 <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                             </svg>
                                         </button>
@@ -128,13 +140,13 @@
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light" data-tippy-content="Создать обсуждение">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <a href="#" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default" data-tippy-content="Создать обсуждение">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
                                     </a>
-                                    <button aria-label="информация по заказу" class="btn-light" data-tippy-content="Информация по заказу">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <button aria-label="информация по заказу" data-modal="modal-order-details" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
                                     </button>
@@ -231,13 +243,13 @@
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <a href="#" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
                                     </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <button aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
                                     </button>
@@ -334,13 +346,13 @@
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <a href="#" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
                                     </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <button aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
                                     </button>
@@ -437,13 +449,13 @@
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <a href="#" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
                                     </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <button aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
                                     </button>
@@ -540,13 +552,13 @@
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <a href="#" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
                                     </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <button aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
                                     </button>
@@ -643,13 +655,13 @@
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <button href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <button href="#" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
                                     </button>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <button aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
                                     </button>
@@ -746,13 +758,13 @@
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <a href="#" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
                                     </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <button aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
                                     </button>
@@ -849,13 +861,13 @@
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <a href="#" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
                                     </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <button aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
                                     </button>
@@ -952,13 +964,13 @@
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <a href="#" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
                                     </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <button aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
                                     </button>
@@ -1055,13 +1067,13 @@
                             <td>
                                 <!-- Действия -->
                                 <div class="table__actions">
-                                    <a href="#" aria-label="создать обсуждение" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <a href="#" aria-label="создать обсуждение" class="btn-lite btn-lite--theme-default btn-lite--compact">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                                         </svg>
                                     </a>
-                                    <button aria-label="информация по заказу" class="btn-light">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <button aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                                         </svg>
                                     </button>
@@ -1147,14 +1159,14 @@
 
             <div class="table-footer">
                 <div class="table-footer__actions">
-                    <button type="button" disabled class="btn-text" data-not-checked-product>
+                    <div class="btn-lite btn-lite--theme-default btn-lite--disabled" data-not-checked-product>
                         Товар не выбран
-                    </button>
+                    </div>
 
-                    <button type="button" class="btn-text btn-text--theme-danger d-none" data-checked-product data-tippy-content="Переносятся заказы только в статусе «Отгружено», «Возврат проведен», «Отказ», Отказ по недостаче»" data-width-tooltip="196">
+                    <button type="button" class="btn-lite btn-lite--theme-danger d-none" data-checked-product data-tippy-content="Переносятся заказы только в статусе «Отгружено», «Возврат проведен», «Отказ», Отказ по недостаче»" data-width-tooltip="196">
                         В архив
                     </button>
-                    <button type="button" class="btn-text btn-text--theme-default d-none" data-checked-product data-modal="modal-change-address" data-tippy-content="Переносятся заказы только в статусе «Отгружено», «Возврат проведен», «Отказ», Отказ по недостаче»" data-width-tooltip="154">
+                    <button type="button" class="btn-lite btn-lite--theme-default d-none" data-checked-product data-modal="modal-change-address" data-tippy-content="Переносятся заказы только в статусе «Отгружено», «Возврат проведен», «Отказ», Отказ по недостаче»" data-width-tooltip="154">
                         Изменить пункт самовывоза
                     </button>
                 </div>
@@ -1183,7 +1195,7 @@
             </table>
         </div>
 
-        <div class="d-none d-md-block product-cards">
+        <div class="d-none d-md-grid product-cards">
             <ul class="product-cards__list">
                 <li class="product-card">
                     <div class="product-card__head">
@@ -1229,13 +1241,13 @@
                     </div>
 
                     <div class="product-card__actions">
-                        <button type="button" aria-label="создать обсуждение" class="btn-light">
-                            <svg class="btn-light__ico" aria-hidden="true">
+                        <button type="button" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                            <svg class="btn-lite__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                             </svg>
                         </button>
-                        <button type="button" aria-label="информация по заказу" class="btn-light">
-                            <svg class="btn-light__ico" aria-hidden="true">
+                        <button type="button" data-modal="modal-order-details" aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                            <svg class="btn-lite__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                             </svg>
                         </button>
@@ -1297,13 +1309,13 @@
                     </div>
 
                     <div class="product-card__actions">
-                        <button type="button" aria-label="создать обсуждение" class="btn-light">
-                            <svg class="btn-light__ico" aria-hidden="true">
+                        <button type="button" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                            <svg class="btn-lite__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                             </svg>
                         </button>
-                        <button type="button" aria-label="информация по заказу" class="btn-light">
-                            <svg class="btn-light__ico" aria-hidden="true">
+                        <button type="button" aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                            <svg class="btn-lite__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                             </svg>
                         </button>
@@ -1361,13 +1373,13 @@
                     </div>
 
                     <div class="product-card__actions">
-                        <button type="button" aria-label="создать обсуждение" class="btn-light">
-                            <svg class="btn-light__ico" aria-hidden="true">
+                        <button type="button" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                            <svg class="btn-lite__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                             </svg>
                         </button>
-                        <button type="button" aria-label="информация по заказу" class="btn-light">
-                            <svg class="btn-light__ico" aria-hidden="true">
+                        <button type="button" aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                            <svg class="btn-lite__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                             </svg>
                         </button>
@@ -1424,13 +1436,13 @@
                     </div>
 
                     <div class="product-card__actions">
-                        <button type="button" aria-label="создать обсуждение" class="btn-light">
-                            <svg class="btn-light__ico" aria-hidden="true">
+                        <button type="button" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                            <svg class="btn-lite__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                             </svg>
                         </button>
-                        <button type="button" aria-label="информация по заказу" class="btn-light">
-                            <svg class="btn-light__ico" aria-hidden="true">
+                        <button type="button" aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                            <svg class="btn-lite__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                             </svg>
                         </button>
@@ -1488,13 +1500,13 @@
                     </div>
 
                     <div class="product-card__actions">
-                        <button type="button" aria-label="создать обсуждение" class="btn-light">
-                            <svg class="btn-light__ico" aria-hidden="true">
+                        <button type="button" aria-label="создать обсуждение" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                            <svg class="btn-lite__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
                             </svg>
                         </button>
-                        <button type="button" aria-label="информация по заказу" class="btn-light">
-                            <svg class="btn-light__ico" aria-hidden="true">
+                        <button type="button" aria-label="информация по заказу" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                            <svg class="btn-lite__ico" aria-hidden="true">
                                 <use xlink:href="static/img/symbol/sprite.svg#info-circle"></use>
                             </svg>
                         </button>
@@ -1509,7 +1521,7 @@
                 </li>
             </ul>
 
-            <button type="button" class="product-cards__show-more btn">
+            <button type="button" class="product-cards__show-more btn btn--filled btn--theme-primary btn--size-m">
                 Показать еще
             </button>
 
@@ -1528,11 +1540,15 @@
                     </div>
 
                     <div class="action-bar__btns">
-                        <button class="action-bar__btn header-btn header-btn--gray" type="button">
-                            В архив
+                        <button class="action-bar__btn btn btn--filled btn--theme-secondary btn--size-s" type="button">
+                            <span class="action-bar__btn-label">
+                              В архив
+                            </span>
                         </button>
-                        <button class="action-bar__btn header-btn header-btn--gray" type="button">
-                            Изменить пункт самовывоза
+                        <button class="action-bar__btn btn btn--filled btn--theme-secondary btn--size-s" type="button">
+                            <span class="action-bar__btn-label">
+                              Изменить пункт самовывоза
+                            </span>
                         </button>
                     </div>
                 </div>

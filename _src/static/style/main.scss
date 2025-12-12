@@ -9,8 +9,7 @@
 
 @import "block/button/btn";
 @import "block/button/btn-primary";
-@import "block/button/btn-light";
-@import "block/button/btn-text";
+@import "block/button/btn-lite";
 
 @import "block/link/link";
 // @import "block/link/link-stretched";
@@ -18,7 +17,6 @@
 @import "block/list/list-reset";
 // @import "block/list/list";
 
-@import "block/header/header";
 @import "block/logo";
 @import "block/breadcrumb";
 @import "block/title/title";
@@ -34,6 +32,10 @@
 @import "block/alert";
 @import "block/tippy";
 @import "block/tooltip";
+@import "block/tag-bar";
+@import "block/tag";
+@import "block/stepper";
+@import "block/badge";
 
 @import "block/form/form";
 // @import "block/form/form-group";
@@ -56,9 +58,10 @@
 @import "block/modal/modal";
 @import "block/drawer/drawer";
 @import "block/notification/notification";
+@import "block/modal-order-details";
 
 @import "block/nav";
-@import "block/intro";
+@import "block/dropdown-menu";
 @import "block/brands";
 @import "block/categories";
 @import "block/map";

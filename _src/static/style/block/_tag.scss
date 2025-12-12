@@ -1,0 +1,39 @@
+.tag {
+  $self: &;
+  border-width: 1px;
+  border-style: solid;
+  padding-left: $gutter * 2;
+  padding-right: $gutter * 2;
+  min-height: 22px;
+  border-radius: 4px;
+  line-height: 1.2;
+  display: inline-grid;
+  align-items: center;
+  gap: $gutter;
+  grid-auto-flow: column;
+  white-space: nowrap;
+  font-size: 12px;
+
+  &--theme-default {
+    background-color: $c-main-2;
+    border-color: #D9D9D9;
+  }
+
+  &--theme-accent {
+    border-color: #91CAFF;
+    background-color: $c-accent-light;
+  }
+
+  &__desc {
+    color: $c-main-45;
+  }
+
+  &__label {
+    #{$self}--theme-default & {
+      color: $c-main-88;
+    }
+    #{$self}--theme-accent & {
+      color: $c-accent
+    }
+  }
+}

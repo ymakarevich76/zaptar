@@ -1,34 +1,4 @@
 .btn-primary {
-  $self: &;
-
-  background-color: #fff;
-  border: 1px solid $c-main-25;
-  border-radius: 6px;
-  min-height: 32px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: $gutter $gutter * 3;
-  transition: .2s;
-
-  font-size: 14px;
-  line-height: 22px;
-  color: $c-main-88;
-
-  &:not(#{$self}--disabled):not(:disabled):is(:hover, :active) {
-    border: 1px solid $c-main-45;
-  }
-
-  &:disabled,
-  &--disabled {
-    border: 1px solid #D9D9D9;
-    background-color: #0000000A;
-    color: $c-main-45;
-  }
-
-  @media (max-width: $md) {
-    padding: $gutter;
-  }
+  background-color: red;
 }
 

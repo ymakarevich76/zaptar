@@ -1,0 +1,86 @@
+.stepper {
+  $self: &;
+  display: grid;
+  row-gap: $gutter * 2;
+
+  &__item {
+    padding: $gutter;
+    display: grid;
+    grid-template-columns: auto 100px 1fr 1fr;
+    align-items: center;
+    column-gap: $gutter * 4;
+    background-color: $c-main-2;
+
+    @media (max-width: $md) {
+      column-gap: $gutter * 2;
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    @media (max-width: $sm) {
+      grid-template-columns: auto 100px 1fr;
+      grid-template-areas:
+        "ico title date"
+        "ico title status";
+    }
+  }
+
+  &__wrap-ico {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $c-accent;
+    background-color: $c-accent-light;
+    color: $c-accent;
+
+    @media (max-width: $sm) {
+      grid-area: ico;
+    }
+
+    @media (max-width: $md) {
+      width: 18px;
+      height: 18px;
+    }
+
+    #{$self}__item--reject & {
+      border: 1px solid $c-text-bad;
+      background-color: $c-bad;
+      color: $c-text-bad;
+    }
+  }
+
+  &__ico {
+    width: 12px;
+    height: 12px;
+
+    @media (max-width: $md) {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+
+    @media (max-width: $sm) {
+      grid-area: title;
+    }
+  }
+
+  &__date {
+    @media (max-width: $sm) {
+      grid-area: date;
+    }
+  }
+
+  &__status {
+    color: $c-main-65;
+
+    @media (max-width: $sm) {
+      grid-area: status;
+    }
+  }
+}

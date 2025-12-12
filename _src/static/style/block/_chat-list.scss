@@ -1,21 +1,6 @@
 .chat-list {
   $self: &;
 
-  &__header-btn {
-    &:not(:last-child) {
-      svg {
-        fill: $c-main-88;
-      }
-    }
-
-    svg {
-      width: 16px;
-      height: 16px;
-      fill: #fff;
-      margin-right: $gutter * 2;
-    }
-  }
-
   &__table-row {
     @media (max-width: $sm) {
       display: grid;

@@ -1,13 +1,14 @@
 .product-cards {
+  display: grid;
+  row-gap: $gutter * 4;
+
   &__list {
     display: grid;
     gap: $gutter * 4;
   }
 
   &__show-more {
-    margin-top: $gutter * 4;
-    margin-left: auto;
-    margin-right: auto;
+    justify-self: center;
 
     @media (max-width: $xs) {
       width: 100%;

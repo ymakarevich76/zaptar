@@ -1,5 +1,5 @@
 @@include('block/head.html')
-@@include('block/header/header.html')
+@@include('$version/block/header.html')
 
 <main class="main">
     @@include('block/breadcrumb.html')
@@ -9,7 +9,7 @@
             <h1 class="title">Результаты поиска</h1>
 
             <div class="section-header__group d-none d-xl-grid">
-                <button class="btn-primary" type="button" data-modal="drawer-filter-search">
+                <button class="btn btn--outlined btn--theme-secondary btn--size-m" type="button" data-modal="drawer-filter-search">
                     Фильтр
                 </button>
             </div>
@@ -112,8 +112,8 @@
                                         <div class="table-dropdown" data-dropdown>
                                             <div class="table-dropdown__inner">
                                                 Цена
-                                                <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn="1">
-                                                    <svg class="btn-light__ico" aria-hidden="true">
+                                                <button type="button" class="table-dropdown__trigger btn-lite btn-lite--compact btn-lite--theme-default" data-dropdown-btn="1">
+                                                    <svg class="btn-lite__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                                     </svg>
                                                 </button>
@@ -192,14 +192,17 @@
                                     <td>
                                         <!-- Купить -->
                                         <div class="table__actions">
-                                            <button type="button" aria-label="добавить в избранное" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                                            <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default" data-tippy-content="Удалить из избранного">
+                                                <!-- <svg class="btn-lite__ico" aria-hidden="true"> -->
+                                                <!--     <use xlink:href="static/img/symbol/sprite.svg#heart"></use> -->
+                                                <!-- </svg> -->
+                                                <svg class="btn-lite__ico" aria-hidden="true">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#heart-filled"></use>
                                                 </svg>
                                             </button>
 
                                             <label class="search__form-number form-number test" data-form-number="1">
-                                                <input class="form-number__input form-input" type="number" value="10">
+                                                <input class="form-number__input form-input" type="number" value="10" data-tippy-content="На складе: 291 Минимальная партия: 1 шт." data-width-tooltip="175">
                                                 <button type="button" class="form-number__increment" data-increment>
                                                     <svg class="form-number__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#chevron-up"></use>
@@ -212,8 +215,8 @@
                                                 </button>
                                             </label>
 
-                                            <button type="button" aria-label="добавить в корзину" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
+                                            <button type="button" aria-label="добавить в корзину" class="btn-lite btn-lite--compact btn-lite--theme-default" data-modal="modal-add-cart">
+                                                <svg class="btn-lite__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
                                                 </svg>
                                             </button>
@@ -288,8 +291,8 @@
                                     <td>
                                         <!-- Купить -->
                                         <div class="table__actions">
-                                            <button type="button" aria-label="добавить в избранное" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
+                                            <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default" data-tippy-content="Добавить в избранное">
+                                                <svg class="btn-lite__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                                 </svg>
                                             </button>
@@ -308,8 +311,8 @@
                                                 </button>
                                             </label>
 
-                                            <button type="button" aria-label="добавить в корзину" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
+                                            <button type="button" aria-label="добавить в корзину" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                                <svg class="btn-lite__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
                                                 </svg>
                                             </button>
@@ -385,8 +388,8 @@
                                         <div class="table-dropdown">
                                             <div class="table-dropdown__inner">
                                                 Цена
-                                                <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn="2">
-                                                    <svg class="btn-light__ico" aria-hidden="true">
+                                                <button type="button" class="table-dropdown__trigger btn-lite btn-lite--compact btn-lite--theme-default" data-dropdown-btn="2">
+                                                    <svg class="btn-lite__ico" aria-hidden="true">
                                                         <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                                     </svg>
                                                 </button>
@@ -465,8 +468,8 @@
                                     <td>
                                         <!-- Купить -->
                                         <div class="table__actions">
-                                            <button type="button" aria-label="добавить в избранное" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
+                                            <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                                <svg class="btn-lite__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                                 </svg>
                                             </button>
@@ -485,8 +488,8 @@
                                                 </button>
                                             </label>
 
-                                            <button type="button" aria-label="добавить в корзину" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
+                                            <button type="button" aria-label="добавить в корзину" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                                <svg class="btn-lite__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
                                                 </svg>
                                             </button>
@@ -561,8 +564,8 @@
                                     <td>
                                         <!-- Купить -->
                                         <div class="table__actions">
-                                            <button type="button" aria-label="добавить в избранное" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
+                                            <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                                <svg class="btn-lite__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                                 </svg>
                                             </button>
@@ -581,8 +584,8 @@
                                                 </button>
                                             </label>
 
-                                            <button type="button" aria-label="добавить в корзину" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
+                                            <button type="button" aria-label="добавить в корзину" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                                <svg class="btn-lite__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
                                                 </svg>
                                             </button>
@@ -657,8 +660,8 @@
                                     <td>
                                         <!-- Купить -->
                                         <div class="table__actions">
-                                            <button type="button" aria-label="добавить в избранное" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
+                                            <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                                <svg class="btn-lite__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                                 </svg>
                                             </button>
@@ -677,8 +680,8 @@
                                                 </button>
                                             </label>
 
-                                            <button type="button" aria-label="добавить в корзину" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
+                                            <button type="button" aria-label="добавить в корзину" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                                <svg class="btn-lite__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
                                                 </svg>
                                             </button>
@@ -753,8 +756,8 @@
                                     <td>
                                         <!-- Купить -->
                                         <div class="table__actions">
-                                            <button type="button" aria-label="добавить в избранное" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
+                                            <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                                <svg class="btn-lite__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                                 </svg>
                                             </button>
@@ -773,8 +776,8 @@
                                                 </button>
                                             </label>
 
-                                            <button type="button" aria-label="добавить в корзину" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
+                                            <button type="button" aria-label="добавить в корзину" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                                <svg class="btn-lite__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
                                                 </svg>
                                             </button>
@@ -788,7 +791,7 @@
 
 
                 <!-- mobile -->
-                <div class="search__result product-cards d-none d-md-block">
+                <div class="search__result product-cards d-none d-md-grid">
                     <div class="search__result-title">
                         <svg aria-hidden="true">
                             <use xlink:href="static/img/symbol/sprite.svg#filter"></use>
@@ -838,8 +841,8 @@
                             </div>
 
                             <div class="product-card__actions product-card__actions--has-input">
-                                <button type="button" aria-label="добавить в избранное" class="btn-light">
-                                    <svg class="btn-light__ico" aria-hidden="true">
+                                <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                    <svg class="btn-lite__ico" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                     </svg>
                                 </button>
@@ -858,8 +861,8 @@
                                     </button>
                                 </label>
 
-                                <button type="button" aria-label="добавить в корзину" class="btn-light">
-                                    <svg class="btn-light__ico" aria-hidden="true">
+                                <button type="button" aria-label="добавить в корзину" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                    <svg class="btn-lite__ico" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
                                     </svg>
                                 </button>
@@ -906,8 +909,8 @@
                             </div>
 
                             <div class="product-card__actions product-card__actions--has-input">
-                                <button type="button" aria-label="добавить в избранное" class="btn-light">
-                                    <svg class="btn-light__ico" aria-hidden="true">
+                                <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                    <svg class="btn-lite__ico" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                     </svg>
                                 </button>
@@ -926,8 +929,8 @@
                                     </button>
                                 </label>
 
-                                <button type="button" aria-label="добавить в корзину" class="btn-light">
-                                    <svg class="btn-light__ico" aria-hidden="true">
+                                <button type="button" aria-label="добавить в корзину" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                    <svg class="btn-lite__ico" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
                                     </svg>
                                 </button>
@@ -935,12 +938,12 @@
                         </li>
                     </ul>
 
-                    <button type="button" class="product-cards__show-more btn">
+                    <button type="button" class="product-cards__show-more btn btn--filled btn--theme-primary btn--size-m">
                         Показать еще
                     </button>
                 </div>
 
-                <div class="search__result product-cards d-none d-md-block">
+                <div class="search__result product-cards d-none d-md-grid">
                     <div class="search__result-title">
                         <svg aria-hidden="true">
                             <use xlink:href="static/img/symbol/sprite.svg#filter"></use>
@@ -990,8 +993,8 @@
                             </div>
 
                             <div class="product-card__actions product-card__actions--has-input">
-                                <button type="button" aria-label="добавить в избранное" class="btn-light">
-                                    <svg class="btn-light__ico" aria-hidden="true">
+                                <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                    <svg class="btn-lite__ico" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                     </svg>
                                 </button>
@@ -1010,8 +1013,8 @@
                                     </button>
                                 </label>
 
-                                <button type="button" aria-label="добавить в корзину" class="btn-light">
-                                    <svg class="btn-light__ico" aria-hidden="true">
+                                <button type="button" aria-label="добавить в корзину" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                    <svg class="btn-lite__ico" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
                                     </svg>
                                 </button>
@@ -1058,8 +1061,8 @@
                             </div>
 
                             <div class="product-card__actions product-card__actions--has-input">
-                                <button type="button" aria-label="добавить в избранное" class="btn-light">
-                                    <svg class="btn-light__ico" aria-hidden="true">
+                                <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                    <svg class="btn-lite__ico" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                     </svg>
                                 </button>
@@ -1078,8 +1081,8 @@
                                     </button>
                                 </label>
 
-                                <button type="button" aria-label="добавить в корзину" class="btn-light">
-                                    <svg class="btn-light__ico" aria-hidden="true">
+                                <button type="button" aria-label="добавить в корзину" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                    <svg class="btn-lite__ico" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
                                     </svg>
                                 </button>
@@ -1087,7 +1090,7 @@
                         </li>
                     </ul>
 
-                    <button type="button" class="product-cards__show-more btn">
+                    <button type="button" class="product-cards__show-more btn btn--filled btn--theme-primary btn--size-m">
                         Показать еще
                     </button>
                 </div>

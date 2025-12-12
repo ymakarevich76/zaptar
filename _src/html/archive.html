@@ -1,5 +1,5 @@
 @@include('block/head.html')
-@@include('block/header/header.html')
+@@include('$version/block/header.html')
 
 <main class="main">
     @@include('block/breadcrumb.html')
@@ -9,7 +9,7 @@
             <h1 class="title">Архив</h1>
 
             <div class="section-header__group">
-                <button class="btn-primary" type="button" data-modal="drawer-filter-orders">
+                <button class="btn btn--outlined btn--theme-secondary btn--size-m" type="button" data-modal="drawer-filter-orders">
                     Назад
                 </button>
             </div>
@@ -48,8 +48,8 @@
                             <div class="table-dropdown">
                                 <div class="table-dropdown__inner">
                                     Цена
-                                    <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn="1">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <button type="button" class="table-dropdown__trigger btn-lite btn-lite--compact btn-lite--theme-default" data-dropdown-btn="1">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                         </svg>
                                     </button>
@@ -63,8 +63,8 @@
                             <div class="table-dropdown">
                                 <div class="table-dropdown__inner">
                                     Статус
-                                    <button type="button" class="table-dropdown__trigger btn-light" data-dropdown-btn="2">
-                                        <svg class="btn-light__ico" aria-hidden="true">
+                                    <button type="button" class="table-dropdown__trigger btn-lite btn-lite--compact btn-lite--theme-default" data-dropdown-btn="2">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
                                             <use xlink:href="static/img/symbol/sprite.svg#filter-filled"></use>
                                         </svg>
                                     </button>
@@ -558,18 +558,13 @@
 
         <div class="table-footer d-md-none">
             <div class="table-footer__actions">
-                <button type="button" disabled class="btn-text" data-not-checked-product>
+                <div class="btn-lite btn-lite--disabled" data-not-checked-product>
                     Товар не выбран
-                </button>
+                </div>
 
-                <button type="button" class="btn-text btn-text--theme-danger d-none" data-checked-product>
+                <button type="button" class="btn-lite btn-lite--theme-danger d-none" data-checked-product>
                     Восстановить заказ
                 </button>
-            </div>
-
-            <!-- todo: переписать js, на этой странице блок не нужен -->
-            <div class="table-footer__info d-none">
-                Выбрано <span data-order-count>1</span> товаров на сумму <span data-order-total></span> руб
             </div>
 
             <div class="table-footer__pagination">
@@ -577,7 +572,7 @@
             </div>
         </div>
 
-        <div class="product-cards d-none d-md-block">
+        <div class="product-cards d-none d-md-grid">
             <ul class="product-cards__list">
                 <li class="product-card">
                     <div class="product-card__body">
@@ -778,7 +773,7 @@
                 </li>
             </ul>
 
-            <button type="button" class="product-cards__show-more btn">
+            <button type="button" class="product-cards__show-more btn btn--filled btn--theme-primary btn--size-m">
                 Показать еще
             </button>
 
@@ -796,8 +791,10 @@
                     </div>
 
                     <div class="action-bar__btns">
-                        <button class="action-bar__btn header-btn header-btn--gray" type="button">
-                            Восстановить заказ
+                        <button class="action-bar__btn btn btn--filled btn--theme-secondary btn--size-s" type="button">
+                            <span class="action-bar__btn-label">
+                                Восстановить заказ
+                            </span>
                         </button>
                     </div>
                 </div>

@@ -1,0 +1,49 @@
+<div id="modal-add-cart" class="modal">
+    <div class="modal__inner modal__inner--open-top">
+        <div class="modal__content modal__content--radius">
+            <button type="button" class="modal__close modal__close--right" data-btn="close">
+                <svg aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__header">
+                <h3 class="title-4">Добавление в корзину</h3>
+                <div class="tag-bar">
+                    <div class="tag tag--theme-accent">
+                        <span class="tag__label">Philips 85 126</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__wrapper">
+                <form action="" class="modal__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="product-add-cart">Привязка к автомобилю</label>
+                        @@include('../select.html', {
+                        "id": "product-add-cart",
+                        "text": "Без привязки",
+                        "option1": { "title": "Без привязки", "value": "value-1" },
+                        "option2": { "title": "Acura MDX I 3.5 4WD MDX I 3.5 л.с Q1231313", "value": "value-2" },
+                        "option3": { "title": "Привязать к авто 2", "value": "value-3" },
+                        "classItem": "select__item--selected",
+                        "dataSelectItem": "data-selected-value-first",
+                        })
+                    </div>
+
+                    <div class="drawer__wrapper-input">
+                        <label for="add-comment">Комментарий</label>
+                        <textarea class="form-textarea" id="add-comment" placeholder="Введите текст"></textarea>
+                    </div>
+
+                    <div class="modal__footer modal__footer--row">
+                        <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="product-add-cart">
+                            Отменить
+                        </button>
+                        <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification-add-comment">
+                            Добавить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

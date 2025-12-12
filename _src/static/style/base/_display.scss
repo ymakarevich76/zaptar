@@ -16,6 +16,16 @@
   }
 }
 
+@media (max-width: $lg) {
+  .d-lg-none {
+    display: none;
+  }
+
+  .d-lg-grid {
+    display: grid;
+  }
+}
+
 @media (max-width: $md) {
   .d-md-block {
     display: block;
@@ -25,6 +35,14 @@
     display: flex;
   }
 
+  .d-md-inline-flex {
+    display: inline-flex;
+  }
+
+  .d-md-grid {
+    display: grid;
+  }
+
   .d-md-none {
     display: none;
   }
@@ -32,6 +50,12 @@
 
 @media (max-width: $sm) {
   .d-sm-none {
+    display: none;
+  }
+}
+
+@media (max-width: $xs) {
+  .d-xs-none {
     display: none;
   }
 }

@@ -23,18 +23,20 @@
     }
   }
 
-  &__top {
-    background-color: #fff;
-  }
-
-  &__container {
+  &__top,
+  &__bottom {
     min-height: 64px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     @media (max-width: $md) {
       min-height: 46px;
     }
+  }
+
+  &__top {
+    background-color: #fff;
   }
 
   &__top-contacts {
@@ -52,7 +54,7 @@
     display: none;
 
     @media (max-width: $md) {
-      margin-left: auto;
+      margin-left: $gutter * 2;
       display: grid;
       grid-auto-flow: column;
       column-gap: $gutter * 1.5;
@@ -64,49 +66,21 @@
   }
 
   &__search {
-    max-width: 696px;
     width: 100%;
-    margin-right: $gutter * 6;
-
-    @media (max-width: $md) {
-      margin-right: $gutter * 2;
-      max-width: 100%;
-    }
+    max-width: 696px;
   }
 
   &__bottom-actions {
-    margin-left: auto;
     flex-shrink: 0;
-  }
-}
+    margin-left: auto;
 
-.header-contact {
-  $self: &;
-  display: flex;
-  align-items: center;
-  min-height: 24px;
+    &:not(:first-child) {
+      margin-left: $gutter * 6;
 
-  &__ico {
-    width: 12px;
-    height: 12px;
-    margin-right: $gutter * 2;
-    color: $c-main;
-    opacity: 0.45;
-    transition: opacity 0.2s;
-
-    #{$self}:hover & {
-      opacity: 1;
+      @media (max-width: $md) {
+        margin-left: $gutter * 2;
+      }
     }
-  }
-
-  &__text {
-    font-size: 12px;
-    line-height: 20px;
-  }
-
-  &--has-divider {
-    padding-left: $gutter * 4;
-    border-left: 1px solid $c-main-6;
   }
 }
 
@@ -125,6 +99,12 @@
     @media (max-width: $lg) {
       min-width: 32px;
     }
+  }
+
+  &__form {
+    display: contents;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
   }
 
   &__input {
@@ -169,7 +149,7 @@
   }
 }
 
-// todo: переименовать классы и объединить стили дропдаунов
+// todo: Саше переименовать классы и объединить стили дропдаунов
 .header-search-dropdown {
   $self: &;
 
@@ -202,7 +182,7 @@
     color: #fff;
   }
 
-  &__caption {
+  &__label {
     color: #fff;
     margin-left: $gutter * 2;
 
@@ -212,35 +192,15 @@
   }
 
   &__menu {
-    position: absolute;
-    top: calc(100% + $gutter);
-    background-color: #fff;
-    border-radius: 8px;
-    padding: $gutter;
-    box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.12);
-    display: flex;
-    flex-direction: column;
-    z-index: 100;
-    opacity: 0;
-    transition: 0.2s;
-    visibility: hidden;
-    transform: translateY(4px);
+    left: 0;
+    pointer-events: none;
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 100%;
-      left: 0;
-      right: 0;
-      height: 4px;
-    }
-
-    @media (min-width: $md) {
-      #{$self}:hover & {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-      }
+    #{$self}:hover & {
+      opacity: 1;
+      pointer-events: visible;
+      visibility: visible;
+      transform: translateY(0);
+      transition:  opacity .2s ease, transform 0.2s ease, visibility 0s linear 0s;
     }
   }
 
@@ -263,6 +223,7 @@
 .header-bottom-actions {
   display: grid;
   grid-auto-flow: column;
+  align-items: center;
   column-gap: $gutter * 4;
   color: #fff;
 
@@ -282,57 +243,9 @@
   }
 }
 
-.header-btn {
-  $self: &;
-  min-width: 32px;
-  min-height: 32px;
-  display: grid;
-  grid-auto-flow: column;
-  column-gap: $gutter * 2;
-  padding: $gutter var(--header-btn-padding-x, $gutter * 4);
-  border-radius: 6px;
-  align-items: center;
-  justify-content: center;
-  transition: background-color .2s;
-
-  &--narrow {
-    --header-btn-padding-x: $gutter * 2;
-  }
-
-  &:hover {
-    background-color: $c-light-20;
-  }
-
-  &--accent {
-    background-color: $c-accent;
-
-    &:hover {
-      background-color: $c-accent-dark;
-    }
-  }
-
-  &--gray {
-    background-color: $c-light-20;
-
-    &:hover {
-      background-color: $c-light-30;
-    }
-  }
-
-  &__ico {
-    width: 16px;
-    height: 16px;
-
-    &--sm {
-      width: 12px;
-      height: 12px;
-    }
-  }
-}
-
 .header-btn-wallet {
   @media (max-width: $lg) {
-  --header-btn-padding-x: #{$gutter * 2};
+    --btn-padding-x: #{$gutter * 2};
   }
 
   &__ico {
@@ -360,7 +273,7 @@
 
   &__toggle {
     @media (max-width: $lg) {
-      --header-btn-padding-x: #{$gutter * 2};
+      --btn-padding-x: #{$gutter * 2};
     }
 
     #{$self}:hover & {
@@ -369,70 +282,15 @@
   }
 
   &__menu {
-    border-radius: 8px;
-    background-color: #fff;
     right: 0;
-    position: absolute;
-    top: calc(100% + 4px);
-    padding: $gutter;
-    color: $c-main;
-    z-index: 100;
-    min-width: 183px;
-    opacity: 0;
-    transition: 0.2s;
-    visibility: hidden;
-    transform: translateY(4px);
-    box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.12);
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 100%;
-      left: 0;
-      right: 0;
-      height: 4px;
-    }
+    pointer-events: none;
 
     #{$self}:hover & {
       opacity: 1;
+      pointer-events: visible;
       visibility: visible;
       transform: translateY(0);
+      transition:  opacity .2s ease, transform 0.2s ease, visibility 0s linear 0s;
     }
-  }
-
-  &__link {
-    min-height: 32px;
-    padding-left: $gutter * 3;
-    padding-right: $gutter * 3;
-    display: flex;
-    align-items: center;
-    color: $c-main-88;
-    transition: background-color 0.2s;
-    border-radius: 4px;
-
-    &:hover {
-      background-color: $c-light;
-    }
-
-    &--logout {
-      margin-top: $gutter * 3;
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: -$gutter * 1.5;
-        height: 1px;
-        left: 0;
-        right: 0;
-        background-color: $c-main-6;
-      }
-    }
-  }
-
-  &__ico {
-    width: 16px;
-    height: 16px;
-    margin-right: $gutter * 2;
   }
 }

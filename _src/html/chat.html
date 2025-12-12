@@ -1,117 +1,117 @@
 @@include('block/head.html')
-@@include('block/header/header.html')
+@@include('$version/block/header.html')
 
 <main class="main">
     <!-- //////////////////////////////////////////////////////////  -->
     @@include('block/breadcrumb.html')
 
     <section class="chat container">
-            <div class="chat__header section-header section-header--mb">
-                <div class="section-header__group">
-                    <h1 class="title-3">Тема</h1>
-                    <div class="chat__tag">
-                        Лампа ксенон d2r 5000к
-                    </div>
+        <div class="chat__header section-header section-header--mb">
+            <div class="section-header__group">
+                <h1 class="title-3">Тема</h1>
+                <div class="chat__tag">
+                    Лампа ксенон d2r 5000к
                 </div>
+            </div>
 
-                <div class="section-header__group">
-                    <span class="chat__header-btn">
-                        <svg aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#unlock"></use>
-                        </svg>
+            <div class="section-header__group">
+                <span class="chat__header-btn">
+                    <svg aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#unlock"></use>
+                    </svg>
+                </span>
+                <button type="button" class="btn btn--outlined btn--theme-secondary btn--size-m">
+                    Назад
+                </button>
+            </div>
+        </div>
+        <div class="chat__content">
+            <div class="chat-message chat-message--user">
+                <div class="chat-message__header">
+                    <div class="chat-message__info">
+                         <span class="chat-message__name">
+                             Иван
+                        </span>
+                        <span class="chat-message__data">
+                            04.11.2024, 17:40
+                        </span>
+                    </div>
+                    <span class="chat-message__person">
+                        Вы
                     </span>
-                    <button type="button" class="btn-primary">
-                        Назад
+                </div>
+                <p class="chat-message__text">Запрос на возврат</p>
+                <!--Todo: разобраться с размерами изображения-->
+                <div class="chat-message__img"></div>
+            </div>
+            <div class="chat-message chat-message--admin">
+                <div class="chat-message__header">
+                    <div class="chat-message__info">
+                         <span class="chat-message__name">
+                            PROGRAMMIST
+                        </span>
+                         <span class="chat-message__data">
+                            04.11.2024, 17:40
+                        </span>
+                    </div>
+                    <span class="chat-message__person">
+                        Сотрудник компании
+                    </span>
+                </div>
+                <p class="chat-message__text">Запрос на возврат</p>
+                <div class="chat-message__img"></div>
+            </div>
+            <div class="chat-message chat-message--admin">
+                <div class="chat-message__header">
+                    <div class="chat-message__info">
+                         <span class="chat-message__name">
+                            PROGRAMMIST
+                        </span>
+                        <span class="chat-message__data">
+                            04.11.2024, 17:40
+                        </span>
+                    </div>
+                    <span class="chat-message__person">
+                        Сотрудник компании
+                    </span>
+                </div>
+                <p class="chat-message__text">Запрос на возврат</p>
+                <div class="chat-message__img"></div>
+            </div>
+            <form action="" class="chat__form">
+                <textarea class="form-textarea" id="chat-text" placeholder="Сообщение"></textarea>
+                <div class="chat__footer">
+                    <div class="chat__clip" data-dropzone>
+                        <input name="file" type="file" id="input-file" class="chat__clip-input" multiple accept="image/*" data-input="file">
+                        <label for="input-file" class="chat__clip-content">
+                            <span
+                                class="chat__clip-choose"
+                                data-input="label"
+                                data-input-error="Один из файлов не является изображением. Доступные типы: jpg, png, bmp"
+                                data-input-placeholder="Нажмите в эту область, чтобы загрузить файлы"
+                            ></span>
+                            <span class="btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l">
+                                <svg class="btn-lite__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#paper"></use>
+                                 </svg>
+                            </span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn--filled btn--theme-primary btn--size-m">
+                        Отправить
                     </button>
                 </div>
-            </div>
-            <div class="chat__content">
-                <div class="chat-message chat-message--user">
-                    <div class="chat-message__header">
-                        <div class="chat-message__info">
-                             <span class="chat-message__name">
-                                 Иван
-                            </span>
-                            <span class="chat-message__data">
-                                04.11.2024, 17:40
-                            </span>
-                        </div>
-                        <span class="chat-message__person">
-                            Вы
-                        </span>
-                    </div>
-                    <p class="chat-message__text">Запрос на возврат</p>
-                    <!--Todo: разобраться с размерами изображения-->
-                    <div class="chat-message__img"></div>
-                </div>
-                <div class="chat-message chat-message--admin">
-                    <div class="chat-message__header">
-                        <div class="chat-message__info">
-                             <span class="chat-message__name">
-                                PROGRAMMIST
-                            </span>
-                             <span class="chat-message__data">
-                                04.11.2024, 17:40
-                            </span>
-                        </div>
-                        <span class="chat-message__person">
-                            Сотрудник компании
-                        </span>
-                    </div>
-                    <p class="chat-message__text">Запрос на возврат</p>
-                    <div class="chat-message__img"></div>
-                </div>
-                <div class="chat-message chat-message--admin">
-                    <div class="chat-message__header">
-                        <div class="chat-message__info">
-                             <span class="chat-message__name">
-                                PROGRAMMIST
-                            </span>
-                            <span class="chat-message__data">
-                                04.11.2024, 17:40
-                            </span>
-                        </div>
-                        <span class="chat-message__person">
-                            Сотрудник компании
-                        </span>
-                    </div>
-                    <p class="chat-message__text">Запрос на возврат</p>
-                    <div class="chat-message__img"></div>
-                </div>
-                <form action="" class="chat__form">
-                    <textarea class="form-textarea" id="chat-text" placeholder="Сообщение"></textarea>
-                    <div class="chat__footer">
-                        <div class="chat__clip" data-dropzone>
-                            <input name="file" type="file" id="input-file" class="chat__clip-input" multiple accept="image/*" data-input="file">
-                            <label for="input-file" class="chat__clip-content">
-                                <span
-                                    class="chat__clip-choose"
-                                    data-input="label"
-                                    data-input-error="Один из файлов не является изображением. Доступные типы: jpg, png, bmp"
-                                    data-input-placeholder="Нажмите в эту область, чтобы загрузить файлы"
-                                ></span>
-                                <span class="btn-light btn-light--size-l">
-                                    <svg class="btn-light__ico" aria-hidden="true">
-                                        <use xlink:href="static/img/symbol/sprite.svg#paper"></use>
-                                     </svg>
-                                </span>
-                            </label>
-                        </div>
-                        <button type="button" class="btn btn--size-s">
-                            Отправить
-                        </button>
-                    </div>
-                </form>
-                <div class="chat__closed">
-                    <span class="chat__closed-text">
-                        Тема закрыта:
-                        <span class="chat__closed-text chat__closed-text--bold">
-                            04.11.2024, 17:44
-                        </span>
+            </form>
+            <div class="chat__closed">
+                <span class="chat__closed-text">
+                    Тема закрыта:
+                    <span class="chat__closed-text chat__closed-text--bold">
+                        04.11.2024, 17:44
                     </span>
-                </div>
+                </span>
             </div>
-        </section>
+        </div>
+    </section>
 </main>
 
 @@include('block/footer/footer.html')

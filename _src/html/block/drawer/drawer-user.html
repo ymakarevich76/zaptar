@@ -7,47 +7,69 @@
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Меню профиля</h3>
+                <h3 class="title-4">Меню профиля</h3>
             </div>
             <nav class="drawer-dropdown__menu">
-                <a class="header-user-dropdown__link" data-modal="drawer-profile" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" data-modal="drawer-profile" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#user"></use>
                     </svg>
                     Профиль
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#dollar"></use>
                     </svg>
                     Мои финансы
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#line-chart"></use>
                     </svg>
                     Ценообразование
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                     </svg>
                     Пополнить баланс
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#wallet"></use>
-                    </svg>
-                    Баланс
-                    <b>+999 999 руб</b>
-                </a>
-                <a class="header-user-dropdown__link header-user-dropdown__link--logout" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
-                    </svg>
-                    Выйти
-                </a>
             </nav>
+
+            <div class="drawer__contacts">
+                <div class="drawer__contacts-title">Контакты</div>
+
+                <a class="contact-link" href="tel:89308255335">
+                    <svg class="contact-link__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                    </svg>
+
+                    <span class="contact-link__label">8 (930) 825 53-35</span>
+                </a>
+
+                <a class="contact-link" href="tel:89206055335">
+                    <svg class="contact-link__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                    </svg>
+
+                    <span class="contact-link__label">8 (920) 605 53-35</span>
+                </a>
+
+                <a class="contact-link" href="mailto:info@zaptar.ru">
+                    <svg class="contact-link__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#mail"></use>
+                    </svg>
+
+                    <span class="contact-link__label">info@zaptar.ru</span>
+                </a>
+            </div>
+
+            <a class="dropdown-menu__link dropdown-menu__link--logout" href="#">
+                <svg aria-hidden="true" class="dropdown-menu__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
+                </svg>
+                Выйти
+            </a>
         </div>
     </div>
 </div>

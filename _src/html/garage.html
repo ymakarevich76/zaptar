@@ -1,528 +1,528 @@
 @@include('block/head.html')
-@@include('block/header/header.html')
+@@include('$version/block/header.html')
 
 <main class="main">
     <!-- //////////////////////////////////////////////////////////  -->
     @@include('block/breadcrumb.html')
 
     <section class="garage container">
-            <div class="section-header section-header--mb">
-                <div class="section-header__group">
-                    <h1 class="title">Гараж</h1>
-                </div>
+        <div class="section-header section-header--mb">
+            <div class="section-header__group">
+                <h1 class="title">Гараж</h1>
+            </div>
 
-                <div class="section-header__group">
-                    <button type="button" class="btn btn--size-s garage__header-btn" data-modal="drawer-add-car">
-                        <svg aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#plus"></use>
-                        </svg>
-                        Добавить автомобиль
+            <div class="section-header__group">
+                <button type="button" class="btn btn--filled btn--theme-primary btn--size-m" data-modal="drawer-add-car">
+                    <svg class="btn__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#plus"></use>
+                    </svg>
+                    Добавить автомобиль
+                </button>
+            </div>
+        </div>
+        <div class="garage__accordion accordion" data-accordion>
+            <div class="accordion__item">
+                <div class="accordion__item-content section-header" data-accordion-item>
+                    <button class="accordion__btn title-4" data-accordion-btn>
+                        Acura MDX
+                        <span class="accordion__btn-ico">
+                             <svg aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+                             </svg>
+                        </span>
                     </button>
-                </div>
-            </div>
-            <div class="garage__accordion accordion" data-accordion>
-                <div class="accordion__item">
-                    <div class="accordion__item-content section-header" data-accordion-item>
-                        <button class="accordion__btn title-4" data-accordion-btn>
-                            Acura MDX
-                            <span class="accordion__btn-ico">
-                                 <svg aria-hidden="true">
-                                    <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-                                 </svg>
-                            </span>
+                    <div class="section-header__group">
+                        <button type="button" class="btn btn--outlined btn--theme-secondary btn--size-m">
+                            Каталог ТО
                         </button>
-                        <div class="section-header__group">
-                            <button type="button" class="btn-primary">
-                                Каталог ТО
-                            </button>
-                            <button type="button" class="garage__action btn-light btn-light--size-l" aria-label="Удалить">
-                                <svg class="btn-light__ico" aria-hidden="true">
-                                    <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                </svg>
-                            </button>
-                        </div>
+                        <button type="button" class="garage__action btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" aria-label="Удалить">
+                            <svg class="btn-lite__ico" aria-hidden="true">
+                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="accordion__content">
-                        <div class="garage__info">
-                            <div class="garage__card">
-                                <div class="garage__photo">
-                                    <img class="garage__img" src="static/img/background/product-car.jpg" alt="Фото автомобиля" />
-                                </div>
-                                <div class="garage__car">
-                                    <div class="garage__row">
-                                        <span class="garage__term">Номер кузова (VIN)</span>
-                                        <span class="garage__value">
-                                            Q1231313
-                                            <button class="garage__copy btn-light" aria-label="Скопировать VIN">
-                                                <svg class="btn-light__ico" aria-hidden="true">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#copy"></use>
-                                                </svg>
-                                            </button>
-                                        </span>
-                                    </div>
-
-                                    <div class="garage__row">
-                                        <span class="garage__term">Двигатель</span>
-                                        <span class="garage__value">3,5 4WD MDX | 3,5 л.с.</span>
-                                    </div>
-
-                                    <div class="garage__row">
-                                        <span class="garage__term">Пробег</span>
-                                        <span class="garage__value">3,5 4WD MDX | 3,5 л.с.</span>
-                                    </div>
-
-                                    <div class="garage__row">
-                                        <span class="garage__term">Госномер</span>
-                                        <span class="garage__value">Т374ОВ</span>
-                                    </div>
-
-                                    <div class="garage__row">
-                                        <span class="garage__term">Год выпуска автомобиля</span>
-                                        <span class="garage__value">2023</span>
-                                    </div>
-
-                                    <div class="garage__row">
-                                        <span class="garage__term">Комментарий</span>
-                                        <span class="garage__value">-</span>
-                                    </div>
+                </div>
+                <div class="accordion__content">
+                    <div class="garage__info">
+                        <div class="garage__card">
+                            <div class="garage__photo">
+                                <img class="garage__img" src="static/img/background/product-car.jpg" alt="Фото автомобиля" />
+                            </div>
+                            <div class="garage__car">
+                                <div class="garage__row">
+                                    <span class="garage__term">Номер кузова (VIN)</span>
+                                    <span class="garage__value">
+                                        Q1231313
+                                        <button class="garage__copy btn-lite btn-lite--compact btn-lite--theme-default" aria-label="Скопировать VIN">
+                                            <svg class="btn-lite__ico" aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#copy"></use>
+                                            </svg>
+                                        </button>
+                                    </span>
                                 </div>
 
-                                <div class="garage__person">
-                                    <button class="garage__edit btn-light btn-light--size-l" aria-label="Редактировать" data-modal="drawer-edit-car">
-                                        <svg class="btn-light__ico" aria-hidden="true">
-                                            <use xlink:href="static/img/symbol/sprite.svg#edit"></use>
-                                        </svg>
-                                    </button>
+                                <div class="garage__row">
+                                    <span class="garage__term">Двигатель</span>
+                                    <span class="garage__value">3,5 4WD MDX | 3,5 л.с.</span>
+                                </div>
 
-                                    <div class="garage__row">
-                                        <span class="garage__term">Название</span>
-                                        <span class="garage__value">Мой авто</span>
-                                    </div>
+                                <div class="garage__row">
+                                    <span class="garage__term">Пробег</span>
+                                    <span class="garage__value">3,5 4WD MDX | 3,5 л.с.</span>
+                                </div>
 
-                                    <div class="garage__row">
-                                        <span class="garage__term">ФИО</span>
-                                        <span class="garage__value">Иванов Иван Иванович</span>
-                                    </div>
+                                <div class="garage__row">
+                                    <span class="garage__term">Госномер</span>
+                                    <span class="garage__value">Т374ОВ</span>
+                                </div>
 
-                                    <div class="garage__row">
-                                        <span class="garage__term">Телефон</span>
-                                        <span class="garage__value">+7 (985) 111-00-00</span>
-                                    </div>
+                                <div class="garage__row">
+                                    <span class="garage__term">Год выпуска автомобиля</span>
+                                    <span class="garage__value">2023</span>
+                                </div>
+
+                                <div class="garage__row">
+                                    <span class="garage__term">Комментарий</span>
+                                    <span class="garage__value">-</span>
                                 </div>
                             </div>
 
-                            <div class="d-md-none garage__table table" data-table>
-                                <div class="table__scrollbar scrollbar scrollbar--horizontal" data-table-scrollbar>
-                                    <table class="table__inner" data-table-inner>
-                                        <tr>
-                                            <th class="garage__data">
-                                                Бренд
-                                            </th>
-                                            <th>
-                                                Артикул
-                                            </th>
-                                            <th>
-                                                Наименование
-                                            </th>
-                                            <th>
-                                                Поставщик
-                                            </th>
-                                            <th class="table__cell-slim">
-                                                <!-- Возврат -->
-                                            </th>
-                                            <th class="table__cell-slim">
-                                                <!-- Дистрибьютер -->
-                                            </th>
-                                            <th>
-                                                Склад
-                                            </th>
-                                            <th>
-                                                Срок
-                                            </th>
-                                            <th>
-                                                Количество
-                                            </th>
-                                            <th>
-                                                Цена
-                                            </th>
-                                            <th>
-                                                Сумма
-                                            </th>
-                                            <th class="table__cell-min-150">
-                                                Комментарий
-                                            </th>
-                                            <th>
-                                                Действия
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <!-- Бренд -->
-                                                Philips
-                                            </td>
-                                            <td>
-                                                <!-- Артикул -->
-                                                <a href="#" class="link link--blue">85126</a>
-                                            </td>
-                                            <td>
-                                                <!-- Наименование -->
-                                                Лампа ксенон<br> d2r 5000к
-                                            </td>
-                                            <td>
-                                                <!-- Поставщик -->
-                                                zsps-
-                                            </td>
-                                            <td>
-                                                <!-- Возврат -->
-                                                <div aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                                    <svg aria-hidden="true">
-                                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                                    </svg>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!--  Дистрибьютер -->
-                                                <button type="button" aria-label="дистрибьютер" class="table-btn">
-                                                    <svg aria-hidden="true">
-                                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                                    </svg>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <!-- Склад -->
-                                                -
-                                            </td>
-                                            <td class="nowrap">
-                                                <!-- Срок -->
-                                                3-6 дн.
-                                            </td>
-                                            <td>
-                                                <!-- Количество -->
-                                                1
-                                            </td>
-                                            <td class="nowrap">
-                                                <!-- Цена -->
-                                                1 427,00
-                                            </td>
-                                            <td class="nowrap">
-                                                <!-- Сумма -->
-                                                1 427,00
-                                            </td>
-                                            <td>
-                                                <!-- Комментарий -->
-                                                -
-                                            </td>
-                                            <td>
-                                                <div class="table__actions">
-                                                <!-- Действия -->
-                                                    <a href="#" aria-label="найти товар" class="btn-light">
-                                                        <svg class="btn-light__ico" aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-                                                        </svg>
-                                                    </a>
-                                                    <button type="button" aria-label="добавить комментарий" class="btn-light" data-modal="modal-add-comment">
-                                                        <svg class="btn-light__ico" aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <button type="button" aria-label="удалить товар" class="btn-light">
-                                                        <svg class="btn-light__ico" aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                                        </svg>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <!-- Бренд -->
-                                                Osram
-                                            </td>
-                                            <td>
-                                                <!-- Артикул -->
-                                                <a href="#" class="link link--blue">7506</a>
-                                            </td>
-                                            <td>
-                                                <!-- Наименование -->
-                                                Лампа ксенон<br> d2r 5000к
-                                            </td>
-                                            <td>
-                                                <!-- Поставщик -->
-                                                zsps-
-                                            </td>
-                                            <td>
-                                                <!-- Возврат -->
-                                                <div aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                                    <svg aria-hidden="true">
-                                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                                    </svg>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!--  Дистрибьютер -->
-                                                <button type="button" aria-label="дистрибьютер" class="table-btn">
-                                                    <svg aria-hidden="true">
-                                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                                    </svg>
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <!-- Склад -->
-                                                -
-                                            </td>
-                                            <td class="nowrap">
-                                                <!-- Срок -->
-                                                2-5 дн.
-                                            </td>
-                                            <td>
-                                                <!-- Количество -->
-                                                10
-                                            </td>
-                                            <td>
-                                                <!-- Цена -->
-                                                85,00
-                                            </td>
-                                            <td>
-                                                <!-- Сумма -->
-                                                850,00
-                                            </td>
-                                            <td>
-                                                <!-- Комментарий -->
-                                                -
-                                            </td>
-                                            <td>
-                                                <div class="table__actions">
-                                                    <!-- Действия -->
-                                                    <a href="#" aria-label="найти товар" class="btn-light">
-                                                        <svg class="btn-light__ico" aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-                                                        </svg>
-                                                    </a>
-                                                    <button type="button" aria-label="добавить комментарий" class="btn-light" data-modal="modal-add-comment">
-                                                        <svg class="btn-light__ico" aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <button type="button" aria-label="удалить товар" class="btn-light">
-                                                        <svg class="btn-light__ico" aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                                        </svg>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="d-none d-md-block product-cards">
-                                <ul class="product-cards__list">
-                                    <li class="product-card">
-                                        <div class="product-card__body">
-                                            <div class="product-card__product">
-                                                <div class="product-card__product-info">
-                                                    <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
-                                                    <div class="product-card__name">Лампа ксенон d2r 5000k</div>
-                                                    <div class="product-card__supplier">zsps–</div>
-                                                </div>
-
-                                                <div class="product-card__product-btns">
-                                                    <button type="button" aria-label="дистрибьютер" class="table-btn">
-                                                        <svg aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                                        <svg aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                                        </svg>
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <div class="product-card__info">
-                                                <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
-                                                <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-card__actions product-card__actions--only-btns">
-                                            <a href="#" aria-label="найти товар" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-                                                </svg>
-                                            </a>
-                                            <button type="button" aria-label="добавить комментарий" class="btn-light" data-modal="modal-add-comment">
-                                                <svg class="btn-light__ico" aria-hidden="true">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                                </svg>
-                                            </button>
-                                            <button type="button" aria-label="удалить товар" class="btn-light">
-                                                <svg class="btn-light__ico" aria-hidden="true">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-
-                                        <div class="product-card__note">
-                                            Текст комментария (заметки), может быть длинный на несколько строк
-                                        </div>
-                                    </li>
-
-                                    <li class="product-card">
-                                        <div class="product-card__body">
-                                            <div class="product-card__product">
-                                                <div class="product-card__product-info">
-                                                    <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
-                                                    <div class="product-card__name">Лампа ксенон d2r 5000k</div>
-                                                    <div class="product-card__supplier">zsps–</div>
-                                                </div>
-
-                                                <div class="product-card__product-btns">
-                                                    <button type="button" aria-label="дистрибьютер" class="table-btn">
-                                                        <svg aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                                        <svg aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                                        </svg>
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <div class="product-card__info">
-                                                <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
-                                                <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-card__actions product-card__actions--only-btns">
-                                            <a href="#" aria-label="найти товар" class="btn-light">
-                                                <svg class="btn-light__ico">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-                                                </svg>
-                                            </a>
-                                            <button type="button" aria-label="добавить комментарий" class="btn-light" data-modal="modal-add-comment">
-                                                <svg class="btn-light__ico" aria-hidden="true">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                                </svg>
-                                            </button>
-                                            <button type="button" aria-label="удалить товар" class="btn-light">
-                                                <svg class="btn-light__ico">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </li>
-
-                                    <li class="product-card">
-                                        <div class="product-card__body">
-                                            <div class="product-card__product">
-                                                <div class="product-card__product-info">
-                                                    <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
-                                                    <div class="product-card__name">Лампа ксенон d2r 5000k</div>
-                                                    <div class="product-card__supplier">zsps–</div>
-                                                </div>
-
-                                                <div class="product-card__product-btns">
-                                                    <button type="button" aria-label="дистрибьютер" class="table-btn">
-                                                        <svg aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                                        <svg aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                                        </svg>
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <div class="product-card__info">
-                                                <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
-                                                <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-card__actions product-card__actions--only-btns">
-                                            <a href="#" aria-label="найти товар" class="btn-light">
-                                                <svg class="btn-light__ico">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-                                                </svg>
-                                            </a>
-                                            <button type="button" aria-label="добавить комментарий" class="btn-light" data-modal="modal-add-comment">
-                                                <svg class="btn-light__ico" aria-hidden="true">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                                </svg>
-                                            </button>
-                                            <button type="button" aria-label="удалить товар" class="btn-light">
-                                                <svg class="btn-light__ico">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </li>
-
-                                    <li class="product-card">
-                                        <div class="product-card__body">
-                                            <div class="product-card__product">
-                                                <div class="product-card__product-info">
-                                                    <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
-                                                    <div class="product-card__name">Лампа ксенон d2r 5000k</div>
-                                                    <div class="product-card__supplier">zsps–</div>
-                                                </div>
-
-                                                <div class="product-card__product-btns">
-                                                    <button type="button" aria-label="дистрибьютер" class="table-btn">
-                                                        <svg aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
-                                                        <svg aria-hidden="true">
-                                                            <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
-                                                        </svg>
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <div class="product-card__info">
-                                                <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
-                                                <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-card__actions product-card__actions--only-btns">
-                                            <a href="#" aria-label="найти товар" class="btn-light">
-                                                <svg class="btn-light__ico">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-                                                </svg>
-                                            </a>
-                                            <button type="button" aria-label="добавить комментарий" class="btn-light" data-modal="modal-add-comment">
-                                                <svg class="btn-light__ico" aria-hidden="true">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
-                                                </svg>
-                                            </button>
-                                            <button type="button" aria-label="удалить товар" class="btn-light">
-                                                <svg class="btn-light__ico">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                                <button type="button" class="product-cards__show-more btn">
-                                    Показать еще
+                            <div class="garage__person">
+                                <button class="garage__edit btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" aria-label="Редактировать" data-modal="drawer-edit-car">
+                                    <svg class="btn-lite__ico" aria-hidden="true">
+                                        <use xlink:href="static/img/symbol/sprite.svg#edit"></use>
+                                    </svg>
                                 </button>
+
+                                <div class="garage__row">
+                                    <span class="garage__term">Название</span>
+                                    <span class="garage__value">Мой авто</span>
+                                </div>
+
+                                <div class="garage__row">
+                                    <span class="garage__term">ФИО</span>
+                                    <span class="garage__value">Иванов Иван Иванович</span>
+                                </div>
+
+                                <div class="garage__row">
+                                    <span class="garage__term">Телефон</span>
+                                    <span class="garage__value">+7 (985) 111-00-00</span>
+                                </div>
                             </div>
+                        </div>
+
+                        <div class="d-md-none garage__table table" data-table>
+                            <div class="table__scrollbar scrollbar scrollbar--horizontal" data-table-scrollbar>
+                                <table class="table__inner" data-table-inner>
+                                    <tr>
+                                        <th class="garage__data">
+                                            Бренд
+                                        </th>
+                                        <th>
+                                            Артикул
+                                        </th>
+                                        <th>
+                                            Наименование
+                                        </th>
+                                        <th>
+                                            Поставщик
+                                        </th>
+                                        <th class="table__cell-slim">
+                                            <!-- Возврат -->
+                                        </th>
+                                        <th class="table__cell-slim">
+                                            <!-- Дистрибьютер -->
+                                        </th>
+                                        <th>
+                                            Склад
+                                        </th>
+                                        <th>
+                                            Срок
+                                        </th>
+                                        <th>
+                                            Количество
+                                        </th>
+                                        <th>
+                                            Цена
+                                        </th>
+                                        <th>
+                                            Сумма
+                                        </th>
+                                        <th class="table__cell-min-150">
+                                            Комментарий
+                                        </th>
+                                        <th>
+                                            Действия
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <!-- Бренд -->
+                                            Philips
+                                        </td>
+                                        <td>
+                                            <!-- Артикул -->
+                                            <a href="#" class="link link--blue">85126</a>
+                                        </td>
+                                        <td>
+                                            <!-- Наименование -->
+                                            Лампа ксенон<br> d2r 5000к
+                                        </td>
+                                        <td>
+                                            <!-- Поставщик -->
+                                            zsps-
+                                        </td>
+                                        <td>
+                                            <!-- Возврат -->
+                                            <div aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                                </svg>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <!--  Дистрибьютер -->
+                                            <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <!-- Склад -->
+                                            -
+                                        </td>
+                                        <td class="nowrap">
+                                            <!-- Срок -->
+                                            3-6 дн.
+                                        </td>
+                                        <td>
+                                            <!-- Количество -->
+                                            1
+                                        </td>
+                                        <td class="nowrap">
+                                            <!-- Цена -->
+                                            1 427,00
+                                        </td>
+                                        <td class="nowrap">
+                                            <!-- Сумма -->
+                                            1 427,00
+                                        </td>
+                                        <td>
+                                            <!-- Комментарий -->
+                                            -
+                                        </td>
+                                        <td>
+                                            <div class="table__actions">
+                                            <!-- Действия -->
+                                                <a href="#" aria-label="найти товар" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                                    <svg class="btn-lite__ico" aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                                    </svg>
+                                                </a>
+                                                <button type="button" aria-label="добавить комментарий" class="btn-lite btn-lite--compact btn-lite--theme-default" data-modal="modal-add-comment">
+                                                    <svg class="btn-lite__ico" aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                                    </svg>
+                                                </button>
+                                                <button type="button" aria-label="удалить товар" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                                    <svg class="btn-lite__ico" aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <!-- Бренд -->
+                                            Osram
+                                        </td>
+                                        <td>
+                                            <!-- Артикул -->
+                                            <a href="#" class="link link--blue">7506</a>
+                                        </td>
+                                        <td>
+                                            <!-- Наименование -->
+                                            Лампа ксенон<br> d2r 5000к
+                                        </td>
+                                        <td>
+                                            <!-- Поставщик -->
+                                            zsps-
+                                        </td>
+                                        <td>
+                                            <!-- Возврат -->
+                                            <div aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                                </svg>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <!--  Дистрибьютер -->
+                                            <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                                <svg aria-hidden="true">
+                                                    <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <!-- Склад -->
+                                            -
+                                        </td>
+                                        <td class="nowrap">
+                                            <!-- Срок -->
+                                            2-5 дн.
+                                        </td>
+                                        <td>
+                                            <!-- Количество -->
+                                            10
+                                        </td>
+                                        <td>
+                                            <!-- Цена -->
+                                            85,00
+                                        </td>
+                                        <td>
+                                            <!-- Сумма -->
+                                            850,00
+                                        </td>
+                                        <td>
+                                            <!-- Комментарий -->
+                                            -
+                                        </td>
+                                        <td>
+                                            <div class="table__actions">
+                                                <!-- Действия -->
+                                                <a href="#" aria-label="найти товар" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                                    <svg class="btn-lite__ico" aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                                    </svg>
+                                                </a>
+                                                <button type="button" aria-label="добавить комментарий" class="btn-lite btn-lite--compact btn-lite--theme-default" data-modal="modal-add-comment">
+                                                    <svg class="btn-lite__ico" aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                                    </svg>
+                                                </button>
+                                                <button type="button" aria-label="удалить товар" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                                    <svg class="btn-lite__ico" aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="d-none d-md-grid product-cards">
+                            <ul class="product-cards__list">
+                                <li class="product-card">
+                                    <div class="product-card__body">
+                                        <div class="product-card__product">
+                                            <div class="product-card__product-info">
+                                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                                <div class="product-card__supplier">zsps–</div>
+                                            </div>
+
+                                            <div class="product-card__product-btns">
+                                                <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                                    </svg>
+                                                </button>
+                                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-card__info">
+                                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-card__actions product-card__actions--only-btns">
+                                        <a href="#" aria-label="найти товар" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                            <svg class="btn-lite__ico" aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                            </svg>
+                                        </a>
+                                        <button type="button" aria-label="добавить комментарий" class="btn-lite btn-lite--compact btn-lite--theme-default" data-modal="modal-add-comment">
+                                            <svg class="btn-lite__ico" aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button" aria-label="удалить товар" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                            <svg class="btn-lite__ico" aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <div class="product-card__note">
+                                        Текст комментария (заметки), может быть длинный на несколько строк
+                                    </div>
+                                </li>
+
+                                <li class="product-card">
+                                    <div class="product-card__body">
+                                        <div class="product-card__product">
+                                            <div class="product-card__product-info">
+                                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                                <div class="product-card__supplier">zsps–</div>
+                                            </div>
+
+                                            <div class="product-card__product-btns">
+                                                <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                                    </svg>
+                                                </button>
+                                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-card__info">
+                                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-card__actions product-card__actions--only-btns">
+                                        <a href="#" aria-label="найти товар" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                            <svg class="btn-lite__ico">
+                                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                            </svg>
+                                        </a>
+                                        <button type="button" aria-label="добавить комментарий" class="btn-lite btn-lite--compact btn-lite--theme-default" data-modal="modal-add-comment">
+                                            <svg class="btn-lite__ico" aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button" aria-label="удалить товар" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                            <svg class="btn-lite__ico">
+                                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <li class="product-card">
+                                    <div class="product-card__body">
+                                        <div class="product-card__product">
+                                            <div class="product-card__product-info">
+                                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                                <div class="product-card__supplier">zsps–</div>
+                                            </div>
+
+                                            <div class="product-card__product-btns">
+                                                <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                                    </svg>
+                                                </button>
+                                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-card__info">
+                                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-card__actions product-card__actions--only-btns">
+                                        <a href="#" aria-label="найти товар" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                            <svg class="btn-lite__ico">
+                                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                            </svg>
+                                        </a>
+                                        <button type="button" aria-label="добавить комментарий" class="btn-lite btn-lite--compact btn-lite--theme-default" data-modal="modal-add-comment">
+                                            <svg class="btn-lite__ico" aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button" aria-label="удалить товар" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                            <svg class="btn-lite__ico">
+                                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <li class="product-card">
+                                    <div class="product-card__body">
+                                        <div class="product-card__product">
+                                            <div class="product-card__product-info">
+                                                <div class="product-card__brand">Philips <a class="product-card__article link link--blue" href="#">85126</a></div>
+                                                <div class="product-card__name">Лампа ксенон d2r 5000k</div>
+                                                <div class="product-card__supplier">zsps–</div>
+                                            </div>
+
+                                            <div class="product-card__product-btns">
+                                                <button type="button" aria-label="дистрибьютер" class="table-btn">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                                                    </svg>
+                                                </button>
+                                                <button type="button" aria-label="информация возврата товаров" class="status-return status-return--standard">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="static/img/symbol/sprite.svg#sync"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-card__info">
+                                            <div class="product-card__term"><span>Срок</span>: 3–6 дн.</div>
+                                            <div class="product-card__sum">1 × 1427 ₽ = 1427 ₽</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-card__actions product-card__actions--only-btns">
+                                        <a href="#" aria-label="найти товар" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                            <svg class="btn-lite__ico">
+                                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                            </svg>
+                                        </a>
+                                        <button type="button" aria-label="добавить комментарий" class="btn-lite btn-lite--compact btn-lite--theme-default" data-modal="modal-add-comment">
+                                            <svg class="btn-lite__ico" aria-hidden="true">
+                                                <use xlink:href="static/img/symbol/sprite.svg#chat-2"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button" aria-label="удалить товар" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                            <svg class="btn-lite__ico">
+                                                <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <button type="button" class="product-cards__show-more btn btn--filled btn--theme-primary btn--size-m">
+                                Показать еще
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 </main>
 
 @@include('block/footer/footer.html')

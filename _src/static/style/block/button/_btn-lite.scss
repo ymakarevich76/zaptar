@@ -1,0 +1,92 @@
+.btn-lite {
+  $self: &;
+  min-width: 24px;
+  min-height: 24px;
+  display: inline-grid;
+  column-gap: $gutter * 2;
+  grid-auto-flow: column;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color .2s;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.2;
+  position: relative;
+  text-align: center;
+
+  &[disabled],
+  &--disabled {
+    color: $c-main-45 !important;
+    background-color: transparent !important;
+    cursor: default;
+  }
+
+  &:not(#{$self}--compact) {
+    padding-left: $gutter * 2;
+    padding-right: $gutter * 2;
+  }
+
+  &--theme-default {
+    color: var(--btn-lite-ico-color, $c-main-88);
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $c-main-6;
+      }
+      &:active {
+        background-color: $c-main-15;
+      }
+    }
+
+    &:active {
+      background-color: $c-main-15;
+    }
+  }
+
+  &--theme-danger {
+    color: $c-text-bad;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $c-bad;
+      }
+
+      &:active {
+        background-color: #ffd7d1;
+      }
+    }
+
+    &:active {
+      background-color: #ffd7d1;
+    }
+  }
+
+  &__ico {
+    width: 14px;
+    height: 14px;
+
+    &--size-l {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+
+  &--size-l {
+    min-width: 32px;
+    min-height: 32px;
+
+    #{$self}__ico {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+  }
+}

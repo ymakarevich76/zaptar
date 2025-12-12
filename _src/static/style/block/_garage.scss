@@ -1,13 +1,4 @@
 .garage {
-  &__header-btn {
-    svg {
-      width: 16px;
-      height: 16px;
-      fill: #fff;
-      margin-right: $gutter * 2;
-    }
-  }
-
   &__action {
     position: relative;
 

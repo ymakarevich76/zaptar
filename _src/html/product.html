@@ -1,101 +1,101 @@
 @@include('block/head.html')
-@@include('block/header/header.html')
+@@include('$version/block/header.html')
 
 <main class="main">
     <!-- //////////////////////////////////////////////////////////  -->
     @@include('block/breadcrumb.html')
 
     <section class="product container">
-            <div class="section-header section-header--mb">
-                <div class="section-header__group">
-                    <h1 class="title">OSRAM 7506</h1>
-                </div>
-
-                <div class="section-header__group">
-                    <button type="button" class="btn btn--size-s product__header-btn">
-                        <svg aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#eye"></use>
-                        </svg>
-                        Посмотреть цены
-                    </button>
-                </div>
+        <div class="section-header section-header--mb">
+            <div class="section-header__group">
+                <h1 class="title">OSRAM 7506</h1>
             </div>
-            <div class="product__content">
-                <div class="product__img-wrapper">
-                    <img class="product__img" src="static/img/background/product-car.jpg" alt="Автомобиль">
+
+            <div class="section-header__group">
+                <button type="button" class="btn btn--filled btn--theme-primary btn--size-m">
+                    <svg class="btn__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#eye"></use>
+                    </svg>
+                    Посмотреть цены
+                </button>
+            </div>
+        </div>
+        <div class="product__content">
+            <div class="product__img-wrapper">
+                <img class="product__img" src="static/img/background/product-car.jpg" alt="Автомобиль">
+            </div>
+            <div class="tabs tabs--horizontal">
+                <div class="tabs__box-btn">
+                    <button class="tabs__btn tabs__btn--active" tab="1">Характеристики</button>
+                    <button class="tabs__btn" tab="2">Применимость</button>
+                    <button class="tabs__btn" tab="3">Замены</button>
                 </div>
-                <div class="tabs tabs--horizontal">
-                    <div class="tabs__box-btn">
-                        <button class="tabs__btn tabs__btn--active" tab="1">Характеристики</button>
-                        <button class="tabs__btn" tab="2">Применимость</button>
-                        <button class="tabs__btn" tab="3">Замены</button>
-                    </div>
 
-                    <div class="tabs__box-content">
-                        <div class="tabs__content tabs__content--active" tab-content="1">
-                            <div class="product__wrapper-info">
-                                <span class="product__info">Информация о данном товаре отстуствует</span>
-                            </div>
-
-                        </div >
-                        <div class="tabs__content" tab-content="2">
-                            <div class="product__wrapper-info">
-                                <span class="product__info">Информация о данном товаре отстуствует</span>
-                            </div>
+                <div class="tabs__box-content">
+                    <div class="tabs__content tabs__content--active" tab-content="1">
+                        <div class="product__wrapper-info">
+                            <span class="product__info">Информация о данном товаре отстуствует</span>
                         </div>
-                        <div class="tabs__content" tab-content="3">
-                            <table class="table-2">
-                                <tr>
-                                    <th>
-                                        Бренд
-                                    </th>
-                                    <th>
-                                        Артикул
-                                    </th>
-                                    <th>
-                                        Действия
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        acdelco
-                                    </td>
-                                    <td>
-                                        7506
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn-light" aria-label="Поиск">
-                                            <svg class="btn-light__ico" aria-hidden="true">
-                                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        acdelco
-                                    </td>
-                                    <td>
-                                        7506
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn-light" aria-label="Поиск">
-                                            <svg class="btn-light__ico" aria-hidden="true">
-                                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </table>
 
-                            @@include('block/pagination.html', {
-                            "class": "product__pagination",
-                            })
+                    </div >
+                    <div class="tabs__content" tab-content="2">
+                        <div class="product__wrapper-info">
+                            <span class="product__info">Информация о данном товаре отстуствует</span>
                         </div>
                     </div>
+                    <div class="tabs__content" tab-content="3">
+                        <table class="table-2">
+                            <tr>
+                                <th>
+                                    Бренд
+                                </th>
+                                <th>
+                                    Артикул
+                                </th>
+                                <th>
+                                    Действия
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    acdelco
+                                </td>
+                                <td>
+                                    7506
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-lite btn-lite--compact btn-lite--theme-default" aria-label="Поиск">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    acdelco
+                                </td>
+                                <td>
+                                    7506
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-lite btn-lite--compact btn-lite--theme-default" aria-label="Поиск">
+                                        <svg class="btn-lite__ico" aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+
+                        @@include('block/pagination.html', {
+                        "class": "product__pagination",
+                        })
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 </main>
 
 @@include('block/footer/footer.html')

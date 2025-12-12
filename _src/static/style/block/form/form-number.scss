@@ -34,7 +34,7 @@
     justify-content: center;
     color: $c-main-45;
     background-color: $c-main-2;
-    opacity: 1;
+    opacity: 0;
 
     @media (hover: hover) {
       #{$self}:hover & {
