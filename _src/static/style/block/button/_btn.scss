@@ -1,7 +1,3 @@
-//Todo: Саше Есть конпка в дровере recharge, она тег а,
-//т.к. ведет на сторону, она должна быть disabled,
-//нужен класс, а не тег disabled
-
 .btn {
   $self: &;
   display: inline-grid;
@@ -9,7 +5,7 @@
   grid-auto-flow: column;
   align-items: center;
   justify-content: center;
-  transition: background-color .2s, color .2s;
+  transition: background-color .2s, color .2s, border-color .2s;
   border-radius: 6px;
   line-height: 1.2;
 
@@ -72,13 +68,29 @@
   }
 
   &--outlined {
+    border-width: 1px;
+    border-style: solid;
 
     &#{$self}--theme-primary {
-
     }
 
     &#{$self}--theme-secondary {
+      border-color: $c-main-25;
+      color: $c-main-88;
 
+      @media (hover: hover) {
+        &:not(#{$self}--disabled):not(:disabled):is(:hover) {
+          border-color: $c-main-45;
+        }
+
+        &:not(#{$self}--disabled):not(:disabled):is(:active) {
+          border-color: $c-main-65;
+        }
+      }
+
+      &:not(#{$self}--disabled):not(:disabled):is(:active) {
+        border-color: $c-main-65;
+      }
     }
   }
 
@@ -89,7 +101,7 @@
     font-size: 14px;
 
     &#{$self}--compact {
-      --btn-padding-x: $gutter;
+      --btn-padding-x: #{$gutter};
     }
 
     #{$self}__ico {
@@ -101,23 +113,6 @@
         height: 12px;
       }
     }
-  }
-
-  &--size-s {
-
-  }
-
-  &--size-xs {
-
-  }
-
-
-
-  &:disabled,
-  &--disabled {
-    border: 1px solid #D9D9D9;
-    background-color: $c-light !important;
-    color: #B8B8B8;
   }
 
   &--size-s {
@@ -134,59 +129,11 @@
     //padding: $gutter $gutter * 4;
   }
 
-  //@media (max-width: $md) {
-  //  &:not(#{$self}--size-s),
-  //  &:not(#{$self}--size-xs) {
-  //    padding: $gutter $gutter * 2;
-  //    min-height: 32px;
-  //  }
-  //}
+  &:disabled,
+  &--disabled {
+    border: 1px solid #D9D9D9;
+    background-color: $c-light !important;
+    color: #B8B8B8;
+  }
 }
 
-//.header-btn {
-//  $self: &;
-//  min-width: 32px;
-//  min-height: 32px;
-//  display: grid;
-//  grid-auto-flow: column;
-//  column-gap: $gutter * 2;
-//  padding: $gutter var(--header-btn-padding-x, $gutter * 4);
-//  border-radius: 6px;
-//  align-items: center;
-//  justify-content: center;
-//  transition: background-color .2s;
-//
-//  &--narrow {
-//    --header-btn-padding-x: $gutter * 2;
-//  }
-//
-//  &:hover {
-//    background-color: $c-light-20;
-//  }
-//
-//  &--accent {
-//    background-color: $c-accent;
-//
-//    &:hover {
-//      background-color: $c-accent-dark;
-//    }
-//  }
-//
-//  &--gray {
-//    background-color: $c-light-20;
-//
-//    &:hover {
-//      background-color: $c-light-30;
-//    }
-//  }
-//
-//  &__ico {
-//    width: 16px;
-//    height: 16px;
-//
-//    &--sm {
-//      width: 12px;
-//      height: 12px;
-//    }
-//  }
-//}
