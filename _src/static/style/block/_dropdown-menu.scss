@@ -13,6 +13,10 @@
   transform: translateY(4px);
   box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.12);
 
+  @media (max-width: $md) {
+    display: none;
+  }
+
   &::before {
     content: "";
     position: absolute;
