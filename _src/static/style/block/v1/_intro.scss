@@ -97,15 +97,17 @@
   }
 
   &__search-btn {
+    height: 40px;
+    width: 104px;
     position: absolute;
     right: 8px;
     top: 50%;
     transform: translateY(-50%);
-    min-height: 40px;
-    min-width: 104px;
 
     @media (max-width: $md) {
-      min-width: auto;
+      height: auto;
+      width: auto;
+      right: 4px;
     }
   }
 

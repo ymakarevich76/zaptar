@@ -34,10 +34,25 @@
     }
 
     &#{$self}--theme-secondary {
+      background-color: $c-light-20;
+      color: #fff;
 
+      @media (hover: hover) {
+        &:not(#{$self}--disabled):not(:disabled):is(:hover) {
+          background-color: $c-light-30;
+        }
+
+        &:not(#{$self}--disabled):not(:disabled):is(:active) {
+          background-color: #FFFFFF66;
+        }
+      }
+
+      &:not(#{$self}--disabled):not(:disabled):is(:active) {
+        background-color: #FFFFFF66;
+      }
     }
 
-    &#{$self}--theme-transparent {
+    &#{$self}--theme-light {
       color: #fff;
 
       @media (hover: hover) {
@@ -70,12 +85,21 @@
   &--size-m {
     min-height: 32px;
     min-width: 32px;
-    padding: $gutter $gutter * 4;
+    padding: $gutter var(--btn-padding-x, $gutter * 4);
     font-size: 14px;
+
+    &#{$self}--compact {
+      --btn-padding-x: $gutter;
+    }
 
     #{$self}__ico {
       width: 16px;
       height: 16px;
+
+      &--sm {
+        width: 12px;
+        height: 12px;
+      }
     }
   }
 

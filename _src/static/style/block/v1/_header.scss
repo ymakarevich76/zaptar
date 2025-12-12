@@ -218,6 +218,7 @@
 .header-bottom-actions {
   display: grid;
   grid-auto-flow: column;
+  align-items: center;
   column-gap: $gutter * 4;
   color: #fff;
 
@@ -239,7 +240,7 @@
 
 .header-btn-wallet {
   @media (max-width: $lg) {
-    --header-btn-padding-x: #{$gutter * 2};
+    --btn-padding-x: #{$gutter * 2};
   }
 
   &__ico {
@@ -267,7 +268,7 @@
 
   &__toggle {
     @media (max-width: $lg) {
-      --header-btn-padding-x: #{$gutter * 2};
+      --btn-padding-x: #{$gutter * 2};
     }
 
     #{$self}:hover & {
