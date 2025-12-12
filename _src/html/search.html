@@ -9,7 +9,7 @@
             <h1 class="title">Результаты поиска</h1>
 
             <div class="section-header__group d-none d-xl-grid">
-                <button class="btn-primary" type="button" data-modal="drawer-filter-search">
+                <button class="btn btn--outlined btn--theme-secondary btn--size-m" type="button" data-modal="drawer-filter-search">
                     Фильтр
                 </button>
             </div>
@@ -192,9 +192,12 @@
                                     <td>
                                         <!-- Купить -->
                                         <div class="table__actions">
-                                            <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                            <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default" data-tippy-content="Удалить из избранного">
+                                                <!-- <svg class="btn-lite__ico" aria-hidden="true"> -->
+                                                <!--     <use xlink:href="static/img/symbol/sprite.svg#heart"></use> -->
+                                                <!-- </svg> -->
                                                 <svg class="btn-lite__ico" aria-hidden="true">
-                                                    <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                                                    <use xlink:href="static/img/symbol/sprite.svg#heart-filled"></use>
                                                 </svg>
                                             </button>
 
@@ -288,7 +291,7 @@
                                     <td>
                                         <!-- Купить -->
                                         <div class="table__actions">
-                                            <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default">
+                                            <button type="button" aria-label="добавить в избранное" class="btn-lite btn-lite--compact btn-lite--theme-default" data-tippy-content="Добавить в избранное">
                                                 <svg class="btn-lite__ico" aria-hidden="true">
                                                     <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
                                                 </svg>
@@ -935,7 +938,7 @@
                         </li>
                     </ul>
 
-                    <button type="button" class="product-cards__show-more btn">
+                    <button type="button" class="product-cards__show-more btn btn--filled btn--theme-primary btn--size-m">
                         Показать еще
                     </button>
                 </div>
@@ -1087,7 +1090,7 @@
                         </li>
                     </ul>
 
-                    <button type="button" class="product-cards__show-more btn">
+                    <button type="button" class="product-cards__show-more btn btn--filled btn--theme-primary btn--size-m">
                         Показать еще
                     </button>
                 </div>

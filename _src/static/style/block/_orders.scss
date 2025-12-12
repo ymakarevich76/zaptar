@@ -1,12 +1,12 @@
 .orders {
-  &__btn-ico {
-    width: 16px;
-    height: 16px;
-    margin-right: $gutter * 2;
-  }
-
   &__filter-bar {
     margin-bottom: $gutter * 6;
+  }
+
+  &__header-btn {
+    @media (max-width: $md) {
+      --btn-padding-x: #{$gutter};
+    }
   }
 
   // //////////////// desktop

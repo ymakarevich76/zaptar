@@ -44,7 +44,7 @@
   }
 
   &__select-caption,
-  &__btn {
+  &__btn-label {
     color: #fff;
     font-size: 12px;
     line-height: 1.2;
@@ -55,17 +55,13 @@
   }
 
   &__btns {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    gap: $gutter * 2;
     margin-left: $gutter * 4;
   }
 
   &__btn {
-    text-align: center;
-    --header-btn-padding-x: #{$gutter * 2};
     max-width: 110px;
-
-    & + & {
-      margin-left: $gutter * 2;
-    }
   }
 }

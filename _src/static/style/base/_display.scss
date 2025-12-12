@@ -35,6 +35,14 @@
     display: flex;
   }
 
+  .d-md-inline-flex {
+    display: inline-flex;
+  }
+
+  .d-md-grid {
+    display: grid;
+  }
+
   .d-md-none {
     display: none;
   }
@@ -42,6 +50,12 @@
 
 @media (max-width: $sm) {
   .d-sm-none {
+    display: none;
+  }
+}
+
+@media (max-width: $xs) {
+  .d-xs-none {
     display: none;
   }
 }

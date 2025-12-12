@@ -13,6 +13,8 @@
   cursor: pointer;
   font-size: 14px;
   line-height: 1.2;
+  position: relative;
+  text-align: center;
 
   &[disabled],
   &--disabled {
@@ -68,12 +70,18 @@
 
 
   &--size-l {
-    width: 32px;
-    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
 
     #{$self}__ico {
       width: 16px;
       height: 16px;
     }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
   }
 }

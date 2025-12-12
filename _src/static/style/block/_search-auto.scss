@@ -37,10 +37,6 @@
     grid-template-columns: 1fr 1fr;
     gap: $gutter * 4;
   }
-
-  &__footer-btn {
-    border-radius: 8px;
-  }
 }
 
 .search-auto-list {

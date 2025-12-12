@@ -1,19 +1,6 @@
 .product {
   $self: &;
 
-  &__header-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    svg {
-      width: 16px;
-      height: 16px;
-      fill: #fff;
-      margin-right: $gutter * 2;
-    }
-  }
-
   &__content {
     display: grid;
     grid-auto-flow: column;

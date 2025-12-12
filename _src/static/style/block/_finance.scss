@@ -1,25 +1,6 @@
 .finance {
   $self: &;
 
-  //Todo: Саше кнопки
-  &__header-btn {
-    svg {
-      width: 16px;
-      height: 16px;
-      margin-right: $gutter * 2;
-
-      @media (max-width: $ss) {
-        display: none;
-      }
-    }
-
-    &:last-child {
-      svg {
-        fill: #fff;
-      }
-    }
-  }
-
   &__info {
     display: grid;
     gap: $gutter * 6;
@@ -245,24 +226,7 @@
   }
 
   &__download {
-    font-size: 14px;
-    line-height: 22px;
-    color: $c-accent;
-    padding-left: $gutter * 2;
-    padding-right: $gutter * 2;
-    border-radius: 4px;
-    border: 1px solid $c-accent;
-    display: grid;
-    align-items: center;
-    grid-auto-flow: column;
-    gap: $gutter;
     max-width: 136px;
-
-    svg {
-      width: 16px;
-      height: 16px;
-      fill: $c-accent;
-    }
   }
 }
 

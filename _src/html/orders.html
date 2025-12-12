@@ -9,30 +9,29 @@
             <h1 class="title">Заказы</h1>
 
             <div class="section-header__group">
-                <a class="btn-primary" href="#">
-                    <svg class="orders__btn-ico" aria-hidden="true">
+                <a class="orders__header-btn btn btn--outlined btn--theme-secondary btn--size-m" href="#">
+                    <svg class="btn__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#folder"></use>
                     </svg>
                     <span class="d-md-none">
-                      Архив заказов
+                        Архив заказов
                     </span>
                 </a>
 
-                <button class="btn-primary" type="button" data-modal="drawer-filter-orders">
-                    <svg class="orders__btn-ico" aria-hidden="true">
+                <button class="orders__header-btn btn btn--outlined btn--theme-secondary btn--size-m" type="button" data-modal="drawer-filter-orders">
+                    <svg class="btn__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#filter"></use>
                     </svg>
                     <span class="d-md-none">
-                      Фильтр
+                        Фильтр
                     </span>
                 </button>
-                <!-- Todo: Саша, разберись с иконками на моби -->
-                <button class="btn-primary d-none d-md-flex" type="button" data-modal="drawer-sort">
-                    <svg class="orders__btn-ico" aria-hidden="true">
+                <button class="orders__header-btn btn btn--outlined btn--theme-secondary btn--size-m d-none d-md-inline-flex" type="button" data-modal="drawer-sort">
+                    <svg class="btn__ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#sort"></use>
                     </svg>
                     <span class="d-md-none">
-                      Сортировка
+                        Сортировка
                     </span>
                 </button>
             </div>
@@ -1196,7 +1195,7 @@
             </table>
         </div>
 
-        <div class="d-none d-md-block product-cards">
+        <div class="d-none d-md-grid product-cards">
             <ul class="product-cards__list">
                 <li class="product-card">
                     <div class="product-card__head">
@@ -1522,7 +1521,7 @@
                 </li>
             </ul>
 
-            <button type="button" class="product-cards__show-more btn">
+            <button type="button" class="product-cards__show-more btn btn--filled btn--theme-primary btn--size-m">
                 Показать еще
             </button>
 
@@ -1541,11 +1540,15 @@
                     </div>
 
                     <div class="action-bar__btns">
-                        <button class="action-bar__btn header-btn header-btn--gray" type="button">
-                            В архив
+                        <button class="action-bar__btn btn btn--filled btn--theme-secondary btn--size-s" type="button">
+                            <span class="action-bar__btn-label">
+                              В архив
+                            </span>
                         </button>
-                        <button class="action-bar__btn header-btn header-btn--gray" type="button">
-                            Изменить пункт самовывоза
+                        <button class="action-bar__btn btn btn--filled btn--theme-secondary btn--size-s" type="button">
+                            <span class="action-bar__btn-label">
+                              Изменить пункт самовывоза
+                            </span>
                         </button>
                     </div>
                 </div>
