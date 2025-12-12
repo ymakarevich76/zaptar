@@ -21,248 +21,253 @@
 <body>
 
 <header class="header" data-header>
-    <div class="header__top">
-        <div class="header__container container">
-            <a class="logo" href="/zaptar/dist">
-                <img class="logo__img" src="static/img/logo/logo.svg" width="198" height="32" alt="zaptar">
+    <div class="header__top container">
+        <a class="logo" href="/">
+            <img class="logo__img" src="static/img/logo/logo.svg" width="198" height="32" alt="zaptar">
+        </a>
+
+        <div class="header__top-contacts">
+            <a class="contact-link" href="tel:89308255335">
+                <svg class="contact-link__ico" aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                </svg>
+
+                <span class="contact-link__label">8 (930) 825 53-35</span>
             </a>
 
-            <div class="header__top-contacts">
-                <a class="header-contact" href="tel:89308255335">
-                    <svg class="header-contact__ico" aria-hidden="true">
-                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
-                    </svg>
+            <a class="contact-link" href="tel:89206055335">
+                <svg class="contact-link__ico" aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                </svg>
 
-                    <span class="header-contact__text">8 (930) 825 53-35</span>
-                </a>
+                <span class="contact-link__label">8 (920) 605 53-35</span>
+            </a>
 
-                <a class="header-contact" href="tel:89206055335">
-                    <svg class="header-contact__ico" aria-hidden="true">
-                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
-                    </svg>
+            <a class="contact-link contact-link--has-divider" href="mailto:info@zaptar.ru">
+                <svg class="contact-link__ico" aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#mail"></use>
+                </svg>
 
-                    <span class="header-contact__text">8 (920) 605 53-35</span>
-                </a>
-
-                <a class="header-contact header-contact--has-divider" href="mailto:info@zaptar.ru">
-                    <svg class="header-contact__ico" aria-hidden="true">
-                        <use xlink:href="static/img/symbol/sprite.svg#mail"></use>
-                    </svg>
-
-                    <span class="header-contact__text">info@zaptar.ru</span>
-                </a>
-            </div>
-
-            <!-- мобайл -->
-            <nav class="header__top-actions">
-                <!-- Пользователь не авторизован -->
-                <!--     <a href="#" class="btn-primary"> -->
-                <!--         Регистрация -->
-                <!--     </a> -->
-
-                <!--     <a href="#" class="btn btn&#45;&#45;size-s"> -->
-                <!--         Войти -->
-                <!--     </a> -->
-
-                <!-- Пользователь авторизован -->
-                <a class="header-btn header-btn--gray header-btn--narrow" href="#">
-                    <svg aria-hidden="true" class="header-btn__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
-                    </svg>
-                </a>
-
-                <a class="header-btn header-btn--gray header-btn--narrow" href="#">
-                    <svg aria-hidden="true" class="header-btn__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#car"></use>
-                    </svg>
-                </a>
-
-                <a class="header-btn header-btn--gray header-btn--narrow" href="#">
-                    <svg aria-hidden="true" class="header-btn__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#inbox"></use>
-                    </svg>
-                </a>
-
-                <a class="header-btn header-btn--gray header-btn--narrow" href="#">
-                    <svg aria-hidden="true" class="header-btn__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
-                    </svg>
-                </a>
-
-                <a class="header-btn header-btn--gray header-btn--narrow" href="#">
-                    <svg aria-hidden="true" class="header-btn__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
-                    </svg>
-                </a>
-
-                <button type="button" class="header-user-dropdown__toggle header-btn header-btn--gray header-btn--narrow" data-modal="drawer-user">
-                    <svg aria-hidden="true" class="header-btn__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#user"></use>
-                    </svg>
-                </button>
-            </nav>
+                <span class="contact-link__label">info@zaptar.ru</span>
+            </a>
         </div>
+
+        <!-- мобайл -->
+        <!-- Пользователь не авторизован -->
+
+        <!-- <nav class="header__top-actions"> -->
+        <!--     <a href="#" class="btn btn&#45;&#45;outlined btn&#45;&#45;theme-secondary btn&#45;&#45;size-m btn&#45;&#45;compact"> -->
+        <!--         Регистрация -->
+        <!--     </a> -->
+
+        <!--     <a href="#" class="btn btn&#45;&#45;filled btn&#45;&#45;theme-primary btn&#45;&#45;size-m btn&#45;&#45;compact"> -->
+        <!--         Войти -->
+        <!--     </a> -->
+        <!-- </nav> -->
+
+        <!-- мобайл -->
+        <!-- Пользователь авторизован -->
+
+        <nav class="header__top-actions">
+            <a class="btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" aria-label="Чат" href="#">
+                <svg aria-hidden="true" class="btn-lite__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
+                </svg>
+            </a>
+
+            <a class="btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" aria-label="Гараж" href="#">
+                <svg aria-hidden="true" class="btn-lite__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#car"></use>
+                </svg>
+            </a>
+
+            <a class="btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" aria-label="Гараж" href="#">
+                <svg aria-hidden="true" class="btn-lite__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#inbox"></use>
+                </svg>
+            </a>
+
+            <a class="btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" aria-label="Избранное" href="#">
+                <svg aria-hidden="true" class="btn-lite__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                </svg>
+            </a>
+
+            <a class="btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" aria-label="Корзина" href="#">
+                <svg aria-hidden="true" class="btn-lite__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
+                </svg>
+                <span class="btn-lite__badge badge badge--theme-dark">3</span>
+            </a>
+
+            <button type="button" aria-label="Пользователь" class="header-user-dropdown__toggle btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" data-modal="drawer-user">
+                <svg aria-hidden="true" class="btn-lite__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#user"></use>
+                </svg>
+            </button>
+        </nav>
     </div>
 
-    <div class="header__bottom">
-        <div class="header__container container">
-            <div class="header__search header-search">
-                <div class="header-search__dropdown header-search-dropdown">
-                    <button class="header-search-dropdown__toggle d-md-none">
-                        <svg class="header-search-dropdown__ico" aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
-                        </svg>
-                        <span class="header-search-dropdown__caption">Каталог</span>
-                    </button>
-                    <button class="header-search-dropdown__toggle d-none d-md-flex" data-modal="drawer-catalog">
-                        <svg class="header-search-dropdown__ico" aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
-                        </svg>
-                        <span class="header-search-dropdown__caption">Каталог</span>
-                    </button>
+    <div class="header__bottom container">
+        <div class="header__search header-search">
+            <div class="header-search__dropdown header-search-dropdown">
+                <button class="header-search-dropdown__toggle d-md-none">
+                    <svg class="header-search-dropdown__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
+                    </svg>
+                    <span class="header-search-dropdown__label">Каталог</span>
+                </button>
+                <button class="header-search-dropdown__toggle d-none d-md-flex" aria-label="Меню" data-modal="drawer-catalog">
+                    <svg class="header-search-dropdown__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
+                    </svg>
+                </button>
 
-                    <nav class="header-search-dropdown__menu">
-                        <a class="header-search-dropdown__link" href="catalog.html">
-                            Каталог запчастей
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Каталог ТО
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Масла
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Аккумуляторы
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Автолампы
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Шины
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Диски
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Колпаки
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Болты, Гайки
-                        </a>
-                    </nav>
-                </div>
+                <nav class="header-search-dropdown__menu dropdown-menu">
+                    <a class="dropdown-menu__link" href="catalog.html">
+                        Каталог запчастей
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Каталог ТО
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Масла
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Аккумуляторы
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Автолампы
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Шины
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Диски
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Колпаки
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Болты, Гайки
+                    </a>
+                </nav>
+            </div>
 
-                <input class="header-search__input" type="text" placeholder="Поиск по артикулу или наименованию" />
+            <form class="header-search__form" action="/search.html" method="GET">
+                <input class="header-search__input" type="search" placeholder="Поиск по артикулу или наименованию" />
 
-                <!-- todo: активировать кнопку когда ввели текст -->
-                <button class="header-search__btn">
+                <button class="header-search__btn" aria-label="Поиск по артикулу или наименованию">
                     <svg class="header-search__btn-ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#search"></use>
                     </svg>
                 </button>
-            </div>
-
-            <!-- Пользователь не авторизован -->
-
-           <!--  <div class="header__bottom-actions header-bottom-actions"> -->
-           <!--     <a class="header-btn" href="#"> -->
-           <!--         Регистрация -->
-           <!--     </a> -->
-
-           <!--     <button type="button" data-modal="auth" class="header-btn header-btn&#45;&#45;accent"> -->
-           <!--         <svg aria-hidden="true" class="header-btn__ico"> -->
-           <!--             <use xlink:href="static/img/symbol/sprite.svg#user"></use> -->
-           <!--         </svg> -->
-
-           <!--         <span>Войти</span> -->
-           <!--     </button> -->
-           <!-- </div> -->
-
-           <!-- Пользователь авторизован -->
-
-           <nav class="header__bottom-actions header-bottom-actions">
-               <a class="header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
-                   <svg aria-hidden="true" class="header-btn__ico">
-                       <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
-                   </svg>
-               </a>
-
-               <a class="header-bottom-actions__btn-divider header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
-                   <svg aria-hidden="true" class="header-btn__ico">
-                       <use xlink:href="static/img/symbol/sprite.svg#car"></use>
-                   </svg>
-               </a>
-
-               <a class="header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
-                   <svg aria-hidden="true" class="header-btn__ico">
-                       <use xlink:href="static/img/symbol/sprite.svg#inbox"></use>
-                   </svg>
-               </a>
-
-               <a class="header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
-                   <svg aria-hidden="true" class="header-btn__ico">
-                       <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
-                   </svg>
-               </a>
-
-               <a class="header-bottom-actions__btn-divider header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
-                   <svg aria-hidden="true" class="header-btn__ico">
-                       <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
-                   </svg>
-               </a>
-
-               <a class="header-btn header-btn--gray header-btn-wallet" href="#">
-                    <svg aria-hidden="true" class="header-btn__ico header-btn-wallet__ico">
-                       <use xlink:href="static/img/symbol/sprite.svg#wallet"></use>
-                    </svg>
-                   <span class="header-btn-wallet__caption">Баланс</span>
-                   <span class="header-btn-wallet__balance">+999 999 руб</span>
-               </a>
-
-               <div class="header-user-dropdown d-md-none">
-                   <button type="button" class="header-user-dropdown__toggle header-btn header-btn--gray">
-                       Иван
-                       <svg aria-hidden="true" class="header-btn__ico header-btn__ico--sm">
-                           <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-                       </svg>
-                   </button>
-
-                    <div class="header-user-dropdown__menu">
-                        <a class="header-user-dropdown__link" data-modal="drawer-profile" href="#">
-                            <svg aria-hidden="true" class="header-user-dropdown__ico">
-                                <use xlink:href="static/img/symbol/sprite.svg#user"></use>
-                            </svg>
-                            Профиль
-                        </a>
-                        <a class="header-user-dropdown__link" href="#">
-                            <svg aria-hidden="true" class="header-user-dropdown__ico">
-                                <use xlink:href="static/img/symbol/sprite.svg#dollar"></use>
-                            </svg>
-                            Мои финансы
-                        </a>
-                        <a class="header-user-dropdown__link" href="#">
-                            <svg aria-hidden="true" class="header-user-dropdown__ico">
-                                <use xlink:href="static/img/symbol/sprite.svg#line-chart"></use>
-                            </svg>
-                            Ценообразование
-                        </a>
-                        <a class="header-user-dropdown__link" href="#">
-                            <svg aria-hidden="true" class="header-user-dropdown__ico">
-                                <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                            </svg>
-                            Пополнить баланс
-                        </a>
-                        <a class="header-user-dropdown__link header-user-dropdown__link--logout" href="#">
-                            <svg aria-hidden="true" class="header-user-dropdown__ico">
-                                <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
-                            </svg>
-                            Выйти
-                        </a>
-                       <!--   todo: дополнить номерами телефонов   -->
-                    </div>
-               </div>
-           </nav>
+            </form>
         </div>
+
+       <!--  Десктоп -->
+       <!-- Пользователь не авторизован -->
+
+        <!-- <nav class="header__bottom-actions header-bottom-actions d-md-none"> -->
+        <!--     <a class="btn btn&#45;&#45;filled btn&#45;&#45;theme-light btn&#45;&#45;size-m" href="#"> -->
+        <!--         Регистрация -->
+        <!--     </a> -->
+
+        <!--     <button type="button" data-modal="auth" class="btn btn&#45;&#45;filled btn&#45;&#45;theme-primary btn&#45;&#45;size-m"> -->
+        <!--         <svg aria-hidden="true" class="btn__ico"> -->
+        <!--             <use xlink:href="static/img/symbol/sprite.svg#user"></use> -->
+        <!--         </svg> -->
+
+        <!--         <span class="btn__label">Войти</span> -->
+        <!--     </button> -->
+        <!-- </nav> -->
+
+        <!--  Десктоп -->
+        <!-- Пользователь авторизован -->
+
+       <nav class="header__bottom-actions header-bottom-actions">
+           <a class="btn btn--filled btn--theme-secondary btn--size-m btn--compact d-md-none" href="#">
+               <svg aria-hidden="true" class="btn__ico">
+                   <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
+               </svg>
+               <span class="btn__badge badge badge--theme-light"></span>
+           </a>
+
+           <a class="header-bottom-actions__btn-divider btn btn--filled btn--theme-secondary btn--size-m btn--compact d-md-none" href="#">
+               <svg aria-hidden="true" class="btn__ico">
+                   <use xlink:href="static/img/symbol/sprite.svg#car"></use>
+               </svg>
+           </a>
+
+           <a class="btn btn--filled btn--theme-secondary btn--size-m btn--compact d-md-none" href="#">
+               <svg aria-hidden="true" class="btn__ico">
+                   <use xlink:href="static/img/symbol/sprite.svg#inbox"></use>
+               </svg>
+           </a>
+
+           <a class="btn btn--filled btn--theme-secondary btn--size-m btn--compact d-md-none" href="#">
+               <svg aria-hidden="true" class="btn__ico">
+                   <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+               </svg>
+           </a>
+
+           <a class="header-bottom-actions__btn-divider btn btn--filled btn--theme-secondary btn--size-m btn--compact d-md-none" href="#">
+               <svg aria-hidden="true" class="btn__ico">
+                   <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
+               </svg>
+               <span class="btn__badge badge badge--theme-light">3</span>
+           </a>
+
+           <a class="header-btn-wallet btn btn--filled btn--theme-secondary btn--size-m" href="#">
+                <svg aria-hidden="true" class="btn__ico header-btn-wallet__ico">
+                   <use xlink:href="static/img/symbol/sprite.svg#wallet"></use>
+                </svg>
+               <span class="header-btn-wallet__caption">Баланс</span>
+               <span class="header-btn-wallet__balance">+999 999 руб</span>
+           </a>
+
+           <div class="header-user-dropdown d-md-none">
+               <button type="button" class="header-user-dropdown__toggle btn btn--filled btn--theme-secondary btn--size-m">
+                   Иван
+                   <svg aria-hidden="true" class="btn__ico btn__ico--sm">
+                       <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+                   </svg>
+               </button>
+
+                <div class="header-user-dropdown__menu dropdown-menu">
+                    <a class="dropdown-menu__link" data-modal="drawer-profile" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#user"></use>
+                        </svg>
+                        Профиль
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#dollar"></use>
+                        </svg>
+                        Мои финансы
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#line-chart"></use>
+                        </svg>
+                        Ценообразование
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                        </svg>
+                        Пополнить баланс
+                    </a>
+                    <a class="dropdown-menu__link dropdown-menu__link--logout" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
+                        </svg>
+                        Выйти
+                    </a>
+                </div>
+           </div>
+        </nav>
     </div>
 </header>
 
@@ -279,214 +284,212 @@
 </div>
 
 
-    <div class="container">
-        <section class="page-text">
-            <h1 class="title title--mb">Договор оферты</h1>
-            <div class="page-text__content">
-                <p>ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ Буртолик Андрей Викторович ИНН 325001420520 ОГРНИП 325320000020536, именуемый в дальнейшем «Исполнитель» с одной стороны и физическое лицо, самозанятый гражданин, юридическое лицо, либо индивидуальный предприниматель, именуемое в дальнейшем «Клиент», с другой стороны, совместно именуемые «Стороны», имеют намерение заключить Договор о нижеследующем:</p>
+    <section class="page-text container">
+        <h1 class="title title--mb">Договор оферты</h1>
+        <div class="page-text__content">
+            <p>ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ Буртолик Андрей Викторович ИНН 325001420520 ОГРНИП 325320000020536, именуемый в дальнейшем «Исполнитель» с одной стороны и физическое лицо, самозанятый гражданин, юридическое лицо, либо индивидуальный предприниматель, именуемое в дальнейшем «Клиент», с другой стороны, совместно именуемые «Стороны», имеют намерение заключить Договор о нижеследующем:</p>
 
-                <p>В соответствии с пунктом 2 статьи 437 Гражданского Кодекса Российской Федерации (далее – ГК РФ) в случае принятия изложенных ниже условий и совершения акцепта, лицо, производящее акцепт настоящей Оферты, становится «Клиентом».</p>
+            <p>В соответствии с пунктом 2 статьи 437 Гражданского Кодекса Российской Федерации (далее – ГК РФ) в случае принятия изложенных ниже условий и совершения акцепта, лицо, производящее акцепт настоящей Оферты, становится «Клиентом».</p>
 
-                <p>Согласно пункту 3 статьи 438 ГК РФ акцепт оферты равносилен заключению договора на условиях, изложенных в оферте.</p>
+            <p>Согласно пункту 3 статьи 438 ГК РФ акцепт оферты равносилен заключению договора на условиях, изложенных в оферте.</p>
 
-                <p>Внимательно прочитайте текст данной оферты и, если вы не согласны с каким-либо пунктом настоящей Оферты, Исполнитель предлагает вам отказаться от совершения каких-либо действий, необходимых для акцепта.</p>
+            <p>Внимательно прочитайте текст данной оферты и, если вы не согласны с каким-либо пунктом настоящей Оферты, Исполнитель предлагает вам отказаться от совершения каких-либо действий, необходимых для акцепта.</p>
 
-                <p>I. ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ</p>
+            <p>I. ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ</p>
 
-                <p>Оферта – публичное предложение Исполнителя, составленное в соответствии с действующим законодательством РФ, адресованное любому лицу, с намерением заключить настоящий Договор на изложенных в нем условиях.</p>
+            <p>Оферта – публичное предложение Исполнителя, составленное в соответствии с действующим законодательством РФ, адресованное любому лицу, с намерением заключить настоящий Договор на изложенных в нем условиях.</p>
 
-                <p>Акцепт оферты – полное и безоговорочное согласие Клиента с условиями настоящей Оферты посредством совершения действий, указанных в п. 2.4. настоящей Оферты.</p>
+            <p>Акцепт оферты – полное и безоговорочное согласие Клиента с условиями настоящей Оферты посредством совершения действий, указанных в п. 2.4. настоящей Оферты.</p>
 
-                <p>Маркетплейс – веб-сайт, являющийся сервисом, предоставляющим потенциальным Клиентам доступ для регистрации с целью дальнейшей покупки товаров, оригинальных или аналоговых автозапчастей по адресу <a href="http://zaptar.ru/">http://zaptar.ru/</a>.</p>
+            <p>Маркетплейс – веб-сайт, являющийся сервисом, предоставляющим потенциальным Клиентам доступ для регистрации с целью дальнейшей покупки товаров, оригинальных или аналоговых автозапчастей по адресу <a href="http://zaptar.ru/">http://zaptar.ru/</a>.</p>
 
-                <p>Услуги - услуги, связанные с предоставлением доступа Клиентам интернет – площадки/ маркетплейса <a href="http://zaptar.ru/">http://zaptar.ru/</a> для покупки товаров, оригинальных или аналоговых автозапчастей.</p>
+            <p>Услуги - услуги, связанные с предоставлением доступа Клиентам интернет – площадки/ маркетплейса <a href="http://zaptar.ru/">http://zaptar.ru/</a> для покупки товаров, оригинальных или аналоговых автозапчастей.</p>
 
-                <p>Клиент – физическое лицо, самозанятый гражданин, юридическое лицо либо индивидуальный предприниматель, осуществляющее покупку товаров на Маркетплейсе на изложенных в Оферте условиях.</p>
+            <p>Клиент – физическое лицо, самозанятый гражданин, юридическое лицо либо индивидуальный предприниматель, осуществляющее покупку товаров на Маркетплейсе на изложенных в Оферте условиях.</p>
 
-                <p>Товар – оригинальные или аналоговые автозапчасти, расположенные со всеми товарными характеристиками по адресу <a href="http://zaptar.ru/">http://zaptar.ru/</a>.</p>
+            <p>Товар – оригинальные или аналоговые автозапчасти, расположенные со всеми товарными характеристиками по адресу <a href="http://zaptar.ru/">http://zaptar.ru/</a>.</p>
 
-                <p>Личный кабинет (аккаунт) - учетная запись Клиента, идентифицируемая данными, указанными им при регистрации, однозначно и полностью определяющая объем данных, принадлежащих Пользователю. Под данными понимаются любые данные, которые вводятся Пользователем (данные, вводимые при регистрации (для идентификации), а также информация о товарах, предлагаемых к реализации) или возникают в процессе использования площадки.</p>
+            <p>Личный кабинет (аккаунт) - учетная запись Клиента, идентифицируемая данными, указанными им при регистрации, однозначно и полностью определяющая объем данных, принадлежащих Пользователю. Под данными понимаются любые данные, которые вводятся Пользователем (данные, вводимые при регистрации (для идентификации), а также информация о товарах, предлагаемых к реализации) или возникают в процессе использования площадки.</p>
 
-                <p>Стоимость услуг – стоимость в соответствии с ценами, указанными на маркетплейсе <a href="http://zaptar.ru/">http://zaptar.ru/</a>.</p>
+            <p>Стоимость услуг – стоимость в соответствии с ценами, указанными на маркетплейсе <a href="http://zaptar.ru/">http://zaptar.ru/</a>.</p>
 
-                <p>Исполнитель – Индивидуальный предприниматель Буртолик Андрей Викторович ИНН 325001420520 ОГРНИП 325320000020536</p>
+            <p>Исполнитель – Индивидуальный предприниматель Буртолик Андрей Викторович ИНН 325001420520 ОГРНИП 325320000020536</p>
 
-                <p>Персональные данные Клиента – любая информация в соответствии с Федеральным законом «О персональных данных», полученная Исполнителем от Клиента при регистрации на Маркетплейсе.</p>
+            <p>Персональные данные Клиента – любая информация в соответствии с Федеральным законом «О персональных данных», полученная Исполнителем от Клиента при регистрации на Маркетплейсе.</p>
 
-                <p>Политика обработки персональных данных – документ, на основании которого Оператор (Исполнитель) обработки персональных данных осуществляет обработку данных.</p>
+            <p>Политика обработки персональных данных – документ, на основании которого Оператор (Исполнитель) обработки персональных данных осуществляет обработку данных.</p>
 
-                <p>Согласие на обработку персональных данных – документ, являющийся основанием обработки персональных данных Клиента.</p>
+            <p>Согласие на обработку персональных данных – документ, являющийся основанием обработки персональных данных Клиента.</p>
 
-                <p>Согласие на рассылку электронных сообщений – документ, являющийся основанием для рассылки материалов рекламного и (или) информационного характера посредством SMS-сервисов и(или) с электронной почты Исполнителя <a href="mailto:info@zaptar.ru">info@zaptar.ru</a>.</p>
+            <p>Согласие на рассылку электронных сообщений – документ, являющийся основанием для рассылки материалов рекламного и (или) информационного характера посредством SMS-сервисов и(или) с электронной почты Исполнителя <a href="mailto:info@zaptar.ru">info@zaptar.ru</a>.</p>
 
-                <p>II. ОБЩИЕ ПОЛОЖЕНИЯ</p>
+            <p>II. ОБЩИЕ ПОЛОЖЕНИЯ</p>
 
-                <p>2.1. В соответствии с настоящей Офертой, Исполнитель обязуется оказать Клиенту, зарегистрированному в личном кабинете на сайте <a href="http://zaptar.ru/">http://zaptar.ru/</a> услуги по предоставлению интернет - площадки для покупки товаров.</p>
+            <p>2.1. В соответствии с настоящей Офертой, Исполнитель обязуется оказать Клиенту, зарегистрированному в личном кабинете на сайте <a href="http://zaptar.ru/">http://zaptar.ru/</a> услуги по предоставлению интернет - площадки для покупки товаров.</p>
 
-                <p>2.2. Услуги направлены на удовлетворение потребностей Клиента в покупке товаров, оригинальных или аналоговых автозапчастей на одной интернет – площадке/маркетплейсе.</p>
+            <p>2.2. Услуги направлены на удовлетворение потребностей Клиента в покупке товаров, оригинальных или аналоговых автозапчастей на одной интернет – площадке/маркетплейсе.</p>
 
-                <p>2.3. Настоящей Офертой Клиент уведомлен, что услуги оказываются в соответствии с законодательством РФ, а также сложившейся правоприменительной практикой.</p>
+            <p>2.3. Настоящей Офертой Клиент уведомлен, что услуги оказываются в соответствии с законодательством РФ, а также сложившейся правоприменительной практикой.</p>
 
-                <p>2.4. Совершение акцепта, влекущее заключение договора между Исполнителем и Клиентом на оказание услуг осуществляется путем совершения Клиентом следующих действий: регистрация на сайте <a href="http://zaptar.ru/">http://zaptar.ru/</a> посредством нажатия на кнопку «Войти»/«Регистрация» и введения персональных данных лица:</p>
+            <p>2.4. Совершение акцепта, влекущее заключение договора между Исполнителем и Клиентом на оказание услуг осуществляется путем совершения Клиентом следующих действий: регистрация на сайте <a href="http://zaptar.ru/">http://zaptar.ru/</a> посредством нажатия на кнопку «Войти»/«Регистрация» и введения персональных данных лица:</p>
 
-                <span>телефон,  email, ФИО, город, адрес.</span>
+            <span>телефон,  email, ФИО, город, адрес.</span>
 
-                <p>2.5. Моментом заключения договора признается дата регистрации Клиента на сайте <a href="http://zaptar.ru.ru/">http://zaptar.ru/</a> и заполнение необходимых персональных данных.</p>
+            <p>2.5. Моментом заключения договора признается дата регистрации Клиента на сайте <a href="http://zaptar.ru.ru/">http://zaptar.ru/</a> и заполнение необходимых персональных данных.</p>
 
-                <p>2.6. После совершения Клиентом акцепта оферты, договор считается заключенным, и может быть расторгнут по основаниям, предусмотренным законодательством РФ.</p>
+            <p>2.6. После совершения Клиентом акцепта оферты, договор считается заключенным, и может быть расторгнут по основаниям, предусмотренным законодательством РФ.</p>
 
-                <p>III. ПОРЯДОК И УСЛОВИЯ ПРЕДОСТАВЛЕНИЯ УСЛУГ</p>
+            <p>III. ПОРЯДОК И УСЛОВИЯ ПРЕДОСТАВЛЕНИЯ УСЛУГ</p>
 
-                <p>3.1. Клиентрегистрируется на сайте <a href="http://zaptar.ru/">http://zaptar.ru/</a> и  предоставляет свои персональные данные для последующего взаимодействия Сторон в целях исполнения Договора.</p>
+            <p>3.1. Клиентрегистрируется на сайте <a href="http://zaptar.ru/">http://zaptar.ru/</a> и  предоставляет свои персональные данные для последующего взаимодействия Сторон в целях исполнения Договора.</p>
 
-                <p>3.2. После заполнения всех полей для данных, Клиент подтверждает правильность и достоверность указанных им данных и выражает желание зарегистрироваться на сайте и заключить договор по изложенным в настоящей Оферте условиям, путем проставления знака «V» напротив графы «С условиями соглашения об обработке персональных данных ознакомлен и согласен», «С условиями использования ресурса ознакомлен и согласен», и нажимая кнопку «Зарегистрироваться».</p>
+            <p>3.2. После заполнения всех полей для данных, Клиент подтверждает правильность и достоверность указанных им данных и выражает желание зарегистрироваться на сайте и заключить договор по изложенным в настоящей Оферте условиям, путем проставления знака «V» напротив графы «С условиями соглашения об обработке персональных данных ознакомлен и согласен», «С условиями использования ресурса ознакомлен и согласен», и нажимая кнопку «Зарегистрироваться».</p>
 
-                <p>3.3. Совершая акцепт настоящей Оферты, Клиент свободно, своей волей и в своём интересе даёт согласие Исполнителю на обработку предоставленных Клиентом персональных данных.  Согласие считается отозванным в случае досрочного расторжения настоящего Договора по любой причине или в случае направления Клиентом отказа от согласия на обработку персональных данных на электронную почту: <a href="mailto:info@zaptar.ru">info@zaptar.ru</a>.</p>
+            <p>3.3. Совершая акцепт настоящей Оферты, Клиент свободно, своей волей и в своём интересе даёт согласие Исполнителю на обработку предоставленных Клиентом персональных данных.  Согласие считается отозванным в случае досрочного расторжения настоящего Договора по любой причине или в случае направления Клиентом отказа от согласия на обработку персональных данных на электронную почту: <a href="mailto:info@zaptar.ru">info@zaptar.ru</a>.</p>
 
-                <p>3.4. После регистрации на сайте <a href="http://zaptar.ru/">http://zaptar.ru/</a> в порядке, предусмотренном п. 3.2. настоящей Оферты, Клиент получает полноправный доступ к маркетплейсус целью дальнейшей покупки товаров, а именно: оригинальных или аналоговых автозапчастей.</p>
+            <p>3.4. После регистрации на сайте <a href="http://zaptar.ru/">http://zaptar.ru/</a> в порядке, предусмотренном п. 3.2. настоящей Оферты, Клиент получает полноправный доступ к маркетплейсус целью дальнейшей покупки товаров, а именно: оригинальных или аналоговых автозапчастей.</p>
 
-                <p>IV. СТОИМОСТЬ ОКАЗЫВАЕМЫХ УСЛУГ И ПОРЯДОК ОПЛАТ</p>
+            <p>IV. СТОИМОСТЬ ОКАЗЫВАЕМЫХ УСЛУГ И ПОРЯДОК ОПЛАТ</p>
 
-                <ul>
-                    <li>Порядок оплаты.
-                    <li>Исполнитель предоставляет Клиенту возможность пополнения баланса с использованием банковской карты, при условии, что такая Банковская карта может быть использована для оплаты Товара. После выполнения заказа Товара, денежные средства списываются с баланса Клиента.</li>
-                    <li>В случае отсутствия полученного платежа с момента перевода в статус «Отгружено» (Клиент обязан оплатить в указанный для него период отсрочки (персонально устанавливаем лимит отсрочки для каждого индивидуально)), Исполнитель начисляет пени, исходя из суммы задолженности Клиента. Начисление пеней производится автоматически в размере 3% (трех  процентов) от суммы задолженности Клиента и начисленных пеней за каждый день просрочки и отражается отдельной операцией в Акте сверки. Задолженность Клиента перед Исполнителем увеличивается на сумму начисленных пеней.</li>
-                </ul>
+            <ul>
+                <li>Порядок оплаты.
+                <li>Исполнитель предоставляет Клиенту возможность пополнения баланса с использованием банковской карты, при условии, что такая Банковская карта может быть использована для оплаты Товара. После выполнения заказа Товара, денежные средства списываются с баланса Клиента.</li>
+                <li>В случае отсутствия полученного платежа с момента перевода в статус «Отгружено» (Клиент обязан оплатить в указанный для него период отсрочки (персонально устанавливаем лимит отсрочки для каждого индивидуально)), Исполнитель начисляет пени, исходя из суммы задолженности Клиента. Начисление пеней производится автоматически в размере 3% (трех  процентов) от суммы задолженности Клиента и начисленных пеней за каждый день просрочки и отражается отдельной операцией в Акте сверки. Задолженность Клиента перед Исполнителем увеличивается на сумму начисленных пеней.</li>
+            </ul>
 
-                <p>V. ПОРЯДОК ДОСТАВКИ ТОВАРА</p>
+            <p>V. ПОРЯДОК ДОСТАВКИ ТОВАРА</p>
 
-                <p>5.1. После Приема в работу Заказов:</p>
+            <p>5.1. После Приема в работу Заказов:</p>
 
-                <p>5.1.1. Исполнитель совершает действия по исполнению Заказов.</p>
+            <p>5.1.1. Исполнитель совершает действия по исполнению Заказов.</p>
 
-                <p>5.1.2. Клиент отслеживает статус исполнения своих Заказов и баланса с помощью ресурсов сайта. Клиент знает количество Товаров, готовых к выдаче, их характеристики (объем, вес, позиционную и суммарную стоимость, режим работы склада), и потому в состоянии правильно организовать получение Готового к выдаче Товара.</p>
+            <p>5.1.2. Клиент отслеживает статус исполнения своих Заказов и баланса с помощью ресурсов сайта. Клиент знает количество Товаров, готовых к выдаче, их характеристики (объем, вес, позиционную и суммарную стоимость, режим работы склада), и потому в состоянии правильно организовать получение Готового к выдаче Товара.</p>
 
-                <p>5.2. Исполнитель передает Клиенту Товар, указанный Клиентом в заказе и оплаченный в соответствии с разделом 4 настоящего Договора. Отгрузка скомплектованного в соответствии с согласованным заказомТовара со склада Исполнителя осуществляется только после поступления на расчетный счет Исполнителя 100% (ста процентов) стоимости Товара.</p>
+            <p>5.2. Исполнитель передает Клиенту Товар, указанный Клиентом в заказе и оплаченный в соответствии с разделом 4 настоящего Договора. Отгрузка скомплектованного в соответствии с согласованным заказомТовара со склада Исполнителя осуществляется только после поступления на расчетный счет Исполнителя 100% (ста процентов) стоимости Товара.</p>
 
-                <p>5.3. Исполнитель гарантирует соблюдение условий хранения Товара до его передачи Клиенту или в транспортную компанию.</p>
+            <p>5.3. Исполнитель гарантирует соблюдение условий хранения Товара до его передачи Клиенту или в транспортную компанию.</p>
 
-                <p>5.4. Исполнитель передает Товар покупателю:</p>
+            <p>5.4. Исполнитель передает Товар покупателю:</p>
 
-                <p>5.4.1. на складе Исполнителя (самовывоз);</p>
+            <p>5.4.1. на складе Исполнителя (самовывоз);</p>
 
-                <p>5.4.2. посредством транспортом Исполнителя (доставка).</p>
+            <p>5.4.2. посредством транспортом Исполнителя (доставка).</p>
 
-                <p>5.5. Приемка Товара по ассортименту, количеству, комплектности и качеству осуществляется Клиентом в момент получения Товара на складе Исполнителя.</p>
+            <p>5.5. Приемка Товара по ассортименту, количеству, комплектности и качеству осуществляется Клиентом в момент получения Товара на складе Исполнителя.</p>
 
-                <p>5.6. Приемка по качеству кузовных деталей осуществляется в присутствии водителя.</p>
+            <p>5.6. Приемка по качеству кузовных деталей осуществляется в присутствии водителя.</p>
 
-                <p>5.7. Клиент, получающий Товар силами Исполнителя, должен проверить Товар на присутствие брака при экспедиторе Исполнителя.</p>
+            <p>5.7. Клиент, получающий Товар силами Исполнителя, должен проверить Товар на присутствие брака при экспедиторе Исполнителя.</p>
 
-                <p>5.8. При обнаружении контрафакта, пересорта/некомплекта, Клиент должен заявить Исполнителю через  <a href="http://zaptar.ru/">http://zaptar.ru/</a> в течение 3 (трех) календарных дней с момента получения Товара.</p>
+            <p>5.8. При обнаружении контрафакта, пересорта/некомплекта, Клиент должен заявить Исполнителю через  <a href="http://zaptar.ru/">http://zaptar.ru/</a> в течение 3 (трех) календарных дней с момента получения Товара.</p>
 
-                <p>5.9. Хранение товара Клиента на складе Исполнителя не должно превышать 7 (семь) календарных дней, иначе Исполнитель имеет право удерживать с Клиента 3% за каждый день хранения от стоимости товара.</p>
+            <p>5.9. Хранение товара Клиента на складе Исполнителя не должно превышать 7 (семь) календарных дней, иначе Исполнитель имеет право удерживать с Клиента 3% за каждый день хранения от стоимости товара.</p>
 
-                <p>5.10. Претензии по недопоставке товара принимаются в течение 1 (одного) рабочего дня с даты выписки документов поставки. При несоблюдении этих сроков претензии по недопоставке не принимаются.</p>
+            <p>5.10. Претензии по недопоставке товара принимаются в течение 1 (одного) рабочего дня с даты выписки документов поставки. При несоблюдении этих сроков претензии по недопоставке не принимаются.</p>
 
-                <p>VI. ПРАВА И ОБЯЗАННОСТИ СТОРОН</p>
+            <p>VI. ПРАВА И ОБЯЗАННОСТИ СТОРОН</p>
 
-                <p>6.1. Исполнитель оказывает услуги в информационно -телекоммуникационной сети «Интернет» с последующим информационным сопровождением и предоставлением пунктов выдачи заказов для Клиентов.</p>
+            <p>6.1. Исполнитель оказывает услуги в информационно -телекоммуникационной сети «Интернет» с последующим информационным сопровождением и предоставлением пунктов выдачи заказов для Клиентов.</p>
 
-                <p>6.2. Исполнитель имеет право не приступать к оказанию услуг, а также приостановить оказание услуг, к которым он фактически приступил, в случаях нарушения Клиентом своих обязательств по настоящему Договору.</p>
+            <p>6.2. Исполнитель имеет право не приступать к оказанию услуг, а также приостановить оказание услуг, к которым он фактически приступил, в случаях нарушения Клиентом своих обязательств по настоящему Договору.</p>
 
-                <p>6.3. Исполнитель обязуется обеспечить использование всех сведений, полученных от Клиента только в целях исполнения Договора.</p>
+            <p>6.3. Исполнитель обязуется обеспечить использование всех сведений, полученных от Клиента только в целях исполнения Договора.</p>
 
-                <p>VII.  ПОРЯДОК УРЕГУЛИРОВАНИЯ СПОРОВ И ОТВЕТСТВЕННОСТЬ СТОРОН</p>
+            <p>VII.  ПОРЯДОК УРЕГУЛИРОВАНИЯ СПОРОВ И ОТВЕТСТВЕННОСТЬ СТОРОН</p>
 
-                <p>7.1. Исполнитель не несет ответственности за несоответствие предоставленной услуги ожиданиям Клиента и(или) за его субъективную оценку.</p>
+            <p>7.1. Исполнитель не несет ответственности за несоответствие предоставленной услуги ожиданиям Клиента и(или) за его субъективную оценку.</p>
 
-                <p>7.2. Несоответствие ожиданиям и (или) отрицательная субъективная оценка не являются основаниями считать услуги оказанными некачественно или не в согласованном объеме. Также не являются такими основаниями мнения третьих лиц, отличные от мнения Исполнителя (его сотрудников и(или) партнеров).</p>
+            <p>7.2. Несоответствие ожиданиям и (или) отрицательная субъективная оценка не являются основаниями считать услуги оказанными некачественно или не в согласованном объеме. Также не являются такими основаниями мнения третьих лиц, отличные от мнения Исполнителя (его сотрудников и(или) партнеров).</p>
 
-                <p>7.3. Все споры и разногласия, возникшие в связи с исполнением договора, заключенного посредством совершения Клиентом акцепта настоящей Оферты, решаются Сторонами путем переговоров. Досудебный порядок урегулирования спора состоит из направления Клиентом претензии в письменной форме на электронный адрес Исполнителя. При невозможности регулирования спора в претензионном порядке, споры разрешаются в судебном порядке в соответствии с законодательством РФ.</p>
+            <p>7.3. Все споры и разногласия, возникшие в связи с исполнением договора, заключенного посредством совершения Клиентом акцепта настоящей Оферты, решаются Сторонами путем переговоров. Досудебный порядок урегулирования спора состоит из направления Клиентом претензии в письменной форме на электронный адрес Исполнителя. При невозможности регулирования спора в претензионном порядке, споры разрешаются в судебном порядке в соответствии с законодательством РФ.</p>
 
-                <p>7.4. Исполнитель не несет ответственности за технические неполадки работы сайта. Исполнитель прилагает все разумные усилия, предотвращающие сбои и неполадки в работе Сайта, однако не гарантирует его бесперебойную работу, не обязуется уведомлять Клиента о перебоях.</p>
+            <p>7.4. Исполнитель не несет ответственности за технические неполадки работы сайта. Исполнитель прилагает все разумные усилия, предотвращающие сбои и неполадки в работе Сайта, однако не гарантирует его бесперебойную работу, не обязуется уведомлять Клиента о перебоях.</p>
 
-                <p>7.5. Стороны освобождаются от ответственности за частичное или полное неисполнение обязательств по настоящему Договору, если неисполнение явилось следствием природных явлений, действий внешних объективных факторов и прочих обстоятельств непреодолимой силы, за которые Стороны не отвечают и предотвратить неблагоприятное воздействие которых они не имеют возможности.</p>
+            <p>7.5. Стороны освобождаются от ответственности за частичное или полное неисполнение обязательств по настоящему Договору, если неисполнение явилось следствием природных явлений, действий внешних объективных факторов и прочих обстоятельств непреодолимой силы, за которые Стороны не отвечают и предотвратить неблагоприятное воздействие которых они не имеют возможности.</p>
 
-                <p>VIII. ПОРЯДОК ВОЗВРАТОВ</p>
+            <p>VIII. ПОРЯДОК ВОЗВРАТОВ</p>
 
-                <p>8.1. Возврат Товара надлежащего качества.</p>
+            <p>8.1. Возврат Товара надлежащего качества.</p>
 
-                <p>8.1.1. При решении о возврате Товара надлежащего качества для физических лиц:</p>
+            <p>8.1.1. При решении о возврате Товара надлежащего качества для физических лиц:</p>
 
-                <ul>
-                    <li>В соответствии со ст.26.1 Закона РФ от 07.02.1992 г. №2300-1 «О защите прав потребителей», физическое лицо вправе отказаться от товара в любое время до его передачи, а после передачи товара - в течение 7 (семи)календарных дней. Возврат товара надлежащего качества возможен в случае, если сохранены его товарный вид, потребительские свойства, целостность упаковки, а также документ, подтверждающий факт и условия покупки указанного Товара.</li>
-                    <li>При отказе Клиента от Товара, Исполнитель возвращает ему стоимость возвращенного Товара, за исключением расходов Исполнителя, связанных с доставкой возвращенного Товара, в течение 10 (десяти)календарных дней с даты поступления возвращенного Товара на склад Исполнителя вместе с заполненным Клиентом заявлением на возврат.</li>
-                    <li>Не подлежат возврату или обмену Товары в соответствии с Перечнем непродовольственных товаров надлежащего качества, не подлежащих обмену, утвержденным Постановлением Правительства РФ от 31 декабря 2020 г. №2463, а именно, масла, технические жидкости, автомобильное электрооборудование, автохимия, бытовая химия, б/у Товар.</li>
-                </ul>
+            <ul>
+                <li>В соответствии со ст.26.1 Закона РФ от 07.02.1992 г. №2300-1 «О защите прав потребителей», физическое лицо вправе отказаться от товара в любое время до его передачи, а после передачи товара - в течение 7 (семи)календарных дней. Возврат товара надлежащего качества возможен в случае, если сохранены его товарный вид, потребительские свойства, целостность упаковки, а также документ, подтверждающий факт и условия покупки указанного Товара.</li>
+                <li>При отказе Клиента от Товара, Исполнитель возвращает ему стоимость возвращенного Товара, за исключением расходов Исполнителя, связанных с доставкой возвращенного Товара, в течение 10 (десяти)календарных дней с даты поступления возвращенного Товара на склад Исполнителя вместе с заполненным Клиентом заявлением на возврат.</li>
+                <li>Не подлежат возврату или обмену Товары в соответствии с Перечнем непродовольственных товаров надлежащего качества, не подлежащих обмену, утвержденным Постановлением Правительства РФ от 31 декабря 2020 г. №2463, а именно, масла, технические жидкости, автомобильное электрооборудование, автохимия, бытовая химия, б/у Товар.</li>
+            </ul>
 
-                <p>8.1.2. При решении о Возврате Товара надлежащего качества для юридических лиц:</p>
+            <p>8.1.2. При решении о Возврате Товара надлежащего качества для юридических лиц:</p>
 
-                <span>В соответствии с ч.1 ст.454 ГК РФ, для физических лиц со статусом самозанятый, Индивидуальных предпринимателей и Юридических лиц возврат товара надлежащего качества невозможен.</span>
+            <span>В соответствии с ч.1 ст.454 ГК РФ, для физических лиц со статусом самозанятый, Индивидуальных предпринимателей и Юридических лиц возврат товара надлежащего качества невозможен.</span>
 
-                <p>8.2. Возврат Товара ненадлежщего качества.</p>
+            <p>8.2. Возврат Товара ненадлежщего качества.</p>
 
-                <p>8.2.1. Товар с претензией по браку, выявленному в процессе эксплуатации, принимается в соответствии с установленными сроками гарантии. Однако, покупатель обязансоблюдать следующие правила:</p>
+            <p>8.2.1. Товар с претензией по браку, выявленному в процессе эксплуатации, принимается в соответствии с установленными сроками гарантии. Однако, покупатель обязансоблюдать следующие правила:</p>
 
-                <ul>
-                    <li>Товар с претензией по браку принимается в соответствии с установленными сроками гарантии.</li>
-                    <li>Регуляторы давления системы CR принимаются для гарантийной проверки только вместе с насосом ТНВД,  распылители только вместе с форсунками.</li>
-                </ul>
+            <ul>
+                <li>Товар с претензией по браку принимается в соответствии с установленными сроками гарантии.</li>
+                <li>Регуляторы давления системы CR принимаются для гарантийной проверки только вместе с насосом ТНВД,  распылители только вместе с форсунками.</li>
+            </ul>
 
-                <p>8.2.2. При решении о возврате Товара ненадлежащего качества для физических лиц:</p>
+            <p>8.2.2. При решении о возврате Товара ненадлежащего качества для физических лиц:</p>
 
-                <ul>
-                    <li>В соответствии со ст. 18 Закона РФ от 07.02.1992 N 2300-1 «О защите прав потребителей», Клиент вправе предъявить к Исполнителю требованияо возврате уплаченной за товар денежной суммы в отношении недостатков товара, если они обнаружены в течение гарантийного срока или срока годности.</li>
-                    <li>Любые требования или претензии по Товару ненадлежащего качества должны быть оформлены Клиентом в чате на сайте zaptar.ru.В требовании о возврате или обмене товара должно быть обязательно указано: контактные данные; наименование возвращаемого Товара; номер заказа;фото детали; фото упаковки и всех стикеров; причины возврата; описание возникшей проблемы; требования к её устранению, по существу.</li>
-                    <li>К требованию или претензии должны быть приложены следующие документы: Оригинал заказ-наряда на установку товара на автомобиль сертифицированной СТО (станция технического обслуживания). В оригинале заказ-наряда должны быть указаны дата заказ-наряда, государственный регистрационный знак (номер) автомобиля, VIN-код автомобиля, пробег автомобиля на момент установки данного Товара; заказ-наряд на диагностику; документы, подтверждающие оплату выполненных на СТО работ; копия сертификата СТО с указанием разрешения на проведение данного вида работ для данного модельного ряда автомобиля; заключение о неработоспособности детали, выданное СТО; копия документа, подтверждающего факт приобретения Товара у Исполнителя.</li>
-                    <li>В соответствии со ст.22 Закона РФ от 07.02.1992 N 2300-1 «О защите прав потребителей», требования о возврате уплаченной за Товар денежной суммы подлежат удовлетворению в течение 10(десяти) календарных дней со дня предъявления соответствующего требования.</li>
-                </ul>
+            <ul>
+                <li>В соответствии со ст. 18 Закона РФ от 07.02.1992 N 2300-1 «О защите прав потребителей», Клиент вправе предъявить к Исполнителю требованияо возврате уплаченной за товар денежной суммы в отношении недостатков товара, если они обнаружены в течение гарантийного срока или срока годности.</li>
+                <li>Любые требования или претензии по Товару ненадлежащего качества должны быть оформлены Клиентом в чате на сайте zaptar.ru.В требовании о возврате или обмене товара должно быть обязательно указано: контактные данные; наименование возвращаемого Товара; номер заказа;фото детали; фото упаковки и всех стикеров; причины возврата; описание возникшей проблемы; требования к её устранению, по существу.</li>
+                <li>К требованию или претензии должны быть приложены следующие документы: Оригинал заказ-наряда на установку товара на автомобиль сертифицированной СТО (станция технического обслуживания). В оригинале заказ-наряда должны быть указаны дата заказ-наряда, государственный регистрационный знак (номер) автомобиля, VIN-код автомобиля, пробег автомобиля на момент установки данного Товара; заказ-наряд на диагностику; документы, подтверждающие оплату выполненных на СТО работ; копия сертификата СТО с указанием разрешения на проведение данного вида работ для данного модельного ряда автомобиля; заключение о неработоспособности детали, выданное СТО; копия документа, подтверждающего факт приобретения Товара у Исполнителя.</li>
+                <li>В соответствии со ст.22 Закона РФ от 07.02.1992 N 2300-1 «О защите прав потребителей», требования о возврате уплаченной за Товар денежной суммы подлежат удовлетворению в течение 10(десяти) календарных дней со дня предъявления соответствующего требования.</li>
+            </ul>
 
-                <p>8.2.3. При решении о возврате Товара ненадлежащего качества для юридических лиц:</p>
+            <p>8.2.3. При решении о возврате Товара ненадлежащего качества для юридических лиц:</p>
 
-                <ul>
-                    <li>В соответствии со ст. 518 ГК РФ, Клиент вправе предъявить к Исполнителю требования о возврате уплаченной за товар денежной суммы, за исключением случая, когда Исполнитель, получивший уведомление Клиента о недостатках поставленных товаров, без промедления заменит поставленные товары товарами надлежащего качества.</li>
-                    <li>В соответствии со ст. 477 ГК РФ, Клиент вправе предъявить к Исполнителю требованияо возврате уплаченной за товар денежной суммы в отношении недостатков товара, если они обнаружены в течение гарантийного срока или срока годности.</li>
-                    <li>Любые требования или претензии по Товару ненадлежащего качества должны быть предъявлены Клиентом в чате на сайте zaptar.ru., а также на адрес электронной почты <a href="mailto:info@zaptar.ru">info@zaptar.ru</a>.В требовании о возврате или обмене товара должно быть обязательно указано: контактные данные; наименование возвращаемого Товара; номер заказа;фото детали; фото упаковки и всех стикеров; причины возврата; описание возникшей проблемы; требования к её устранению, по существу.</li>
-                </ul>
+            <ul>
+                <li>В соответствии со ст. 518 ГК РФ, Клиент вправе предъявить к Исполнителю требования о возврате уплаченной за товар денежной суммы, за исключением случая, когда Исполнитель, получивший уведомление Клиента о недостатках поставленных товаров, без промедления заменит поставленные товары товарами надлежащего качества.</li>
+                <li>В соответствии со ст. 477 ГК РФ, Клиент вправе предъявить к Исполнителю требованияо возврате уплаченной за товар денежной суммы в отношении недостатков товара, если они обнаружены в течение гарантийного срока или срока годности.</li>
+                <li>Любые требования или претензии по Товару ненадлежащего качества должны быть предъявлены Клиентом в чате на сайте zaptar.ru., а также на адрес электронной почты <a href="mailto:info@zaptar.ru">info@zaptar.ru</a>.В требовании о возврате или обмене товара должно быть обязательно указано: контактные данные; наименование возвращаемого Товара; номер заказа;фото детали; фото упаковки и всех стикеров; причины возврата; описание возникшей проблемы; требования к её устранению, по существу.</li>
+            </ul>
 
-                <ul>
-                    <li>К требованию или претензии должны быть приложены следующие документы: Оригинал заказ-наряда на установку товара на автомобиль сертифицированной СТО (станция технического обслуживания). В оригинале заказ-наряда должны быть указаны дата заказ-наряда, государственный регистрационный знак (номер) автомобиля, VIN-код автомобиля, пробег автомобиля на момент установки данного Товара; заказ-наряд на диагностику; документы, подтверждающие оплату выполненных на СТО работ; копия сертификата СТО с указанием разрешения на проведение данного вида работ для данного модельного ряда автомобиля; заключение о неработоспособности детали, выданное СТО; копия документа, подтверждающего факт приобретения Товара у Исполнителя.</li>
-                    <li>Требования о возврате уплаченной за Товар денежной суммы подлежат удовлетворению в течение 60 (шестидесяти) календарных  дней со дня предъявления соответствующего требования.</li>
-                </ul>
+            <ul>
+                <li>К требованию или претензии должны быть приложены следующие документы: Оригинал заказ-наряда на установку товара на автомобиль сертифицированной СТО (станция технического обслуживания). В оригинале заказ-наряда должны быть указаны дата заказ-наряда, государственный регистрационный знак (номер) автомобиля, VIN-код автомобиля, пробег автомобиля на момент установки данного Товара; заказ-наряд на диагностику; документы, подтверждающие оплату выполненных на СТО работ; копия сертификата СТО с указанием разрешения на проведение данного вида работ для данного модельного ряда автомобиля; заключение о неработоспособности детали, выданное СТО; копия документа, подтверждающего факт приобретения Товара у Исполнителя.</li>
+                <li>Требования о возврате уплаченной за Товар денежной суммы подлежат удовлетворению в течение 60 (шестидесяти) календарных  дней со дня предъявления соответствующего требования.</li>
+            </ul>
 
-                <p>8.3. Под Товаром ненадлежащего качества подразумевается Товар, который неисправен и не может обеспечить исполнение своих функциональных качеств. Полученный Товар должен соответствовать каталожному номер производителя. Отличие элементов дизайна или оформления от заявленного на Сайте описания не является признаком ненадлежащего качества.</p>
+            <p>8.3. Под Товаром ненадлежащего качества подразумевается Товар, который неисправен и не может обеспечить исполнение своих функциональных качеств. Полученный Товар должен соответствовать каталожному номер производителя. Отличие элементов дизайна или оформления от заявленного на Сайте описания не является признаком ненадлежащего качества.</p>
 
-                <ul>
-                    <li>Возврат Товара осуществляется на склад Исполнителя.</li>
-                    <li>Срок  передачи Клиентом согласованного возврата Исполнителю составляет 2 (два) календарных дня.</li>
-                    <li>Товар должен быть предоставлен в очищенном от загрязнений виде и иметь читаемые заводские маркировки.</li>
-                    <li>Не подлежат возврату и обмену Товары, вышедшие из строя по вине Клиента.</li>
-                    <li>Не подлежат возврату или обмену Товары со вскрытой герметичной упаковкой, а также Товар со следами установки.</li>
-                    <li>Возврат Товара Исполнителю возможен только в случаях, предусмотренных данными Условиями, если иное не вытекает из письменного соглашения Сторон.</li>
-                    <li>Исполнитель не несет ответственность за прямые и косвенные убытки, упущенную выгоду, а также другие расходы, которые Клиент может понести в результате транспортировки, установки или эксплуатации возвращаемого Товара.</li>
-                    <li>Исполнитель вправе произвести проверку качества Товара, и по ее результатам либо произвести возврат, либо отказать Клиенту в возврате Товара.</li>
-                    <li>Гарантия на все оригинальные запчасти рассматриваются только при установке у официального дилера.</li>
-                    <li>Исполнитель вправе отказать Клиенту в возврате Товара, не имеющего дефектов и соответствующего условиям Заказа.</li>
-                    <li>Возврату не подлежит Товар,  сумма которого не превышает 1000 (тысячи) рублей.</li>
-                </ul>
+            <ul>
+                <li>Возврат Товара осуществляется на склад Исполнителя.</li>
+                <li>Срок  передачи Клиентом согласованного возврата Исполнителю составляет 2 (два) календарных дня.</li>
+                <li>Товар должен быть предоставлен в очищенном от загрязнений виде и иметь читаемые заводские маркировки.</li>
+                <li>Не подлежат возврату и обмену Товары, вышедшие из строя по вине Клиента.</li>
+                <li>Не подлежат возврату или обмену Товары со вскрытой герметичной упаковкой, а также Товар со следами установки.</li>
+                <li>Возврат Товара Исполнителю возможен только в случаях, предусмотренных данными Условиями, если иное не вытекает из письменного соглашения Сторон.</li>
+                <li>Исполнитель не несет ответственность за прямые и косвенные убытки, упущенную выгоду, а также другие расходы, которые Клиент может понести в результате транспортировки, установки или эксплуатации возвращаемого Товара.</li>
+                <li>Исполнитель вправе произвести проверку качества Товара, и по ее результатам либо произвести возврат, либо отказать Клиенту в возврате Товара.</li>
+                <li>Гарантия на все оригинальные запчасти рассматриваются только при установке у официального дилера.</li>
+                <li>Исполнитель вправе отказать Клиенту в возврате Товара, не имеющего дефектов и соответствующего условиям Заказа.</li>
+                <li>Возврату не подлежит Товар,  сумма которого не превышает 1000 (тысячи) рублей.</li>
+            </ul>
 
-                <p>IX. ПРОЧИЕ УСЛОВИЯ</p>
+            <p>IX. ПРОЧИЕ УСЛОВИЯ</p>
 
-                <p>9.1. Настоящая Оферта вступает в силу с момента её Акцепта и действует до момента окончания оказания услуг в соответствии с настоящей офертой. </p>
+            <p>9.1. Настоящая Оферта вступает в силу с момента её Акцепта и действует до момента окончания оказания услуг в соответствии с настоящей офертой. </p>
 
-                <p>9.2. Положения настоящей Оферты могут быть изменены Исполнителем с уведомлением Клиентов о новых условиях Оферты.</p>
+            <p>9.2. Положения настоящей Оферты могут быть изменены Исполнителем с уведомлением Клиентов о новых условиях Оферты.</p>
 
-                <p>9.3. Клиент, акцептуя Оферту, дает согласие на обработку своих персональных данных в соответствии с положениями Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных».</p>
+            <p>9.3. Клиент, акцептуя Оферту, дает согласие на обработку своих персональных данных в соответствии с положениями Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных».</p>
 
-                <p>9.4. В вопросах, не предусмотренных настоящей Офертой, Стороны руководствуются действующим законодательством Российской Федерации.</p>
+            <p>9.4. В вопросах, не предусмотренных настоящей Офертой, Стороны руководствуются действующим законодательством Российской Федерации.</p>
 
-                <p>X. ЗАКЛЮЧЕНИЕ, ИЗМЕНЕНИЕ, РАСТОРЖЕНИЕ НАСТОЯЩЕГО ДОГОВОРА</p>
+            <p>X. ЗАКЛЮЧЕНИЕ, ИЗМЕНЕНИЕ, РАСТОРЖЕНИЕ НАСТОЯЩЕГО ДОГОВОРА</p>
 
-                <p>10.1. Настоящий договор считается заключенным с момента регистрации Клиента на сайте <a href="http://zaptar.ru/">http://zaptar.ru/</a> и заполнение необходимых персональных данных.</p>
+            <p>10.1. Настоящий договор считается заключенным с момента регистрации Клиента на сайте <a href="http://zaptar.ru/">http://zaptar.ru/</a> и заполнение необходимых персональных данных.</p>
 
-                <p>10.2. Договор, может быть расторгнут досрочно по соглашению Сторон или в одностороннем порядке в случаях, предусмотренных законодательством Российской Федерации.</p>
+            <p>10.2. Договор, может быть расторгнут досрочно по соглашению Сторон или в одностороннем порядке в случаях, предусмотренных законодательством Российской Федерации.</p>
 
-                <p>10.3. Стороны вправе расторгнуть Договор по взаимному согласию в любой момент до фактического исполнения Договора.</p>
-            </div>
-            <a href="/" class="btn-primary page-text__btn">На главную</a>
-        </section>
-    </div>
+            <p>10.3. Стороны вправе расторгнуть Договор по взаимному согласию в любой момент до фактического исполнения Договора.</p>
+        </div>
+        <a href="/" class="btn btn--outlined btn--theme-secondary btn--size-m">На главную</a>
+    </section>
 </main>
 
 <footer class="footer">
@@ -619,8 +622,8 @@
 <div id="modal-auth" class="modal">
     <div class="modal__inner modal__inner--open-top">
         <div class="modal__content modal__content--radius">
-            <button type="button" class="modal__close modal__close--right" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--right" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
@@ -642,9 +645,9 @@
                         <input type="text" class="form-input modal__input" id="login-auth" placeholder="Введите логин" required>
                     </div>
                     <div class="modal__wrapper-input-password">
-                        <input type="password" class="form-input" id="password-auth" placeholder="Введите пароль" required>
-                        <button type="button" class="modal__input-password btn-light">
-                            <svg class="btn-light__ico">
+                        <input type="password" class="form-input" id="password-auth" placeholder="Введите пароль" required data-input-password>
+                        <button type="button" class="modal__input-password btn-lite btn-lite--compact btn-lite--theme-default" aria-label="Закрыть">
+                            <svg aria-hidden="true" class="btn-lite__ico">
                                 <use xlink:href="static/img/symbol/sprite.svg#eye-invisible"></use>
                             </svg>
                         </button>
@@ -662,7 +665,7 @@
 
 
                     <div class="modal__footer">
-                        <button type="submit" class="modal__btn form__btn btn btn--size-s">
+                        <button type="submit" class="form__btn btn btn--filled btn--theme-primary btn--size-m">
                             Войти
                         </button>
                         <a href="/registration.html" class="modal__link">
@@ -681,7 +684,7 @@
     <div class="modal__inner modal__inner--open-top">
         <div class="modal__content modal__content--radius">
             <button type="button" class="modal__close modal__close--right" data-btn="close">
-                <svg>
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
@@ -693,10 +696,10 @@
                     <textarea class="form-textarea" id="add-comment" placeholder="Введите текст"></textarea>
 
                     <div class="modal__footer modal__footer--row">
-                        <button type="reset" class="btn-primary">
+                        <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m">
                             Отменить
                         </button>
-                        <button type="submit" class="btn btn--size-s" data-btn="close" data-notification="notification-add-comment">
+                        <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification-add-comment">
                             Сохранить
                         </button>
                     </div>
@@ -734,10 +737,10 @@
                         </div>
                     </div>
                     <div class="modal__footer modal__footer--row">
-                        <button type="reset" class="btn-primary">
+                        <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m">
                             Отменить
                         </button>
-                        <button type="submit" class="btn btn--size-s" data-btn="close" data-notification="notification-change-address">
+                        <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification-change-address">
                             Изменить
                         </button>
                     </div>
@@ -747,17 +750,193 @@
     </div>
 </div>
 
+<div id="modal-add-cart" class="modal">
+    <div class="modal__inner modal__inner--open-top">
+        <div class="modal__content modal__content--radius">
+            <button type="button" class="modal__close modal__close--right" data-btn="close">
+                <svg aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__header">
+                <h3 class="title-4">Добавление в корзину</h3>
+                <div class="tag-bar">
+                    <div class="tag tag--theme-accent">
+                        <span class="tag__label">Philips 85 126</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__wrapper">
+                <form action="" class="modal__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="product-add-cart">Привязка к автомобилю</label>
+                        <div class="select @@class" data-select data-select-id=product-add-cart @@data data-selected-value-first>
+    <div class="form-input select__search d-none" data-select-search>
+        <input type="text" name="select-category" data-select-input id="product-add-cart" class="select__input" value="@@value">
+        <span class="select__ico">
+            <svg aria-hidden="true">
+                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+        </span>
+    </div>
+    <button type="button" class="form-input select__btn" data-select-btn>
+        <span data-select-text="Без привязки" class="select__text">Без привязки</span>
+        <span class="select__ico select__ico--rotate" data-select-ico>
+          <svg>
+            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+          </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item select__item--active select__item--selected"
+                data-select-value="value-1" @@dataItem1>Без привязки</button>
+        <button type="button" class="select__item"
+                data-select-value="value-2" @@dataItem2>Acura MDX I 3.5 4WD MDX I 3.5 л.с Q1231313</button>
+        <button type="button" class="select__item"
+                data-select-value="value-3" @@dataItem3>Привязать к авто 2</button>
+    </div>
+</div>
+
+                    </div>
+
+                    <div class="drawer__wrapper-input">
+                        <label for="add-comment">Комментарий</label>
+                        <textarea class="form-textarea" id="add-comment" placeholder="Введите текст"></textarea>
+                    </div>
+
+                    <div class="modal__footer modal__footer--row">
+                        <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="product-add-cart">
+                            Отменить
+                        </button>
+                        <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification-add-comment">
+                            Добавить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-order-details" class="modal-order-details modal">
+    <div class="modal__inner modal__inner--open-top">
+        <div class="modal__content modal__content--radius">
+            <button type="button" class="modal__close modal__close--right" data-btn="close">
+                <svg aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__header">
+                <h3 class="title-4">Информация по заказу</h3>
+                <div class="tag-bar">
+                    <div class="tag tag--theme-default">
+                        <span class="tag__desc">Бренд:</span>
+                        <span class="tag__label">Philips</span>
+                    </div>
+                    <div class="tag tag--theme-default">
+                        <span class="tag__desc">Артикул:</span>
+                        <span class="tag__label">215478</span>
+                    </div>
+                    <div class="tag tag--theme-default">
+                        <span class="tag__desc">Наименование:</span>
+                        <span class="tag__label">Лампа ксенон d2r 5000к</span>
+                    </div>
+                    <div class="tag tag--theme-accent">
+                        <span class="tag__desc">Сумма:</span>
+                        <span class="tag__label">1 427,00 руб</span>
+                    </div>
+                    <div class="tag tag--theme-accent">
+                        <span class="tag__desc">Поставщик:</span>
+                        <span class="tag__label">PRST</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__wrapper">
+                <div class="modal-order-details__scrollbar scrollbar scrollbar--vertical">
+                    <ul class="stepper">
+                        <li class="stepper__item">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">Заказ</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">04.11.2024</span>
+                                <span class="nowrap">16:45:32</span>
+                            </div>
+                            <div class="stepper__status">Получен</div>
+                        </li>
+                        <li class="stepper__item">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">Заказано</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">04.11.2024</span>
+                                <span class="nowrap">16:47:22</span>
+                            </div>
+                            <div class="stepper__status">Идет работа поставщика</div>
+                        </li>
+                        <li class="stepper__item">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">Склад МСК</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">04.11.2024 </span>
+                                <span class="nowrap">17:02:13</span>
+                            </div>
+                            <div class="stepper__status">Готов к отправке в филиал</div>
+                        </li>
+                        <li class="stepper__item">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">В доставке</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">04.11.2024</span>
+                                <span class="nowrap">17:02:13</span>
+                                <span class="nowrap">с 10:00 до 18:00</span>
+                            </div>
+                            <div class="stepper__status">Отправлено в филиал, ожидайте доставку </div>
+                        </li>
+                        <li class="stepper__item stepper__item--reject">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">Отказ</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">07.11.2024</span>
+                                <span class="nowrap">15:36:10</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div id="drawer-profile" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Профиль</h3>
+                <h3 class="title-4">Профиль</h3>
             </div>
             <div class="drawer__info">
                 <div class="drawer__info-blocks">
@@ -782,7 +961,7 @@
                         <span class="drawer__info-text">Брянск</span>
                     </div>
                 </div>
-                <button type="button" class="drawer__btn btn-primary" data-modal="drawer-profile-edit">
+                <button type="button" class="drawer__btn btn btn--outlined btn--theme-secondary btn--size-m" data-modal="drawer-profile-edit">
                     Редактировать профиль
                 </button>
             </div>
@@ -793,13 +972,13 @@
 <div id="drawer-profile-edit" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Редактирование профиля</h3>
+                <h3 class="title-4">Редактирование профиля</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -835,10 +1014,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="button" class="drawer__footer-btn btn-primary" data-modal="drawer-profile">
+                    <button type="button" class="btn btn--outlined btn--theme-secondary btn--size-m" data-modal="drawer-profile">
                         Назад
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close">
                         Сохранить
                     </button>
                 </div>
@@ -850,13 +1029,13 @@
 <div id="drawer-add-theme" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Добавление темы</h3>
+                <h3 class="title-4">Добавление темы</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -883,11 +1062,11 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
-                    Отменить
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m">
+                        Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
-                    Сохранить
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
+                        Сохранить
                     </button>
                 </div>
             </div>
@@ -898,13 +1077,13 @@
 <div id="drawer-filter-messages" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Фильтр</h3>
+                <h3 class="title-4">Фильтр</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -944,7 +1123,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="filter-messages" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -974,7 +1153,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="reason" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1000,10 +1179,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="reason, filter-messages">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="reason, filter-messages">
                         Сбросить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
                         Применить
                     </button>
                 </div>
@@ -1021,7 +1200,7 @@
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Фильтр</h3>
+                <h3 class="title-4">Фильтр</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form search-filter">
@@ -1052,7 +1231,7 @@
                 </form>
 
                 <div class="drawer__footer">
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close">
                         Показать аналоги
                     </button>
                 </div>
@@ -1064,53 +1243,75 @@
 <div id="drawer-user" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
                 <svg>
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Меню профиля</h3>
+                <h3 class="title-4">Меню профиля</h3>
             </div>
             <nav class="drawer-dropdown__menu">
-                <a class="header-user-dropdown__link" data-modal="drawer-profile" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" data-modal="drawer-profile" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#user"></use>
                     </svg>
                     Профиль
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#dollar"></use>
                     </svg>
                     Мои финансы
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#line-chart"></use>
                     </svg>
                     Ценообразование
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                     </svg>
                     Пополнить баланс
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#wallet"></use>
-                    </svg>
-                    Баланс
-                    <b>+999 999 руб</b>
-                </a>
-                <a class="header-user-dropdown__link header-user-dropdown__link--logout" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
-                    </svg>
-                    Выйти
-                </a>
             </nav>
+
+            <div class="drawer__contacts">
+                <div class="drawer__contacts-title">Контакты</div>
+
+                <a class="contact-link" href="tel:89308255335">
+                    <svg class="contact-link__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                    </svg>
+
+                    <span class="contact-link__label">8 (930) 825 53-35</span>
+                </a>
+
+                <a class="contact-link" href="tel:89206055335">
+                    <svg class="contact-link__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                    </svg>
+
+                    <span class="contact-link__label">8 (920) 605 53-35</span>
+                </a>
+
+                <a class="contact-link" href="mailto:info@zaptar.ru">
+                    <svg class="contact-link__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#mail"></use>
+                    </svg>
+
+                    <span class="contact-link__label">info@zaptar.ru</span>
+                </a>
+            </div>
+
+            <a class="dropdown-menu__link dropdown-menu__link--logout" href="#">
+                <svg aria-hidden="true" class="dropdown-menu__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
+                </svg>
+                Выйти
+            </a>
         </div>
     </div>
 </div>
@@ -1118,40 +1319,40 @@
 <div id="drawer-catalog" class="drawer modal">
     <div class="modal__inner modal__inner--open-left">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Меню каталога</h3>
+                <h3 class="title-4">Меню каталога</h3>
             </div>
             <nav class="drawer-dropdown__menu">
-                <a class="header-search-dropdown__link" href="catalog.html">
+                <a class="dropdown-menu__link" href="catalog.html">
                     Каталог запчастей
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Каталог ТО
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Масла
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Аккумуляторы
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Автолампы
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Шины
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Диски
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Колпаки
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Болты, Гайки
                 </a>
             </nav>
@@ -1162,13 +1363,13 @@
 <div id="drawer-add-car" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" aria-label="Закрыть" class="modal__close modal__close--left" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Добавление автомобиля</h3>
+                <h3 class="title-4">Добавление автомобиля</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -1207,7 +1408,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-brand" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1234,7 +1435,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-model" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1261,7 +1462,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-power" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1290,7 +1491,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-year" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1328,8 +1529,8 @@
                             <div class="form-input form-file-2__info d-none" data-input="file-download-block">
                                 <img src="" alt="" data-input="file-download-img" class="form-file-2__img">
                                 <span class="form-file-2__text" data-input="file-download-text"></span>
-                                <button type="button" class="form-file-2__delete btn-light" data-input="file-download-delete">
-                                    <svg aria-hidden="true">
+                                <button type="button" aria-label="Удалить" class="form-file-2__delete btn-lite btn-lite--compact btn-lite--theme-default" data-input="file-download-delete">
+                                    <svg class="btn-lite__ico btn-lite__ico--size-l" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                                     </svg>
                                 </button>
@@ -1338,10 +1539,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="car-add-power, car-add-year, car-add-model, car-add-brand">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="car-add-power, car-add-year, car-add-model, car-add-brand">
                         Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
                         Сохранить
                     </button>
                 </div>
@@ -1353,13 +1554,13 @@
 <div id="drawer-edit-car" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Редактировать информацию</h3>
+                <h3 class="title-4">Редактировать информацию</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -1400,7 +1601,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-edit-year" class="select__input" value="2023">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1436,10 +1637,10 @@
                                 </label>
                             </div>
                             <div class="form-input form-file-2__info" data-input="file-download-block">
-                                <img src="static/img/background/product-car.png" alt="Автомобиль" data-input="file-download-img" class="form-file-2__img">
-                                <span class="form-file-2__text" data-input="file-download-text">product-car.png</span>
-                                <button type="button" class="form-file-2__delete btn-light" data-input="file-download-delete">
-                                    <svg aria-hidden="true">
+                                <img src="static/img/background/product-car.jpg" alt="Автомобиль" data-input="file-download-img" class="form-file-2__img">
+                                <span class="form-file-2__text" data-input="file-download-text">product-car.jpg</span>
+                                <button type="button" class="form-file-2__delete btn-lite btn-lite--compact btn-lite--theme-default" aria-label="Удалить" data-input="file-download-delete">
+                                    <svg class="btn-lite__ico btn-lite__ico--size-l" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                                     </svg>
                                 </button>
@@ -1448,10 +1649,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="car-edit-year" data-btn="close">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="car-edit-year" data-btn="close">
                         Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification" disabled>
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
                         Сохранить
                     </button>
                 </div>
@@ -1463,13 +1664,13 @@
 <div id="drawer-recharge" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Пополнение баланса</h3>
+                <h3 class="title-4">Пополнение баланса</h3>
             </div>
             <div class="drawer__info" data-recharge>
                 <form action="" class="drawer__form form">
@@ -1479,7 +1680,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="recharge-method" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1514,10 +1715,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary btn-primary--disabled" data-recharge-reset>
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-recharge-reset>
                         Сбросить
                     </button>
-                    <a href="#" class="drawer__footer-btn btn btn--size-s btn--disabled" data-recharge-submit>
+                    <a href="#" class="btn btn--filled btn--theme-primary btn--size-m" data-recharge-submit>
                         Применить
                     </a>
                 </div>
@@ -1529,13 +1730,13 @@
 <div id="drawer-deduce" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Запрос на вывод средств</h3>
+                <h3 class="title-4">Запрос на вывод средств</h3>
             </div>
             <div class="drawer__info" data-deduce>
                 <form action="" class="drawer__form form">
@@ -1550,10 +1751,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary btn-primary--disabled" data-deduce-reset>
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-deduce-reset>
                         Сбросить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s btn--disabled" data-deduce-submit data-notification="notification-deduce">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-deduce-submit data-notification="notification-deduce">
                         Применить
                     </button>
                 </div>
@@ -1566,12 +1767,12 @@
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
             <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Фильтр</h3>
+                <h3 class="title-4">Фильтр</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -1581,7 +1782,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="order-issue-date" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1636,7 +1837,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="order-pick-up" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1662,10 +1863,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="order-issue-date, order-pick-up">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="order-issue-date, order-pick-up">
                         Сбросить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close">
                         Применить
                     </button>
                 </div>
@@ -1678,12 +1879,12 @@
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
             <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Создание обсуждения</h3>
+                <h3 class="title-4">Создание обсуждения</h3>
             </div>
             <div class="drawer__info" data-deduce>
                 <form action="" class="drawer__form form">
@@ -1693,7 +1894,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="discussion-theme" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1743,11 +1944,98 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="discussion-theme">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="discussion-theme">
                         Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s btn--disabled" data-notification="notification-add-discussion">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-notification="notification-add-discussion">
                         Сохранить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="drawer-sort" class="drawer modal">
+    <div class="modal__inner modal__inner--open-right">
+        <div class="modal__content drawer__content">
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="drawer__header">
+                <h3 class="title-4">Сортировка</h3>
+            </div>
+            <div class="drawer__info">
+                <form action="" class="drawer__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="sort-product-status">Выберите статус</label>
+                        <div class="select @@class" data-select data-select-id=sort-product-status @@data @@dataSelectItem>
+    <div class="form-input select__search d-none" data-select-search>
+        <input type="text" name="select-category" data-select-input id="sort-product-status" class="select__input" value="@@value">
+        <span class="select__ico">
+            <svg aria-hidden="true">
+                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+        </span>
+    </div>
+    <button type="button" class="form-input select__btn" data-select-btn>
+        <span data-select-text="Выберите статус" class="select__text">Выберите статус</span>
+        <span class="select__ico select__ico--rotate" data-select-ico>
+          <svg>
+            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+          </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item select__item--active @@classItem"
+                data-select-value="value-1" @@dataItem1>В обработке</button>
+        <button type="button" class="select__item"
+                data-select-value="value-2" @@dataItem2>Возврат проведен</button>
+        <button type="button" class="select__item"
+                data-select-value="value-3" @@dataItem3>В разборе</button>
+    </div>
+</div>
+
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="sort-product-price">Выберите цену</label>
+                        <div class="select @@class" data-select data-select-id=sort-product-price @@data @@dataSelectItem>
+    <div class="form-input select__search d-none" data-select-search>
+        <input type="text" name="select-category" data-select-input id="sort-product-price" class="select__input" value="@@value">
+        <span class="select__ico">
+            <svg aria-hidden="true">
+                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+        </span>
+    </div>
+    <button type="button" class="form-input select__btn" data-select-btn>
+        <span data-select-text="Выберите цену" class="select__text">Выберите цену</span>
+        <span class="select__ico select__ico--rotate" data-select-ico>
+          <svg>
+            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+          </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item select__item--active @@classItem"
+                data-select-value="value-1" @@dataItem1>Наценка (10,00)</button>
+        <button type="button" class="select__item"
+                data-select-value="value-2" @@dataItem2>Наценка (20,00)</button>
+        <button type="button" class="select__item"
+                data-select-value="value-3" @@dataItem3>Без наценки</button>
+    </div>
+</div>
+
+                    </div>
+                </form>
+                <div class="drawer__footer">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="sort-product-status, sort-product-price">
+                        Сбросить
+                    </button>
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
+                        Применить
                     </button>
                 </div>
             </div>
@@ -1757,48 +2045,48 @@
 
 
 <div class="notification" id="notification">
-    <svg class="notification__ico">
+    <svg class="notification__ico" aria-hidden="true">
         <use xlink:href="static/img/symbol/sprite.svg#check-circle"></use>
     </svg>
     <span class="notification__text">Сообщение успешно создано</span>
-    <button type="button" class="notification__close" data-btn="close">
-        <svg>
+    <button type="button" class="notification__close" aria-label="Закрыть" data-btn="close">
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
 </div>
 
 <div class="notification" id="notification-deduce">
-    <svg class="notification__ico">
+    <svg class="notification__ico" aria-hidden="true">
         <use xlink:href="static/img/symbol/sprite.svg#check-circle"></use>
     </svg>
     <span class="notification__text">Запрос на вывод средств успешно отправлен</span>
-    <button type="button" class="notification__close" data-btn="close">
-        <svg>
+    <button type="button" class="notification__close" aria-label="Закрыть" data-btn="close">
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
 </div>
 
 <div class="notification" id="notification-add-comment">
-    <svg class="notification__ico">
+    <svg class="notification__ico" aria-hidden="true">
         <use xlink:href="static/img/symbol/sprite.svg#check-circle"></use>
     </svg>
     <span class="notification__text">Комментарий успешно добавлен</span>
     <button type="button" class="notification__close" data-btn="close">
-        <svg>
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
 </div>
 
 <div class="notification" id="notification-delete-product">
-    <svg class="notification__ico">
+    <svg class="notification__ico" aria-hidden="true">
         <use xlink:href="static/img/symbol/sprite.svg#check-circle"></use>
     </svg>
     <span class="notification__text">Товар успешно удален</span>
-    <button type="button" class="notification__close" data-btn="close">
-        <svg>
+    <button type="button" class="notification__close" aria-label="Закрыть" data-btn="close">
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
@@ -1810,7 +2098,7 @@
     </svg>
     <span class="notification__text">Пункт самовывоза успешно изменен</span>
     <button type="button" class="notification__close" data-btn="close">
-        <svg>
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
@@ -1822,7 +2110,7 @@
     </svg>
     <span class="notification__text">Обсуждение успешно создано</span>
     <button type="button" class="notification__close" data-btn="close">
-        <svg>
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>

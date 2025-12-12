@@ -27,12 +27,12 @@
         <li>
             <a href="home.html">Главная</a>
         </li>
-        <li>
-            Главная V2
-        </li>
-        <li>
-            Главная V3
-        </li>
+        <!-- <li> -->
+        <!--     <a href="home-2.html">Главная V2</a> -->
+        <!-- </li> -->
+        <!-- <li> -->
+        <!--     Главная V3 -->
+        <!-- </li> -->
         <li>
             <a href="search.html">Поиск</a>
         </li>
@@ -52,16 +52,16 @@
             <a href="garage.html">Гараж</a>
         </li>
         <li>
-            <a href="orders.html">Заказы</a> (Обсудить и сделать всплывающую плашку)
+            <a href="orders.html">Заказы</a>
         </li>
         <li>
-            <a href="archive.html">Архив</a> (Обсудить и сделать всплывающую плашку)
+            <a href="archive.html">Архив</a>
         </li>
         <li>
             <a href="favorites.html">Избранное</a>
         </li>
         <li>
-            <a href="cart.html">Корзина</a> (Обсудить и сделать всплывающую плашку)
+            <a href="cart.html">Корзина</a>
         </li>
         <li>
             <a href="catalog.html">Каталог автозапчастей</a>
@@ -79,7 +79,7 @@
             <a href="details-node.html">Каталог деталей (Поиск по узлам)</a>
         </li>
         <li>
-            <a href="detail.html">Деталь</a>
+            <a href="details.html">Деталь</a>
         </li>
         <li>
             <a href="detail-search.html">Результаты поиска</a>
@@ -108,6 +108,12 @@
         </li>
         <li>
             <button data-modal="modal-change-address">Изменить пункт самовывоза<br> (стр Заказы)</button>
+        </li>
+        <li>
+            <button data-modal="modal-order-details">Информация по заказу<br> (стр Заказы)</button>
+        </li>
+        <li>
+            <button data-modal="modal-add-cart">Добавление в корзину<br> (стр Поиск)</button>
         </li>
     </ol>
 
@@ -155,6 +161,9 @@
         <li>
             <button data-modal="drawer-create-discussion">Создание обсуждения<br> (стр Заказы)</button>
         </li>
+        <li>
+            <button data-modal="drawer-sort">Сортировка<br> (стр Заказы, моб версия)</button>
+        </li>
     </ol>
 
     <br>
@@ -187,8 +196,8 @@
 <div id="modal-auth" class="modal">
     <div class="modal__inner modal__inner--open-top">
         <div class="modal__content modal__content--radius">
-            <button type="button" class="modal__close modal__close--right" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--right" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
@@ -210,9 +219,9 @@
                         <input type="text" class="form-input modal__input" id="login-auth" placeholder="Введите логин" required>
                     </div>
                     <div class="modal__wrapper-input-password">
-                        <input type="password" class="form-input" id="password-auth" placeholder="Введите пароль" required>
-                        <button type="button" class="modal__input-password btn-light">
-                            <svg class="btn-light__ico">
+                        <input type="password" class="form-input" id="password-auth" placeholder="Введите пароль" required data-input-password>
+                        <button type="button" class="modal__input-password btn-lite btn-lite--compact btn-lite--theme-default" aria-label="Закрыть">
+                            <svg aria-hidden="true" class="btn-lite__ico">
                                 <use xlink:href="static/img/symbol/sprite.svg#eye-invisible"></use>
                             </svg>
                         </button>
@@ -230,7 +239,7 @@
 
 
                     <div class="modal__footer">
-                        <button type="submit" class="modal__btn form__btn btn btn--size-s">
+                        <button type="submit" class="form__btn btn btn--filled btn--theme-primary btn--size-m">
                             Войти
                         </button>
                         <a href="/registration.html" class="modal__link">
@@ -249,7 +258,7 @@
     <div class="modal__inner modal__inner--open-top">
         <div class="modal__content modal__content--radius">
             <button type="button" class="modal__close modal__close--right" data-btn="close">
-                <svg>
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
@@ -261,10 +270,10 @@
                     <textarea class="form-textarea" id="add-comment" placeholder="Введите текст"></textarea>
 
                     <div class="modal__footer modal__footer--row">
-                        <button type="reset" class="btn-primary">
+                        <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m">
                             Отменить
                         </button>
-                        <button type="submit" class="btn btn--size-s" data-btn="close" data-notification="notification-add-comment">
+                        <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification-add-comment">
                             Сохранить
                         </button>
                     </div>
@@ -302,10 +311,10 @@
                         </div>
                     </div>
                     <div class="modal__footer modal__footer--row">
-                        <button type="reset" class="btn-primary">
+                        <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m">
                             Отменить
                         </button>
-                        <button type="submit" class="btn btn--size-s" data-btn="close" data-notification="notification-change-address">
+                        <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification-change-address">
                             Изменить
                         </button>
                     </div>
@@ -315,17 +324,193 @@
     </div>
 </div>
 
+<div id="modal-add-cart" class="modal">
+    <div class="modal__inner modal__inner--open-top">
+        <div class="modal__content modal__content--radius">
+            <button type="button" class="modal__close modal__close--right" data-btn="close">
+                <svg aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__header">
+                <h3 class="title-4">Добавление в корзину</h3>
+                <div class="tag-bar">
+                    <div class="tag tag--theme-accent">
+                        <span class="tag__label">Philips 85 126</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__wrapper">
+                <form action="" class="modal__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="product-add-cart">Привязка к автомобилю</label>
+                        <div class="select @@class" data-select data-select-id=product-add-cart @@data data-selected-value-first>
+    <div class="form-input select__search d-none" data-select-search>
+        <input type="text" name="select-category" data-select-input id="product-add-cart" class="select__input" value="@@value">
+        <span class="select__ico">
+            <svg aria-hidden="true">
+                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+        </span>
+    </div>
+    <button type="button" class="form-input select__btn" data-select-btn>
+        <span data-select-text="Без привязки" class="select__text">Без привязки</span>
+        <span class="select__ico select__ico--rotate" data-select-ico>
+          <svg>
+            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+          </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item select__item--active select__item--selected"
+                data-select-value="value-1" @@dataItem1>Без привязки</button>
+        <button type="button" class="select__item"
+                data-select-value="value-2" @@dataItem2>Acura MDX I 3.5 4WD MDX I 3.5 л.с Q1231313</button>
+        <button type="button" class="select__item"
+                data-select-value="value-3" @@dataItem3>Привязать к авто 2</button>
+    </div>
+</div>
+
+                    </div>
+
+                    <div class="drawer__wrapper-input">
+                        <label for="add-comment">Комментарий</label>
+                        <textarea class="form-textarea" id="add-comment" placeholder="Введите текст"></textarea>
+                    </div>
+
+                    <div class="modal__footer modal__footer--row">
+                        <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="product-add-cart">
+                            Отменить
+                        </button>
+                        <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification-add-comment">
+                            Добавить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-order-details" class="modal-order-details modal">
+    <div class="modal__inner modal__inner--open-top">
+        <div class="modal__content modal__content--radius">
+            <button type="button" class="modal__close modal__close--right" data-btn="close">
+                <svg aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__header">
+                <h3 class="title-4">Информация по заказу</h3>
+                <div class="tag-bar">
+                    <div class="tag tag--theme-default">
+                        <span class="tag__desc">Бренд:</span>
+                        <span class="tag__label">Philips</span>
+                    </div>
+                    <div class="tag tag--theme-default">
+                        <span class="tag__desc">Артикул:</span>
+                        <span class="tag__label">215478</span>
+                    </div>
+                    <div class="tag tag--theme-default">
+                        <span class="tag__desc">Наименование:</span>
+                        <span class="tag__label">Лампа ксенон d2r 5000к</span>
+                    </div>
+                    <div class="tag tag--theme-accent">
+                        <span class="tag__desc">Сумма:</span>
+                        <span class="tag__label">1 427,00 руб</span>
+                    </div>
+                    <div class="tag tag--theme-accent">
+                        <span class="tag__desc">Поставщик:</span>
+                        <span class="tag__label">PRST</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__wrapper">
+                <div class="modal-order-details__scrollbar scrollbar scrollbar--vertical">
+                    <ul class="stepper">
+                        <li class="stepper__item">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">Заказ</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">04.11.2024</span>
+                                <span class="nowrap">16:45:32</span>
+                            </div>
+                            <div class="stepper__status">Получен</div>
+                        </li>
+                        <li class="stepper__item">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">Заказано</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">04.11.2024</span>
+                                <span class="nowrap">16:47:22</span>
+                            </div>
+                            <div class="stepper__status">Идет работа поставщика</div>
+                        </li>
+                        <li class="stepper__item">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">Склад МСК</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">04.11.2024 </span>
+                                <span class="nowrap">17:02:13</span>
+                            </div>
+                            <div class="stepper__status">Готов к отправке в филиал</div>
+                        </li>
+                        <li class="stepper__item">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">В доставке</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">04.11.2024</span>
+                                <span class="nowrap">17:02:13</span>
+                                <span class="nowrap">с 10:00 до 18:00</span>
+                            </div>
+                            <div class="stepper__status">Отправлено в филиал, ожидайте доставку </div>
+                        </li>
+                        <li class="stepper__item stepper__item--reject">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">Отказ</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">07.11.2024</span>
+                                <span class="nowrap">15:36:10</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div id="drawer-profile" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Профиль</h3>
+                <h3 class="title-4">Профиль</h3>
             </div>
             <div class="drawer__info">
                 <div class="drawer__info-blocks">
@@ -350,7 +535,7 @@
                         <span class="drawer__info-text">Брянск</span>
                     </div>
                 </div>
-                <button type="button" class="drawer__btn btn-primary" data-modal="drawer-profile-edit">
+                <button type="button" class="drawer__btn btn btn--outlined btn--theme-secondary btn--size-m" data-modal="drawer-profile-edit">
                     Редактировать профиль
                 </button>
             </div>
@@ -361,13 +546,13 @@
 <div id="drawer-profile-edit" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Редактирование профиля</h3>
+                <h3 class="title-4">Редактирование профиля</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -403,10 +588,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="button" class="drawer__footer-btn btn-primary" data-modal="drawer-profile">
+                    <button type="button" class="btn btn--outlined btn--theme-secondary btn--size-m" data-modal="drawer-profile">
                         Назад
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close">
                         Сохранить
                     </button>
                 </div>
@@ -418,13 +603,13 @@
 <div id="drawer-add-theme" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Добавление темы</h3>
+                <h3 class="title-4">Добавление темы</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -451,11 +636,11 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
-                    Отменить
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m">
+                        Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
-                    Сохранить
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
+                        Сохранить
                     </button>
                 </div>
             </div>
@@ -466,13 +651,13 @@
 <div id="drawer-filter-messages" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Фильтр</h3>
+                <h3 class="title-4">Фильтр</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -512,7 +697,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="filter-messages" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -542,7 +727,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="reason" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -568,10 +753,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="reason, filter-messages">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="reason, filter-messages">
                         Сбросить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
                         Применить
                     </button>
                 </div>
@@ -589,7 +774,7 @@
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Фильтр</h3>
+                <h3 class="title-4">Фильтр</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form search-filter">
@@ -620,7 +805,7 @@
                 </form>
 
                 <div class="drawer__footer">
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close">
                         Показать аналоги
                     </button>
                 </div>
@@ -632,53 +817,75 @@
 <div id="drawer-user" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
                 <svg>
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Меню профиля</h3>
+                <h3 class="title-4">Меню профиля</h3>
             </div>
             <nav class="drawer-dropdown__menu">
-                <a class="header-user-dropdown__link" data-modal="drawer-profile" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" data-modal="drawer-profile" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#user"></use>
                     </svg>
                     Профиль
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#dollar"></use>
                     </svg>
                     Мои финансы
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#line-chart"></use>
                     </svg>
                     Ценообразование
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                     </svg>
                     Пополнить баланс
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#wallet"></use>
-                    </svg>
-                    Баланс
-                    <b>+999 999 руб</b>
-                </a>
-                <a class="header-user-dropdown__link header-user-dropdown__link--logout" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
-                    </svg>
-                    Выйти
-                </a>
             </nav>
+
+            <div class="drawer__contacts">
+                <div class="drawer__contacts-title">Контакты</div>
+
+                <a class="contact-link" href="tel:89308255335">
+                    <svg class="contact-link__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                    </svg>
+
+                    <span class="contact-link__label">8 (930) 825 53-35</span>
+                </a>
+
+                <a class="contact-link" href="tel:89206055335">
+                    <svg class="contact-link__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                    </svg>
+
+                    <span class="contact-link__label">8 (920) 605 53-35</span>
+                </a>
+
+                <a class="contact-link" href="mailto:info@zaptar.ru">
+                    <svg class="contact-link__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#mail"></use>
+                    </svg>
+
+                    <span class="contact-link__label">info@zaptar.ru</span>
+                </a>
+            </div>
+
+            <a class="dropdown-menu__link dropdown-menu__link--logout" href="#">
+                <svg aria-hidden="true" class="dropdown-menu__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
+                </svg>
+                Выйти
+            </a>
         </div>
     </div>
 </div>
@@ -686,40 +893,40 @@
 <div id="drawer-catalog" class="drawer modal">
     <div class="modal__inner modal__inner--open-left">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Меню каталога</h3>
+                <h3 class="title-4">Меню каталога</h3>
             </div>
             <nav class="drawer-dropdown__menu">
-                <a class="header-search-dropdown__link" href="catalog.html">
+                <a class="dropdown-menu__link" href="catalog.html">
                     Каталог запчастей
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Каталог ТО
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Масла
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Аккумуляторы
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Автолампы
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Шины
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Диски
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Колпаки
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Болты, Гайки
                 </a>
             </nav>
@@ -730,13 +937,13 @@
 <div id="drawer-add-car" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" aria-label="Закрыть" class="modal__close modal__close--left" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Добавление автомобиля</h3>
+                <h3 class="title-4">Добавление автомобиля</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -775,7 +982,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-brand" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -802,7 +1009,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-model" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -829,7 +1036,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-power" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -858,7 +1065,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-year" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -896,8 +1103,8 @@
                             <div class="form-input form-file-2__info d-none" data-input="file-download-block">
                                 <img src="" alt="" data-input="file-download-img" class="form-file-2__img">
                                 <span class="form-file-2__text" data-input="file-download-text"></span>
-                                <button type="button" class="form-file-2__delete btn-light" data-input="file-download-delete">
-                                    <svg aria-hidden="true">
+                                <button type="button" aria-label="Удалить" class="form-file-2__delete btn-lite btn-lite--compact btn-lite--theme-default" data-input="file-download-delete">
+                                    <svg class="btn-lite__ico btn-lite__ico--size-l" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                                     </svg>
                                 </button>
@@ -906,10 +1113,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="car-add-power, car-add-year, car-add-model, car-add-brand">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="car-add-power, car-add-year, car-add-model, car-add-brand">
                         Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
                         Сохранить
                     </button>
                 </div>
@@ -921,13 +1128,13 @@
 <div id="drawer-edit-car" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Редактировать информацию</h3>
+                <h3 class="title-4">Редактировать информацию</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -968,7 +1175,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-edit-year" class="select__input" value="2023">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1004,10 +1211,10 @@
                                 </label>
                             </div>
                             <div class="form-input form-file-2__info" data-input="file-download-block">
-                                <img src="static/img/background/product-car.png" alt="Автомобиль" data-input="file-download-img" class="form-file-2__img">
-                                <span class="form-file-2__text" data-input="file-download-text">product-car.png</span>
-                                <button type="button" class="form-file-2__delete btn-light" data-input="file-download-delete">
-                                    <svg aria-hidden="true">
+                                <img src="static/img/background/product-car.jpg" alt="Автомобиль" data-input="file-download-img" class="form-file-2__img">
+                                <span class="form-file-2__text" data-input="file-download-text">product-car.jpg</span>
+                                <button type="button" class="form-file-2__delete btn-lite btn-lite--compact btn-lite--theme-default" aria-label="Удалить" data-input="file-download-delete">
+                                    <svg class="btn-lite__ico btn-lite__ico--size-l" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                                     </svg>
                                 </button>
@@ -1016,10 +1223,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="car-edit-year" data-btn="close">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="car-edit-year" data-btn="close">
                         Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification" disabled>
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
                         Сохранить
                     </button>
                 </div>
@@ -1031,13 +1238,13 @@
 <div id="drawer-recharge" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Пополнение баланса</h3>
+                <h3 class="title-4">Пополнение баланса</h3>
             </div>
             <div class="drawer__info" data-recharge>
                 <form action="" class="drawer__form form">
@@ -1047,7 +1254,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="recharge-method" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1082,10 +1289,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary btn-primary--disabled" data-recharge-reset>
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-recharge-reset>
                         Сбросить
                     </button>
-                    <a href="#" class="drawer__footer-btn btn btn--size-s btn--disabled" data-recharge-submit>
+                    <a href="#" class="btn btn--filled btn--theme-primary btn--size-m" data-recharge-submit>
                         Применить
                     </a>
                 </div>
@@ -1097,13 +1304,13 @@
 <div id="drawer-deduce" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Запрос на вывод средств</h3>
+                <h3 class="title-4">Запрос на вывод средств</h3>
             </div>
             <div class="drawer__info" data-deduce>
                 <form action="" class="drawer__form form">
@@ -1118,10 +1325,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary btn-primary--disabled" data-deduce-reset>
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-deduce-reset>
                         Сбросить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s btn--disabled" data-deduce-submit data-notification="notification-deduce">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-deduce-submit data-notification="notification-deduce">
                         Применить
                     </button>
                 </div>
@@ -1134,12 +1341,12 @@
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
             <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Фильтр</h3>
+                <h3 class="title-4">Фильтр</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -1149,7 +1356,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="order-issue-date" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1204,7 +1411,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="order-pick-up" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1230,10 +1437,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="order-issue-date, order-pick-up">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="order-issue-date, order-pick-up">
                         Сбросить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close">
                         Применить
                     </button>
                 </div>
@@ -1246,12 +1453,12 @@
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
             <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Создание обсуждения</h3>
+                <h3 class="title-4">Создание обсуждения</h3>
             </div>
             <div class="drawer__info" data-deduce>
                 <form action="" class="drawer__form form">
@@ -1261,7 +1468,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="discussion-theme" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1311,11 +1518,98 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="discussion-theme">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="discussion-theme">
                         Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s btn--disabled" data-notification="notification-add-discussion">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-notification="notification-add-discussion">
                         Сохранить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="drawer-sort" class="drawer modal">
+    <div class="modal__inner modal__inner--open-right">
+        <div class="modal__content drawer__content">
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="drawer__header">
+                <h3 class="title-4">Сортировка</h3>
+            </div>
+            <div class="drawer__info">
+                <form action="" class="drawer__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="sort-product-status">Выберите статус</label>
+                        <div class="select @@class" data-select data-select-id=sort-product-status @@data @@dataSelectItem>
+    <div class="form-input select__search d-none" data-select-search>
+        <input type="text" name="select-category" data-select-input id="sort-product-status" class="select__input" value="@@value">
+        <span class="select__ico">
+            <svg aria-hidden="true">
+                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+        </span>
+    </div>
+    <button type="button" class="form-input select__btn" data-select-btn>
+        <span data-select-text="Выберите статус" class="select__text">Выберите статус</span>
+        <span class="select__ico select__ico--rotate" data-select-ico>
+          <svg>
+            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+          </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item select__item--active @@classItem"
+                data-select-value="value-1" @@dataItem1>В обработке</button>
+        <button type="button" class="select__item"
+                data-select-value="value-2" @@dataItem2>Возврат проведен</button>
+        <button type="button" class="select__item"
+                data-select-value="value-3" @@dataItem3>В разборе</button>
+    </div>
+</div>
+
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="sort-product-price">Выберите цену</label>
+                        <div class="select @@class" data-select data-select-id=sort-product-price @@data @@dataSelectItem>
+    <div class="form-input select__search d-none" data-select-search>
+        <input type="text" name="select-category" data-select-input id="sort-product-price" class="select__input" value="@@value">
+        <span class="select__ico">
+            <svg aria-hidden="true">
+                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+        </span>
+    </div>
+    <button type="button" class="form-input select__btn" data-select-btn>
+        <span data-select-text="Выберите цену" class="select__text">Выберите цену</span>
+        <span class="select__ico select__ico--rotate" data-select-ico>
+          <svg>
+            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+          </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item select__item--active @@classItem"
+                data-select-value="value-1" @@dataItem1>Наценка (10,00)</button>
+        <button type="button" class="select__item"
+                data-select-value="value-2" @@dataItem2>Наценка (20,00)</button>
+        <button type="button" class="select__item"
+                data-select-value="value-3" @@dataItem3>Без наценки</button>
+    </div>
+</div>
+
+                    </div>
+                </form>
+                <div class="drawer__footer">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="sort-product-status, sort-product-price">
+                        Сбросить
+                    </button>
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
+                        Применить
                     </button>
                 </div>
             </div>
@@ -1325,48 +1619,48 @@
 
 
 <div class="notification" id="notification">
-    <svg class="notification__ico">
+    <svg class="notification__ico" aria-hidden="true">
         <use xlink:href="static/img/symbol/sprite.svg#check-circle"></use>
     </svg>
     <span class="notification__text">Сообщение успешно создано</span>
-    <button type="button" class="notification__close" data-btn="close">
-        <svg>
+    <button type="button" class="notification__close" aria-label="Закрыть" data-btn="close">
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
 </div>
 
 <div class="notification" id="notification-deduce">
-    <svg class="notification__ico">
+    <svg class="notification__ico" aria-hidden="true">
         <use xlink:href="static/img/symbol/sprite.svg#check-circle"></use>
     </svg>
     <span class="notification__text">Запрос на вывод средств успешно отправлен</span>
-    <button type="button" class="notification__close" data-btn="close">
-        <svg>
+    <button type="button" class="notification__close" aria-label="Закрыть" data-btn="close">
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
 </div>
 
 <div class="notification" id="notification-add-comment">
-    <svg class="notification__ico">
+    <svg class="notification__ico" aria-hidden="true">
         <use xlink:href="static/img/symbol/sprite.svg#check-circle"></use>
     </svg>
     <span class="notification__text">Комментарий успешно добавлен</span>
     <button type="button" class="notification__close" data-btn="close">
-        <svg>
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
 </div>
 
 <div class="notification" id="notification-delete-product">
-    <svg class="notification__ico">
+    <svg class="notification__ico" aria-hidden="true">
         <use xlink:href="static/img/symbol/sprite.svg#check-circle"></use>
     </svg>
     <span class="notification__text">Товар успешно удален</span>
-    <button type="button" class="notification__close" data-btn="close">
-        <svg>
+    <button type="button" class="notification__close" aria-label="Закрыть" data-btn="close">
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
@@ -1378,7 +1672,7 @@
     </svg>
     <span class="notification__text">Пункт самовывоза успешно изменен</span>
     <button type="button" class="notification__close" data-btn="close">
-        <svg>
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
@@ -1390,7 +1684,7 @@
     </svg>
     <span class="notification__text">Обсуждение успешно создано</span>
     <button type="button" class="notification__close" data-btn="close">
-        <svg>
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>

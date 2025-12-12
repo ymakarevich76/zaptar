@@ -21,248 +21,253 @@
 <body>
 
 <header class="header" data-header>
-    <div class="header__top">
-        <div class="header__container container">
-            <a class="logo" href="/zaptar/dist">
-                <img class="logo__img" src="static/img/logo/logo.svg" width="198" height="32" alt="zaptar">
+    <div class="header__top container">
+        <a class="logo" href="/">
+            <img class="logo__img" src="static/img/logo/logo.svg" width="198" height="32" alt="zaptar">
+        </a>
+
+        <div class="header__top-contacts">
+            <a class="contact-link" href="tel:89308255335">
+                <svg class="contact-link__ico" aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                </svg>
+
+                <span class="contact-link__label">8 (930) 825 53-35</span>
             </a>
 
-            <div class="header__top-contacts">
-                <a class="header-contact" href="tel:89308255335">
-                    <svg class="header-contact__ico" aria-hidden="true">
-                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
-                    </svg>
+            <a class="contact-link" href="tel:89206055335">
+                <svg class="contact-link__ico" aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                </svg>
 
-                    <span class="header-contact__text">8 (930) 825 53-35</span>
-                </a>
+                <span class="contact-link__label">8 (920) 605 53-35</span>
+            </a>
 
-                <a class="header-contact" href="tel:89206055335">
-                    <svg class="header-contact__ico" aria-hidden="true">
-                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
-                    </svg>
+            <a class="contact-link contact-link--has-divider" href="mailto:info@zaptar.ru">
+                <svg class="contact-link__ico" aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#mail"></use>
+                </svg>
 
-                    <span class="header-contact__text">8 (920) 605 53-35</span>
-                </a>
-
-                <a class="header-contact header-contact--has-divider" href="mailto:info@zaptar.ru">
-                    <svg class="header-contact__ico" aria-hidden="true">
-                        <use xlink:href="static/img/symbol/sprite.svg#mail"></use>
-                    </svg>
-
-                    <span class="header-contact__text">info@zaptar.ru</span>
-                </a>
-            </div>
-
-            <!-- мобайл -->
-            <nav class="header__top-actions">
-                <!-- Пользователь не авторизован -->
-                <!--     <a href="#" class="btn-primary"> -->
-                <!--         Регистрация -->
-                <!--     </a> -->
-
-                <!--     <a href="#" class="btn btn&#45;&#45;size-s"> -->
-                <!--         Войти -->
-                <!--     </a> -->
-
-                <!-- Пользователь авторизован -->
-                <a class="header-btn header-btn--gray header-btn--narrow" href="#">
-                    <svg aria-hidden="true" class="header-btn__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
-                    </svg>
-                </a>
-
-                <a class="header-btn header-btn--gray header-btn--narrow" href="#">
-                    <svg aria-hidden="true" class="header-btn__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#car"></use>
-                    </svg>
-                </a>
-
-                <a class="header-btn header-btn--gray header-btn--narrow" href="#">
-                    <svg aria-hidden="true" class="header-btn__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#inbox"></use>
-                    </svg>
-                </a>
-
-                <a class="header-btn header-btn--gray header-btn--narrow" href="#">
-                    <svg aria-hidden="true" class="header-btn__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
-                    </svg>
-                </a>
-
-                <a class="header-btn header-btn--gray header-btn--narrow" href="#">
-                    <svg aria-hidden="true" class="header-btn__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
-                    </svg>
-                </a>
-
-                <button type="button" class="header-user-dropdown__toggle header-btn header-btn--gray header-btn--narrow" data-modal="drawer-user">
-                    <svg aria-hidden="true" class="header-btn__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#user"></use>
-                    </svg>
-                </button>
-            </nav>
+                <span class="contact-link__label">info@zaptar.ru</span>
+            </a>
         </div>
+
+        <!-- мобайл -->
+        <!-- Пользователь не авторизован -->
+
+        <!-- <nav class="header__top-actions"> -->
+        <!--     <a href="#" class="btn btn&#45;&#45;outlined btn&#45;&#45;theme-secondary btn&#45;&#45;size-m btn&#45;&#45;compact"> -->
+        <!--         Регистрация -->
+        <!--     </a> -->
+
+        <!--     <a href="#" class="btn btn&#45;&#45;filled btn&#45;&#45;theme-primary btn&#45;&#45;size-m btn&#45;&#45;compact"> -->
+        <!--         Войти -->
+        <!--     </a> -->
+        <!-- </nav> -->
+
+        <!-- мобайл -->
+        <!-- Пользователь авторизован -->
+
+        <nav class="header__top-actions">
+            <a class="btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" aria-label="Чат" href="#">
+                <svg aria-hidden="true" class="btn-lite__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
+                </svg>
+            </a>
+
+            <a class="btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" aria-label="Гараж" href="#">
+                <svg aria-hidden="true" class="btn-lite__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#car"></use>
+                </svg>
+            </a>
+
+            <a class="btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" aria-label="Гараж" href="#">
+                <svg aria-hidden="true" class="btn-lite__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#inbox"></use>
+                </svg>
+            </a>
+
+            <a class="btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" aria-label="Избранное" href="#">
+                <svg aria-hidden="true" class="btn-lite__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+                </svg>
+            </a>
+
+            <a class="btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" aria-label="Корзина" href="#">
+                <svg aria-hidden="true" class="btn-lite__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
+                </svg>
+                <span class="btn-lite__badge badge badge--theme-dark">3</span>
+            </a>
+
+            <button type="button" aria-label="Пользователь" class="header-user-dropdown__toggle btn-lite btn-lite--compact btn-lite--theme-default btn-lite--size-l" data-modal="drawer-user">
+                <svg aria-hidden="true" class="btn-lite__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#user"></use>
+                </svg>
+            </button>
+        </nav>
     </div>
 
-    <div class="header__bottom">
-        <div class="header__container container">
-            <div class="header__search header-search">
-                <div class="header-search__dropdown header-search-dropdown">
-                    <button class="header-search-dropdown__toggle d-md-none">
-                        <svg class="header-search-dropdown__ico" aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
-                        </svg>
-                        <span class="header-search-dropdown__caption">Каталог</span>
-                    </button>
-                    <button class="header-search-dropdown__toggle d-none d-md-flex" data-modal="drawer-catalog">
-                        <svg class="header-search-dropdown__ico" aria-hidden="true">
-                            <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
-                        </svg>
-                        <span class="header-search-dropdown__caption">Каталог</span>
-                    </button>
+    <div class="header__bottom container">
+        <div class="header__search header-search">
+            <div class="header-search__dropdown header-search-dropdown">
+                <button class="header-search-dropdown__toggle d-md-none">
+                    <svg class="header-search-dropdown__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
+                    </svg>
+                    <span class="header-search-dropdown__label">Каталог</span>
+                </button>
+                <button class="header-search-dropdown__toggle d-none d-md-flex" aria-label="Меню" data-modal="drawer-catalog">
+                    <svg class="header-search-dropdown__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#menu"></use>
+                    </svg>
+                </button>
 
-                    <nav class="header-search-dropdown__menu">
-                        <a class="header-search-dropdown__link" href="catalog.html">
-                            Каталог запчастей
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Каталог ТО
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Масла
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Аккумуляторы
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Автолампы
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Шины
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Диски
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Колпаки
-                        </a>
-                        <a class="header-search-dropdown__link" href="#">
-                            Болты, Гайки
-                        </a>
-                    </nav>
-                </div>
+                <nav class="header-search-dropdown__menu dropdown-menu">
+                    <a class="dropdown-menu__link" href="catalog.html">
+                        Каталог запчастей
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Каталог ТО
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Масла
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Аккумуляторы
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Автолампы
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Шины
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Диски
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Колпаки
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        Болты, Гайки
+                    </a>
+                </nav>
+            </div>
 
-                <input class="header-search__input" type="text" placeholder="Поиск по артикулу или наименованию" />
+            <form class="header-search__form" action="/search.html" method="GET">
+                <input class="header-search__input" type="search" placeholder="Поиск по артикулу или наименованию" />
 
-                <!-- todo: активировать кнопку когда ввели текст -->
-                <button class="header-search__btn">
+                <button class="header-search__btn" aria-label="Поиск по артикулу или наименованию">
                     <svg class="header-search__btn-ico" aria-hidden="true">
                         <use xlink:href="static/img/symbol/sprite.svg#search"></use>
                     </svg>
                 </button>
-            </div>
-
-            <!-- Пользователь не авторизован -->
-
-           <!--  <div class="header__bottom-actions header-bottom-actions"> -->
-           <!--     <a class="header-btn" href="#"> -->
-           <!--         Регистрация -->
-           <!--     </a> -->
-
-           <!--     <button type="button" data-modal="auth" class="header-btn header-btn&#45;&#45;accent"> -->
-           <!--         <svg aria-hidden="true" class="header-btn__ico"> -->
-           <!--             <use xlink:href="static/img/symbol/sprite.svg#user"></use> -->
-           <!--         </svg> -->
-
-           <!--         <span>Войти</span> -->
-           <!--     </button> -->
-           <!-- </div> -->
-
-           <!-- Пользователь авторизован -->
-
-           <nav class="header__bottom-actions header-bottom-actions">
-               <a class="header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
-                   <svg aria-hidden="true" class="header-btn__ico">
-                       <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
-                   </svg>
-               </a>
-
-               <a class="header-bottom-actions__btn-divider header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
-                   <svg aria-hidden="true" class="header-btn__ico">
-                       <use xlink:href="static/img/symbol/sprite.svg#car"></use>
-                   </svg>
-               </a>
-
-               <a class="header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
-                   <svg aria-hidden="true" class="header-btn__ico">
-                       <use xlink:href="static/img/symbol/sprite.svg#inbox"></use>
-                   </svg>
-               </a>
-
-               <a class="header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
-                   <svg aria-hidden="true" class="header-btn__ico">
-                       <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
-                   </svg>
-               </a>
-
-               <a class="header-bottom-actions__btn-divider header-btn header-btn--gray header-btn--narrow d-md-none" href="#">
-                   <svg aria-hidden="true" class="header-btn__ico">
-                       <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
-                   </svg>
-               </a>
-
-               <a class="header-btn header-btn--gray header-btn-wallet" href="#">
-                    <svg aria-hidden="true" class="header-btn__ico header-btn-wallet__ico">
-                       <use xlink:href="static/img/symbol/sprite.svg#wallet"></use>
-                    </svg>
-                   <span class="header-btn-wallet__caption">Баланс</span>
-                   <span class="header-btn-wallet__balance">+999 999 руб</span>
-               </a>
-
-               <div class="header-user-dropdown d-md-none">
-                   <button type="button" class="header-user-dropdown__toggle header-btn header-btn--gray">
-                       Иван
-                       <svg aria-hidden="true" class="header-btn__ico header-btn__ico--sm">
-                           <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
-                       </svg>
-                   </button>
-
-                    <div class="header-user-dropdown__menu">
-                        <a class="header-user-dropdown__link" data-modal="drawer-profile" href="#">
-                            <svg aria-hidden="true" class="header-user-dropdown__ico">
-                                <use xlink:href="static/img/symbol/sprite.svg#user"></use>
-                            </svg>
-                            Профиль
-                        </a>
-                        <a class="header-user-dropdown__link" href="#">
-                            <svg aria-hidden="true" class="header-user-dropdown__ico">
-                                <use xlink:href="static/img/symbol/sprite.svg#dollar"></use>
-                            </svg>
-                            Мои финансы
-                        </a>
-                        <a class="header-user-dropdown__link" href="#">
-                            <svg aria-hidden="true" class="header-user-dropdown__ico">
-                                <use xlink:href="static/img/symbol/sprite.svg#line-chart"></use>
-                            </svg>
-                            Ценообразование
-                        </a>
-                        <a class="header-user-dropdown__link" href="#">
-                            <svg aria-hidden="true" class="header-user-dropdown__ico">
-                                <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
-                            </svg>
-                            Пополнить баланс
-                        </a>
-                        <a class="header-user-dropdown__link header-user-dropdown__link--logout" href="#">
-                            <svg aria-hidden="true" class="header-user-dropdown__ico">
-                                <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
-                            </svg>
-                            Выйти
-                        </a>
-                       <!--   todo: дополнить номерами телефонов   -->
-                    </div>
-               </div>
-           </nav>
+            </form>
         </div>
+
+       <!--  Десктоп -->
+       <!-- Пользователь не авторизован -->
+
+        <!-- <nav class="header__bottom-actions header-bottom-actions d-md-none"> -->
+        <!--     <a class="btn btn&#45;&#45;filled btn&#45;&#45;theme-light btn&#45;&#45;size-m" href="#"> -->
+        <!--         Регистрация -->
+        <!--     </a> -->
+
+        <!--     <button type="button" data-modal="auth" class="btn btn&#45;&#45;filled btn&#45;&#45;theme-primary btn&#45;&#45;size-m"> -->
+        <!--         <svg aria-hidden="true" class="btn__ico"> -->
+        <!--             <use xlink:href="static/img/symbol/sprite.svg#user"></use> -->
+        <!--         </svg> -->
+
+        <!--         <span class="btn__label">Войти</span> -->
+        <!--     </button> -->
+        <!-- </nav> -->
+
+        <!--  Десктоп -->
+        <!-- Пользователь авторизован -->
+
+       <nav class="header__bottom-actions header-bottom-actions">
+           <a class="btn btn--filled btn--theme-secondary btn--size-m btn--compact d-md-none" href="#">
+               <svg aria-hidden="true" class="btn__ico">
+                   <use xlink:href="static/img/symbol/sprite.svg#chat"></use>
+               </svg>
+               <span class="btn__badge badge badge--theme-light"></span>
+           </a>
+
+           <a class="header-bottom-actions__btn-divider btn btn--filled btn--theme-secondary btn--size-m btn--compact d-md-none" href="#">
+               <svg aria-hidden="true" class="btn__ico">
+                   <use xlink:href="static/img/symbol/sprite.svg#car"></use>
+               </svg>
+           </a>
+
+           <a class="btn btn--filled btn--theme-secondary btn--size-m btn--compact d-md-none" href="#">
+               <svg aria-hidden="true" class="btn__ico">
+                   <use xlink:href="static/img/symbol/sprite.svg#inbox"></use>
+               </svg>
+           </a>
+
+           <a class="btn btn--filled btn--theme-secondary btn--size-m btn--compact d-md-none" href="#">
+               <svg aria-hidden="true" class="btn__ico">
+                   <use xlink:href="static/img/symbol/sprite.svg#heart"></use>
+               </svg>
+           </a>
+
+           <a class="header-bottom-actions__btn-divider btn btn--filled btn--theme-secondary btn--size-m btn--compact d-md-none" href="#">
+               <svg aria-hidden="true" class="btn__ico">
+                   <use xlink:href="static/img/symbol/sprite.svg#cart"></use>
+               </svg>
+               <span class="btn__badge badge badge--theme-light">3</span>
+           </a>
+
+           <a class="header-btn-wallet btn btn--filled btn--theme-secondary btn--size-m" href="#">
+                <svg aria-hidden="true" class="btn__ico header-btn-wallet__ico">
+                   <use xlink:href="static/img/symbol/sprite.svg#wallet"></use>
+                </svg>
+               <span class="header-btn-wallet__caption">Баланс</span>
+               <span class="header-btn-wallet__balance">+999 999 руб</span>
+           </a>
+
+           <div class="header-user-dropdown d-md-none">
+               <button type="button" class="header-user-dropdown__toggle btn btn--filled btn--theme-secondary btn--size-m">
+                   Иван
+                   <svg aria-hidden="true" class="btn__ico btn__ico--sm">
+                       <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+                   </svg>
+               </button>
+
+                <div class="header-user-dropdown__menu dropdown-menu">
+                    <a class="dropdown-menu__link" data-modal="drawer-profile" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#user"></use>
+                        </svg>
+                        Профиль
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#dollar"></use>
+                        </svg>
+                        Мои финансы
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#line-chart"></use>
+                        </svg>
+                        Ценообразование
+                    </a>
+                    <a class="dropdown-menu__link" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
+                        </svg>
+                        Пополнить баланс
+                    </a>
+                    <a class="dropdown-menu__link dropdown-menu__link--logout" href="#">
+                        <svg aria-hidden="true" class="dropdown-menu__ico">
+                            <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
+                        </svg>
+                        Выйти
+                    </a>
+                </div>
+           </div>
+        </nav>
     </div>
 </header>
 
@@ -279,578 +284,576 @@
 </div>
 
 
-    <div class="container">
-        <section class="details">
-            <div class="section-header section-header--mb">
-                <div class="section-header__group">
-                    <h1 class="title">Abarth CINQUECENTO ABARTH [NUOVA 500 ABARTH (2008-2012)]</h1>
-                </div>
-
-                <div class="section-header__group">
-                    <a href="#" class="btn-primary">
-                       Назад
-                    </a>
-                </div>
+    <section class="details container">
+        <div class="section-header section-header--mb">
+            <div class="section-header__group">
+                <h1 class="title">Abarth CINQUECENTO ABARTH [NUOVA 500 ABARTH (2008-2012)]</h1>
             </div>
-            <div class="details__wrapper">
-                <div class="details__sidebar">
-                    <div class="tabs-2">
-                        <div class="tabs-2__box-btn">
-                            <button class="tabs-2__btn tabs-2__btn--active" tab-2="1">Поиск по каталогу</button>
-                            <button class="tabs-2__btn" tab-2="2">Поиск по узлам</button>
-                        </div>
 
-                        <div class="tabs-2__box-content">
-                            <div class="tabs-2__content tabs-2__content--active" tab-2-content="1">
-                                <div class="details__tree">
-                                    <div class="details__search">
-                                        <input class="details__search-input" type="text" tabindex="0" placeholder="Поиск по списку категорий" />
-                                        <button type="button" class="details__search-btn">
-                                            <svg aria-hidden="true">
-                                                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="details__scrollbar scrollbar scrollbar--vertical">
-                                        <ul class="details__list" data-categories-list>
-                                            <li class="details__item" data-categories-item>
-                                                <div class="details__group">
-                                                    <button type="button" class="btn-light" data-categories-btn>
-                                                        <svg aria-hidden="true" class="btn-light__ico" data-categories-ico-plus>
-                                                            <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
-                                                        </svg>
-                                                        <svg aria-hidden="true" class="btn-light__ico d-none" data-categories-ico-minus>
-                                                            <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <span class="details__label">
-                                                    Детали для ТО
-                                                </span>
-                                                </div>
-                                                <ul class="details__sublist d-none" data-categories-sublist>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link details__link--active">Фильтр масляный</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Фильтр воздушный</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Фильтр салонный</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Свечи зажигания</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Ремень приводной</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Ремень ГРМ</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Насос системы охлаждения</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Термостат</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Колодки тормозные</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Пробка сливного отверстия</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Щетки стеклоочистителя</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="details__item" data-categories-item>
-                                                <div class="details__group">
-                                                    <button type="button" class="btn-light" data-categories-btn>
-                                                        <svg aria-hidden="true" class="btn-light__ico" data-categories-ico-plus>
-                                                            <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
-                                                        </svg>
-                                                        <svg aria-hidden="true" class="btn-light__ico d-none" data-categories-ico-minus>
-                                                            <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <span class="details__label">
-                                                    Двигатель
-                                                </span>
-                                                </div>
-                                                <ul class="details__sublist d-none" data-categories-sublist>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Двигатель масляный</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Двигатель воздушный</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Двигатель салонный</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="details__item" data-categories-item>
-                                                <div class="details__group">
-                                                    <button type="button" class="btn-light" data-categories-btn>
-                                                        <svg aria-hidden="true" class="btn-light__ico" data-categories-ico-plus>
-                                                            <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
-                                                        </svg>
-                                                        <svg aria-hidden="true" class="btn-light__ico d-none" data-categories-ico-minus>
-                                                            <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <span class="details__label">
-                                                   Топливная система
-                                                </span>
-                                                </div>
-                                                <ul class="details__sublist d-none" data-categories-sublist>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Система</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Система</a>
-                                                    </li>
-                                                    <li class="details__subitem">
-                                                        <a href="#" class="details__link">Система</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="details__item" data-categories-item>
-                                                <div class="details__group">
-                                                    <button type="button" class="btn-light" data-categories-btn>
-                                                        <svg aria-hidden="true" class="btn-light__ico" data-categories-ico-plus>
-                                                            <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
-                                                        </svg>
-                                                        <svg aria-hidden="true" class="btn-light__ico d-none" data-categories-ico-minus>
-                                                            <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <span class="details__label">
-                                                    Система охлаждения
-                                                </span>
-                                                </div>
-                                                <ul class="details__list d-none" data-categories-sublist>
-                                                    <li class="details__item" data-categories-item>
-                                                        <div class="details__group">
-                                                            <button type="button" class="btn-light" data-categories-btn>
-                                                                <svg aria-hidden="true" class="btn-light__ico" data-categories-ico-plus>
-                                                                    <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
-                                                                </svg>
-                                                                <svg aria-hidden="true" class="btn-light__ico d-none" data-categories-ico-minus>
-                                                                    <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
-                                                                </svg>
-                                                            </button>
-                                                            <span class="details__label">
-                                                           Топливная система
-                                                        </span>
-                                                        </div>
-                                                        <ul class="details__sublist d-none" data-categories-sublist>
-                                                            <li class="details__subitem">
-                                                                <a href="#" class="details__link">Фильтр масляный</a>
-                                                            </li>
-                                                            <li class="details__subitem">
-                                                                <a href="#" class="details__link">Фильтр воздушный</a>
-                                                            </li>
-                                                            <li class="details__subitem">
-                                                                <a href="#" class="details__link">Фильтр салонный</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="details__item" data-categories-item>
-                                                        <div class="details__group">
-                                                            <button type="button" class="btn-light" data-categories-btn>
-                                                                <svg aria-hidden="true" class="btn-light__ico" data-categories-ico-plus>
-                                                                    <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
-                                                                </svg>
-                                                                <svg aria-hidden="true" class="btn-light__ico d-none" data-categories-ico-minus>
-                                                                    <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
-                                                                </svg>
-                                                            </button>
-                                                            <span class="details__label">
-                                                           Топливная система
-                                                        </span>
-                                                        </div>
-                                                        <ul class="details__sublist d-none" data-categories-sublist>
-                                                            <li class="details__subitem">
-                                                                <a href="#" class="details__link">Фильтр масляный</a>
-                                                            </li>
-                                                            <li class="details__subitem">
-                                                                <a href="#" class="details__link">Фильтр воздушный</a>
-                                                            </li>
-                                                            <li class="details__subitem">
-                                                                <a href="#" class="details__link">Фильтр салонный</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="details__item" data-categories-item>
-                                                        <div class="details__group">
-                                                            <button type="button" class="btn-light" data-categories-btn>
-                                                                <svg aria-hidden="true" class="btn-light__ico" data-categories-ico-plus>
-                                                                    <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
-                                                                </svg>
-                                                                <svg aria-hidden="true" class="btn-light__ico d-none" data-categories-ico-minus>
-                                                                    <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
-                                                                </svg>
-                                                            </button>
-                                                            <span class="details__label">
-                                                           Топливная система
-                                                        </span>
-                                                        </div>
-                                                        <ul class="details__list d-none" data-categories-sublist>
-                                                            <li class="details__item" data-categories-item>
-                                                                <div class="details__group">
-                                                                    <button type="button" class="btn-light" data-categories-btn>
-                                                                        <svg aria-hidden="true" class="btn-light__ico" data-categories-ico-plus>
-                                                                            <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
-                                                                        </svg>
-                                                                        <svg aria-hidden="true" class="btn-light__ico d-none" data-categories-ico-minus>
-                                                                            <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
-                                                                        </svg>
-                                                                    </button>
-                                                                    <span class="details__label">
-                                                           Топливная система
-                                                        </span>
-                                                                </div>
-                                                                <ul class="details__sublist d-none" data-categories-sublist>
-                                                                    <li class="details__subitem">
-                                                                        <a href="#" class="details__link">Фильтр масляный</a>
-                                                                    </li>
-                                                                    <li class="details__subitem">
-                                                                        <a href="#" class="details__link">Фильтр воздушный</a>
-                                                                    </li>
-                                                                    <li class="details__subitem">
-                                                                        <a href="#" class="details__link">Фильтр салонный</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="details__item" data-categories-item>
-                                                                <div class="details__group">
-                                                                    <button type="button" class="btn-light" data-categories-btn>
-                                                                        <svg aria-hidden="true" class="btn-light__ico" data-categories-ico-plus>
-                                                                            <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
-                                                                        </svg>
-                                                                        <svg aria-hidden="true" class="btn-light__ico d-none" data-categories-ico-minus>
-                                                                            <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
-                                                                        </svg>
-                                                                    </button>
-                                                                    <span class="details__label">
-                                                           Топливная система
-                                                        </span>
-                                                                </div>
-                                                                <ul class="details__sublist d-none" data-categories-sublist>
-                                                                    <li class="details__subitem">
-                                                                        <a href="#" class="details__link">Фильтр масляный</a>
-                                                                    </li>
-                                                                    <li class="details__subitem">
-                                                                        <a href="#" class="details__link">Фильтр воздушный</a>
-                                                                    </li>
-                                                                    <li class="details__subitem">
-                                                                        <a href="#" class="details__link">Фильтр салонный</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
+            <div class="section-header__group">
+                <a href="#" class="btn btn--outlined btn--theme-secondary btn--size-m">
+                   Назад
+                </a>
+            </div>
+        </div>
+        <div class="details__wrapper">
+            <div class="details__sidebar">
+                <div class="tabs-2">
+                    <div class="tabs-2__box-btn">
+                        <button class="tabs-2__btn tabs-2__btn--active" tab-2="1">Поиск по каталогу</button>
+                        <button class="tabs-2__btn" tab-2="2">Поиск по узлам</button>
+                    </div>
+
+                    <div class="tabs-2__box-content">
+                        <div class="tabs-2__content tabs-2__content--active" tab-2-content="1">
+                            <div class="details__tree">
+                                <div class="details__search">
+                                    <input class="details__search-input" type="text" tabindex="0" placeholder="Поиск по списку категорий" />
+                                    <button type="button" class="details__search-btn">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+                                        </svg>
+                                    </button>
                                 </div>
-
+                                <div class="details__scrollbar scrollbar scrollbar--vertical">
+                                    <ul class="details__list" data-categories-list>
+                                        <li class="details__item" data-categories-item>
+                                            <div class="details__group">
+                                                <button type="button" class="btn-lite btn-lite--compact btn-lite--theme-default" data-categories-btn>
+                                                    <svg aria-hidden="true" class="btn-lite__ico" data-categories-ico-plus>
+                                                        <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                    </svg>
+                                                    <svg aria-hidden="true" class="btn-lite__ico d-none" data-categories-ico-minus>
+                                                        <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
+                                                    </svg>
+                                                </button>
+                                                <span class="details__label">
+                                                Детали для ТО
+                                            </span>
+                                            </div>
+                                            <ul class="details__sublist d-none" data-categories-sublist>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link details__link--active">Фильтр масляный</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Фильтр воздушный</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Фильтр салонный</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Свечи зажигания</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Ремень приводной</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Ремень ГРМ</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Насос системы охлаждения</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Термостат</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Колодки тормозные</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Пробка сливного отверстия</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Щетки стеклоочистителя</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="details__item" data-categories-item>
+                                            <div class="details__group">
+                                                <button type="button" class="btn-lite btn-lite--compact btn-lite--theme-default" data-categories-btn>
+                                                    <svg aria-hidden="true" class="btn-lite__ico" data-categories-ico-plus>
+                                                        <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                    </svg>
+                                                    <svg aria-hidden="true" class="btn-lite__ico d-none" data-categories-ico-minus>
+                                                        <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
+                                                    </svg>
+                                                </button>
+                                                <span class="details__label">
+                                                Двигатель
+                                            </span>
+                                            </div>
+                                            <ul class="details__sublist d-none" data-categories-sublist>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Двигатель масляный</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Двигатель воздушный</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Двигатель салонный</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="details__item" data-categories-item>
+                                            <div class="details__group">
+                                                <button type="button" class="btn-lite btn-lite--compact btn-lite--theme-default" data-categories-btn>
+                                                    <svg aria-hidden="true" class="btn-lite__ico" data-categories-ico-plus>
+                                                        <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                    </svg>
+                                                    <svg aria-hidden="true" class="btn-lite__ico d-none" data-categories-ico-minus>
+                                                        <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
+                                                    </svg>
+                                                </button>
+                                                <span class="details__label">
+                                               Топливная система
+                                            </span>
+                                            </div>
+                                            <ul class="details__sublist d-none" data-categories-sublist>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Система</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Система</a>
+                                                </li>
+                                                <li class="details__subitem">
+                                                    <a href="#" class="details__link">Система</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="details__item" data-categories-item>
+                                            <div class="details__group">
+                                                <button type="button" class="btn-lite btn-lite--compact btn-lite--theme-default" data-categories-btn>
+                                                    <svg aria-hidden="true" class="btn-lite__ico" data-categories-ico-plus>
+                                                        <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                    </svg>
+                                                    <svg aria-hidden="true" class="btn-lite__ico d-none" data-categories-ico-minus>
+                                                        <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
+                                                    </svg>
+                                                </button>
+                                                <span class="details__label">
+                                                Система охлаждения
+                                            </span>
+                                            </div>
+                                            <ul class="details__list d-none" data-categories-sublist>
+                                                <li class="details__item" data-categories-item>
+                                                    <div class="details__group">
+                                                        <button type="button" class="btn-lite btn-lite--compact btn-lite--theme-default" data-categories-btn>
+                                                            <svg aria-hidden="true" class="btn-lite__ico" data-categories-ico-plus>
+                                                                <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                            </svg>
+                                                            <svg aria-hidden="true" class="btn-lite__ico d-none" data-categories-ico-minus>
+                                                                <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <span class="details__label">
+                                                       Топливная система
+                                                    </span>
+                                                    </div>
+                                                    <ul class="details__sublist d-none" data-categories-sublist>
+                                                        <li class="details__subitem">
+                                                            <a href="#" class="details__link">Фильтр масляный</a>
+                                                        </li>
+                                                        <li class="details__subitem">
+                                                            <a href="#" class="details__link">Фильтр воздушный</a>
+                                                        </li>
+                                                        <li class="details__subitem">
+                                                            <a href="#" class="details__link">Фильтр салонный</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="details__item" data-categories-item>
+                                                    <div class="details__group">
+                                                        <button type="button" class="btn-lite btn-lite--compact btn-lite--theme-default" data-categories-btn>
+                                                            <svg aria-hidden="true" class="btn-lite__ico" data-categories-ico-plus>
+                                                                <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                            </svg>
+                                                            <svg aria-hidden="true" class="btn-lite__ico d-none" data-categories-ico-minus>
+                                                                <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <span class="details__label">
+                                                       Топливная система
+                                                    </span>
+                                                    </div>
+                                                    <ul class="details__sublist d-none" data-categories-sublist>
+                                                        <li class="details__subitem">
+                                                            <a href="#" class="details__link">Фильтр масляный</a>
+                                                        </li>
+                                                        <li class="details__subitem">
+                                                            <a href="#" class="details__link">Фильтр воздушный</a>
+                                                        </li>
+                                                        <li class="details__subitem">
+                                                            <a href="#" class="details__link">Фильтр салонный</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="details__item" data-categories-item>
+                                                    <div class="details__group">
+                                                        <button type="button" class="btn-lite btn-lite--compact btn-lite--theme-default" data-categories-btn>
+                                                            <svg aria-hidden="true" class="btn-lite__ico" data-categories-ico-plus>
+                                                                <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                            </svg>
+                                                            <svg aria-hidden="true" class="btn-lite__ico d-none" data-categories-ico-minus>
+                                                                <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <span class="details__label">
+                                                       Топливная система
+                                                    </span>
+                                                    </div>
+                                                    <ul class="details__list d-none" data-categories-sublist>
+                                                        <li class="details__item" data-categories-item>
+                                                            <div class="details__group">
+                                                                <button type="button" class="btn-lite btn-lite--compact btn-lite--theme-default" data-categories-btn>
+                                                                    <svg aria-hidden="true" class="btn-lite__ico" data-categories-ico-plus>
+                                                                        <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                                    </svg>
+                                                                    <svg aria-hidden="true" class="btn-lite__ico d-none" data-categories-ico-minus>
+                                                                        <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
+                                                                    </svg>
+                                                                </button>
+                                                                <span class="details__label">
+                                                       Топливная система
+                                                    </span>
+                                                            </div>
+                                                            <ul class="details__sublist d-none" data-categories-sublist>
+                                                                <li class="details__subitem">
+                                                                    <a href="#" class="details__link">Фильтр масляный</a>
+                                                                </li>
+                                                                <li class="details__subitem">
+                                                                    <a href="#" class="details__link">Фильтр воздушный</a>
+                                                                </li>
+                                                                <li class="details__subitem">
+                                                                    <a href="#" class="details__link">Фильтр салонный</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="details__item" data-categories-item>
+                                                            <div class="details__group">
+                                                                <button type="button" class="btn-lite btn-lite--compact btn-lite--theme-default" data-categories-btn>
+                                                                    <svg aria-hidden="true" class="btn-lite__ico" data-categories-ico-plus>
+                                                                        <use xlink:href="static/img/symbol/sprite.svg#plus-square"></use>
+                                                                    </svg>
+                                                                    <svg aria-hidden="true" class="btn-lite__ico d-none" data-categories-ico-minus>
+                                                                        <use xlink:href="static/img/symbol/sprite.svg#minus-square"></use>
+                                                                    </svg>
+                                                                </button>
+                                                                <span class="details__label">
+                                                       Топливная система
+                                                    </span>
+                                                            </div>
+                                                            <ul class="details__sublist d-none" data-categories-sublist>
+                                                                <li class="details__subitem">
+                                                                    <a href="#" class="details__link">Фильтр масляный</a>
+                                                                </li>
+                                                                <li class="details__subitem">
+                                                                    <a href="#" class="details__link">Фильтр воздушный</a>
+                                                                </li>
+                                                                <li class="details__subitem">
+                                                                    <a href="#" class="details__link">Фильтр салонный</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="tabs-2__content" tab-2-content="2">
-                                <div class="details__nodes">
-                                    <div class="details__scrollbar scrollbar scrollbar--vertical">
-                                        <ul class="details__nodes-list">
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Двигатель и подвески
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link details__nodes-link--active">
-                                                    Двигатель
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Подвески и силовой агрегат
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Подвески двигателя
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Двигатель и подвески
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Двигатель
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Подвески и силовой агрегат
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Подвески двигателя
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Двигатель и подвески
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Двигатель
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Подвески и силовой агрегат
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Подвески двигателя
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Двигатель и подвески
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Двигатель
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Подвески и силовой агрегат
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Подвески двигателя
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Двигатель и подвески
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Двигатель
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Подвески и силовой агрегат
-                                                </a>
-                                            </li>
-                                            <li class="details__nodes-item">
-                                                <a href="#" class="details__nodes-link">
-                                                    Подвески двигателя
-                                                </a>
-                                            </li>
 
-                                        </ul>
-                                    </div>
+                        </div>
+                        <div class="tabs-2__content" tab-2-content="2">
+                            <div class="details__nodes">
+                                <div class="details__scrollbar scrollbar scrollbar--vertical">
+                                    <ul class="details__nodes-list">
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Двигатель и подвески
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link details__nodes-link--active">
+                                                Двигатель
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Подвески и силовой агрегат
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Подвески двигателя
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Двигатель и подвески
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Двигатель
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Подвески и силовой агрегат
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Подвески двигателя
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Двигатель и подвески
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Двигатель
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Подвески и силовой агрегат
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Подвески двигателя
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Двигатель и подвески
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Двигатель
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Подвески и силовой агрегат
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Подвески двигателя
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Двигатель и подвески
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Двигатель
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Подвески и силовой агрегат
+                                            </a>
+                                        </li>
+                                        <li class="details__nodes-item">
+                                            <a href="#" class="details__nodes-link">
+                                                Подвески двигателя
+                                            </a>
+                                        </li>
+
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="details__main">
-                    <div class="details__row">
-                        <div class="details__card">
-                            <h3 class="title-4 title-4--accent">51853885 - КОНДИЦИОНЕР (Var.: 1/Rev.: 0), (PNC:1; №2)</h3>
-                            <img src="static/img/details/5.png" class="details__card-img" alt="Кондиционер">
-                        </div>
-                        <div class="details__content">
-                            <h3 class="title-4">Деталь найдена в узле 50101/00</h3>
-                            <ol class="details__spareparts">
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">1</span>
-                                    <span class="details__sparepart-name">
-                                        Коробка Scarico Conden
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">2</span>
-                                    <span class="details__sparepart-name">
-                                        Фильтр воздуха
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">3</span>
-                                    <span class="details__sparepart-name">
-                                        Фильтр воздуха Multipack 6 pz
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">4</span>
-                                    <span class="details__sparepart-name">
-                                      Фильтр воздуха Carbon filter
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">5</span>
-                                    <span class="details__sparepart-name">
-                                        Крышка Filtro
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">6</span>
-                                    <span class="details__sparepart-name">
-                                       Датчик NTC
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">7</span>
-                                    <span class="details__sparepart-name">
-                                      Пружинка
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">8</span>
-                                    <span class="details__sparepart-name">
-                                      Винт 4х12
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">9</span>
-                                    <span class="details__sparepart-name">
-                                      Клапан
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">10</span>
-                                    <span class="details__sparepart-name">
-                                      Уплотнение 10.8х2.4
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">11</span>
-                                    <span class="details__sparepart-name">
-                                      Уплотнение 13.4х2.4
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                            </ol>
-                        </div>
+            </div>
+            <div class="details__main">
+                <div class="details__row">
+                    <div class="details__card">
+                        <a href="#" class="title-4 title-4--accent">51853885 - КОНДИЦИОНЕР (Var.: 1/Rev.: 0), (PNC:1; №2)</a>
+                        <img src="static/img/details/5.png" class="details__card-img" alt="Кондиционер">
                     </div>
-                    <div class="details__row">
-                        <div class="details__card">
-                            <h3 class="title-4 title-4--accent">51853885 - КОНДИЦИОНЕР (Var.: 1/Rev.: 0), (PNC:1; №2)</h3>
-                            <img src="static/img/details/5.png" class="details__card-img" alt="Кондиционер">
-                        </div>
-                        <div class="details__content">
-                            <h3 class="title-4">Деталь найдена в узле 50101/00</h3>
-                            <ol class="details__spareparts">
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">1</span>
-                                    <span class="details__sparepart-name">
-                                        Коробка Scarico Conden
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">2</span>
-                                    <span class="details__sparepart-name">
-                                        Фильтр воздуха
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">3</span>
-                                    <span class="details__sparepart-name">
-                                        Фильтр воздуха Multipack 6 pz
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">4</span>
-                                    <span class="details__sparepart-name">
-                                      Фильтр воздуха Carbon filter
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">5</span>
-                                    <span class="details__sparepart-name">
-                                        Крышка Filtro
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">6</span>
-                                    <span class="details__sparepart-name">
-                                       Датчик NTC
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">7</span>
-                                    <span class="details__sparepart-name">
-                                      Пружинка
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">8</span>
-                                    <span class="details__sparepart-name">
-                                      Винт 4х12
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">9</span>
-                                    <span class="details__sparepart-name">
-                                      Клапан
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">10</span>
-                                    <span class="details__sparepart-name">
-                                      Уплотнение 10.8х2.4
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                                <li class="details__sparepart">
-                                    <span class="details__sparepart-num">11</span>
-                                    <span class="details__sparepart-name">
-                                      Уплотнение 13.4х2.4
-                                    </span>
-                                    <a href="#" class="btn-text btn-text--theme-accent">Цена</a>
-                                </li>
-                            </ol>
-                        </div>
+                    <div class="details__content">
+                        <h3 class="title-4">Деталь найдена в узле 50101/00</h3>
+                        <ol class="details__spareparts">
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">1</span>
+                                <span class="details__sparepart-name">
+                                    Коробка Scarico Conden
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">2</span>
+                                <span class="details__sparepart-name">
+                                    Фильтр воздуха
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">3</span>
+                                <span class="details__sparepart-name">
+                                    Фильтр воздуха Multipack 6 pz
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">4</span>
+                                <span class="details__sparepart-name">
+                                  Фильтр воздуха Carbon filter
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">5</span>
+                                <span class="details__sparepart-name">
+                                    Крышка Filtro
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">6</span>
+                                <span class="details__sparepart-name">
+                                   Датчик NTC
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">7</span>
+                                <span class="details__sparepart-name">
+                                  Пружинка
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">8</span>
+                                <span class="details__sparepart-name">
+                                  Винт 4х12
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">9</span>
+                                <span class="details__sparepart-name">
+                                  Клапан
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">10</span>
+                                <span class="details__sparepart-name">
+                                  Уплотнение 10.8х2.4
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">11</span>
+                                <span class="details__sparepart-name">
+                                  Уплотнение 13.4х2.4
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="details__row">
+                    <div class="details__card">
+                        <a href="#" class="title-4 title-4--accent">51853885 - КОНДИЦИОНЕР (Var.: 1/Rev.: 0), (PNC:1; №2)</a>
+                        <img src="static/img/details/5.png" class="details__card-img" alt="Кондиционер">
+                    </div>
+                    <div class="details__content">
+                        <h3 class="title-4">Деталь найдена в узле 50101/00</h3>
+                        <ol class="details__spareparts">
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">1</span>
+                                <span class="details__sparepart-name">
+                                    Коробка Scarico Conden
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">2</span>
+                                <span class="details__sparepart-name">
+                                    Фильтр воздуха
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">3</span>
+                                <span class="details__sparepart-name">
+                                    Фильтр воздуха Multipack 6 pz
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">4</span>
+                                <span class="details__sparepart-name">
+                                  Фильтр воздуха Carbon filter
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">5</span>
+                                <span class="details__sparepart-name">
+                                    Крышка Filtro
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">6</span>
+                                <span class="details__sparepart-name">
+                                   Датчик NTC
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">7</span>
+                                <span class="details__sparepart-name">
+                                  Пружинка
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">8</span>
+                                <span class="details__sparepart-name">
+                                  Винт 4х12
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">9</span>
+                                <span class="details__sparepart-name">
+                                  Клапан
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">10</span>
+                                <span class="details__sparepart-name">
+                                  Уплотнение 10.8х2.4
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                            <li class="details__sparepart">
+                                <span class="details__sparepart-num">11</span>
+                                <span class="details__sparepart-name">
+                                  Уплотнение 13.4х2.4
+                                </span>
+                                <a href="#" class="btn btn--outlined btn--theme-primary btn--size-s">Цена</a>
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 </main>
 
 <footer class="footer">
@@ -983,8 +986,8 @@
 <div id="modal-auth" class="modal">
     <div class="modal__inner modal__inner--open-top">
         <div class="modal__content modal__content--radius">
-            <button type="button" class="modal__close modal__close--right" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--right" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
@@ -1006,9 +1009,9 @@
                         <input type="text" class="form-input modal__input" id="login-auth" placeholder="Введите логин" required>
                     </div>
                     <div class="modal__wrapper-input-password">
-                        <input type="password" class="form-input" id="password-auth" placeholder="Введите пароль" required>
-                        <button type="button" class="modal__input-password btn-light">
-                            <svg class="btn-light__ico">
+                        <input type="password" class="form-input" id="password-auth" placeholder="Введите пароль" required data-input-password>
+                        <button type="button" class="modal__input-password btn-lite btn-lite--compact btn-lite--theme-default" aria-label="Закрыть">
+                            <svg aria-hidden="true" class="btn-lite__ico">
                                 <use xlink:href="static/img/symbol/sprite.svg#eye-invisible"></use>
                             </svg>
                         </button>
@@ -1026,7 +1029,7 @@
 
 
                     <div class="modal__footer">
-                        <button type="submit" class="modal__btn form__btn btn btn--size-s">
+                        <button type="submit" class="form__btn btn btn--filled btn--theme-primary btn--size-m">
                             Войти
                         </button>
                         <a href="/registration.html" class="modal__link">
@@ -1045,7 +1048,7 @@
     <div class="modal__inner modal__inner--open-top">
         <div class="modal__content modal__content--radius">
             <button type="button" class="modal__close modal__close--right" data-btn="close">
-                <svg>
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
@@ -1057,10 +1060,10 @@
                     <textarea class="form-textarea" id="add-comment" placeholder="Введите текст"></textarea>
 
                     <div class="modal__footer modal__footer--row">
-                        <button type="reset" class="btn-primary">
+                        <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m">
                             Отменить
                         </button>
-                        <button type="submit" class="btn btn--size-s" data-btn="close" data-notification="notification-add-comment">
+                        <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification-add-comment">
                             Сохранить
                         </button>
                     </div>
@@ -1098,10 +1101,10 @@
                         </div>
                     </div>
                     <div class="modal__footer modal__footer--row">
-                        <button type="reset" class="btn-primary">
+                        <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m">
                             Отменить
                         </button>
-                        <button type="submit" class="btn btn--size-s" data-btn="close" data-notification="notification-change-address">
+                        <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification-change-address">
                             Изменить
                         </button>
                     </div>
@@ -1111,17 +1114,193 @@
     </div>
 </div>
 
+<div id="modal-add-cart" class="modal">
+    <div class="modal__inner modal__inner--open-top">
+        <div class="modal__content modal__content--radius">
+            <button type="button" class="modal__close modal__close--right" data-btn="close">
+                <svg aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__header">
+                <h3 class="title-4">Добавление в корзину</h3>
+                <div class="tag-bar">
+                    <div class="tag tag--theme-accent">
+                        <span class="tag__label">Philips 85 126</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__wrapper">
+                <form action="" class="modal__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="product-add-cart">Привязка к автомобилю</label>
+                        <div class="select @@class" data-select data-select-id=product-add-cart @@data data-selected-value-first>
+    <div class="form-input select__search d-none" data-select-search>
+        <input type="text" name="select-category" data-select-input id="product-add-cart" class="select__input" value="@@value">
+        <span class="select__ico">
+            <svg aria-hidden="true">
+                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+        </span>
+    </div>
+    <button type="button" class="form-input select__btn" data-select-btn>
+        <span data-select-text="Без привязки" class="select__text">Без привязки</span>
+        <span class="select__ico select__ico--rotate" data-select-ico>
+          <svg>
+            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+          </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item select__item--active select__item--selected"
+                data-select-value="value-1" @@dataItem1>Без привязки</button>
+        <button type="button" class="select__item"
+                data-select-value="value-2" @@dataItem2>Acura MDX I 3.5 4WD MDX I 3.5 л.с Q1231313</button>
+        <button type="button" class="select__item"
+                data-select-value="value-3" @@dataItem3>Привязать к авто 2</button>
+    </div>
+</div>
+
+                    </div>
+
+                    <div class="drawer__wrapper-input">
+                        <label for="add-comment">Комментарий</label>
+                        <textarea class="form-textarea" id="add-comment" placeholder="Введите текст"></textarea>
+                    </div>
+
+                    <div class="modal__footer modal__footer--row">
+                        <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="product-add-cart">
+                            Отменить
+                        </button>
+                        <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification-add-comment">
+                            Добавить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-order-details" class="modal-order-details modal">
+    <div class="modal__inner modal__inner--open-top">
+        <div class="modal__content modal__content--radius">
+            <button type="button" class="modal__close modal__close--right" data-btn="close">
+                <svg aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="modal__header">
+                <h3 class="title-4">Информация по заказу</h3>
+                <div class="tag-bar">
+                    <div class="tag tag--theme-default">
+                        <span class="tag__desc">Бренд:</span>
+                        <span class="tag__label">Philips</span>
+                    </div>
+                    <div class="tag tag--theme-default">
+                        <span class="tag__desc">Артикул:</span>
+                        <span class="tag__label">215478</span>
+                    </div>
+                    <div class="tag tag--theme-default">
+                        <span class="tag__desc">Наименование:</span>
+                        <span class="tag__label">Лампа ксенон d2r 5000к</span>
+                    </div>
+                    <div class="tag tag--theme-accent">
+                        <span class="tag__desc">Сумма:</span>
+                        <span class="tag__label">1 427,00 руб</span>
+                    </div>
+                    <div class="tag tag--theme-accent">
+                        <span class="tag__desc">Поставщик:</span>
+                        <span class="tag__label">PRST</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__wrapper">
+                <div class="modal-order-details__scrollbar scrollbar scrollbar--vertical">
+                    <ul class="stepper">
+                        <li class="stepper__item">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">Заказ</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">04.11.2024</span>
+                                <span class="nowrap">16:45:32</span>
+                            </div>
+                            <div class="stepper__status">Получен</div>
+                        </li>
+                        <li class="stepper__item">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">Заказано</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">04.11.2024</span>
+                                <span class="nowrap">16:47:22</span>
+                            </div>
+                            <div class="stepper__status">Идет работа поставщика</div>
+                        </li>
+                        <li class="stepper__item">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">Склад МСК</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">04.11.2024 </span>
+                                <span class="nowrap">17:02:13</span>
+                            </div>
+                            <div class="stepper__status">Готов к отправке в филиал</div>
+                        </li>
+                        <li class="stepper__item">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">В доставке</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">04.11.2024</span>
+                                <span class="nowrap">17:02:13</span>
+                                <span class="nowrap">с 10:00 до 18:00</span>
+                            </div>
+                            <div class="stepper__status">Отправлено в филиал, ожидайте доставку </div>
+                        </li>
+                        <li class="stepper__item stepper__item--reject">
+                            <div class="stepper__wrap-ico">
+                                <svg class="stepper__ico" aria-hidden="true">
+                                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                                </svg>
+                            </div>
+                            <div class="stepper__title">Отказ</div>
+                            <div class="stepper__date">
+                                <span class="nowrap">07.11.2024</span>
+                                <span class="nowrap">15:36:10</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div id="drawer-profile" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Профиль</h3>
+                <h3 class="title-4">Профиль</h3>
             </div>
             <div class="drawer__info">
                 <div class="drawer__info-blocks">
@@ -1146,7 +1325,7 @@
                         <span class="drawer__info-text">Брянск</span>
                     </div>
                 </div>
-                <button type="button" class="drawer__btn btn-primary" data-modal="drawer-profile-edit">
+                <button type="button" class="drawer__btn btn btn--outlined btn--theme-secondary btn--size-m" data-modal="drawer-profile-edit">
                     Редактировать профиль
                 </button>
             </div>
@@ -1157,13 +1336,13 @@
 <div id="drawer-profile-edit" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Редактирование профиля</h3>
+                <h3 class="title-4">Редактирование профиля</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -1199,10 +1378,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="button" class="drawer__footer-btn btn-primary" data-modal="drawer-profile">
+                    <button type="button" class="btn btn--outlined btn--theme-secondary btn--size-m" data-modal="drawer-profile">
                         Назад
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close">
                         Сохранить
                     </button>
                 </div>
@@ -1214,13 +1393,13 @@
 <div id="drawer-add-theme" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Добавление темы</h3>
+                <h3 class="title-4">Добавление темы</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -1247,11 +1426,11 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary">
-                    Отменить
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m">
+                        Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
-                    Сохранить
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
+                        Сохранить
                     </button>
                 </div>
             </div>
@@ -1262,13 +1441,13 @@
 <div id="drawer-filter-messages" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Фильтр</h3>
+                <h3 class="title-4">Фильтр</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -1308,7 +1487,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="filter-messages" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1338,7 +1517,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="reason" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1364,10 +1543,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="reason, filter-messages">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="reason, filter-messages">
                         Сбросить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
                         Применить
                     </button>
                 </div>
@@ -1385,7 +1564,7 @@
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Фильтр</h3>
+                <h3 class="title-4">Фильтр</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form search-filter">
@@ -1416,7 +1595,7 @@
                 </form>
 
                 <div class="drawer__footer">
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close">
                         Показать аналоги
                     </button>
                 </div>
@@ -1428,53 +1607,75 @@
 <div id="drawer-user" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
                 <svg>
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Меню профиля</h3>
+                <h3 class="title-4">Меню профиля</h3>
             </div>
             <nav class="drawer-dropdown__menu">
-                <a class="header-user-dropdown__link" data-modal="drawer-profile" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" data-modal="drawer-profile" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#user"></use>
                     </svg>
                     Профиль
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#dollar"></use>
                     </svg>
                     Мои финансы
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#line-chart"></use>
                     </svg>
                     Ценообразование
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
+                <a class="dropdown-menu__link" href="#">
+                    <svg aria-hidden="true" class="dropdown-menu__ico">
                         <use xlink:href="static/img/symbol/sprite.svg#credit-card"></use>
                     </svg>
                     Пополнить баланс
                 </a>
-                <a class="header-user-dropdown__link" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#wallet"></use>
-                    </svg>
-                    Баланс
-                    <b>+999 999 руб</b>
-                </a>
-                <a class="header-user-dropdown__link header-user-dropdown__link--logout" href="#">
-                    <svg aria-hidden="true" class="header-user-dropdown__ico">
-                        <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
-                    </svg>
-                    Выйти
-                </a>
             </nav>
+
+            <div class="drawer__contacts">
+                <div class="drawer__contacts-title">Контакты</div>
+
+                <a class="contact-link" href="tel:89308255335">
+                    <svg class="contact-link__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                    </svg>
+
+                    <span class="contact-link__label">8 (930) 825 53-35</span>
+                </a>
+
+                <a class="contact-link" href="tel:89206055335">
+                    <svg class="contact-link__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#phone"></use>
+                    </svg>
+
+                    <span class="contact-link__label">8 (920) 605 53-35</span>
+                </a>
+
+                <a class="contact-link" href="mailto:info@zaptar.ru">
+                    <svg class="contact-link__ico" aria-hidden="true">
+                        <use xlink:href="static/img/symbol/sprite.svg#mail"></use>
+                    </svg>
+
+                    <span class="contact-link__label">info@zaptar.ru</span>
+                </a>
+            </div>
+
+            <a class="dropdown-menu__link dropdown-menu__link--logout" href="#">
+                <svg aria-hidden="true" class="dropdown-menu__ico">
+                    <use xlink:href="static/img/symbol/sprite.svg#logout"></use>
+                </svg>
+                Выйти
+            </a>
         </div>
     </div>
 </div>
@@ -1482,40 +1683,40 @@
 <div id="drawer-catalog" class="drawer modal">
     <div class="modal__inner modal__inner--open-left">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Меню каталога</h3>
+                <h3 class="title-4">Меню каталога</h3>
             </div>
             <nav class="drawer-dropdown__menu">
-                <a class="header-search-dropdown__link" href="catalog.html">
+                <a class="dropdown-menu__link" href="catalog.html">
                     Каталог запчастей
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Каталог ТО
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Масла
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Аккумуляторы
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Автолампы
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Шины
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Диски
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Колпаки
                 </a>
-                <a class="header-search-dropdown__link" href="#">
+                <a class="dropdown-menu__link" href="#">
                     Болты, Гайки
                 </a>
             </nav>
@@ -1526,13 +1727,13 @@
 <div id="drawer-add-car" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" aria-label="Закрыть" class="modal__close modal__close--left" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Добавление автомобиля</h3>
+                <h3 class="title-4">Добавление автомобиля</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -1571,7 +1772,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-brand" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1598,7 +1799,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-model" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1625,7 +1826,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-power" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1654,7 +1855,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-add-year" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1692,8 +1893,8 @@
                             <div class="form-input form-file-2__info d-none" data-input="file-download-block">
                                 <img src="" alt="" data-input="file-download-img" class="form-file-2__img">
                                 <span class="form-file-2__text" data-input="file-download-text"></span>
-                                <button type="button" class="form-file-2__delete btn-light" data-input="file-download-delete">
-                                    <svg aria-hidden="true">
+                                <button type="button" aria-label="Удалить" class="form-file-2__delete btn-lite btn-lite--compact btn-lite--theme-default" data-input="file-download-delete">
+                                    <svg class="btn-lite__ico btn-lite__ico--size-l" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                                     </svg>
                                 </button>
@@ -1702,10 +1903,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="car-add-power, car-add-year, car-add-model, car-add-brand">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="car-add-power, car-add-year, car-add-model, car-add-brand">
                         Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
                         Сохранить
                     </button>
                 </div>
@@ -1717,13 +1918,13 @@
 <div id="drawer-edit-car" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Редактировать информацию</h3>
+                <h3 class="title-4">Редактировать информацию</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -1764,7 +1965,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="car-edit-year" class="select__input" value="2023">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1800,10 +2001,10 @@
                                 </label>
                             </div>
                             <div class="form-input form-file-2__info" data-input="file-download-block">
-                                <img src="static/img/background/product-car.png" alt="Автомобиль" data-input="file-download-img" class="form-file-2__img">
-                                <span class="form-file-2__text" data-input="file-download-text">product-car.png</span>
-                                <button type="button" class="form-file-2__delete btn-light" data-input="file-download-delete">
-                                    <svg aria-hidden="true">
+                                <img src="static/img/background/product-car.jpg" alt="Автомобиль" data-input="file-download-img" class="form-file-2__img">
+                                <span class="form-file-2__text" data-input="file-download-text">product-car.jpg</span>
+                                <button type="button" class="form-file-2__delete btn-lite btn-lite--compact btn-lite--theme-default" aria-label="Удалить" data-input="file-download-delete">
+                                    <svg class="btn-lite__ico btn-lite__ico--size-l" aria-hidden="true">
                                         <use xlink:href="static/img/symbol/sprite.svg#delete"></use>
                                     </svg>
                                 </button>
@@ -1812,10 +2013,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="car-edit-year" data-btn="close">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="car-edit-year" data-btn="close">
                         Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close" data-notification="notification" disabled>
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
                         Сохранить
                     </button>
                 </div>
@@ -1827,13 +2028,13 @@
 <div id="drawer-recharge" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Пополнение баланса</h3>
+                <h3 class="title-4">Пополнение баланса</h3>
             </div>
             <div class="drawer__info" data-recharge>
                 <form action="" class="drawer__form form">
@@ -1843,7 +2044,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="recharge-method" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -1878,10 +2079,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary btn-primary--disabled" data-recharge-reset>
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-recharge-reset>
                         Сбросить
                     </button>
-                    <a href="#" class="drawer__footer-btn btn btn--size-s btn--disabled" data-recharge-submit>
+                    <a href="#" class="btn btn--filled btn--theme-primary btn--size-m" data-recharge-submit>
                         Применить
                     </a>
                 </div>
@@ -1893,13 +2094,13 @@
 <div id="drawer-deduce" class="drawer modal">
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
-            <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Запрос на вывод средств</h3>
+                <h3 class="title-4">Запрос на вывод средств</h3>
             </div>
             <div class="drawer__info" data-deduce>
                 <form action="" class="drawer__form form">
@@ -1914,10 +2115,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary btn-primary--disabled" data-deduce-reset>
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-deduce-reset>
                         Сбросить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s btn--disabled" data-deduce-submit data-notification="notification-deduce">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-deduce-submit data-notification="notification-deduce">
                         Применить
                     </button>
                 </div>
@@ -1930,12 +2131,12 @@
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
             <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Фильтр</h3>
+                <h3 class="title-4">Фильтр</h3>
             </div>
             <div class="drawer__info">
                 <form action="" class="drawer__form form">
@@ -1945,7 +2146,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="order-issue-date" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -2000,7 +2201,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="order-pick-up" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -2026,10 +2227,10 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="order-issue-date, order-pick-up">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="order-issue-date, order-pick-up">
                         Сбросить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s" data-btn="close">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close">
                         Применить
                     </button>
                 </div>
@@ -2042,12 +2243,12 @@
     <div class="modal__inner modal__inner--open-right">
         <div class="modal__content drawer__content">
             <button type="button" class="modal__close modal__close--left" data-btn="close">
-                <svg>
+                <svg aria-hidden="true">
                     <use xlink:href="static/img/symbol/sprite.svg#close"></use>
                 </svg>
             </button>
             <div class="drawer__header">
-                <h3 class="title-4 title-4--mb">Создание обсуждения</h3>
+                <h3 class="title-4">Создание обсуждения</h3>
             </div>
             <div class="drawer__info" data-deduce>
                 <form action="" class="drawer__form form">
@@ -2057,7 +2258,7 @@
     <div class="form-input select__search d-none" data-select-search>
         <input type="text" name="select-category" data-select-input id="discussion-theme" class="select__input" value="@@value">
         <span class="select__ico">
-            <svg>
+            <svg aria-hidden="true">
                 <use xlink:href="static/img/symbol/sprite.svg#search"></use>
             </svg>
         </span>
@@ -2107,11 +2308,98 @@
                     </div>
                 </form>
                 <div class="drawer__footer">
-                    <button type="reset" class="drawer__footer-btn btn-primary" data-reset-select="discussion-theme">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="discussion-theme">
                         Отменить
                     </button>
-                    <button type="submit" class="drawer__footer-btn btn btn--size-s btn--disabled" data-notification="notification-add-discussion">
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-notification="notification-add-discussion">
                         Сохранить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="drawer-sort" class="drawer modal">
+    <div class="modal__inner modal__inner--open-right">
+        <div class="modal__content drawer__content">
+            <button type="button" class="modal__close modal__close--left" aria-label="Закрыть" data-btn="close">
+                <svg aria-hidden="true">
+                    <use xlink:href="static/img/symbol/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="drawer__header">
+                <h3 class="title-4">Сортировка</h3>
+            </div>
+            <div class="drawer__info">
+                <form action="" class="drawer__form form">
+                    <div class="drawer__wrapper-input">
+                        <label for="sort-product-status">Выберите статус</label>
+                        <div class="select @@class" data-select data-select-id=sort-product-status @@data @@dataSelectItem>
+    <div class="form-input select__search d-none" data-select-search>
+        <input type="text" name="select-category" data-select-input id="sort-product-status" class="select__input" value="@@value">
+        <span class="select__ico">
+            <svg aria-hidden="true">
+                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+        </span>
+    </div>
+    <button type="button" class="form-input select__btn" data-select-btn>
+        <span data-select-text="Выберите статус" class="select__text">Выберите статус</span>
+        <span class="select__ico select__ico--rotate" data-select-ico>
+          <svg>
+            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+          </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item select__item--active @@classItem"
+                data-select-value="value-1" @@dataItem1>В обработке</button>
+        <button type="button" class="select__item"
+                data-select-value="value-2" @@dataItem2>Возврат проведен</button>
+        <button type="button" class="select__item"
+                data-select-value="value-3" @@dataItem3>В разборе</button>
+    </div>
+</div>
+
+                    </div>
+                    <div class="drawer__wrapper-input">
+                        <label for="sort-product-price">Выберите цену</label>
+                        <div class="select @@class" data-select data-select-id=sort-product-price @@data @@dataSelectItem>
+    <div class="form-input select__search d-none" data-select-search>
+        <input type="text" name="select-category" data-select-input id="sort-product-price" class="select__input" value="@@value">
+        <span class="select__ico">
+            <svg aria-hidden="true">
+                <use xlink:href="static/img/symbol/sprite.svg#search"></use>
+            </svg>
+        </span>
+    </div>
+    <button type="button" class="form-input select__btn" data-select-btn>
+        <span data-select-text="Выберите цену" class="select__text">Выберите цену</span>
+        <span class="select__ico select__ico--rotate" data-select-ico>
+          <svg>
+            <use xlink:href="static/img/symbol/sprite.svg#chevron-down"></use>
+          </svg>
+        </span>
+    </button>
+    <div class="select__list" data-select-list>
+        <button type="button" class="select__item select__item--active @@classItem"
+                data-select-value="value-1" @@dataItem1>Наценка (10,00)</button>
+        <button type="button" class="select__item"
+                data-select-value="value-2" @@dataItem2>Наценка (20,00)</button>
+        <button type="button" class="select__item"
+                data-select-value="value-3" @@dataItem3>Без наценки</button>
+    </div>
+</div>
+
+                    </div>
+                </form>
+                <div class="drawer__footer">
+                    <button type="reset" class="btn btn--outlined btn--theme-secondary btn--size-m" data-reset-select="sort-product-status, sort-product-price">
+                        Сбросить
+                    </button>
+                    <button type="submit" class="btn btn--filled btn--theme-primary btn--size-m" data-btn="close" data-notification="notification">
+                        Применить
                     </button>
                 </div>
             </div>
@@ -2121,48 +2409,48 @@
 
 
 <div class="notification" id="notification">
-    <svg class="notification__ico">
+    <svg class="notification__ico" aria-hidden="true">
         <use xlink:href="static/img/symbol/sprite.svg#check-circle"></use>
     </svg>
     <span class="notification__text">Сообщение успешно создано</span>
-    <button type="button" class="notification__close" data-btn="close">
-        <svg>
+    <button type="button" class="notification__close" aria-label="Закрыть" data-btn="close">
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
 </div>
 
 <div class="notification" id="notification-deduce">
-    <svg class="notification__ico">
+    <svg class="notification__ico" aria-hidden="true">
         <use xlink:href="static/img/symbol/sprite.svg#check-circle"></use>
     </svg>
     <span class="notification__text">Запрос на вывод средств успешно отправлен</span>
-    <button type="button" class="notification__close" data-btn="close">
-        <svg>
+    <button type="button" class="notification__close" aria-label="Закрыть" data-btn="close">
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
 </div>
 
 <div class="notification" id="notification-add-comment">
-    <svg class="notification__ico">
+    <svg class="notification__ico" aria-hidden="true">
         <use xlink:href="static/img/symbol/sprite.svg#check-circle"></use>
     </svg>
     <span class="notification__text">Комментарий успешно добавлен</span>
     <button type="button" class="notification__close" data-btn="close">
-        <svg>
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
 </div>
 
 <div class="notification" id="notification-delete-product">
-    <svg class="notification__ico">
+    <svg class="notification__ico" aria-hidden="true">
         <use xlink:href="static/img/symbol/sprite.svg#check-circle"></use>
     </svg>
     <span class="notification__text">Товар успешно удален</span>
-    <button type="button" class="notification__close" data-btn="close">
-        <svg>
+    <button type="button" class="notification__close" aria-label="Закрыть" data-btn="close">
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
@@ -2174,7 +2462,7 @@
     </svg>
     <span class="notification__text">Пункт самовывоза успешно изменен</span>
     <button type="button" class="notification__close" data-btn="close">
-        <svg>
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
@@ -2186,7 +2474,7 @@
     </svg>
     <span class="notification__text">Обсуждение успешно создано</span>
     <button type="button" class="notification__close" data-btn="close">
-        <svg>
+        <svg aria-hidden="true">
             <use xlink:href="static/img/symbol/sprite.svg#close"></use>
         </svg>
     </button>
