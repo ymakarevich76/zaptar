@@ -1,0 +1,280 @@
+.intro {
+  background: #0A1A31BF center/cover no-repeat url("../img/background/car-auto-service.jpg");
+  padding-top: $gutter * 36;
+  padding-bottom: $gutter * 12;
+
+  display: grid;
+  gap: $gutter * 12;
+
+  @media (max-width: $md) {
+    gap: $gutter * 6;
+    padding-top: $gutter * 30;
+  }
+
+  &--padding {
+    padding-top: $gutter * 52;
+
+    @media (max-width: $md) {
+      padding-top: $gutter * 40;
+    }
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #0A1A31BF;
+    border-radius: inherit;
+  }
+
+  &__title {
+    font-size: 72px;
+    line-height: 68px;
+    font-weight: 600;
+    color: #fff;
+
+    @media (max-width: $lg) {
+      font-size: 56px;
+      line-height: 1.2;
+    }
+
+    @media (max-width: $md) {
+      width: 100%;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    span {
+      color: $c-accent;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: $gutter * 3;
+  }
+
+  &__item {
+    color: #fff;
+    position: relative;
+    padding-left: $gutter * 4;
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background-color: $c-accent;
+      border-radius: 50%;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.intro-search {
+  $self: &;
+
+  border-radius: 8px;
+  position: relative;
+  min-height: 32px;
+  display: flex;
+
+  &__dropdown {
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    min-width: 200px;
+
+    @media (max-width: $md) {
+      min-width: 32px;
+    }
+  }
+
+  &__form {
+    position: relative;
+    display: contents;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
+  &__input {
+    font-size: 16px;
+    line-height: 24px;
+
+    flex-grow: 1;
+    background-color: #fff;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    padding-left: $gutter * 4;
+    padding-right: $gutter * 52;
+    width: 100%;
+    height: 72px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &::placeholder {
+      color: $c-main-45;
+    }
+
+    @media (max-width: $lg) {
+      height: 56px;
+    }
+
+    @media (max-width: $md) {
+      padding-left: $gutter * 2;
+      padding-right: $gutter * 12;
+      font-size: 14px;
+      line-height: 1.2;
+      height: 40px;
+    }
+  }
+
+  &__btn {
+    #{$self} & {
+      position: absolute;
+    }
+    position: absolute;
+    height: 40px;
+    width: 179px;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+
+
+    @media (max-width: $lg) {
+      right: 8px;
+    }
+
+    @media (max-width: $md) {
+      height: auto;
+      width: auto;
+      right: 4px;
+    }
+  }
+
+  &__ico {
+    width: 16px;
+    height: 16px;
+    fill: white;
+  }
+
+  &__text {
+    margin-left: $gutter * 2;
+
+    @media (max-width: $md) {
+      display: none;
+      margin-left: 0;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    bottom: -20px;
+    left: 216px;
+    color: #fff;
+    opacity: 0.8;
+    font-size: 12px;
+    line-height: 20px;
+
+    @media (max-width: $md) {
+      left: 40px;
+    }
+  }
+
+  &__link {
+    text-decoration: underline dotted;
+    text-decoration-thickness: 8%;
+    text-underline-offset: 16%;
+  }
+}
+
+.intro-search-dropdown {
+  $self: &;
+
+  &__toggle {
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $c-accent;
+    width: 100%;
+    padding: $gutter $gutter * 3;
+    transition: background-color 0.2s;
+
+    @media (max-width: $lg) {
+      min-width: 100%;
+    }
+
+    @media (max-width: $md) {
+      min-width: 32px;
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
+
+    #{$self}:hover & {
+      background-color: $c-accent-dark;
+    }
+  }
+
+  &__ico {
+    width: 16px;
+    height: 16px;
+    color: #fff;
+  }
+
+  &__label {
+    color: #fff;
+    margin-left: $gutter * 2;
+
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    --dropdown-menu-width: 200px;
+    left: 0;
+    pointer-events: none;
+
+    #{$self}:hover & {
+      opacity: 1;
+      pointer-events: visible;
+      visibility: visible;
+      transform: translateY(0);
+      transition:  opacity .2s ease, transform 0.2s ease, visibility 0s linear 0s;
+    }
+  }
+
+  &__link {
+    min-height: 32px;
+    padding-left: $gutter * 3;
+    padding-right: $gutter * 3;
+    display: flex;
+    align-items: center;
+    color: $c-main-88;
+    transition: background-color 0.2s;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $c-light;
+    }
+  }
+}

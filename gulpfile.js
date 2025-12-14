@@ -69,7 +69,7 @@ const clean = () => {
 };
 
 ///////////////////////////////////////////////////////// html
-const mainMod = version === 'v2' ? ' main--mt' : '';
+const mainMod = version !== 'v1' ? ' main--mt' : '';
 
 const html = () => {
   return src(path.src.html, { allowEmpty: true })
