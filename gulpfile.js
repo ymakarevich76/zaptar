@@ -69,9 +69,12 @@ const clean = () => {
 };
 
 ///////////////////////////////////////////////////////// html
+const mainMod = version === 'v2' ? ' main--mt' : '';
+
 const html = () => {
   return src(path.src.html, { allowEmpty: true })
-    .pipe(replace('$version', version))    // ← подмена версии в путях
+    .pipe(replace('{{MAIN_MOD}}', mainMod))
+    .pipe(replace('$version', version)) // если уже используешь версии в include
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'

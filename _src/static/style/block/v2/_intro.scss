@@ -8,6 +8,15 @@
 
   @media (max-width: $md) {
     gap: $gutter * 6;
+    padding-top: $gutter * 30;
+  }
+
+  &--padding {
+    padding-top: $gutter * 52;
+
+    @media (max-width: $md) {
+      padding-top: $gutter * 40;
+    }
   }
 
   & > * {
@@ -79,6 +88,8 @@
 }
 
 .intro-search {
+  $self: &;
+
   border-radius: 8px;
   position: relative;
   min-height: 32px;
@@ -135,17 +146,25 @@
   }
 
   &__btn {
+    #{$self} & {
+      position: absolute;
+    }
     position: absolute;
+    height: 40px;
+    width: 179px;
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
-    border-radius: 4px;
 
-    min-width: 104px;
+
+    @media (max-width: $lg) {
+      right: 8px;
+    }
 
     @media (max-width: $md) {
-      min-width: auto;
-      right: 8px;
+      height: auto;
+      width: auto;
+      right: 4px;
     }
   }
 

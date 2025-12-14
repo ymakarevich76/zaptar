@@ -27,13 +27,33 @@
 
   &__top,
   &__bottom {
-    min-height: 64px;
+    min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     @media (max-width: $md) {
       min-height: 46px;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 32px;
+      left: 32px;
+      top: 0;
+      display: block;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+
+      @media (max-width: 1440px) {
+        right: 12px;
+        left: 12px;
+      }
     }
   }
 
@@ -70,6 +90,14 @@
       @media (max-width: $md) {
         margin-left: $gutter * 2;
       }
+    }
+  }
+
+  &__user-btn {
+    --btn-padding-x: #{$gutter * 4};
+
+    @media (max-width: $md) {
+      --btn-padding-x: #{$gutter};
     }
   }
 }
