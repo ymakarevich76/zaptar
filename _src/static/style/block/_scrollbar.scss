@@ -4,29 +4,15 @@
   overflow: auto;
   scroll-behavior: smooth;
 
-  // todo: Саше добавить стили скролла для firefox
-  //@include firefox {
-  //  scrollbar-width: thin;
-  //}
-
   &::-webkit-scrollbar-corner {
     background-color: hsla(0, 0%, 100%, 0);
   }
 
   &--is-fixed {
-    margin-right: -$gutter * 0.5; // компенсация ширины скролла
+    margin-right: -$gutter * 0.5;
 
     overflow-y: scroll;
   }
-
-  //&--is-fixed#{$self} { // с хаком для фф теряется scoped, поэтому усилил селектор
-  //  @include firefox {
-  //    @include touchscreen {
-  //      margin-right: 0;
-  //    }
-  //    margin-right: 0; // костыль для скролла фф, em не нужен
-  //  }
-  //}
 
   &--vertical {
     overflow-x: hidden;
@@ -37,14 +23,6 @@
     overflow-x: auto;
     overflow-y: hidden;
   }
-
-  //.body--not-scrollable & {
-  //  overscroll-behavior: contain;
-  //}
-
-  //@include firefox {
-  //  scrollbar-color: map_get($options, thumb-bg) map_get($options, bg);
-  //}
 
   &::-webkit-scrollbar-thumb {
     background-color: $c-main-15;
