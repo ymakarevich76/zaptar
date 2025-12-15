@@ -2,23 +2,21 @@
   &--has-bg {
     position: relative;
     background: #000 top center no-repeat url("../img/background/car-auto-service-v3.jpg");
+    background-size: 100%;
 
     &::after {
       content: "";
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       height: 100%;
       background: #111C2CD9;
-      background-size: 100%;
     }
 
     > * {
       z-index: 1;
     }
   }
-
-
 }
