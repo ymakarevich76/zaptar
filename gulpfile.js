@@ -77,7 +77,11 @@ const html = () => {
     .pipe(replace('$version', version)) // если уже используешь версии в include
     .pipe(fileinclude({
       prefix: '@@',
-      basepath: '@file'
+      basepath: '@file',
+      context: {
+        // Устанавливаем значение по умолчанию, чтобы избежать ошибки "is not defined"
+        dark: false
+      },
     }))
     .pipe(dest(path.dist.html))
     .pipe(browserSync.stream());

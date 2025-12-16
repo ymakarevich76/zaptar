@@ -1,3 +1,4 @@
+// common
 .brands {
   &__list {
     display: grid;
@@ -40,19 +41,11 @@
     left: 0;
     width: 24px;
     height: 24px;
-    border: 1px solid $c-gray;
     border-radius: 4px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 14px;
     line-height: 22px;
-    color: $c-accent;
-  }
-
-  &__link {
-
   }
 }

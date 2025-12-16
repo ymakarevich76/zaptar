@@ -1,0 +1,36 @@
+// есть common
+.footer {
+  &--dark {
+    background-color: transparent;
+    color: $c-light-65;
+  }
+
+  &__bottom {
+    .footer--dark & {
+      border-top: 1px solid #FFFFFF33;
+    }
+  }
+}
+
+.footer-company {
+  .footer--dark & {
+    b {
+      color: #fff;
+    }
+  }
+}
+
+.footer-info {
+  &__title,
+  &__subtitle {
+    .footer--dark & {
+      color: #fff;
+    }
+  }
+
+  &__list {
+    .footer--dark & {
+      color: $c-light-65;
+    }
+  }
+}

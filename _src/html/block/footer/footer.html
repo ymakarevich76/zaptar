@@ -1,9 +1,24 @@
-<footer class="footer">
+<footer
+        @@if (dark) {
+            class="footer footer--dark"
+        }
+        @@if (!dark) {
+            class="footer"
+        }
+>
     <div class="footer__top">
         <div class="footer__top-container container">
             <div class="footer__company footer-company">
                 <a class="logo" href="#">
-                    <img class="logo__img" src="static/img/logo/logo.svg" width="198" height="32" alt="zaptar">
+                    <img class="logo__img"
+                        @@if (dark) {
+                            src="static/img/logo/logo-2.svg"
+                        }
+                        @@if (!dark) {
+                            src="static/img/logo/logo.svg"
+                        }
+                        width="198" height="32" alt="zaptar"
+                    >
                 </a>
 
                 <ul class="footer-company__list">
@@ -30,31 +45,94 @@
 
                 <ul class="footer-info__list">
                     <li>
-                        <a class="link link--light" href="#">Каталог автозапчастей</a>
+                        <a
+                           @@if (dark) {
+                                class="link link--bright"
+                           }
+                           @@if (!dark) {
+                                class="link link--light"
+                           }
+                           href="#">Каталог автозапчастей</a>
                     </li>
                     <li>
-                        <a class="link link--light" href="#">Каталог ТО</a>
+                        <a
+                            @@if (dark) {
+                                class="link link--bright"
+                            }
+                            @@if (!dark) {
+                                class="link link--light"
+                            }
+                            href="#">Каталог ТО</a>
                     </li>
                     <li>
-                        <a class="link link--light" href="#">Автомобильные масла</a>
+                        <a
+                           @@if (dark) {
+                                class="link link--bright"
+                           }
+                           @@if (!dark) {
+                                class="link link--light"
+                           }
+                           href="#">Автомобильные масла</a>
                     </li>
                     <li>
-                        <a class="link link--light" href="#">Аккамуляторы</a>
+                        <a
+                           @@if (dark) {
+                                class="link link--bright"
+                           }
+                           @@if (!dark) {
+                                class="link link--light"
+                           }
+                           href="#">Аккамуляторы</a>
                     </li>
                     <li>
-                        <a class="link link--light" href="#">Автомобильные лампы</a>
+                        <a
+                           @@if (dark) {
+                                class="link link--bright"
+                           }
+                           @@if (!dark) {
+                                class="link link--light"
+                           }
+                           href="#">Автомобильные лампы</a>
                     </li>
                     <li>
-                        <a class="link link--light" href="#">Аксессуары</a>
+                        <a
+                           @@if (dark) {
+                                class="link link--bright"
+                           }
+                           @@if (!dark) {
+                                class="link link--light"
+                           }
+                           href="#">Аксессуары</a>
                     </li>
                     <li>
-                        <a class="link link--light" href="#">Диски</a>
+                        <a
+                           @@if (dark) {
+                                class="link link--bright"
+                           }
+                           @@if (!dark) {
+                                class="link link--light"
+                           }
+                           href="#">Диски</a>
                     </li>
                     <li>
-                        <a class="link link--light" href="#">Колпаки</a>
+                        <a
+                           @@if (dark) {
+                                class="link link--bright"
+                           }
+                           @@if (!dark) {
+                                class="link link--light"
+                           }
+                           href="#">Колпаки</a>
                     </li>
                     <li>
-                        <a class="link link--light" href="#">Болты и Гайки</a>
+                        <a
+                           @@if (dark) {
+                                class="link link--bright"
+                           }
+                           @@if (!dark) {
+                                class="link link--light"
+                           }
+                           href="#">Болты и Гайки</a>
                     </li>
                 </ul>
             </div>
@@ -65,24 +143,52 @@
                 <p class="footer-info__subtitle">Клиентский отдел</p>
                 <ul class="footer-info__list">
                     <li>
-                        <a class="link link--light" href="#">8 (930) 825 53-35</a>
+                        <a
+                           @@if (dark) {
+                                class="link link--bright"
+                           }
+                           @@if (!dark) {
+                                class="link link--light"
+                           }
+                           href="#">8 (930) 825 53-35</a>
                     </li>
                     <li>
-                        <a class="link link--light" href="#">8 (920) 605 53-35</a>
+                        <a
+                           @@if (dark) {
+                                class="link link--bright"
+                           }
+                           @@if (!dark) {
+                                class="link link--light"
+                           }
+                           href="#">8 (920) 605 53-35</a>
                     </li>
                 </ul>
 
                 <p class="footer-info__subtitle">Клиентский отдел</p>
                 <ul class="footer-info__list">
                     <li>
-                        <a class="link link--light" href="#">8 (930) 825 53-35</a>
+                        <a
+                           @@if (dark) {
+                                class="link link--bright"
+                           }
+                           @@if (!dark) {
+                                class="link link--light"
+                           }
+                           href="#">8 (930) 825 53-35</a>
                     </li>
                 </ul>
 
                 <p class="footer-info__subtitle">E-mail</p>
                 <ul class="footer-info__list">
                     <li>
-                        <a class="link link--light" href="#">info@zaptar.ru</a>
+                        <a
+                           @@if (dark) {
+                                class="link link--bright"
+                           }
+                           @@if (!dark) {
+                                class="link link--light"
+                           }
+                           href="#">info@zaptar.ru</a>
                     </li>
                 </ul>
             </div>
@@ -119,9 +225,30 @@
             <p class="footer__copyright">
                 <span>&copy; Интернет-магазин автозапчастей и комплектующих.</span> <span>Все права защищены - 2025</span>
             </p>
-            <a class="footer__privacy link link--light" href="#">Политика конфиденциальности</a>
-            <a class="footer__offer link link--light" href="#">Договор оферты</a>
-            <a class="footer__pay link link--light" href="#">Способы оплаты</a>
+            <a
+               @@if (dark) {
+                    class="link link--bright"
+               }
+               @@if (!dark) {
+                    class="link link--light"
+               }
+               href="#">Политика конфиденциальности</a>
+            <a
+               @@if (dark) {
+                    class="link link--bright"
+               }
+               @@if (!dark) {
+                    class="link link--light"
+               }
+               href="#">Договор оферты</a>
+            <a
+               @@if (dark) {
+                    class="link link--bright"
+               }
+               @@if (!dark) {
+                    class="link link--light"
+               }
+               href="#">Способы оплаты</a>
         </div>
     </div>
 </footer>

@@ -1,0 +1,24 @@
+// есть common
+.brands {
+  &__title {
+    font-weight: 600;
+    position: relative;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: $gutter * 8;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      flex-grow: 1;
+      background-color: $c-light-20;
+      height: 1px;
+      margin-left: $gutter * 4;
+    }
+  }
+
+  &__letter {
+    background-color: $c-light-20;
+    color: #fff;
+  }
+}

@@ -1,0 +1,7 @@
+// есть common
+.brands {
+  &__letter {
+    border: 1px solid $c-gray;
+    color: $c-accent;
+  }
+}

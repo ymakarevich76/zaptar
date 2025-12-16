@@ -1,0 +1,55 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gutter * 6;
+
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stats-card {
+  padding: $gutter * 4;
+  border-radius: 8px;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: calc(100%) top;
+  background-color: #FFFFFF33;
+
+  &--products {
+    background-image: url("../img/stats/stats-1.svg");
+  }
+
+  &--users {
+    background-image: url("../img/stats/stats-2.svg");
+  }
+
+  &--tools {
+    background-image: url("../img/stats/stats-3.svg");
+  }
+
+  &__label {
+    color: $c-light-65;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: $gutter * 3;
+  }
+
+  &__value {
+    color: #fff;
+    font-size: 45px;
+    line-height: 52px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @media (max-width: 1350px) {
+      font-size: 35px;
+      line-height: 40px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+}
