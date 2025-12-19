@@ -27,7 +27,6 @@
 
   &__top,
   &__bottom {
-    min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,24 +36,30 @@
     }
   }
 
+  &__top {
+    min-height: 50px;
+  }
+
   &__bottom {
+    min-height: 80px;
     position: relative;
 
     &::before {
       content: "";
       position: absolute;
-      right: 32px;
-      left: 32px;
+      right: 0;
+      left: 0;
       top: 0;
       display: block;
       height: 1px;
       background-color: rgba(255, 255, 255, 0.2);
-
-      @media (max-width: 1440px) {
-        right: 12px;
-        left: 12px;
-      }
     }
+  }
+
+  &__top-logo {
+    display: grid;
+    grid-auto-flow: column;
+    gap: $gutter * 4;
   }
 
   &__top-contacts {
@@ -99,6 +104,33 @@
     @media (max-width: $md) {
       --btn-padding-x: #{$gutter};
     }
+  }
+}
+
+.header-address {
+  $self: &;
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 8px;
+  align-items: center;
+
+  &__ico {
+    width: 12px;
+    height: 12px;
+    color: #fff;
+    opacity: 0.45;
+    transition: opacity 0.2s;
+
+    #{$self}:hover & {
+      opacity: 1;
+    }
+  }
+
+  &__city {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #fff;
   }
 }
 
