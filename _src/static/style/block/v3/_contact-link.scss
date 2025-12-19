@@ -8,9 +8,13 @@
     width: 12px;
     height: 12px;
     margin-right: $gutter * 2;
-    color: #fff;
+    color: $c-main;
     opacity: 0.45;
     transition: opacity 0.2s;
+
+    #{$self}--light & {
+      color: #fff;
+    }
 
     @media (hover: hover) {
       #{$self}:hover & {
