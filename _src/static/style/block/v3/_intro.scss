@@ -1,5 +1,5 @@
 .intro {
-  padding-top: $gutter * 32;
+  padding-top: $gutter * 25;
 
   // на второстепенных страницах
   &--has-background {
@@ -22,18 +22,19 @@
   gap: $gutter * 12;
 
   @media (max-width: $lg) {
-    padding-top: $gutter * 26;
+    padding-top: $gutter * 19;
   }
 
   @media (max-width: $md) {
     gap: $gutter * 6;
+    padding-top: $gutter * 27;
   }
 
   &--has-pd-top {
     padding-top: $gutter * 45;
 
     @media (max-width: $lg) {
-      padding-top: $gutter * 40;
+      padding-top: $gutter * 39;
     }
 
     @media (max-width: $md) {
